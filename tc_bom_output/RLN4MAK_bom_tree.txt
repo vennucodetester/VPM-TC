@@ -1,8 +1,8 @@
 BOM Tree: RLN4MAK
-Fetched: 2026-03-23T15:33:48.143829
+Fetched: 2026-03-24T23:00:11.221482
 View: MTY View
-Total parts: 135
-Max depth: 6
+Total parts: 102
+Max depth: 5
 
 ✗ RLN4MAK/A — RLN4MA-KITS
 ├── ✗ 3H00010385/A — RLN4MA-MISC OPTIONS
@@ -72,9 +72,7 @@ Max depth: 6
 │           ├── ✓ 3074382/B — DIAGRAM-WIRING LED UNIV LTG
 │           ├── ✓ 5500172/M — ILUMINATION T8 SYSTEM 4DR
 │           │   ├── ✓ 0210386/C — REFLECTOR END LH
-│           │   │   └── ✓ 0208069/A — LAMINA GALV C.22 3  (ROLLO)G60
 │           │   ├── ✓ 0210387/C — REFLECTOR END RH
-│           │   │   └── ✓ 0208069/A — LAMINA GALV C.22 3  (ROLLO)G60
 │           │   ├── ✓ 0387218000/A — STICKER-LIGHT BAR
 │           │   ├── ✓ 0489702000/B — DIAG WRG 4 DRS JAM BLST
 │           │   ├── ✓ 0511082/A — 1/8 DOMED HEAD ALUMINUM RIVET
@@ -84,36 +82,17 @@ Max depth: 6
 │           │   ├── ✓ 1004377/A — SHIELD LAMP
 │           │   ├── ✓ 1803084/A — LAMP F58T8 4000 K OR 4100 K 5O
 │           │   ├── ✓ 1803357/B — WIRE ASM JUMPER
-│           │   │   ├── ✓ 1803509/A — NYLON CAP 12-10 NM22WC05
-│           │   │   └── ✓ 1803437/A — WIRE 18 GA RED 34"
 │           │   ├── ✓ 1803983/A — WIRE ASM LAMP-BLST WC 4DR
-│           │   │   ├── ✓ 1803338/A — NYLON CAP 16-14 NM22WC02
-│           │   │   ├── ✓ 1803774/A — WIRE 18 GA BLUE 34"
-│           │   │   └── ✓ 1803437/A — WIRE 18 GA RED 34"
 │           │   ├── ✓ 1900427/A — SCREW 8X1/2 TR PHL SM
 │           │   ├── ✓ 1900437/B — SCREW-8 X 3/8 SM THREAD BLUND
 │           │   ├── ✓ 7406403/A — LENS ASSEMBLY END LH
-│           │   │   ├── ✓ 1004423/A — LENS END CLEAR
-│           │   │   └── ✓ 1004427/A — CAP END LENS LH
-│           │   ├── ✓ 7406404/A — LENS ASSEMBLY END RH
-│           │   │   ├── ✓ 1004423/A — LENS END CLEAR
-│           │   │   └── ✓ 1004428/A — CAP END LENS RH
-│           │   └── ✓ 7406405/B — LENS ASSEMBLY MULLION
-│           │       ├── ✓ 1004429/A — CAP LENS MULLION
-│           │       ├── ✓ 1004768/B — CLIP-MULLION DIFUSSER
-│           │       ├── ✓ 1900718/B — EXPANSION RIVET 3/16 X 7/16
-│           │       ├── ✓ 1900711/A — WASHER .190ID X.450OD X.040
-│           │       └── ✓ 1004422/B — LENS MULLION CLEAR
+│           │   └── ✓ 7406404/A — LENS ASSEMBLY END RH
 │           ├── ✓ 3117868/D — POWER SUPPLY-4A 24V 96W
 │           ├── ✓ 3016238/A — CONNECTOR-SPLICING 5 COND
 │           ├── ✓ 0456490/A — WIRE -18 GA BLK 35" LED WC67
 │           ├── ✓ 050584100/F — REINFORCEMENT-BRACKET MULLION WC
-│           │   ├── ✓ 0200500/A — LAMINA GALV C.16 3'(ROLLO) G60
-│           │   └── ✓ 0200500/A — LAMINA GALV C.16 3'(ROLLO) G60
 │           ├── ✓ 1803437/A — WIRE 18 GA RED 34"
 │           ├── ✓ 3027886/B — BRACKET-END FRAME LED REINF
-│           │   ├── ✓ 0200500/A — LAMINA GALV C.16 3'(ROLLO) G60
-│           │   └── ✓ 0200500/A — LAMINA GALV C.16 3'(ROLLO) G60
 │           └── ✓ 0428788001/A — CONNECTOR-4 WIRE
 ├── ✗ 3H00010397/A — REFRIGERATION-MICROBLOCK LT CASSETTE
 └── ✗ 3H00010393/A — END-OPTIONS MICROBLOCK LT
@@ -171,54 +150,10 @@ Max depth: 6
             ├── ✓ 0430382000/A — SCREW-8 X .5 TR HD PH BLK
             ├── ✓ 0479781/E — IMPORTANT FOR INSTALLER
             ├── ✓ 0511304/A — GASKET DONUT RLN END
-            │   └── ✓ 0511231/C — GASKET DONUT 1250 FT
             ├── ✓ 0560316/A — GASKET.906" X 1/2" X 200"
             ├── ✓ 1006247/B — MOULDING END BLACK NO HOLES
             ├── ✓ 1900427/A — SCREW 8X1/2 TR PHL SM
             ├── ✓ 3232947/C — SPLASHGUARD-RNMA RH END TXTD
-            │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
             ├── ✓ 3232948/C — SPLASHGUARD-RNMA LH END TXTD
-            │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
             ├── ✓ 3233001/C — END ASSY-RH RECT RLNMA BARE - FRP INT
-            │   ├── ✓ 0043943001/C — TAPE-.125 X .5 BLACK SPONGE RUBBER ADH BK
-            │   ├── ✓ 0059412000/A — BLOCK-FOAM
-            │   ├── ✓ 0330999002/B — TAPE-HOT MELT PACKAGING
-            │   ├── ✓ 0331949002/A — BUTTON-PLUG BPF 7/8 BLACK
-            │   ├── ✓ 0336788000/B — SPACER-BOLT
-            │   ├── ✓ 0533405/A — SPACER BOLT END 2
-            │   ├── ✓ 0544553/A — TAPE-VENTING PET/CELLULOSE FABRIC .045" X .748"
-            │   ├── ✓ 2700372/F — INSULATION FOAM REACH
-            │   │   ├── ✓ 3215651/A — ISOCYANATE-WANNATE PM200
-            │   │   ├── ✓ 3215652/A — RESIN-WANFOAM RF06359-101 POLYOL
-            │   │   └── ✓ 3215655/A — BLOWING AGENT-HFO LBA
-            │   ├── ✓ 3232992/D — PANEL-RH EXT RECT END BARE RNMA
-            │   │   └── ✓ 0200045/A — LAMINA GALV C.22 4' (ROLLO)G60
-            │   ├── ✓ 3232998/C — PANEL-INT RH END FRP RMNA
-            │   │   └── ✓ 0511286/F — PANEL FRP RLN I IE
-            │   ├── ✓ 0137715002/A — SCREW SM 10-16X3/4 HX WAS
-            │   ├── ✓ 0210825/C — FILLER-FRONT END
-            │   │   ├── ✓ 0202183/A — LAMINA GALV PAS C.26 4' G90
-            │   │   └── ✓ 0202183/A — LAMINA GALV PAS C.26 4' G90
-            │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
-            │   └── ✓ 3232962/A — SPACER-JOINING RNMA LT-LT
-            │       └── ✓ 0203080/A — LAMINA GALV C.18 3' (ROLLO)
             └── ✓ 3233002/C — END ASSY-LH RECT RLNMA BARE - FRP INT
-                ├── ✓ 0043943001/C — TAPE-.125 X .5 BLACK SPONGE RUBBER ADH BK
-                ├── ✓ 0059412000/A — BLOCK-FOAM
-                ├── ✓ 0330999002/B — TAPE-HOT MELT PACKAGING
-                ├── ✓ 0331949002/A — BUTTON-PLUG BPF 7/8 BLACK
-                ├── ✓ 0336788000/B — SPACER-BOLT
-                ├── ✓ 0533405/A — SPACER BOLT END 2
-                ├── ✓ 0544553/A — TAPE-VENTING PET/CELLULOSE FABRIC .045" X .748"
-                ├── ✓ 2700372/F — INSULATION FOAM REACH
-                │   ├── ✓ 3215651/A — ISOCYANATE-WANNATE PM200
-                │   ├── ✓ 3215652/A — RESIN-WANFOAM RF06359-101 POLYOL
-                │   └── ✓ 3215655/A — BLOWING AGENT-HFO LBA
-                ├── ✓ 3232993/D — PANEL-LH EXT RECT END BARE RNMA
-                │   └── ✓ 0200045/A — LAMINA GALV C.22 4' (ROLLO)G60
-                ├── ✓ 3232999/C — PANEL-INT LH END FRP RMNA
-                │   └── ✓ 0511286/F — PANEL FRP RLN I IE
-                ├── ✓ 0210825/C — FILLER-FRONT END
-                │   ├── ✓ 0202183/A — LAMINA GALV PAS C.26 4' G90
-                │   └── ✓ 0202183/A — LAMINA GALV PAS C.26 4' G90
-                └── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
