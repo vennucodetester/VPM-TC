@@ -780,10 +780,6 @@ class EcnDashboardEngine:
                         start_date = pd.to_datetime(row.get(start_col), errors='coerce') if start_col else pd.NaT
                         status = str(row.get(status_col, "")).upper() if status_col else ""
 
-                        # Check rejection
-                        if "REJECT" in status:
-                            is_rejected = True
-
                         # Determine completion — steps at or before the highest
                         # completed position are implicitly done (gap-skipping).
                         step_complete = False
@@ -799,17 +795,31 @@ class EcnDashboardEngine:
                         else:
                             step_complete = pd.notna(end_date)
 
+                        # Check rejection — only flag if the rejected step
+                        # is NOT yet complete (issue was fixed and moved past)
+                        if "REJECT" in status and not step_complete:
+                            is_rejected = True
+
                         if step_complete:
                             completed_count += 1
                         elif not current_step_found:
-                            current_step_found = True
-                            item.current_step_name = config['name']
-                            item.current_step_start_date = start_date if pd.notna(start_date) else None
-                            performer_col = self.find_flexible_column(row.keys(), config['performer_col']) if config.get('performer_col') else None
-                            performer = row.get(performer_col, "") if performer_col else ""
-                            if pd.isna(performer) or performer is None or not str(performer).strip():
-                                performer = config.get('default_performer', '')
-                            item.current_step_performer = str(performer)
+                            # Only mark as bottleneck if the step has actually
+                            # started (has a start date) or is in progress.
+                            # Steps with zero data (no start, no end, no status)
+                            # are future steps that haven't begun — skip them.
+                            has_any_activity = (
+                                pd.notna(start_date) or pd.notna(end_date) or
+                                bool(status.strip())
+                            )
+                            if has_any_activity:
+                                current_step_found = True
+                                item.current_step_name = config['name']
+                                item.current_step_start_date = start_date if pd.notna(start_date) else None
+                                performer_col = self.find_flexible_column(row.keys(), config['performer_col']) if config.get('performer_col') else None
+                                performer = row.get(performer_col, "") if performer_col else ""
+                                if pd.isna(performer) or performer is None or not str(performer).strip():
+                                    performer = config.get('default_performer', '')
+                                item.current_step_performer = str(performer)
 
                     # Step 3: Calculate progress
                     total = len(applicable_steps)
@@ -884,9 +894,36 @@ class EcnDashboardEngine:
                             break
 
                 if not ecn_released:
-                    hold_steps = {'Item Production Released', 'Design Released', 'ECN Completed'}
+                    # Find the position of "ECN Completed" in workflow config.
+                    # Any item whose last completed step is at or past ECN Completed
+                    # (or whose current step has no activity) should be on hold.
+                    ecn_completed_pos = -1
+                    for idx, cfg in enumerate(self.workflow_config):
+                        if cfg['name'] == 'ECN Completed':
+                            ecn_completed_pos = idx
+                            break
+
                     for item in ecn.items:
-                        if item.current_step_name in hold_steps:
+                        # Re-derive highest_completed_pos for this item
+                        r = item.raw_data
+                        item_highest_pos = -1
+                        for cfg in self.workflow_config:
+                            _e = self.find_flexible_column(r.keys(), cfg['end_date_col']) if cfg.get('end_date_col') else None
+                            _s = self.find_flexible_column(r.keys(), cfg['start_date_col']) if cfg.get('start_date_col') else None
+                            if cfg['end_date_col'] is None:
+                                _d = pd.notna(pd.to_datetime(r.get(_s), errors='coerce')) if _s else False
+                            elif _e:
+                                _d = pd.notna(pd.to_datetime(r.get(_e), errors='coerce'))
+                            else:
+                                _d = False
+                            if _d:
+                                pos = next((i for i, c in enumerate(self.workflow_config) if c is cfg), -1)
+                                if pos > item_highest_pos:
+                                    item_highest_pos = pos
+
+                        # If item's last completed step is at/past ECN Completed
+                        # position, it's waiting on ECN release before MCN can start
+                        if item_highest_pos >= ecn_completed_pos and ecn_completed_pos >= 0:
                             peers_behind = sum(
                                 1 for i in ecn.items
                                 if i.effective_progress < item.effective_progress and i is not item
