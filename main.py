@@ -1329,16 +1329,33 @@ class AdvancedSummaryDialog(QDialog):
             self.table.setRowCount(0)
             self.table.setColumnCount(0)
             return
-            
-        headers = data[0].keys()
+
+        headers = list(data[0].keys())
         self.table.setColumnCount(len(headers))
         self.table.setHorizontalHeaderLabels(headers)
         self.table.setRowCount(len(data))
-        
+
         for row_idx, row_data in enumerate(data):
+            current_task = str(row_data.get("Current Task / Name", ""))
+            overall_status = str(row_data.get("Overall Status", ""))
+            progress = str(row_data.get("Progress", ""))
+
+            # Determine row color
+            if "On Hold" in current_task:
+                bg_color = QColor("#FFF3CD")  # yellow for on-hold
+            elif overall_status == "Rejected":
+                bg_color = QColor("#F8D7DA")  # light red for rejected
+            elif overall_status == "Completed" or progress == "100%":
+                bg_color = QColor("#D4EDDA")  # light green for completed
+            else:
+                bg_color = None
+
             for col_idx, header in enumerate(headers):
-                self.table.setItem(row_idx, col_idx, QTableWidgetItem(str(row_data.get(header, ''))))
-        
+                item = QTableWidgetItem(str(row_data.get(header, '')))
+                if bg_color:
+                    item.setBackground(bg_color)
+                self.table.setItem(row_idx, col_idx, item)
+
         self.table.resizeColumnsToContents()
 
     def export_to_csv(self):

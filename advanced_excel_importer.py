@@ -33,6 +33,10 @@ class Item:
         self.completed_steps = 0
         self.total_steps = 0
 
+        # ECN dependency tracking
+        self.waiting_on_ecn = False
+        self.ecn_peers_behind = 0
+
     def get_all_subtasks(self): return []
 
 class ECN:
@@ -135,6 +139,18 @@ class WorkflowFlowchartDialog(QDialog):
             QProgressBar::chunk { background: #3498db; border-radius: 3px; }
         """)
         dialog_layout.addWidget(pbar)
+
+        # On Hold - ECN Pending banner
+        if getattr(self.item, 'waiting_on_ecn', False):
+            peers = getattr(self.item, 'ecn_peers_behind', 0)
+            peer_text = f" — {peers} peer item{'s' if peers != 1 else ''} still in progress" if peers > 0 else ""
+            banner = QLabel(f"<b>On Hold — ECN not released{peer_text}</b>")
+            banner.setStyleSheet(
+                "background-color: #FFF3CD; color: #856404; padding: 6px 10px; "
+                "border: 1px solid #ffc107; border-radius: 4px; font-size: 11px;"
+            )
+            dialog_layout.addWidget(banner)
+
         dialog_layout.addSpacing(6)
 
         # Scroll area for step rows
@@ -389,7 +405,7 @@ class EcnDashboardEngine:
             {'name': 'CFT MFG Review', 'start_date_col': 'ECN CFT MFG Start Date', 'end_date_col': 'ECN CFT MFG End Date', 'performer_col': 'ECN CFT MFG Performer', 'status_col': 'ECN CFT MFG Status', 'default_performer': 'Manufacturing Engineer', 'condition': lambda row: not self._is_bgn(row)},
             {'name': 'CFT Compliance Review', 'start_date_col': 'ECN CFT Compliance Start Date', 'end_date_col': 'ECN CFT Compliance End Date', 'performer_col': 'ECN CFT Compliance Performer', 'status_col': 'ECN CFT Compliance Status', 'default_performer': 'Compliance Engineer', 'condition': None},
             {'name': 'Controller Review', 'start_date_col': 'ECN Controller Review Start Date', 'end_date_col': 'ECN Controller Review End Date', 'performer_col': 'ECN Controller Review Performer', 'status_col': 'ECN Controller Review Status', 'default_performer': 'Controller', 'condition': None},
-            {'name': 'ECN Completed', 'start_date_col': None, 'end_date_col': 'ECN Completed Date', 'performer_col': None, 'status_col': None, 'default_performer': 'SYSTEM TASK (Not Manual)', 'condition': None},
+            {'name': 'ECN Completed', 'start_date_col': None, 'end_date_col': 'ECN Released Date', 'performer_col': None, 'status_col': None, 'default_performer': 'SYSTEM TASK (Not Manual)', 'condition': None},
 
             # MCN and Production Implementation Stages (16-28)
             {'name': 'Item Production Released', 'start_date_col': None, 'end_date_col': 'Item Production Released Date', 'performer_col': None, 'status_col': None, 'default_performer': 'SYSTEM TASK (Not Manual)', 'condition': None},
@@ -727,26 +743,35 @@ class EcnDashboardEngine:
                             except Exception:
                                 pass
 
-                    # Pre-check: If a terminal step (MCN Released, ECN Completed)
-                    # is completed, then ALL prior steps should be treated as done
-                    # regardless of missing data in intermediate columns.
-                    terminal_completed = False
-                    terminal_steps = {'MCN Released', 'ECN Completed', 'Part Implementation Completed'}
+                    # ── Pass 1: Find the highest-position completed step ──
+                    # If step N is complete, all steps before N are implicitly
+                    # complete even if their data is missing from the report.
+                    config_position = {id(cfg): i for i, cfg in enumerate(self.workflow_config)}
+                    highest_completed_pos = -1
+                    highest_completed_name = ""
                     for config in applicable_steps:
-                        if config['name'] in terminal_steps:
-                            end_col = self.find_flexible_column(row.keys(), config['end_date_col']) if config.get('end_date_col') else None
-                            if end_col:
-                                end_date = pd.to_datetime(row.get(end_col), errors='coerce')
-                                if pd.notna(end_date):
-                                    terminal_completed = True
-                                    break
+                        pos = config_position.get(id(config), 0)
+                        _end = self.find_flexible_column(row.keys(), config['end_date_col']) if config.get('end_date_col') else None
+                        _start = self.find_flexible_column(row.keys(), config['start_date_col']) if config.get('start_date_col') else None
+                        if config['end_date_col'] is None:
+                            _done = pd.notna(pd.to_datetime(row.get(_start), errors='coerce')) if _start else False
+                        elif _end:
+                            _done = pd.notna(pd.to_datetime(row.get(_end), errors='coerce'))
+                        else:
+                            _sc = self.find_flexible_column(row.keys(), config.get('status_col')) if config.get('status_col') else None
+                            _sv = str(row.get(_sc, "")).upper() if _sc else ""
+                            _done = any(kw in _sv for kw in ['RELEASED', 'COMPLETED', 'APPROVED']) if _sv else (pd.notna(pd.to_datetime(row.get(_start), errors='coerce')) if _start else False)
+                        if _done and pos > highest_completed_pos:
+                            highest_completed_pos = pos
+                            highest_completed_name = config['name']
 
-                    # Step 2: Count completed steps, find bottleneck, detect rejections
+                    # ── Pass 2: Count completed steps, find bottleneck ──
                     completed_count = 0
                     current_step_found = False
                     is_rejected = False
 
                     for config in applicable_steps:
+                        pos = config_position.get(id(config), 0)
                         end_col = self.find_flexible_column(row.keys(), config['end_date_col']) if config['end_date_col'] else None
                         start_col = self.find_flexible_column(row.keys(), config['start_date_col']) if config['start_date_col'] else None
                         status_col = self.find_flexible_column(row.keys(), config.get('status_col')) if config.get('status_col') else None
@@ -759,35 +784,27 @@ class EcnDashboardEngine:
                         if "REJECT" in status:
                             is_rejected = True
 
-                        # Determine completion based on step type
+                        # Determine completion — steps at or before the highest
+                        # completed position are implicitly done (gap-skipping).
                         step_complete = False
-                        if terminal_completed:
-                            # A terminal step (MCN Released, ECN Completed) is done,
-                            # so ALL prior steps are implicitly complete even if
-                            # their individual end dates are missing from the report.
+                        if pos <= highest_completed_pos:
                             step_complete = True
                         elif config['end_date_col'] is None:
-                            # Event step (creation dates) — completed if start date exists
                             step_complete = pd.notna(start_date)
                         elif end_col is None:
-                            # Config expects end_date column but it doesn't exist in TC report
-                            # Fallback: check status column for completion keywords
                             if status:
                                 step_complete = any(kw in status for kw in ['RELEASED', 'COMPLETED', 'APPROVED'])
                             else:
                                 step_complete = pd.notna(start_date)
                         else:
-                            # Standard step — completed if end date exists
                             step_complete = pd.notna(end_date)
 
                         if step_complete:
                             completed_count += 1
                         elif not current_step_found:
-                            # First incomplete step = current bottleneck
                             current_step_found = True
                             item.current_step_name = config['name']
                             item.current_step_start_date = start_date if pd.notna(start_date) else None
-                            # Get performer
                             performer_col = self.find_flexible_column(row.keys(), config['performer_col']) if config.get('performer_col') else None
                             performer = row.get(performer_col, "") if performer_col else ""
                             if pd.isna(performer) or performer is None or not str(performer).strip():
@@ -807,29 +824,18 @@ class EcnDashboardEngine:
 
                     if not current_step_found:
                         if completed_count == total and total > 0:
-                            # All data-backed steps are done. Check whether any applicable
-                            # step (condition passes) is still pending (has no data yet)
-                            # BUT only look AFTER the last completed step in workflow order.
-                            # This prevents going backwards (e.g., showing "PR Created" as
-                            # pending when the item is already MCN Released).
-
-                            # Find the position of the last completed applicable step
-                            last_completed_idx = -1
+                            # All applicable steps done — search for next pending
+                            # step AFTER the highest completed position only.
                             applicable_set = set(id(s) for s in applicable_steps)
-                            for i, cfg in enumerate(self.workflow_config):
-                                if id(cfg) in applicable_set:
-                                    last_completed_idx = i
-
                             next_pending = None
-                            for cfg in self.workflow_config[last_completed_idx + 1:]:
+                            for cfg in self.workflow_config[highest_completed_pos + 1:]:
                                 if not self.task_applies_to_item(row, cfg):
                                     continue
                                 if id(cfg) in applicable_set:
-                                    continue  # already counted
+                                    continue
                                 next_pending = cfg
                                 break
                             if next_pending:
-                                # Expose the next pending step so the summary matches the popup
                                 p_col = self.find_flexible_column(row.keys(), next_pending['performer_col']) if next_pending.get('performer_col') else None
                                 p_val = row.get(p_col, "") if p_col else ""
                                 if pd.isna(p_val) or not str(p_val).strip():
@@ -837,11 +843,16 @@ class EcnDashboardEngine:
                                 item.current_step_name = next_pending['name']
                                 item.current_step_performer = str(p_val)
                             else:
-                                item.current_step_name = "Completed"
+                                # Show last completed step name (e.g., "MCN Released")
+                                item.current_step_name = highest_completed_name or "Completed"
                                 item.current_step_performer = ""
                         else:
-                            item.current_step_name = "Completed"
+                            item.current_step_name = highest_completed_name or "Completed"
                             item.current_step_performer = ""
+
+                    # ECN dependency flag (set in ECN-level pass below)
+                    item.waiting_on_ecn = False
+                    item.ecn_peers_behind = 0
 
                     # Pending MCN task: item is deep in workflow but not done
                     item.has_pending_mcn_task = (item.effective_progress >= 80 and item.effective_progress < 100)
@@ -858,6 +869,32 @@ class EcnDashboardEngine:
                     )
                 else:
                     ecn.effective_progress = 0
+
+                # ── ECN Peer Dependency Check ──
+                # If the ECN is not released, items that are individually
+                # Production Released are "On Hold - ECN Pending".
+                ecn_released = False
+                for item in ecn.items:
+                    r = item.raw_data
+                    ecn_rel_col = self.find_flexible_column(r.keys(), 'ECN Released Date')
+                    if ecn_rel_col:
+                        ecn_rel_date = pd.to_datetime(r.get(ecn_rel_col), errors='coerce')
+                        if pd.notna(ecn_rel_date):
+                            ecn_released = True
+                            break
+
+                if not ecn_released:
+                    hold_steps = {'Item Production Released', 'Design Released', 'ECN Completed'}
+                    for item in ecn.items:
+                        if item.current_step_name in hold_steps:
+                            peers_behind = sum(
+                                1 for i in ecn.items
+                                if i.effective_progress < item.effective_progress and i is not item
+                            )
+                            item.waiting_on_ecn = True
+                            item.ecn_peers_behind = peers_behind
+                            item.current_step_name = "On Hold - ECN Pending"
+                            item.current_step_performer = ""
 
             # PR Level Calculation
             pr.is_rejected = any(ecn.is_rejected for ecn in pr.ecns.values())
