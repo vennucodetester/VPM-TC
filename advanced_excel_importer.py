@@ -1,4 +1,4 @@
-_VPM_VERSION = "3.1.6"  # Removed _auto_complete_design_task - use gap-skipping instead
+_VPM_VERSION = "3.1.7"  # Fix NaN status treated as activity - str(NaN)="nan" was truthy
 import pandas as pd
 import datetime
 from PyQt6.QtWidgets import QFileDialog, QMessageBox, QDialog, QVBoxLayout, QScrollArea, QWidget, QLabel, QHBoxLayout, QFrame, QGridLayout, QProgressBar
@@ -779,7 +779,8 @@ class EcnDashboardEngine:
                             _done = pd.notna(pd.to_datetime(row.get(_end), errors='coerce'))
                         else:
                             _sc = self.find_flexible_column(row.keys(), config.get('status_col')) if config.get('status_col') else None
-                            _sv = str(row.get(_sc, "")).upper() if _sc else ""
+                            _raw_sv = row.get(_sc, "") if _sc else ""
+                            _sv = str(_raw_sv).upper() if pd.notna(_raw_sv) and _raw_sv != "" else ""
                             _done = any(kw in _sv for kw in ['RELEASED', 'COMPLETED', 'APPROVED']) if _sv else (pd.notna(pd.to_datetime(row.get(_start), errors='coerce')) if _start else False)
                         if _done and pos > highest_completed_pos:
                             highest_completed_pos = pos
@@ -807,7 +808,8 @@ class EcnDashboardEngine:
 
                         end_date = pd.to_datetime(row.get(end_col), errors='coerce') if end_col else pd.NaT
                         start_date = pd.to_datetime(row.get(start_col), errors='coerce') if start_col else pd.NaT
-                        status = str(row.get(status_col, "")).upper() if status_col else ""
+                        _raw_status = row.get(status_col, "") if status_col else ""
+                        status = str(_raw_status).upper() if pd.notna(_raw_status) and _raw_status != "" else ""
 
                         # Determine completion — steps at or before the highest
                         # completed position are implicitly done (gap-skipping).
@@ -854,46 +856,35 @@ class EcnDashboardEngine:
                                     performer = config.get('default_performer', '')
                                 item.current_step_performer = str(performer)
 
-                    # ── Rejection backtracking ──
-                    # When a step has a rejection status (No Decision, Reject,
-                    # etc.), the workflow loops BACK to an earlier step. Find
-                    # the earlier step that has a start date but no end date —
-                    # that's where the work actually went.
-                    #
-                    # Also handles the case where _auto_complete_design_task
-                    # set end = start (auto-completed): treat end == start as
-                    # "not really complete" when there's a rejection downstream.
+                    # ── Rejection rework detection (Option C) ──
+                    # Keep the REJECTED step as the current task (bottleneck),
+                    # but also find where work went back to (rework step).
+                    # Display format: "Sheetmetal Review ↩ Design Task"
+                    item.rework_step_name = ""
                     if current_step_found and is_rejected:
                         try:
                             _match = next(c for c in applicable_steps if c['name'] == item.current_step_name)
                             rejected_step_pos = config_position.get(id(_match), 999)
                         except StopIteration:
                             rejected_step_pos = 999
+                        # Find the earlier step that work went back to:
+                        # must have end_date_col defined (real completable step),
+                        # have a start date, but NO end date (still open/rework).
                         for earlier_cfg in applicable_steps:
                             earlier_pos = config_position.get(id(earlier_cfg), 0)
                             if earlier_pos >= rejected_step_pos:
-                                continue  # Only look at steps BEFORE the rejection
+                                continue
+                            # Skip steps without end_date_col (milestones like
+                            # PR Created, ECN Created) — they can't be "open"
+                            if earlier_cfg.get('end_date_col') is None:
+                                continue
                             _e_start_col = self.find_flexible_column(row.keys(), earlier_cfg['start_date_col']) if earlier_cfg.get('start_date_col') else None
                             _e_end_col = self.find_flexible_column(row.keys(), earlier_cfg['end_date_col']) if earlier_cfg.get('end_date_col') else None
                             _e_start = pd.to_datetime(row.get(_e_start_col), errors='coerce') if _e_start_col else pd.NaT
                             _e_end = pd.to_datetime(row.get(_e_end_col), errors='coerce') if _e_end_col else pd.NaT
-                            # Step is "open" if: no end date, OR end == start
-                            # (auto-completed by _auto_complete_design_task)
-                            end_is_missing = pd.isna(_e_end)
-                            end_equals_start = (pd.notna(_e_end) and pd.notna(_e_start) and _e_end == _e_start)
-                            if pd.notna(_e_start) and (end_is_missing or end_equals_start):
-                                # This earlier step is open (restarted or auto-completed)
-                                item.current_step_name = earlier_cfg['name']
-                                item.current_step_start_date = _e_start
-                                # Undo auto-complete: reset end date back to NaT
-                                if end_equals_start and _e_end_col:
-                                    item.raw_data[_e_end_col] = pd.NaT
-                                _e_perf_col = self.find_flexible_column(row.keys(), earlier_cfg['performer_col']) if earlier_cfg.get('performer_col') else None
-                                _e_perf = row.get(_e_perf_col, "") if _e_perf_col else ""
-                                if pd.isna(_e_perf) or not str(_e_perf).strip():
-                                    _e_perf = earlier_cfg.get('default_performer', '')
-                                item.current_step_performer = str(_e_perf)
-                                break  # Found the backtracked step
+                            if pd.notna(_e_start) and pd.isna(_e_end):
+                                item.rework_step_name = earlier_cfg['name']
+                                break
 
                     # Step 3: Calculate progress
                     total = len(applicable_steps)
@@ -1436,6 +1427,10 @@ class EcnDashboardEngine:
         for item in all_items:
             # Use pre-computed attributes from _calculate_ecn_statuses()
             bottleneck_task = item.current_step_name or "Completed"
+            # Option C: show rejected step + rework target
+            rework = getattr(item, 'rework_step_name', '')
+            if rework and item.is_rejected:
+                bottleneck_task = f"{bottleneck_task} ↩ {rework}"
             assigned_to = item.current_step_performer or ""
 
             if item.current_step_start_date and pd.notna(item.current_step_start_date):
