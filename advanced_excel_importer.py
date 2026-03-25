@@ -727,6 +727,20 @@ class EcnDashboardEngine:
                             except Exception:
                                 pass
 
+                    # Pre-check: If a terminal step (MCN Released, ECN Completed)
+                    # is completed, then ALL prior steps should be treated as done
+                    # regardless of missing data in intermediate columns.
+                    terminal_completed = False
+                    terminal_steps = {'MCN Released', 'ECN Completed', 'Part Implementation Completed'}
+                    for config in applicable_steps:
+                        if config['name'] in terminal_steps:
+                            end_col = self.find_flexible_column(row.keys(), config['end_date_col']) if config.get('end_date_col') else None
+                            if end_col:
+                                end_date = pd.to_datetime(row.get(end_col), errors='coerce')
+                                if pd.notna(end_date):
+                                    terminal_completed = True
+                                    break
+
                     # Step 2: Count completed steps, find bottleneck, detect rejections
                     completed_count = 0
                     current_step_found = False
@@ -747,7 +761,12 @@ class EcnDashboardEngine:
 
                         # Determine completion based on step type
                         step_complete = False
-                        if config['end_date_col'] is None:
+                        if terminal_completed:
+                            # A terminal step (MCN Released, ECN Completed) is done,
+                            # so ALL prior steps are implicitly complete even if
+                            # their individual end dates are missing from the report.
+                            step_complete = True
+                        elif config['end_date_col'] is None:
                             # Event step (creation dates) — completed if start date exists
                             step_complete = pd.notna(start_date)
                         elif end_col is None:
@@ -789,13 +808,23 @@ class EcnDashboardEngine:
                     if not current_step_found:
                         if completed_count == total and total > 0:
                             # All data-backed steps are done. Check whether any applicable
-                            # step (condition passes) is still pending (has no data yet).
-                            # This matches what WorkflowFlowchartDialog shows as gray/pending.
+                            # step (condition passes) is still pending (has no data yet)
+                            # BUT only look AFTER the last completed step in workflow order.
+                            # This prevents going backwards (e.g., showing "PR Created" as
+                            # pending when the item is already MCN Released).
+
+                            # Find the position of the last completed applicable step
+                            last_completed_idx = -1
+                            applicable_set = set(id(s) for s in applicable_steps)
+                            for i, cfg in enumerate(self.workflow_config):
+                                if id(cfg) in applicable_set:
+                                    last_completed_idx = i
+
                             next_pending = None
-                            for cfg in self.workflow_config:
+                            for cfg in self.workflow_config[last_completed_idx + 1:]:
                                 if not self.task_applies_to_item(row, cfg):
                                     continue
-                                if cfg in applicable_steps:
+                                if id(cfg) in applicable_set:
                                     continue  # already counted
                                 next_pending = cfg
                                 break
