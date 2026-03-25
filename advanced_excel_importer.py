@@ -855,6 +855,10 @@ class EcnDashboardEngine:
                     # etc.), the workflow loops BACK to an earlier step. Find
                     # the earlier step that has a start date but no end date —
                     # that's where the work actually went.
+                    #
+                    # Also handles the case where _auto_complete_design_task
+                    # set end = start (auto-completed): treat end == start as
+                    # "not really complete" when there's a rejection downstream.
                     if current_step_found and is_rejected:
                         try:
                             _match = next(c for c in applicable_steps if c['name'] == item.current_step_name)
@@ -869,10 +873,17 @@ class EcnDashboardEngine:
                             _e_end_col = self.find_flexible_column(row.keys(), earlier_cfg['end_date_col']) if earlier_cfg.get('end_date_col') else None
                             _e_start = pd.to_datetime(row.get(_e_start_col), errors='coerce') if _e_start_col else pd.NaT
                             _e_end = pd.to_datetime(row.get(_e_end_col), errors='coerce') if _e_end_col else pd.NaT
-                            if pd.notna(_e_start) and pd.isna(_e_end):
-                                # This earlier step restarted (has start, no end)
+                            # Step is "open" if: no end date, OR end == start
+                            # (auto-completed by _auto_complete_design_task)
+                            end_is_missing = pd.isna(_e_end)
+                            end_equals_start = (pd.notna(_e_end) and pd.notna(_e_start) and _e_end == _e_start)
+                            if pd.notna(_e_start) and (end_is_missing or end_equals_start):
+                                # This earlier step is open (restarted or auto-completed)
                                 item.current_step_name = earlier_cfg['name']
                                 item.current_step_start_date = _e_start
+                                # Undo auto-complete: reset end date back to NaT
+                                if end_equals_start and _e_end_col:
+                                    item.raw_data[_e_end_col] = pd.NaT
                                 _e_perf_col = self.find_flexible_column(row.keys(), earlier_cfg['performer_col']) if earlier_cfg.get('performer_col') else None
                                 _e_perf = row.get(_e_perf_col, "") if _e_perf_col else ""
                                 if pd.isna(_e_perf) or not str(_e_perf).strip():
