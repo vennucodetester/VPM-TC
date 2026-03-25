@@ -1,4 +1,4 @@
-_VPM_VERSION = "3.1.5"  # Robust rejection backtracking (end==start handling)
+_VPM_VERSION = "3.1.6"  # Removed _auto_complete_design_task - use gap-skipping instead
 import pandas as pd
 import datetime
 from PyQt6.QtWidgets import QFileDialog, QMessageBox, QDialog, QVBoxLayout, QScrollArea, QWidget, QLabel, QHBoxLayout, QFrame, QGridLayout, QProgressBar
@@ -728,7 +728,11 @@ class EcnDashboardEngine:
             for ecn in pr.ecns.values():
                 for item in ecn.items:
                     row = item.raw_data
-                    self._auto_complete_design_task(item)
+                    # NOTE: _auto_complete_design_task removed — it mutated
+                    # raw_data (set Design Task end = start) which corrupted
+                    # the summary when rejections caused workflow loops.
+                    # Gap-skipping (highest_activity_pos) now handles Design
+                    # Task completion implicitly without mutation.
 
                     # Step 1: Determine applicable steps.
                     # Include a step if it has actual data, OR if it has a
