@@ -1,4 +1,4 @@
-_VPM_VERSION = "3.1.4"  # Rejection backtracking + auto-complete blocking
+_VPM_VERSION = "3.1.5"  # Robust rejection backtracking (end==start handling)
 import pandas as pd
 import datetime
 from PyQt6.QtWidgets import QFileDialog, QMessageBox, QDialog, QVBoxLayout, QScrollArea, QWidget, QLabel, QHBoxLayout, QFrame, QGridLayout, QProgressBar
