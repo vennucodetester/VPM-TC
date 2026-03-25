@@ -1,0 +1,8 @@
+Dependency Report: RMN2MA
+Generated: 2026-03-25T02:10:34.389043
+Total parts: 117
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 117 of 117 (100.0%)
+  Unreleased: 0
+  Blocked (On-Hold): 0

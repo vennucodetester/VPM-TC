@@ -1,0 +1,8 @@
+Dependency Report: RMN5MA
+Generated: 2026-03-24T23:23:19.735987
+Total parts: 101
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 101 of 101 (100.0%)
+  Unreleased: 0
+  Blocked (On-Hold): 0
