@@ -492,7 +492,7 @@
           "MTY RELEASED",
           "PRODUCTION RELEASED"
         ],
-        "process_stage": "HSM Part Implementation Process/3232965/D;1-FOAM-ASSEMBLY TOP 4 DR RNMA:8,MFG Engineer2/3232965/D;1-FOAM-ASSEMBLY TOP 4 DR RNMA:8",
+        "process_stage": "",
         "h4_ECN_Number": "ECN-CAP-0038096"
       },
       {
@@ -755,7 +755,7 @@
           "MTY RELEASED",
           "PRODUCTION RELEASED"
         ],
-        "process_stage": "HSM Part Implementation Process/3246072/B;2-PANEL-INT TOP LH:1,Production Control SM/3246072/B;2-PANEL-INT TOP LH:1",
+        "process_stage": "",
         "h4_ECN_Number": "ECN-NPD-0007931"
       },
       {
@@ -770,7 +770,7 @@
           "MTY RELEASED",
           "PRODUCTION RELEASED"
         ],
-        "process_stage": "HSM Part Implementation Process/3246073/B;2-PANEL-INT TOP RH:2,Production Control SM/3246073/B;2-PANEL-INT TOP RH:2",
+        "process_stage": "",
         "h4_ECN_Number": "ECN-NPD-0007931"
       },
       {
@@ -785,7 +785,7 @@
           "MTY RELEASED",
           "PRODUCTION RELEASED"
         ],
-        "process_stage": "HSM Part Implementation Process/3246074/B;2-PANEL-INT TOP CTR:3,Production Control SM/3246074/B;2-PANEL-INT TOP CTR:3",
+        "process_stage": "",
         "h4_ECN_Number": "ECN-NPD-0007931"
       },
       {
@@ -1816,7 +1816,7 @@
           "MTY RELEASED",
           "PRODUCTION RELEASED"
         ],
-        "process_stage": "HSM Part Implementation Process/3232945/E;1-SPLASHGUARD-RNMA 4 DOOR TXTD:14,Production Control SM/3232945/E;1-SPLASHGUARD-RNMA 4 DOOR TXTD:14",
+        "process_stage": "",
         "h4_ECN_Number": "ECN-NPD-0007911"
       },
       {
