@@ -749,6 +749,7 @@ class EcnDashboardEngine:
                     config_position = {id(cfg): i for i, cfg in enumerate(self.workflow_config)}
                     highest_completed_pos = -1
                     highest_completed_name = ""
+                    highest_activity_pos = -1  # Tracks the furthest step with ANY start date
                     for config in applicable_steps:
                         pos = config_position.get(id(config), 0)
                         _end = self.find_flexible_column(row.keys(), config['end_date_col']) if config.get('end_date_col') else None
@@ -764,6 +765,15 @@ class EcnDashboardEngine:
                         if _done and pos > highest_completed_pos:
                             highest_completed_pos = pos
                             highest_completed_name = config['name']
+                        # Track furthest step with a start date — if step N has
+                        # started, all steps 0..N-1 are implicitly complete
+                        _has_start = pd.notna(pd.to_datetime(row.get(_start), errors='coerce')) if _start else False
+                        if _has_start and pos > highest_activity_pos:
+                            highest_activity_pos = pos
+
+                    # If a later step has started, all prior steps must be done
+                    if highest_activity_pos > highest_completed_pos:
+                        highest_completed_pos = highest_activity_pos - 1
 
                     # ── Pass 2: Count completed steps, find bottleneck ──
                     completed_count = 0
