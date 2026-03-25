@@ -1,0 +1,13 @@
+Dependency Report: 3248751
+Generated: 2026-03-23T17:18:52.990297
+Total parts: 2
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 1 of 2 (50.0%)
+  Unreleased: 1
+  Blocked (On-Hold): 0
+
+UNRELEASED PARTS (1 total)
+------------------------------------------------------------
+  ✗ 3248751/A — PANEL-COVER RECT END TXTD 701 RLNMA
+      ECN: ECN-NPD-0007968 | Has: (none)

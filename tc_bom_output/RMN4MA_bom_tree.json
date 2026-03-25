@@ -1,0 +1,22 @@
+{
+  "nomenclature": "RMN4MA",
+  "fetched_at": "2026-03-22T17:22:31.591402",
+  "view_type": "MTY View",
+  "total_parts": 1,
+  "max_depth": 0,
+  "root": {
+    "item_id": "RMN4MA",
+    "revision": "C",
+    "name": "RMN4MA-REACH-IN MT 4DR R290 MICROBLOCK",
+    "nomenclature": "RMN4MA",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "uid": "xUMAknFJoeVOgD",
+    "depth": 0,
+    "children": []
+  }
+}

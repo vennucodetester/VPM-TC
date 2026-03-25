@@ -1,0 +1,2234 @@
+{
+  "nomenclature": "3232977",
+  "fetched_at": "2026-03-22T19:53:43.774320",
+  "view_type": "MTY View",
+  "total_parts": 101,
+  "max_depth": 4,
+  "root": {
+    "item_id": "3232977",
+    "revision": "C",
+    "name": "MODULE-FOAM ASSY 4 DR RNMA",
+    "nomenclature": "",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "uid": "weEAkfqZoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "0135468000",
+        "revision": "A",
+        "name": "SEALANT-PUMPABLE BUTYLE",
+        "nomenclature": "",
+        "release_status": [
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "xUMAAA22oeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0334177002",
+        "revision": "A",
+        "name": "SEALER SILICONE ADHESIVE",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "_EAAAAGuoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0431934000",
+        "revision": "A",
+        "name": "FOAM-ASM FLAT LWR 4N",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "wbIAAAGroeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0386582001",
+            "revision": "A",
+            "name": "SPACER-BOLT (3 STUD)",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "XWOAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1501434",
+            "revision": "A",
+            "name": "VENT TAPE 1.88 X 1.88 X 0.188",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "ozBAAAWNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0437134000",
+            "revision": "A",
+            "name": "LINER FLAT FOAM TOP/BACK",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "FHAAAA22oeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0208949",
+                "revision": "A",
+                "name": "G60U .013\"M X36.750\"X122.468\"",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "nuNAAA3VoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "2700372",
+            "revision": "A",
+            "name": "INSULATION FOAM REACH",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "6$AAAAntoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "2700351",
+                "revision": "A",
+                "name": "POLIOL VORACOR* CR 1058",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "oiOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "2700352",
+                "revision": "A",
+                "name": "ISOCIANATO VORACOR* CE 153",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "4OOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "0386877001",
+            "revision": "A",
+            "name": "GASKET DONUT  BIG ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "JvAAAAWBoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0431931000",
+            "revision": "A",
+            "name": "CAP-END FLAT FOAM RH",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "0CKAAAm3oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2700037",
+            "revision": "A",
+            "name": "COLD CREAM (CREMA FRIA)",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "1zAAAAmxoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386808001",
+            "revision": "A",
+            "name": "SPACER-BOLT",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "Y5KAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0431930000",
+            "revision": "A",
+            "name": "CAP-END FLAT FOAM LH",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "U6MAAAm3oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0103607002",
+            "revision": "A",
+            "name": "SEALER-1/2 BEAD",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "Q1OAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386472001",
+            "revision": "A",
+            "name": "EXTRUSION-OFFSET JOINT 4 DR",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "m7CAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0330999002",
+            "revision": "A",
+            "name": "TAPE-2 WIDE BOX SEALING",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "rOOAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386482001",
+            "revision": "A",
+            "name": "FLAP-FOAM HOLE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "HkKAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3195637",
+        "revision": "A",
+        "name": "FOAM-ASSY EXTENSION 4DR",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "hQNAT3FioeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0330999002",
+            "revision": "A",
+            "name": "TAPE-2 WIDE BOX SEALING",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "rOOAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0384132003",
+            "revision": "A",
+            "name": "TAPE-WATERPROOF CLOTH 2\"",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "BBK RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "v3CAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0536497",
+            "revision": "A",
+            "name": "EXTRUSION-FRT FOAM TOP 4DR",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "K9AAAA1XoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0548767",
+            "revision": "A",
+            "name": "TAPE-ADHESIVE TRANSFER 1\"",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "_YIAAAWAoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3187640",
+            "revision": "A",
+            "name": "LINER-FOAM EXTENSION CASS 4DR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "RRBAjWSUoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0200874",
+                "revision": "A",
+                "name": "LAMINA GALV PAS C.24 33\"(ROLLO",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED",
+                  "TJU RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "bcKAAAWRoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3196821",
+            "revision": "A",
+            "name": "INSULATION-FOAM EXTENSION INJ",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "uid": "xgFAjT$poeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3204288",
+            "revision": "A",
+            "name": "INSULATION-FOAM EXTENSION CTR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "uid": "BUIAUMXNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2700372",
+            "revision": "A",
+            "name": "INSULATION FOAM REACH",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "6$AAAAntoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "2700351",
+                "revision": "A",
+                "name": "POLIOL VORACOR* CR 1058",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "oiOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "2700352",
+                "revision": "A",
+                "name": "ISOCIANATO VORACOR* CE 153",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "4OOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3196814",
+            "revision": "A",
+            "name": "INSULATION-FOAM EXTENSION END",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "uid": "wrEAjT$poeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3198561",
+        "revision": "A",
+        "name": "BOTTOM -ASSY 4DR SC",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "geOAj3tgoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0311800001",
+            "revision": "A",
+            "name": "ADHESIVE-PVC & ABS PIPE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "IYIAAA2yoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386604000",
+            "revision": "A",
+            "name": "BUSHING-REDUCER 1 1/4 X 1",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "QCMAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386605000",
+            "revision": "A",
+            "name": "PLUG-1 THREADED",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "QuMAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "051443900",
+            "revision": "A",
+            "name": "LOCTITE PLASTIC PIPE SEALANT 80726",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "k6GAAAVzoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3196808",
+            "revision": "A",
+            "name": "FOAM-ASSY BOTTOM 4DR SC",
+            "nomenclature": "",
+            "release_status": "REJECTED",
+            "process_stage": "",
+            "uid": "hCHAjT9toeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0136172002",
+                "revision": "A",
+                "name": "GASKET 1/2 X 1/4 X 600",
+                "nomenclature": "",
+                "release_status": [
+                  "HAB RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "TJU RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "VwAAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0386547002",
+                "revision": "A",
+                "name": "DRAIN",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "Z7EAAAWBoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0386548002",
+                "revision": "A",
+                "name": "GASKET-DRAIN",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "HGEAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0386559001",
+                "revision": "A",
+                "name": "LINER-EXT REAR 4 DR",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "k3CAAA2yoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0208975",
+                    "revision": "A",
+                    "name": "(OBS) LAM GAL PAS C24 120.093X21.476",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "XUPAAA3VoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "0386670001",
+                "revision": "A",
+                "name": "EXTRUSION-BOTTOM 4 DR",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "3bCAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0386712001",
+                "revision": "A",
+                "name": "FILLER ENDCAP",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "INCAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0386860001",
+                "revision": "A",
+                "name": "PLUG-ENDCAP ANTI SWEAT 1",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "Q3MAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0386861000",
+                "revision": "A",
+                "name": "PLUG-ENDCAP ANTI SWEAT 2",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "grCAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0386966000",
+                "revision": "A",
+                "name": "PLUG-BTM RXTRUSION",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "oaCAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0418096000",
+                "revision": "A",
+                "name": "EXTRUSION-BTM FOAM 4",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "wlEAAAmSoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0424042001",
+                "revision": "A",
+                "name": "SCREW-PHILLIPS 3/16 X 3/4",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "a6MAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0438100000",
+                "revision": "A",
+                "name": "PLUG -ENDCAP ANTI SWEAT 3",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "qTOAAAWBoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0438101000",
+                "revision": "A",
+                "name": "PLUG-ENDCAP ANTI SWEAT 4",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "hXKAAAm3oeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0545578",
+                "revision": "A",
+                "name": "ENDCAP ASSY-LH 33\"POLYSTYR",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "6zEAAAndoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0414109",
+                    "revision": "A",
+                    "name": "FLAP-38/50\" BOTTOM FOAM",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "CNO RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "uWOAAAnFoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0545579",
+                    "revision": "A",
+                    "name": "ENDCAP-LH 33\" POLYSTYRENE",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "HAB RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "63KAAAndoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "0545582",
+                "revision": "A",
+                "name": "ENDCAP-RH 33\" POLYSTYRENE",
+                "nomenclature": "",
+                "release_status": "PRODUCTION RELEASED",
+                "process_stage": "",
+                "uid": "LAGAAAndoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "PSH0601",
+                    "revision": "A",
+                    "name": "HIGH IMPACT-POLYSTYRENE",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "MTY Discontinued",
+                      "DISCONTINUED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "AcEAAAXhoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "1006279",
+                "revision": "A",
+                "name": "GASKET-DRAIN",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "SIPAAAGqoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "1501434",
+                "revision": "A",
+                "name": "VENT TAPE 1.88 X 1.88 X 0.188",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "ozBAAAWNoeVOgD",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "item_id": "2600083",
+                "revision": "A",
+                "name": "CINTA ADHESIVA TRANSPARENTE 2\"",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "TJU RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "aUCAAAGuoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "2700037",
+                "revision": "A",
+                "name": "COLD CREAM (CREMA FRIA)",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "1zAAAAmxoeVOgD",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "item_id": "2700372",
+                "revision": "A",
+                "name": "INSULATION FOAM REACH",
+                "nomenclature": "",
+                "release_status": [
+                  "HAB RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "6$AAAAntoeVOgD",
+                "depth": 2,
+                "children": [
+                  {
+                    "item_id": "2700351",
+                    "revision": "A",
+                    "name": "POLIOL VORACOR* CR 1058",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "oiOAAAXloeVOgD",
+                    "depth": 3,
+                    "children": []
+                  },
+                  {
+                    "item_id": "2700352",
+                    "revision": "A",
+                    "name": "ISOCIANATO VORACOR* CE 153",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "4OOAAAXloeVOgD",
+                    "depth": 3,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3178213",
+                "revision": "A",
+                "name": "LINER-INTERIOR 4DR NAR",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "htPATJMxoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "3126320",
+                    "revision": "A",
+                    "name": "GALV G90U 26GA .018\"M X 36\"",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "uid": "A$GAh7VPoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3191770",
+                "revision": "A",
+                "name": "LINER-EXT FRT 4DR NAR CASSETTE",
+                "nomenclature": "",
+                "release_status": "",
+                "process_stage": "",
+                "uid": "giLADLtWoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0208304",
+                    "revision": "A",
+                    "name": "LAMINA GALV PAS C.24 4' ROLLO",
+                    "nomenclature": "",
+                    "release_status": [
+                      "PRODUCTION RELEASED",
+                      "MTY RELEASED",
+                      "BGN RELEASED",
+                      "HAB RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "64IAAAXloeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "0462726000",
+                "revision": "A",
+                "name": "PLATE-FOAM ASM BTM 2X5",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "BGN RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "2IPAAAmtoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0208069",
+                    "revision": "A",
+                    "name": "LAMINA GALV C.22 3  (ROLLO)G60",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "BGN RELEASED",
+                      "PRODUCTION RELEASED",
+                      "CNO RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "F1GAAA2yoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "item_id": "0556273",
+            "revision": "A",
+            "name": "ELBOW PVC 1.250\" SCH #40 SOC X FIPT",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "UtEAAwkwoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3232960",
+        "revision": "A",
+        "name": "FOAM ASSY-FRONT & SUPPORT 4DR RNMA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "gDLAkaMhoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0130711003",
+            "revision": "A",
+            "name": "SCREW SM SLFDRIL 8-18X1/2 HX HD ST ZP W/SERRA",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "QHGAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0430303000",
+            "revision": "A",
+            "name": "SCREW-1/4 X 7/8 PL THD",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "DIGAAA2KoeVOgD",
+            "depth": 1,
+            "children": []
+          },
+          {
+            "item_id": "3021218",
+            "revision": "A",
+            "name": "SUPPORT-UNDER DOOR RLTM4",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "FoPAQC3poeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0207858",
+                "revision": "A",
+                "name": "LAMINA G60 C14 12.005\"X152.811",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "03MAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3021439",
+            "revision": "A",
+            "name": "RIVET-1/8\" ALUM WIDE GRIP",
+            "nomenclature": "",
+            "release_status": "DESIGN RELEASED",
+            "process_stage": "",
+            "uid": "hCLAQCfJoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3187649",
+            "revision": "A",
+            "name": "CHANNEL-REINFORCEMENT CASS",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "x9DAjWSUoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3148174",
+                "revision": "A",
+                "name": "GALV G60U 14GA .071\"M X 36\"",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED",
+                  "TJU RELEASED",
+                  "BBK RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "x4OAiJgioeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3187891",
+            "revision": "A",
+            "name": "GUSSET-CASSETTE GRILL",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "sTFAjaFzoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3148175",
+                "revision": "A",
+                "name": "GALV G60U 14GA .071\"M X 48\"",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED",
+                  "TJU RELEASED",
+                  "BBK RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "BJJAiJgioeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3196827",
+            "revision": "A",
+            "name": "FOAM-ASSY FRONT LWR 4DR SC",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "RLFAjXiooeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0330999002",
+                "revision": "A",
+                "name": "TAPE-2 WIDE BOX SEALING",
+                "nomenclature": "",
+                "release_status": [
+                  "HAB RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "rOOAAAVXoeVOgD",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "item_id": "0533467",
+                "revision": "A",
+                "name": "CAP-FRONT FOAM ASSY RH",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "hCOAAAm0oeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0533468",
+                "revision": "A",
+                "name": "CAP-FRONT FOAM ASSY LH",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "hKEAAAm0oeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0533469",
+                "revision": "A",
+                "name": "SPACER-FRONT FOAM ASSY",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "hOKAAAm0oeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0536493",
+                "revision": "A",
+                "name": "EXTRUSION-FRT FOAM BTM 4DR",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "KlIAAA1XoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0536497",
+                "revision": "A",
+                "name": "EXTRUSION-FRT FOAM TOP 4DR",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "K9AAAA1XoeVOgD",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "item_id": "0536547",
+                "revision": "A",
+                "name": "FLAP-FOAM HOLE",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "GJCAAAWUoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0536838",
+                "revision": "A",
+                "name": "LINER-4DR FRT FOAM ASSY OUTER",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "hFMAAAG4oeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0200450",
+                    "revision": "A",
+                    "name": "LAMINA GALV C.20 4' (ROLLO)G60",
+                    "nomenclature": "",
+                    "release_status": [
+                      "BGN RELEASED",
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "CNO RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "mpCAAAWqoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "0536841",
+                "revision": "A",
+                "name": "LINER-4DR FRT FOAM ASSY INNER",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "hVOAAAG4oeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0200450",
+                    "revision": "A",
+                    "name": "LAMINA GALV C.20 4' (ROLLO)G60",
+                    "nomenclature": "",
+                    "release_status": [
+                      "BGN RELEASED",
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "CNO RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "mpCAAAWqoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "1501434",
+                "revision": "A",
+                "name": "VENT TAPE 1.88 X 1.88 X 0.188",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "ozBAAAWNoeVOgD",
+                "depth": 2,
+                "children": []
+              },
+              {
+                "item_id": "2700372",
+                "revision": "A",
+                "name": "INSULATION FOAM REACH",
+                "nomenclature": "",
+                "release_status": [
+                  "HAB RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "6$AAAAntoeVOgD",
+                "depth": 2,
+                "children": [
+                  {
+                    "item_id": "2700351",
+                    "revision": "A",
+                    "name": "POLIOL VORACOR* CR 1058",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "oiOAAAXloeVOgD",
+                    "depth": 3,
+                    "children": []
+                  },
+                  {
+                    "item_id": "2700352",
+                    "revision": "A",
+                    "name": "ISOCIANATO VORACOR* CE 153",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "uid": "4OOAAAXloeVOgD",
+                    "depth": 3,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "item_id": "3202833",
+            "revision": "A",
+            "name": "CHANNEL-REINFORCEMENT CASS LNG",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "AfLAEww_oeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3148174",
+                "revision": "A",
+                "name": "GALV G60U 14GA .071\"M X 36\"",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED",
+                  "TJU RELEASED",
+                  "BBK RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "x4OAiJgioeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3232927",
+            "revision": "A",
+            "name": "SUPPORT-FRONT PANEL CASSETTE",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "A5HAkaMhoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0200045",
+                "revision": "A",
+                "name": "LAMINA GALV C.22 4' (ROLLO)G60",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "CNO RELEASED",
+                  "TJU RELEASED",
+                  "BBK RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "6GOAAAWRoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "3232965",
+        "revision": "A",
+        "name": "FOAM-ASSEMBLY TOP 4 DR RNMA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "wbFAkaMhoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0103607002",
+            "revision": "A",
+            "name": "SEALER-1/2 BEAD",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "Q1OAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0330999002",
+            "revision": "A",
+            "name": "TAPE-2 WIDE BOX SEALING",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "rOOAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386472001",
+            "revision": "A",
+            "name": "EXTRUSION-OFFSET JOINT 4 DR",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "m7CAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386482001",
+            "revision": "A",
+            "name": "FLAP-FOAM HOLE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "HkKAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386808001",
+            "revision": "A",
+            "name": "SPACER-BOLT",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "Y5KAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0421034000",
+            "revision": "A",
+            "name": "EXTRUSION-FLT FOAM FRT 4",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "qdMAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0472798",
+            "revision": "A",
+            "name": "TAPE-MASKING 3/4\" WIDE       X 50M ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "joBAAAWnoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0509633",
+            "revision": "A",
+            "name": "SPACER - 1 BOLT 3/8",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "rUGAAAG_oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1501434",
+            "revision": "A",
+            "name": "VENT TAPE 1.88 X 1.88 X 0.188",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "ozBAAAWNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2700037",
+            "revision": "A",
+            "name": "COLD CREAM (CREMA FRIA)",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "1zAAAAmxoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2700372",
+            "revision": "A",
+            "name": "INSULATION FOAM REACH",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "6$AAAAntoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "2700351",
+                "revision": "A",
+                "name": "POLIOL VORACOR* CR 1058",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "oiOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "2700352",
+                "revision": "A",
+                "name": "ISOCIANATO VORACOR* CE 153",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "4OOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3159645",
+            "revision": "A",
+            "name": "END-35.50IN FLT FRT RH IRL-N 2.0",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "uid": "ReAAy67SoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3159646",
+            "revision": "A",
+            "name": "END-35.50IN FLT FRT LH IRL-N 2.0",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "uid": "RqEAy67SoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3172745",
+            "revision": "A",
+            "name": "BRACKET-IRI TOP FOAM BACKER",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "1aDAT0EdoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0200052",
+                "revision": "A",
+                "name": "LAMINA GALV C.20 3' (ROLLO)G60",
+                "nomenclature": "",
+                "release_status": [
+                  "HAB RELEASED",
+                  "MTY RELEASED",
+                  "BBK RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "TJU RELEASED",
+                  "CNO RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "5JOAAAWQoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3232952",
+            "revision": "A",
+            "name": "LINER-INT TOP 4DR CASSETTE",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "w_OAkaMhoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3122120",
+                "revision": "A",
+                "name": "GALV G60U 30GA .013\"M X  33.5\"",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "TuEARXbVoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3232953",
+            "revision": "A",
+            "name": "LINER-EXT TOP 4DR CASSETTE",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "ATDAkaMhoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3122121",
+                "revision": "A",
+                "name": "GALV G60U 30GA .013\"M X  36.75\"",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "jOEARXbVoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "0430303000",
+        "revision": "A",
+        "name": "SCREW-1/4 X 7/8 PL THD",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "DIGAAA2KoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3196807",
+        "revision": "A",
+        "name": "FOAM-ASSY FLAT UPR BACK 4DR SC",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "R2LAjT9toeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0103607002",
+            "revision": "A",
+            "name": "SEALER-1/2 BEAD",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "Q1OAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0330999002",
+            "revision": "A",
+            "name": "TAPE-2 WIDE BOX SEALING",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "rOOAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386468000",
+            "revision": "A",
+            "name": "END-35.750 IN FLAT ASM LEFT",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "WzEAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386469000",
+            "revision": "A",
+            "name": "END-35.750 IN FLAT ASM RIGHT",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "mfEAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386472001",
+            "revision": "A",
+            "name": "EXTRUSION-OFFSET JOINT 4 DR",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "m7CAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386482001",
+            "revision": "A",
+            "name": "FLAP-FOAM HOLE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "HkKAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0386582001",
+            "revision": "A",
+            "name": "SPACER-BOLT (3 STUD)",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "XWOAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1501434",
+            "revision": "A",
+            "name": "VENT TAPE 1.88 X 1.88 X 0.188",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "ozBAAAWNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2700037",
+            "revision": "A",
+            "name": "COLD CREAM (CREMA FRIA)",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "1zAAAAmxoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2700372",
+            "revision": "A",
+            "name": "INSULATION FOAM REACH",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "6$AAAAntoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "2700351",
+                "revision": "A",
+                "name": "POLIOL VORACOR* CR 1058",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "oiOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "2700352",
+                "revision": "A",
+                "name": "ISOCIANATO VORACOR* CE 153",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "4OOAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3191771",
+            "revision": "A",
+            "name": "LINER-FLAT FOAM 4DR CASSETTE",
+            "nomenclature": "",
+            "release_status": "REJECTED",
+            "process_stage": "",
+            "uid": "guHADLtWoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3122120",
+                "revision": "A",
+                "name": "GALV G60U 30GA .013\"M X  33.5\"",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "uid": "TuEARXbVoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

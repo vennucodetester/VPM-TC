@@ -1,0 +1,8 @@
+Dependency Report: 3247904
+Generated: 2026-03-23T17:29:19.351713
+Total parts: 1
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 1 of 1 (100.0%)
+  Unreleased: 0
+  Blocked (On-Hold): 0

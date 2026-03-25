@@ -1,0 +1,253 @@
+{
+  "nomenclature": "3196827",
+  "fetched_at": "2026-03-22T20:20:59.950797",
+  "view_type": "MTY View",
+  "total_parts": 15,
+  "max_depth": 2,
+  "root": {
+    "item_id": "3196827",
+    "revision": "A",
+    "name": "FOAM-ASSY FRONT LWR 4DR SC",
+    "nomenclature": "",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "uid": "RLFAjXiooeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "0330999002",
+        "revision": "A",
+        "name": "TAPE-2 WIDE BOX SEALING",
+        "nomenclature": "",
+        "release_status": [
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "rOOAAAVXoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0533467",
+        "revision": "A",
+        "name": "CAP-FRONT FOAM ASSY RH",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "hCOAAAm0oeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0533468",
+        "revision": "A",
+        "name": "CAP-FRONT FOAM ASSY LH",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "hKEAAAm0oeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0533469",
+        "revision": "A",
+        "name": "SPACER-FRONT FOAM ASSY",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "hOKAAAm0oeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0536493",
+        "revision": "A",
+        "name": "EXTRUSION-FRT FOAM BTM 4DR",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "KlIAAA1XoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0536497",
+        "revision": "A",
+        "name": "EXTRUSION-FRT FOAM TOP 4DR",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "K9AAAA1XoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0536547",
+        "revision": "A",
+        "name": "FLAP-FOAM HOLE",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "GJCAAAWUoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0536838",
+        "revision": "A",
+        "name": "LINER-4DR FRT FOAM ASSY OUTER",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "hFMAAAG4oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0200450",
+            "revision": "A",
+            "name": "LAMINA GALV C.20 4' (ROLLO)G60",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "CNO RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "mpCAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "0536841",
+        "revision": "A",
+        "name": "LINER-4DR FRT FOAM ASSY INNER",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "hVOAAAG4oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0200450",
+            "revision": "A",
+            "name": "LAMINA GALV C.20 4' (ROLLO)G60",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "CNO RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "mpCAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "1501434",
+        "revision": "A",
+        "name": "VENT TAPE 1.88 X 1.88 X 0.188",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "ozBAAAWNoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "2700372",
+        "revision": "A",
+        "name": "INSULATION FOAM REACH",
+        "nomenclature": "",
+        "release_status": [
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "6$AAAAntoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "2700351",
+            "revision": "A",
+            "name": "POLIOL VORACOR* CR 1058",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "oiOAAAXloeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2700352",
+            "revision": "A",
+            "name": "ISOCIANATO VORACOR* CE 153",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "4OOAAAXloeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

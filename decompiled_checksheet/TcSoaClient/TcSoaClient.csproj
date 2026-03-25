@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>TcSoaClient</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net20</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="TcSoaCommon">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Check Sheet 1.0.3.5/log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="TcServerNetBindingInterface">
+      <HintPath>Check Sheet 1.0.3.5/TcServerNetBindingInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib" />
+    <Reference Include="TcMemNetBindingInterface">
+      <HintPath>Check Sheet 1.0.3.5/TcMemNetBindingInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Teamcenter_SSOloader" />
+    <Reference Include="Teamcenter_SSO" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+BOM Tree: 3247904
+Fetched: 2026-03-23T17:29:19.351713
+View: MTY View
+Total parts: 1
+Max depth: 0
+
+✓ 3247904/A — EVAPORATOR-MICROBLOCK MT C20411071

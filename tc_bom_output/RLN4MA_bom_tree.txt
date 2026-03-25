@@ -1,0 +1,118 @@
+BOM Tree: RLN4MA
+Fetched: 2026-03-23T23:36:11.808112
+View: MTY View
+Total parts: 108
+Max depth: 2
+
+✓ RLN4MA/D — RLN4MA-REACH-IN LT 4DR R290 MICROBLOCK
+├── ✓ 3232971/B — MODULE-EXT STRUCTURE 4 DR RNMA
+│   ├── ✓ 0115192003/C — SCREW-.25-20 X .75 HEX THD CUTTING SERRATED-FLG
+│   ├── ✓ 0137715002/A — SCREW SM 10-16X3/4 HX WAS
+│   ├── ✓ 0376397002/B — NUT-HEX W/FLANGE 3/8-24
+│   ├── ✓ 3232926/B — FOOT-EXT FRAME RNMA
+│   ├── ✓ 3232942/C — RAIL-RNMA 4 DOOR BASE
+│   ├── ✓ 3232944/B — BASE-RNMA LWR SUPPORT
+│   ├── ✓ 3232989/A — BASE-RNMA RH END
+│   └── ✓ 3232990/A — BASE-RNMA LH END
+├── ✓ 3232977/C — MODULE-FOAM ASSY 4 DR RNMA
+│   ├── ✓ 0135468000/A — SEALANT-PUMPABLE BUTYLE
+│   ├── ✓ 0334177002/H — SEALER SILICONE ADHESIVE
+│   ├── ✓ 0431934000/H — FOAM-ASM FLAT LWR 4N
+│   ├── ✓ 3195637/E — FOAM-ASSY EXTENSION 4DR
+│   ├── ✓ 3198561/B — BOTTOM -ASSY 4DR SC
+│   ├── ✓ 3232960/B — FOAM ASSY-FRONT & SUPPORT 4DR RNMA
+│   ├── ✓ 3232965/D — FOAM-ASSEMBLY TOP 4 DR RNMA
+│   ├── ✓ 0430303000/D — SCREW-1/4 X 7/8 PL THD
+│   └── ✓ 3196807/B — FOAM-ASSY FLAT UPR BACK 4DR SC
+├── ✓ 3232980/E — MODULE-INTERIOR ASSY 4 DR RNMA
+│   ├── ✓ 3232931/B — PANEL-RNMA BACK INT
+│   ├── ✓ 3232936/A — SUPPORT-RNMA LH END FRAME EXT GUSSET
+│   ├── ✓ 3232937/A — SUPPORT-RNMA RH END FRAME EXT GUSSET
+│   ├── ✓ 3232939/A — SUPPORT-RNMA DECK PAN
+│   ├── ✓ 3232940/B — GRILLE-RNMA END DISCHARGE AIR
+│   ├── ✓ 3232941/B — GRILLE-RNMA CTR DISCHARGE AIR
+│   ├── ✓ 3242093/A — FOAM-AIR DIVIDER INSULATION
+│   ├── ✓ 0137715002/A — SCREW SM 10-16X3/4 HX WAS
+│   ├── ✓ 0376397002/B — NUT-HEX W/FLANGE 3/8-24
+│   ├── ✓ 0482328000/A — TAPE-VHB 1X72Y .025THK
+│   ├── ✓ 3191536/C — BASE-DISPLAY CENTER
+│   ├── ✓ 3244797/A — FRAME ASSY-RNMA LH END ADD SCR
+│   ├── ✓ 3244798/A — FRAME ASSY-RNMA RH END ADD SCR
+│   ├── ✓ 3244799/A — SUPPORT ASSY-RNMA REAR SHELF ADD SCR
+│   ├── ✓ 3245910/A — BRACKET-SUPPORT GRILL LH
+│   ├── ✓ 3245911/A — BRACKET-SUPPORT GRILL RH
+│   ├── ✓ 3246072/B — PANEL-INT TOP LH
+│   ├── ✓ 3246073/B — PANEL-INT TOP RH
+│   ├── ✓ 3246074/B — PANEL-INT TOP CTR
+│   └── ✓ 3248488/A — SUPPORT ASSY-RN4MA CANOPY
+├── ✓ 3233417/E — MODULE-FRAME BLK RLN4MA
+│   ├── ✓ 0108880001/A — MARKER-WIRE VINYL ORANGE
+│   ├── ✓ 0399798001/A — LABEL-WIRINIG CODES
+│   ├── ✓ 0399800001/A — LABEL-GROUND LUG
+│   ├── ✓ 0410640001/E — LABEL-DISCONNET
+│   ├── ✓ 0418114000/A — SUPPORT-DOOR SHIPPING
+│   ├── ✓ 0425652000/A — SCREW # 6X5/8 OVAL
+│   ├── ✓ 0428616000/A — SCREW-CASE END SHOULDER B
+│   ├── ✓ 043051301/B — CONNECTOR-2 WIRE
+│   ├── ✓ 0432616000/B — SCREW-K50 WFR HD PHIL BLK
+│   ├── ✓ 050463100/A — DISCONNECT ASM-BALLAST
+│   ├── ✓ 0521014/C — DOOR LH BLACK LT WC67
+│   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+│   ├── ✓ 1E34065/D — NAMEPLATE HUSSMANN SERVICE
+│   ├── ✓ 0456356/G — LABEL-DOOR POWER ATTENTION
+│   ├── ✓ 0550747/B — PATENTS LABEL STD
+│   ├── ✓ 3005041/D — LABEL-CLOSING TORQUE ATTENTION
+│   ├── ✓ 3233415/C — FRAME-LH BLK RLN4MA
+│   ├── ✓ 0137715002/A — SCREW SM 10-16X3/4 HX WAS
+│   └── ✓ 0138299001/A — SCREW SM TEK SELF DRILL 10-16X1 1/2 W/SERRA
+├── ✓ 3234687/D — MODULE-PACKOUT RN4MA
+│   ├── ✓ 0008515001/B — CLIP-SHELF END FRAME
+│   ├── ✓ 0142194000/A — STRAPPING (FLEJE 1/2 PLASTICO)
+│   ├── ✓ 0301266002/A — COVER-DRAIN
+│   ├── ✓ 0352341002/A — BAG-POLYETHYLENE 18 X 18
+│   ├── ✓ 0387350000/C — STICKER-FRONT SUPPORT
+│   ├── ✓ 0399091000/B — SPACER-REMOVABLE END
+│   ├── ✓ 0399799001/B — LABEL-BRACE WARNING
+│   ├── ✓ 0399805000/A — LABEL-PKG. PRODUCE
+│   ├── ✓ 0399810002/A — TAG-DAMAGE/LOSS
+│   ├── ✓ 0410640001/E — LABEL-DISCONNET
+│   ├── ✓ 0430249000/A — LABEL- ANSI/NSF TYPE II LABEL
+│   ├── ✓ 0444785000/A — MOA-RL,RM TAPE LOCATION
+│   ├── ✓ 051443900/B — SEALANT-480 MULTI PURPOSE WITH PTFE
+│   ├── ✓ 0519328/B — WASHER PIN DOOR LOCK
+│   ├── ✓ 0528454/H — LABEL-RISK OF FIRE PRPN-EL COMPNT
+│   ├── ✓ 0528971/G — LABEL-RISK OF FIRE PRPN-OS CASE
+│   ├── ✓ 0528972/G — LABEL-RISK OF FIRE PRPN-FAN PLENUM
+│   ├── ✓ 0528973/H — LABEL-RISK OF FIRE PRPN-COMPR UNIT
+│   ├── ✓ 0531496/B — STICKER VALANCE
+│   ├── ✓ 0536734/B — LABEL DRAIN
+│   ├── ✓ 0536974/A — BOLT- TAP, 5/16"-18 x 4.5, STEEL, ZINC FINISH, GR5
+│   ├── ✓ 0541569/B — LABEL-CASE TOP CAUTION
+│   ├── ✓ 0552623/C — SHIPPING BRACE STD RL,RM,RLN,RLT
+│   ├── ✓ 1004330/A — BOLSA PLASTICO DE 23X32 C200
+│   ├── ✓ 1006135/A — BOLSA PLASTICA PARA DOCUMENTOS
+│   ├── ✓ 1900154/B — CABLE TIE 6"
+│   ├── ✓ 1900155/A — CINTILLO DE PLAST. 11" LARGO
+│   ├── ✓ 1900356/A — CINTILLO DE PLASTICO 30"LARGO
+│   ├── ✓ 1900576/B — STRAP SEAL 0.500 IN
+│   ├── ✓ 23S289/B — LABEL- UL EPH SANITATION
+│   ├── ✓ 2400125/B — LABEL-ZEBRA PAPER 3"" X 2""
+│   ├── ✓ 2400190/G — STICKER UL/CUL LISTED
+│   ├── ✓ 2402199/B — TAPE-RIBBON RESIN 110MM X 450M
+│   ├── ✓ 2402310/A — ETIQUETA DRENAJE
+│   ├── ✓ 2600083/A — CINTA ADHESIVA TRANSPARENTE 2"
+│   ├── ✓ 2602738/A — TAPE-8916V BLUE
+│   ├── ✓ 3040539/F — LABEL-SERIAL PLATE SCNTN
+│   ├── ✓ 3043443/A — LABEL-CLIP DOOR
+│   ├── ✓ 3069575/A — LABEL-WARNING P65 CALIFORNIA
+│   ├── ✓ 3113734/B — LABEL-RISK OF FIRE PRPN-FOL HD
+│   ├── ✓ 3177054/A — LABEL-AHRI CERTIFIED
+│   ├── ✓ 3199408/B — LABEL-FIRE TRIANGLE 2.25 X 2.25 IN
+│   ├── ✓ 3232945/E — SPLASHGUARD-RNMA 4 DOOR TXTD
+│   └── ✓ 3232947/C — SPLASHGUARD-RNMA RH END TXTD
+├── ✓ 3234816/B — MODULE-SHIPPING RNMA
+├── ✓ 3245575/A — MODULE-ELECTRICAL LOW 2 OUTLET
+├── ✓ 3246055/A — MANUAL-INSTALL RN-MA EN
+├── ✓ 3246058/A — DATASHEET-RLN-MA EN
+├── ✓ 3247194/A — DRAWING-RLNMA-RMNMA DIMENSIONAL APPL
+└── ✓ 3247229/B — MODULE-END PANEL RLN-MA

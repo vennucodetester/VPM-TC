@@ -1,0 +1,19 @@
+{
+  "nomenclature": "ECN-NPD-0007921",
+  "fetched_at": "2026-03-23T17:30:06.270575",
+  "view_type": "MTY View",
+  "total_parts": 1,
+  "max_depth": 0,
+  "root": {
+    "item_id": "ECN-NPD-0007921",
+    "revision": "A",
+    "name": "Microblock COP Components",
+    "nomenclature": "",
+    "release_status": "ECN RELEASED",
+    "process_stage": "HSM EPE CAD Move Process/HSM EPE CAD Move Process : ECN-NPD-0007921/A;2-Microblock COP Components,EPE Review Reqd?/HSM EPE CAD Move Process : ECN-NPD-0007921/A;2-Microblock COP Components,perform-signoffs/HSM EPE CAD Move Process : ECN-NPD-0007921/A;2-Microblock COP Components",
+    "ecn": "",
+    "uid": "xmGAkvADoeVOgD",
+    "depth": 0,
+    "children": []
+  }
+}

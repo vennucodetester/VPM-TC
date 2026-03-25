@@ -1,0 +1,24 @@
+{
+  "nomenclature": "3247904",
+  "fetched_at": "2026-03-23T17:29:19.351713",
+  "view_type": "MTY View",
+  "total_parts": 1,
+  "max_depth": 0,
+  "root": {
+    "item_id": "3247904",
+    "revision": "A",
+    "name": "EVAPORATOR-MICROBLOCK MT C20411071",
+    "nomenclature": "",
+    "release_status": [
+      "MTY RELEASED",
+      "HAB RELEASED",
+      "PRODUCTION RELEASED",
+      "BGN RELEASED"
+    ],
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007932",
+    "uid": "wcAAkvUWoeVOgD",
+    "depth": 0,
+    "children": []
+  }
+}

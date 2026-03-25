@@ -1,0 +1,7 @@
+BOM Tree: ECN-NPD-0007921
+Fetched: 2026-03-23T17:30:06.270575
+View: MTY View
+Total parts: 1
+Max depth: 0
+
+✗ ECN-NPD-0007921/A — Microblock COP Components

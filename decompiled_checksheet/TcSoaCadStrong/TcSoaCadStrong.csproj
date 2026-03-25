@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>TcSoaCadStrong</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net20</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="TcSoaClient">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaClient.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaCadTypes">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaCadTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaStrongModel">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaStrongModel.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaCommon">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>CHECKSHEET</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net45</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Data" />
+    <Reference Include="Interop.SolidEdgeFileProperties">
+      <HintPath>Check Sheet 1.0.3.5/Interop.SolidEdgeFileProperties.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaClient">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaClient.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaCommon">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Interop.RevisionManager">
+      <HintPath>Check Sheet 1.0.3.5/Interop.RevisionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaCoreStrong">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaCoreStrong.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaStrongModel">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaStrongModel.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaQueryStrong">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaQueryStrong.dll</HintPath>
+    </Reference>
+    <Reference Include="TcSoaCadStrong">
+      <HintPath>Check Sheet 1.0.3.5/TcSoaCadStrong.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+</Project>
