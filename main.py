@@ -4649,7 +4649,6 @@ class BomExplorerView(QWidget):
         super().__init__(parent)
         self._main_window = main_window
         self._bom_database = {}  # {nomenclature: bom_result}
-        self._pr_data = {}       # {item_id: {assignee, task, status}}
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -4663,11 +4662,6 @@ class BomExplorerView(QWidget):
         add_btn.setStyleSheet("padding: 5px 12px; font-weight: bold;")
         add_btn.clicked.connect(self._on_add_case)
         toolbar.addWidget(add_btn)
-
-        pr_btn = QPushButton("📋 Load PR Data")
-        pr_btn.setStyleSheet("padding: 5px 12px;")
-        pr_btn.clicked.connect(self._on_load_pr_data)
-        toolbar.addWidget(pr_btn)
 
         refresh_btn = QPushButton("🔄 Refresh All")
         refresh_btn.setStyleSheet("padding: 5px 12px;")
@@ -4778,6 +4772,34 @@ class BomExplorerView(QWidget):
     def get_saved_case_names(self):
         """Return list of case nomenclatures currently loaded."""
         return list(self._bom_database.keys())
+
+    # ------------------------------------------------------------------
+    # ECN DATA LOOKUP
+    # ------------------------------------------------------------------
+
+    def _get_ecn_item_lookup(self):
+        """Build {item_id: ecn_engine.Item} lookup from already-loaded ECN projects.
+
+        This reuses data loaded via the ECN Data dropdown (load_ecn_data), which
+        populates ecn_projects with Item objects that have current_step_name,
+        current_step_performer, effective_progress, etc.
+        """
+        lookup = {}
+        ecn_projects = getattr(self._main_window, 'ecn_projects', []) or []
+        for pr in ecn_projects:
+            ecns = getattr(pr, 'ecns', {}) or {}
+            for ecn in ecns.values():
+                items = getattr(ecn, 'items', []) or []
+                for item in items:
+                    # Item.id is the part number (e.g., "3243443")
+                    item_id = str(getattr(item, 'id', '')).strip()
+                    if item_id:
+                        lookup[item_id] = item
+                    # Also index by name which is "3243443/D" → extract "3243443"
+                    name_id = str(getattr(item, 'name', '')).split("/")[0].strip()
+                    if name_id and name_id not in lookup:
+                        lookup[name_id] = item
+        return lookup
 
     # ------------------------------------------------------------------
     # TOOLBAR ACTIONS
@@ -4968,85 +4990,14 @@ class BomExplorerView(QWidget):
         except Exception as e:
             print(f"[BOM] Warning: Could not push blocking data to timeline: {e}")
 
-    def _on_load_pr_data(self):
-        """Load PR tracking spreadsheet and match by Item ID."""
-        import pandas as pd
-        file_paths, _ = QFileDialog.getOpenFileNames(
-            self, "Select PR Tracking Spreadsheet(s)",
-            "", "Excel Files (*.xlsx *.xls *.csv);;All Files (*)"
-        )
-        if not file_paths:
-            return
+    def refresh_from_ecn_data(self):
+        """Refresh the BOM Explorer tree to pick up newly loaded ECN data.
 
-        matched = 0
-        total_parts = sum(
-            len(bom.get("bom", {}).get("nodes", []))
-            for bom in self._bom_database.values()
-        )
-
-        for file_path in file_paths:
-            try:
-                if file_path.endswith('.csv'):
-                    df = pd.read_csv(file_path)
-                else:
-                    df = pd.read_excel(file_path, engine='openpyxl')
-
-                # Find Item ID column
-                item_col = None
-                for col in df.columns:
-                    col_lower = str(col).lower().strip()
-                    if col_lower in ("item id", "item_id", "itemid", "part number", "part_number"):
-                        item_col = col
-                        break
-                if not item_col:
-                    for col in df.columns:
-                        if "item" in str(col).lower() and "id" in str(col).lower():
-                            item_col = col
-                            break
-
-                if not item_col:
-                    QMessageBox.warning(self, "Column Not Found", f"Could not find 'Item ID' column in {os.path.basename(file_path)}")
-                    continue
-
-                # Find assignee/task columns
-                assignee_col = None
-                task_col = None
-                status_col = None
-                for col in df.columns:
-                    cl = str(col).lower().strip()
-                    if not assignee_col and ("assign" in cl or "performer" in cl or "responsible" in cl):
-                        assignee_col = col
-                    if not task_col and ("current" in cl and "task" in cl or "step" in cl):
-                        task_col = col
-                    if not status_col and "status" in cl:
-                        status_col = col
-
-                for _, row in df.iterrows():
-                    item_id = str(row.get(item_col, "")).strip()
-                    if not item_id:
-                        continue
-                    pr_entry = {}
-                    if assignee_col:
-                        val = row.get(assignee_col, "")
-                        pr_entry["assignee"] = str(val).strip() if pd.notna(val) else ""
-                    if task_col:
-                        val = row.get(task_col, "")
-                        pr_entry["task"] = str(val).strip() if pd.notna(val) else ""
-                    if status_col:
-                        val = row.get(status_col, "")
-                        pr_entry["status"] = str(val).strip() if pd.notna(val) else ""
-                    if any(pr_entry.values()):
-                        self._pr_data[item_id] = pr_entry
-                        matched += 1
-
-            except Exception as e:
-                QMessageBox.warning(self, "Import Error", f"Error reading {os.path.basename(file_path)}: {e}")
-
-        self._rebuild_tree()
-        QMessageBox.information(
-            self, "PR Data Loaded",
-            f"Matched {matched} parts from PR spreadsheet.\n{total_parts} total parts in BOM database."
-        )
+        Called after ECN data is loaded from the main dropdown so the
+        BOM Explorer shows updated workflow status without a manual action.
+        """
+        if self._bom_database:
+            self._rebuild_tree()
 
     def _on_export_csv(self):
         """Export flat CSV of all loaded BOM data."""
@@ -5061,27 +5012,34 @@ class BomExplorerView(QWidget):
             return
 
         import csv
+        ecn_lookup = self._get_ecn_item_lookup()
         rows = []
         for nom, bom_result in self._bom_database.items():
-            nodes = bom_result.get("bom", {}).get("nodes", [])
+            if bom_result is None:
+                continue
+            nodes = (bom_result.get("bom", {}) or {}).get("nodes", []) or []
             for node in nodes:
                 item_id = node.get("item_id", "")
-                pr = self._pr_data.get(item_id, {})
+                ecn_item = ecn_lookup.get(item_id)
                 release_text = self._release_text(node.get("release_status_list", ""))
                 is_released = "PRODUCTION RELEASED" in release_text.upper()
                 workflow = self._parse_workflow(node.get("process_stage", ""))
+                ecn_step = getattr(ecn_item, 'current_step_name', '') if ecn_item else ""
+                ecn_performer = getattr(ecn_item, 'current_step_performer', '') if ecn_item else ""
+                eff_progress = getattr(ecn_item, 'effective_progress', 0) if ecn_item else 0
                 rows.append({
                     "Case": nom,
                     "Item ID": item_id,
                     "Revision": node.get("item_revision_id", ""),
                     "Name": node.get("object_name", ""),
                     "BOM Depth": node.get("depth", 0),
-                    "Workflow": workflow,
+                    "Workflow (TC)": workflow,
                     "ECN": node.get("h4_ECN_Number", ""),
                     "Prod Released": "Yes" if is_released else "No",
                     "Release Status": release_text,
-                    "Assignee": pr.get("assignee", ""),
-                    "Current Task": pr.get("task", ""),
+                    "Current Task": ecn_step,
+                    "Assigned To": ecn_performer,
+                    "Progress": f"{eff_progress:.0f}%" if ecn_item else "",
                 })
 
         if rows:
@@ -5143,6 +5101,8 @@ class BomExplorerView(QWidget):
 
             root_uids = [n["uid"] for n in nodes if n.get("uid") and n["uid"] not in child_set]
 
+            ecn_lookup = self._get_ecn_item_lookup()
+
             def _add_node(parent_widget, uid):
                 nonlocal total_parts, total_released, total_blocked
                 node = node_by_uid.get(uid, {})
@@ -5151,23 +5111,44 @@ class BomExplorerView(QWidget):
                 name = node.get("object_name", "")
                 release_text = self._release_text(node.get("release_status_list", ""))
                 is_released_tc = "PRODUCTION RELEASED" in release_text.upper()
-                workflow = self._parse_workflow(node.get("process_stage", ""))
-                is_blocked = "on-hold" in workflow.lower() or "onhold" in workflow.lower()
+                workflow_tc = self._parse_workflow(node.get("process_stage", ""))
+                is_blocked = "on-hold" in workflow_tc.lower() or "onhold" in workflow_tc.lower()
                 ecn = node.get("h4_ECN_Number", "")
                 qty = node.get("quantity", "")
-                pr = self._pr_data.get(item_id, {})
 
-                # Use PR Excel status when available; fall back to TC release status
-                pr_status = pr.get("status", "").strip()
-                if pr_status:
-                    display_status = pr_status
-                    # Treat as released if status text implies completion
-                    status_upper = pr_status.upper()
-                    is_released = any(kw in status_upper for kw in
-                                      ("RELEASED", "APPROVED", "COMPLETED", "DONE", "CLOSED"))
+                # Match against loaded ECN data (single source of truth for workflow status)
+                ecn_item = ecn_lookup.get(item_id)
+                ecn_step = ""
+                ecn_performer = ""
+                ecn_progress = ""
+                if ecn_item:
+                    ecn_step = getattr(ecn_item, 'current_step_name', '') or ""
+                    ecn_performer = getattr(ecn_item, 'current_step_performer', '') or ""
+                    completed = getattr(ecn_item, 'completed_steps', 0)
+                    total_s = getattr(ecn_item, 'total_steps', 0)
+                    eff_progress = getattr(ecn_item, 'effective_progress', 0)
+                    if total_s > 0:
+                        ecn_progress = f"{completed}/{total_s} ({eff_progress:.0f}%)"
+
+                # Determine displayed status — prefer ECN data, then TC data
+                if ecn_item and ecn_step:
+                    if ecn_step.upper() in ("COMPLETED",):
+                        display_status = "✓ Completed"
+                        is_released = True
+                    elif getattr(ecn_item, 'is_rejected', False):
+                        display_status = f"✗ Rejected at {ecn_step}"
+                        is_released = False
+                    else:
+                        display_status = ecn_step  # e.g. "Sheetmetal Review"
+                        is_released = False
                 else:
                     is_released = is_released_tc
-                    display_status = "Prod Released" if is_released_tc else "Not Released"
+                    display_status = "✓ Prod Released" if is_released_tc else "✗ Not Released"
+
+                # Use TC workflow if ECN data doesn't have a step
+                workflow_display = ecn_step if ecn_step else workflow_tc
+                if is_blocked and not ecn_step:
+                    workflow_display = f"⏸ {workflow_tc}"
 
                 total_parts += 1
                 if is_released:
@@ -5180,14 +5161,17 @@ class BomExplorerView(QWidget):
                 tree_item.setText(self.COL_ITEM, item_label)
                 tree_item.setText(self.COL_NAME, name)
                 tree_item.setText(self.COL_QTY, str(qty) if qty != "" else "")
-                tree_item.setText(self.COL_WORKFLOW, f"⏸ {workflow}" if is_blocked else workflow)
+                tree_item.setText(self.COL_WORKFLOW, workflow_display)
                 tree_item.setText(self.COL_ECN, ecn)
                 tree_item.setText(self.COL_RELEASED, display_status)
-                tree_item.setText(self.COL_ASSIGNEE, pr.get("assignee", ""))
-                tree_item.setText(self.COL_TASK, pr.get("task", ""))
+                tree_item.setText(self.COL_ASSIGNEE, ecn_performer)
+                tree_item.setText(self.COL_TASK, ecn_progress)
 
                 # Color coding
-                if is_blocked:
+                if getattr(ecn_item, 'is_rejected', False) if ecn_item else False:
+                    for col in range(len(self.HEADERS)):
+                        tree_item.setBackground(col, QColor("#FADBD8"))  # red tint for rejected
+                elif is_blocked:
                     for col in range(len(self.HEADERS)):
                         tree_item.setBackground(col, QColor("#FFF3CD"))  # yellow
                 elif not is_released:
@@ -5207,22 +5191,24 @@ class BomExplorerView(QWidget):
                 tooltip_lines = [
                     f"{item_label} — {name}",
                     "",
-                    f"Release Status: {release_text or '(none)'}",
+                    f"Release Status (TC): {release_text or '(none)'}",
                 ]
-                if workflow:
-                    tooltip_lines.append(f"Workflow: {workflow}")
+                if workflow_tc:
+                    tooltip_lines.append(f"Workflow (TC): {workflow_tc}")
                 if ecn:
                     tooltip_lines.append(f"ECN: {ecn}")
                 tooltip_lines.append(f"BOM Depth: Level {node.get('depth', 0)} of {nom}")
-                if pr:
+                if ecn_item:
                     tooltip_lines.append("")
-                    tooltip_lines.append("── From PR Spreadsheet ──")
-                    if pr.get("task"):
-                        tooltip_lines.append(f"Current Task: {pr['task']}")
-                    if pr.get("assignee"):
-                        tooltip_lines.append(f"Assigned To: {pr['assignee']}")
-                    if pr.get("status"):
-                        tooltip_lines.append(f"Status: {pr['status']}")
+                    tooltip_lines.append("── ECN Workflow Status ──")
+                    if ecn_step:
+                        tooltip_lines.append(f"Current Task: {ecn_step}")
+                    if ecn_performer:
+                        tooltip_lines.append(f"Assigned To: {ecn_performer}")
+                    if ecn_progress:
+                        tooltip_lines.append(f"Progress: {ecn_progress}")
+                    if getattr(ecn_item, 'is_rejected', False):
+                        tooltip_lines.append("⚠️ REJECTED")
 
                 tree_item.setToolTip(self.COL_ITEM, "\n".join(tooltip_lines))
                 tree_item.setToolTip(self.COL_NAME, "\n".join(tooltip_lines))
@@ -5436,6 +5422,8 @@ class BomExplorerView(QWidget):
                 release_text = self._release_text(node.get("release_status_list", ""))
                 return "PRODUCTION RELEASED" in release_text.upper()
 
+            ecn_lookup = self._get_ecn_item_lookup()
+
             # First pass: find all unreleased leaf/child parts
             for node in nodes:
                 uid = node.get("uid", "")
@@ -5450,7 +5438,7 @@ class BomExplorerView(QWidget):
                 name = node.get("object_name", "")
                 ecn = node.get("h4_ECN_Number", "")
                 workflow = self._parse_workflow(node.get("process_stage", ""))
-                pr = self._pr_data.get(item_id, {})
+                ecn_item = ecn_lookup.get(item_id)
                 release_text = self._release_text(node.get("release_status_list", ""))
 
                 # Count children stats
@@ -5465,15 +5453,15 @@ class BomExplorerView(QWidget):
                     if not _is_prod_released(d_node):
                         d_item_id = d_node.get("item_id", "")
                         if d_item_id:
-                            d_pr = self._pr_data.get(d_item_id, {})
+                            d_ecn_item = ecn_lookup.get(d_item_id)
                             blocking_children.append({
                                 "item_id": d_item_id,
                                 "rev": d_node.get("item_revision_id", ""),
                                 "name": d_node.get("object_name", ""),
                                 "ecn": d_node.get("h4_ECN_Number", ""),
                                 "release_text": self._release_text(d_node.get("release_status_list", "")),
-                                "assignee": d_pr.get("assignee", ""),
-                                "task": d_pr.get("task", ""),
+                                "assignee": getattr(d_ecn_item, 'current_step_performer', '') if d_ecn_item else "",
+                                "task": getattr(d_ecn_item, 'current_step_name', '') if d_ecn_item else "",
                             })
 
                 # Build blocking chains (paths from this node to unreleased leaves)
@@ -5507,8 +5495,8 @@ class BomExplorerView(QWidget):
                         "release_text": release_text,
                         "ecn": ecn,
                         "workflow": workflow,
-                        "assignee": pr.get("assignee", ""),
-                        "task": pr.get("task", ""),
+                        "assignee": getattr(ecn_item, 'current_step_performer', '') if ecn_item else "",
+                        "task": getattr(ecn_item, 'current_step_name', '') if ecn_item else "",
                         "blocking_children": blocking_children,
                         "blocking_chain": blocking_chains,
                         "total_children": total_children,
@@ -5988,7 +5976,14 @@ class MainWindow(QMainWindow):
             file_paths=files,
             pr_placement_map=pr_placement_map
         )
-    
+
+        # Refresh BOM Explorer with newly loaded ECN data
+        if hasattr(self, 'bom_explorer') and self.bom_explorer:
+            try:
+                self.bom_explorer.refresh_from_ecn_data()
+            except Exception:
+                pass
+
     def connect_to_teamcenter(self):
         """Connect to Teamcenter and fetch ECN data via SOA.
         Persists the TC session so credentials are only needed once."""
@@ -6043,6 +6038,13 @@ class MainWindow(QMainWindow):
             ecn_metadata,
             pr_placement_map=pr_placement_map
         )
+
+        # Refresh BOM Explorer with newly loaded ECN data
+        if hasattr(self, 'bom_explorer') and self.bom_explorer:
+            try:
+                self.bom_explorer.refresh_from_ecn_data()
+            except Exception:
+                pass
 
         # Don't logout — keep session alive
         QMessageBox.information(
