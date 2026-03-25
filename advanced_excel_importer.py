@@ -670,28 +670,42 @@ class EcnDashboardEngine:
         if design_task_index == -1:
             return
         
+        # First check: if any subsequent task has a rejection status
+        # (No Decision, Reject), do NOT auto-complete Design Task because
+        # the workflow may have looped back to Design after a rejection.
+        for i in range(design_task_index + 1, len(self.workflow_config)):
+            task_config = self.workflow_config[i]
+            status_col_name = task_config.get('status_col')
+            if status_col_name:
+                status_col = self.find_flexible_column(row.keys(), status_col_name)
+                if status_col:
+                    status_val = str(row.get(status_col, "")).upper().strip()
+                    if status_val and ("REJECT" in status_val or "NO DECISION" in status_val):
+                        # Rejection found downstream — don't auto-complete
+                        return
+
         # Check all tasks after Design Task
         for i in range(design_task_index + 1, len(self.workflow_config)):
             task_config = self.workflow_config[i]
-            
+
             # Skip tasks without start/end date columns
             if not task_config['start_date_col'] and not task_config['end_date_col']:
                 continue
-            
+
             # Use flexible column matching
             start_col = self.find_flexible_column(row.keys(), task_config['start_date_col']) if task_config['start_date_col'] else None
             end_col = self.find_flexible_column(row.keys(), task_config['end_date_col']) if task_config['end_date_col'] else None
-            
+
             # Check if task has started
             start_date = pd.to_datetime(row.get(start_col), errors='coerce') if start_col else pd.NaT
             end_date = pd.to_datetime(row.get(end_col), errors='coerce') if end_col else pd.NaT
-            
+
             # If any subsequent task has started or completed, auto-complete Design Task
             if pd.notna(start_date) or pd.notna(end_date):
                 # Mark Design Task as complete by setting its end date to its start date or today
                 design_start_col = self.find_flexible_column(row.keys(), design_task_config['start_date_col']) if design_task_config['start_date_col'] else None
                 design_start_date = pd.to_datetime(row.get(design_start_col), errors='coerce') if design_start_col else pd.NaT
-                
+
                 # Set the end date to the start date (if available) or to the earliest subsequent task date
                 if pd.notna(design_start_date):
                     item.raw_data[design_end_col] = design_start_date
@@ -699,7 +713,7 @@ class EcnDashboardEngine:
                     item.raw_data[design_end_col] = start_date
                 else:
                     item.raw_data[design_end_col] = datetime.datetime.now()
-                
+
                 # Break after auto-completing
                 return
 
@@ -806,8 +820,12 @@ class EcnDashboardEngine:
                             step_complete = pd.notna(end_date)
 
                         # Check rejection — only flag if the rejected step
-                        # is NOT yet complete (issue was fixed and moved past)
-                        if "REJECT" in status and not step_complete:
+                        # is NOT yet complete (issue was fixed and moved past).
+                        # "No Decision" also counts as rejection (sends work back)
+                        is_rejection_status = (
+                            "REJECT" in status or "NO DECISION" in status
+                        )
+                        if is_rejection_status and not step_complete:
                             is_rejected = True
 
                         if step_complete:
@@ -830,6 +848,36 @@ class EcnDashboardEngine:
                                 if pd.isna(performer) or performer is None or not str(performer).strip():
                                     performer = config.get('default_performer', '')
                                 item.current_step_performer = str(performer)
+
+                    # ── Rejection backtracking ──
+                    # When a step has a rejection status (No Decision, Reject,
+                    # etc.), the workflow loops BACK to an earlier step. Find
+                    # the earlier step that has a start date but no end date —
+                    # that's where the work actually went.
+                    if current_step_found and is_rejected:
+                        try:
+                            _match = next(c for c in applicable_steps if c['name'] == item.current_step_name)
+                            rejected_step_pos = config_position.get(id(_match), 999)
+                        except StopIteration:
+                            rejected_step_pos = 999
+                        for earlier_cfg in applicable_steps:
+                            earlier_pos = config_position.get(id(earlier_cfg), 0)
+                            if earlier_pos >= rejected_step_pos:
+                                continue  # Only look at steps BEFORE the rejection
+                            _e_start_col = self.find_flexible_column(row.keys(), earlier_cfg['start_date_col']) if earlier_cfg.get('start_date_col') else None
+                            _e_end_col = self.find_flexible_column(row.keys(), earlier_cfg['end_date_col']) if earlier_cfg.get('end_date_col') else None
+                            _e_start = pd.to_datetime(row.get(_e_start_col), errors='coerce') if _e_start_col else pd.NaT
+                            _e_end = pd.to_datetime(row.get(_e_end_col), errors='coerce') if _e_end_col else pd.NaT
+                            if pd.notna(_e_start) and pd.isna(_e_end):
+                                # This earlier step restarted (has start, no end)
+                                item.current_step_name = earlier_cfg['name']
+                                item.current_step_start_date = _e_start
+                                _e_perf_col = self.find_flexible_column(row.keys(), earlier_cfg['performer_col']) if earlier_cfg.get('performer_col') else None
+                                _e_perf = row.get(_e_perf_col, "") if _e_perf_col else ""
+                                if pd.isna(_e_perf) or not str(_e_perf).strip():
+                                    _e_perf = earlier_cfg.get('default_performer', '')
+                                item.current_step_performer = str(_e_perf)
+                                break  # Found the backtracked step
 
                     # Step 3: Calculate progress
                     total = len(applicable_steps)
