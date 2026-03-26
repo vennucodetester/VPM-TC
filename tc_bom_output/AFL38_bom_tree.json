@@ -1,0 +1,633 @@
+{
+  "nomenclature": "AFL38",
+  "fetched_at": "2026-03-26T15:47:06.152014",
+  "view_type": "MTY View",
+  "total_parts": 25,
+  "max_depth": 3,
+  "root": {
+    "item_id": "AFL38",
+    "revision": "B",
+    "name": "BASE-RL,MN-MA ELEV 3.16IN 3DR",
+    "nomenclature": "",
+    "release_status": "DESIGN RELEASED",
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007986",
+    "uid": "wmIAk75LoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "3232947",
+        "revision": "C",
+        "name": "SPLASHGUARD-RNMA RH END TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007801",
+        "uid": "QVEAUrN7oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3232948",
+        "revision": "C",
+        "name": "SPLASHGUARD-RNMA LH END TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007801",
+        "uid": "gJFAUrN7oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3234412",
+        "revision": "C",
+        "name": "SPLASHGUARD-RNMA 3 DOOR TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007911",
+        "uid": "A1FAkvEUoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3239242",
+        "revision": "A",
+        "name": "BASE ASSY-ELEV RISER 3.16IN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007623",
+        "uid": "REDAEn8AoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "3239236",
+            "revision": "B",
+            "name": "BASE-ELEV LOWER PANEL RISER 3.16IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007623",
+            "uid": "xdNAkfOJoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3148175",
+                "revision": "A",
+                "name": "GALV G60U 14GA .071\"M X 48\"",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED",
+                  "TJU RELEASED",
+                  "BBK RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0038344",
+                "uid": "BJJAiJgioeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3239237",
+            "revision": "A",
+            "name": "SUPPORT-ELEV UPPER PANEL RISER 3.16IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007623",
+            "uid": "gbFAEn8AoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3148175",
+                "revision": "A",
+                "name": "GALV G60U 14GA .071\"M X 48\"",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED",
+                  "TJU RELEASED",
+                  "BBK RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0038344",
+                "uid": "BJJAiJgioeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "0137715002",
+            "revision": "A",
+            "name": "SCREW SM 10-16X3/4 HX WAS",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0030790",
+            "uid": "7QIAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3246347",
+            "revision": "A",
+            "name": "COVER-TOP RISER 3.16IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007623",
+            "uid": "BdOAkfmSoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3148175",
+                "revision": "A",
+                "name": "GALV G60U 14GA .071\"M X 48\"",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "BGN RELEASED",
+                  "TJU RELEASED",
+                  "BBK RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0038344",
+                "uid": "BJJAiJgioeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "3239247",
+        "revision": "A",
+        "name": "SPLASHGUARD-END LH-RH ELEV BASE 3.16IN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007623",
+        "uid": "C9DAEn8AoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0200450",
+            "revision": "A",
+            "name": "LAMINA GALV C.20 4' (ROLLO)G60",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "CNO RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0025918",
+            "uid": "mpCAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3239323",
+        "revision": "A",
+        "name": "SPLASHGUARD-3DR FR ELEV BASE 3.16IN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007623",
+        "uid": "A6GAErihoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0200450",
+            "revision": "A",
+            "name": "LAMINA GALV C.20 4' (ROLLO)G60",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "CNO RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0025918",
+            "uid": "mpCAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3239508",
+        "revision": "A",
+        "name": "INSTRUCTION-RNMA RISER AND FACADE",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007623",
+        "uid": "ATOAErY8oeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3249764",
+        "revision": "A",
+        "name": "BAG ASSY-W SCREW 3DR",
+        "nomenclature": "",
+        "release_status": "DESIGN RELEASED",
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007986",
+        "uid": "EoPA0LVMoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0115192003",
+            "revision": "C",
+            "name": "SCREW-.25-20 X .75 HEX THD CUTTING SERRATED-FLG",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED",
+              "TJU RELEASED",
+              "BBK RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0031189",
+            "uid": "ijGASmBQoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3242616",
+            "revision": "A",
+            "name": "BAG-PLASTIC 4 IN X 6 IN PRESS TO CLOSE",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007707",
+            "uid": "ABMAUXl8oeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "B008394",
+        "revision": "A",
+        "name": "1/2 SEALED AIR NYLON BAR",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "BBK RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "TJU RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0029511",
+        "uid": "RfOAAAmSoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3233370",
+        "revision": "C",
+        "name": "PANEL-END FACADE 15IN SLOTTED TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007705",
+        "uid": "wmGAUPMfoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3234883",
+        "revision": "C",
+        "name": "PANEL-FACADE 3DR 15IN SC SM DSPL TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007962",
+        "uid": "kFBAk7O0oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3245714",
+        "revision": "A",
+        "name": "PANEL-END FACADE 16.62IN SLOTTED TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007623",
+        "uid": "wpCAkThioeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3246473",
+        "revision": "A",
+        "name": "PANEL ASSY-FACADE ELEV 3.16IN R-3MA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007623",
+        "uid": "gmHAkfa_oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "3245712",
+            "revision": "C",
+            "name": "PANEL-FACADE 3DR 16.62IN DSPL TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007962",
+            "uid": "k5BAk7O0oeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0962053",
+                "revision": "A",
+                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED",
+                  "TJU RELEASED",
+                  "CNO RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-COD-0022737",
+                "uid": "64IAAAGxoeVOgD",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3246468",
+            "revision": "A",
+            "name": "CHANNEL-SUPPORT 3DR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007623",
+            "uid": "wsPAkfa_oeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0962053",
+                "revision": "A",
+                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED",
+                  "TJU RELEASED",
+                  "CNO RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-COD-0022737",
+                "uid": "64IAAAGxoeVOgD",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

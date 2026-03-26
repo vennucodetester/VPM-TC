@@ -1,0 +1,15 @@
+Dependency Report: AFL36
+Generated: 2026-03-26T15:41:38.504211
+Total parts: 25
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 23 of 25 (92.0%)
+  Unreleased: 2
+  Blocked (On-Hold): 0
+
+UNRELEASED PARTS (2 total)
+------------------------------------------------------------
+  ✗ AFL36/B — BASE-RL,MN-MA ELEV 3.16IN 5DR
+      ECN: ECN-NPD-0007986 | Has: DESIGN RELEASED
+  ✗ 3249762/A — BAG ASSY-W SCREW 5DR
+      ECN: ECN-NPD-0007986 | Has: DESIGN RELEASED

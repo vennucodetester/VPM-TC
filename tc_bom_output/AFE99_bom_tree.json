@@ -1,0 +1,607 @@
+{
+  "nomenclature": "AFE99",
+  "fetched_at": "2026-03-26T15:55:39.578615",
+  "view_type": "MTY View",
+  "total_parts": 26,
+  "max_depth": 3,
+  "root": {
+    "item_id": "AFE99",
+    "revision": "A",
+    "name": "JOINING-CASE RNMA",
+    "nomenclature": "AFE99",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007707",
+    "uid": "RtEAk6MIoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "0137715000",
+        "revision": "A",
+        "name": "SCREW SM 10-16X3/4 HX WAS",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0016141",
+        "uid": "dKOAAA1roeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0534121",
+        "revision": "B",
+        "name": "SCREW-SM 8-18X5/8 PHIL HX HD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED",
+          "TJU RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0030790",
+        "uid": "RQHAhGuJoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3232962",
+        "revision": "A",
+        "name": "SPACER-JOINING RNMA LT-LT",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007375",
+        "uid": "gnFAkaMhoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0203080",
+            "revision": "A",
+            "name": "LAMINA GALV C.18 3' (ROLLO)",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED",
+              "BBK RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0032286",
+            "uid": "r2IAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3233370",
+        "revision": "C",
+        "name": "PANEL-END FACADE 15IN SLOTTED TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007705",
+        "uid": "wmGAUPMfoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3234330",
+        "revision": "B",
+        "name": "INSTRUCTION-RNMA CASE JOINING",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007707",
+        "uid": "gkDAUfjQoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3234331",
+        "revision": "C",
+        "name": "TRIM ASSY-CASE JOINING RLNMA-RLNMA TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007707",
+        "uid": "g8LAUb7ToeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0548767",
+            "revision": "E",
+            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "QMDAkyWKoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232986",
+            "revision": "B",
+            "name": "TRIM-CASE JOINING RLNMA-RLNMA TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007705",
+            "uid": "Q_FAUPMfoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0962053",
+                "revision": "A",
+                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED",
+                  "TJU RELEASED",
+                  "CNO RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-COD-0022737",
+                "uid": "64IAAAGxoeVOgD",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3242444",
+            "revision": "A",
+            "name": "LABEL-B JOIN TRIM",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007707",
+            "uid": "wICAUTHroeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3234756",
+        "revision": "C",
+        "name": "TRIM ASSY-CASE JOINING RLNMA-RMNMA TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007707",
+        "uid": "wwEAUb7ToeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0548767",
+            "revision": "E",
+            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "QMDAkyWKoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3234754",
+            "revision": "B",
+            "name": "TRIM-CASE JOINING RLNMA-RMNMA TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007705",
+            "uid": "QPIAUPMfoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0962053",
+                "revision": "A",
+                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED",
+                  "TJU RELEASED",
+                  "CNO RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-COD-0022737",
+                "uid": "64IAAAGxoeVOgD",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3242445",
+            "revision": "A",
+            "name": "LABEL-C JOIN TRIM",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007707",
+            "uid": "wYLAUTHroeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3234757",
+        "revision": "C",
+        "name": "TRIM ASSY-CASE JOINING RMNMA-RMNMA TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007707",
+        "uid": "AhAAUb7ToeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0548767",
+            "revision": "E",
+            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "QMDAkyWKoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3234755",
+            "revision": "B",
+            "name": "TRIM-CASE JOINING RMNMA-RMNMA TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007705",
+            "uid": "gDJAUPMfoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0962053",
+                "revision": "A",
+                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED",
+                  "HAB RELEASED",
+                  "TJU RELEASED",
+                  "CNO RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-COD-0022737",
+                "uid": "64IAAAGxoeVOgD",
+                "depth": 2,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3242446",
+            "revision": "A",
+            "name": "LABEL-D JOIN TRIM",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007707",
+            "uid": "wsAAUTHroeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3236080",
+        "revision": "B",
+        "name": "INSTRUCTION-RNMA CASE JOINING",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007707",
+        "uid": "QAAAUfjQoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3238598",
+        "revision": "B",
+        "name": "TRIM ASSY-FACADE RNMA TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007705",
+        "uid": "wYPAUPdDoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "3238597",
+            "revision": "B",
+            "name": "TRIM-FACADE JOINT RNMA SM OC TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007705",
+            "uid": "wrKAUPMfoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0962094",
+                "revision": "A",
+                "name": "LAM CRS C22 TEXTD 48.5\" COIL",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "38523",
+                "uid": "t3JAAAm7oeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "0548767",
+            "revision": "E",
+            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "QMDAkyWKoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3238666",
+        "revision": "B",
+        "name": "SPLASHGUARD-JOINING TRIM ASSY TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007705",
+        "uid": "AJLAUPdDoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0548767",
+            "revision": "E",
+            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "QMDAkyWKoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3238665",
+            "revision": "B",
+            "name": "SPLASHGUARD-JOINING TRIM TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007705",
+            "uid": "BcKAUPMfoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0962094",
+                "revision": "A",
+                "name": "LAM CRS C22 TEXTD 48.5\" COIL",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "38523",
+                "uid": "t3JAAAm7oeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "3242469",
+        "revision": "A",
+        "name": "LABEL-BN FACADE TRIM",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007707",
+        "uid": "guHAUTHroeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3242475",
+        "revision": "A",
+        "name": "LABEL-CD JOINT TRIM SPLGRD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007707",
+        "uid": "AXGAUTHroeVOgD",
+        "depth": 1,
+        "children": []
+      }
+    ]
+  }
+}

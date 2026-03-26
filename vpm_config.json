@@ -1,5 +1,5 @@
 {
-    "ecn_data_path": "C:/PYTHON/VPM-TC/2.4/PR FILES",
+    "ecn_data_path": "C:/PYTHON/VPM-TC/2.5/PR FILES",
     "pr_parent_map": {
         "PR-NPD-0000924": 831,
         "PR-NPD-0000973": 831,
@@ -8981,6 +8981,17 @@
         "RMN5MA",
         "RMN4MA",
         "RMN3MA",
-        "RMN2MA"
+        "RMN2MA",
+        "AFL36",
+        "AFL37",
+        "AFL38",
+        "AFL39",
+        "AFY94",
+        "AFY95",
+        "AFY10",
+        "AFE96",
+        "AFE98",
+        "AFE99",
+        "AFL83"
     ]
 }

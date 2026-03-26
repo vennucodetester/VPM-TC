@@ -1,0 +1,42 @@
+{
+  "nomenclature": "AFY95",
+  "fetched_at": "2026-03-26T15:50:18.735314",
+  "view_type": "MTY View",
+  "total_parts": 2,
+  "max_depth": 1,
+  "root": {
+    "item_id": "AFY95",
+    "revision": "A",
+    "name": "CONDENSING UNIT-MICROBLOCK LT ALX440U-DS3B0",
+    "nomenclature": "",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007836",
+    "uid": "wrOAkHhtoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "3242798",
+        "revision": "C",
+        "name": "CONDENSING UNIT-LT MICROBLOCK ALX440U-DS3B0",
+        "nomenclature": "",
+        "release_status": [
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007933",
+        "uid": "akLAkvtZoeVOgD",
+        "depth": 1,
+        "children": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+Dependency Report: AFL38
+Generated: 2026-03-26T15:47:06.152014
+Total parts: 25
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 23 of 25 (92.0%)
+  Unreleased: 2
+  Blocked (On-Hold): 0
+
+UNRELEASED PARTS (2 total)
+------------------------------------------------------------
+  ✗ AFL38/B — BASE-RL,MN-MA ELEV 3.16IN 3DR
+      ECN: ECN-NPD-0007986 | Has: DESIGN RELEASED
+  ✗ 3249764/A — BAG ASSY-W SCREW 3DR
+      ECN: ECN-NPD-0007986 | Has: DESIGN RELEASED

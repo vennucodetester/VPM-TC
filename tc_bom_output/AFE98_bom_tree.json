@@ -1,0 +1,144 @@
+{
+  "nomenclature": "AFE98",
+  "fetched_at": "2026-03-26T15:52:50.877402",
+  "view_type": "MTY View",
+  "total_parts": 8,
+  "max_depth": 3,
+  "root": {
+    "item_id": "AFE98",
+    "revision": "B",
+    "name": "COVER-END RLNMA",
+    "nomenclature": "AFE98",
+    "release_status": "DESIGN RELEASED",
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007986",
+    "uid": "xNBA0PCUoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "3232970",
+        "revision": "D",
+        "name": "COVER ASSY-END RLNMA TXTD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0038145",
+        "uid": "gEHAUbrkoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "3232995",
+            "revision": "C",
+            "name": "PANEL-COVER RECT END TXTD OPTL COLOR RLNMA",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "HAB RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0038355",
+            "uid": "gyGAUPMfoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0960038",
+                "revision": "B",
+                "name": "035GALVTEX_50.000X101.000",
+                "nomenclature": "",
+                "release_status": [
+                  "HAB RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "41472",
+                "uid": "FxPAAAJ9oeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "0548767",
+            "revision": "E",
+            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "QMDAkyWKoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3242471",
+            "revision": "A",
+            "name": "LABEL-BR END COVER",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007707",
+            "uid": "wSBAUTHroeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3236082",
+        "revision": "A",
+        "name": "INSTRUCTION-RNMA END CVR INSTL",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007426",
+        "uid": "gaHA0KT7oeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "0434583000",
+        "revision": "A",
+        "name": "PROTECTOR-END NARROW",
+        "nomenclature": "",
+        "release_status": [
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "",
+        "uid": "i$CAAAmLoeVOgD",
+        "depth": 1,
+        "children": []
+      }
+    ]
+  }
+}

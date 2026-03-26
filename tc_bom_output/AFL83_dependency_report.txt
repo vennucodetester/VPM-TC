@@ -1,0 +1,8 @@
+Dependency Report: AFL83
+Generated: 2026-03-26T15:56:22.039223
+Total parts: 7
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 7 of 7 (100.0%)
+  Unreleased: 0
+  Blocked (On-Hold): 0

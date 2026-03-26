@@ -251,7 +251,7 @@
           "MTY RELEASED",
           "PRODUCTION RELEASED"
         ],
-        "process_stage": "HSM Part Implementation Process/3247230/B;1-MODULE-END PANEL RMN-MA:1,perform-signoffs/3247230/B;1-MODULE-END PANEL RMN-MA:1,Set Final Costing/3247230/B;1-MODULE-END PANEL RMN-MA:1",
+        "process_stage": "",
         "h4_ECN_Number": "ECN-NPD-0007958"
       },
       {
@@ -932,7 +932,7 @@
           "MTY RELEASED",
           "PRODUCTION RELEASED"
         ],
-        "process_stage": "HSM Part Implementation Process/3248490/A;1-SUPPORT ASSY-RN2MA CANOPY:8,Set Final Costing/3248490/A;1-SUPPORT ASSY-RN2MA CANOPY:8,perform-signoffs/3248490/A;1-SUPPORT ASSY-RN2MA CANOPY:8",
+        "process_stage": "",
         "h4_ECN_Number": "ECN-NPD-0007950"
       },
       {

@@ -1,0 +1,214 @@
+{
+  "nomenclature": "AFE96",
+  "candidates": [
+    {
+      "uid": "B5EAk6MIoeVOgD",
+      "item_id": "AFE96",
+      "item_revision_id": "A",
+      "object_name": "COVER-END RMNMA",
+      "object_desc": "COVER-END RMNMA",
+      "h4_Nomenclature": "AFE96",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED",
+        "HAB RELEASED"
+      ],
+      "process_stage": ""
+    },
+    {
+      "uid": "hJMA0PCUoeVOgD",
+      "item_id": "AFE96",
+      "item_revision_id": "B",
+      "object_name": "COVER-END RMNMA",
+      "object_desc": "COVER-END RMNMA",
+      "h4_Nomenclature": "AFE96",
+      "release_status_list": "DESIGN RELEASED",
+      "process_stage": ""
+    }
+  ],
+  "selected_revisions": [
+    {
+      "uid": "hJMA0PCUoeVOgD",
+      "item_id": "AFE96",
+      "item_revision_id": "B",
+      "object_name": "COVER-END RMNMA",
+      "object_desc": "COVER-END RMNMA",
+      "h4_Nomenclature": "AFE96",
+      "release_status_list": "DESIGN RELEASED",
+      "process_stage": ""
+    }
+  ],
+  "bom": {
+    "nodes": [
+      {
+        "uid": "hJMA0PCUoeVOgD",
+        "depth": 0,
+        "item_id": "AFE96",
+        "item_revision_id": "B",
+        "object_name": "COVER-END RMNMA",
+        "h4_Nomenclature": "AFE96",
+        "release_status_list": "DESIGN RELEASED",
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007986"
+      },
+      {
+        "uid": "g4GAUbrkoeVOgD",
+        "depth": 1,
+        "item_id": "3233143",
+        "item_revision_id": "C",
+        "object_name": "COVER ASSY-END RMNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0038145"
+      },
+      {
+        "uid": "gaHA0KT7oeVOgD",
+        "depth": 1,
+        "item_id": "3236082",
+        "item_revision_id": "A",
+        "object_name": "INSTRUCTION-RNMA END CVR INSTL",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007426"
+      },
+      {
+        "uid": "i$CAAAmLoeVOgD",
+        "depth": 1,
+        "item_id": "0434583000",
+        "item_revision_id": "A",
+        "object_name": "PROTECTOR-END NARROW",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": ""
+      },
+      {
+        "uid": "QwNAUPMfoeVOgD",
+        "depth": 2,
+        "item_id": "3232914",
+        "item_revision_id": "C",
+        "object_name": "PANEL-COVER RECT END TXTD OPTL COLOR RMNMA",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0038355"
+      },
+      {
+        "uid": "QMDAkyWKoeVOgD",
+        "depth": 2,
+        "item_id": "0548767",
+        "item_revision_id": "E",
+        "object_name": "TAPE-ADHESIVE TRANSFER 1 IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": ""
+      },
+      {
+        "uid": "g_MAUTHroeVOgD",
+        "depth": 2,
+        "item_id": "3242470",
+        "item_revision_id": "A",
+        "object_name": "LABEL-BP END COVER",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "FxPAAAJ9oeVOgD",
+        "depth": 3,
+        "item_id": "0960038",
+        "item_revision_id": "B",
+        "object_name": "035GALVTEX_50.000X101.000",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "41472"
+      }
+    ],
+    "edges": [
+      {
+        "parent_uid": "hJMA0PCUoeVOgD",
+        "child_uid": "g4GAUbrkoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "hJMA0PCUoeVOgD",
+        "child_uid": "gaHA0KT7oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "hJMA0PCUoeVOgD",
+        "child_uid": "i$CAAAmLoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "g4GAUbrkoeVOgD",
+        "child_uid": "QwNAUPMfoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g4GAUbrkoeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g4GAUbrkoeVOgD",
+        "child_uid": "g_MAUTHroeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "QwNAUPMfoeVOgD",
+        "child_uid": "FxPAAAJ9oeVOgD",
+        "depth": 3
+      }
+    ],
+    "visited_count": 8,
+    "truncated": false,
+    "truncate_reason": "",
+    "queue_remaining": 0,
+    "elapsed_seconds": 49.865
+  }
+}

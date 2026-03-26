@@ -1,0 +1,8 @@
+Dependency Report: AFY10
+Generated: 2026-03-26T15:51:10.819537
+Total parts: 8
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 8 of 8 (100.0%)
+  Unreleased: 0
+  Blocked (On-Hold): 0

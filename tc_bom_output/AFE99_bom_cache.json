@@ -1,0 +1,622 @@
+{
+  "nomenclature": "AFE99",
+  "candidates": [
+    {
+      "uid": "RtEAk6MIoeVOgD",
+      "item_id": "AFE99",
+      "item_revision_id": "A",
+      "object_name": "JOINING-CASE RNMA",
+      "object_desc": "JOINING-CASE RNMA",
+      "h4_Nomenclature": "AFE99",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "selected_revisions": [
+    {
+      "uid": "RtEAk6MIoeVOgD",
+      "item_id": "AFE99",
+      "item_revision_id": "A",
+      "object_name": "JOINING-CASE RNMA",
+      "object_desc": "JOINING-CASE RNMA",
+      "h4_Nomenclature": "AFE99",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "bom": {
+    "nodes": [
+      {
+        "uid": "RtEAk6MIoeVOgD",
+        "depth": 0,
+        "item_id": "AFE99",
+        "item_revision_id": "A",
+        "object_name": "JOINING-CASE RNMA",
+        "h4_Nomenclature": "AFE99",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "dKOAAA1roeVOgD",
+        "depth": 1,
+        "item_id": "0137715000",
+        "item_revision_id": "A",
+        "object_name": "SCREW SM 10-16X3/4 HX WAS",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0016141"
+      },
+      {
+        "uid": "RQHAhGuJoeVOgD",
+        "depth": 1,
+        "item_id": "0534121",
+        "item_revision_id": "B",
+        "object_name": "SCREW-SM 8-18X5/8 PHIL HX HD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED",
+          "TJU RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0030790"
+      },
+      {
+        "uid": "gnFAkaMhoeVOgD",
+        "depth": 1,
+        "item_id": "3232962",
+        "item_revision_id": "A",
+        "object_name": "SPACER-JOINING RNMA LT-LT",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007375"
+      },
+      {
+        "uid": "wmGAUPMfoeVOgD",
+        "depth": 1,
+        "item_id": "3233370",
+        "item_revision_id": "C",
+        "object_name": "PANEL-END FACADE 15IN SLOTTED TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "gkDAUfjQoeVOgD",
+        "depth": 1,
+        "item_id": "3234330",
+        "item_revision_id": "B",
+        "object_name": "INSTRUCTION-RNMA CASE JOINING",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "g8LAUb7ToeVOgD",
+        "depth": 1,
+        "item_id": "3234331",
+        "item_revision_id": "C",
+        "object_name": "TRIM ASSY-CASE JOINING RLNMA-RLNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "wwEAUb7ToeVOgD",
+        "depth": 1,
+        "item_id": "3234756",
+        "item_revision_id": "C",
+        "object_name": "TRIM ASSY-CASE JOINING RLNMA-RMNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "AhAAUb7ToeVOgD",
+        "depth": 1,
+        "item_id": "3234757",
+        "item_revision_id": "C",
+        "object_name": "TRIM ASSY-CASE JOINING RMNMA-RMNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "QAAAUfjQoeVOgD",
+        "depth": 1,
+        "item_id": "3236080",
+        "item_revision_id": "B",
+        "object_name": "INSTRUCTION-RNMA CASE JOINING",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "wYPAUPdDoeVOgD",
+        "depth": 1,
+        "item_id": "3238598",
+        "item_revision_id": "B",
+        "object_name": "TRIM ASSY-FACADE RNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "AJLAUPdDoeVOgD",
+        "depth": 1,
+        "item_id": "3238666",
+        "item_revision_id": "B",
+        "object_name": "SPLASHGUARD-JOINING TRIM ASSY TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "guHAUTHroeVOgD",
+        "depth": 1,
+        "item_id": "3242469",
+        "item_revision_id": "A",
+        "object_name": "LABEL-BN FACADE TRIM",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "AXGAUTHroeVOgD",
+        "depth": 1,
+        "item_id": "3242475",
+        "item_revision_id": "A",
+        "object_name": "LABEL-CD JOINT TRIM SPLGRD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "r2IAAAGuoeVOgD",
+        "depth": 2,
+        "item_id": "0203080",
+        "item_revision_id": "A",
+        "object_name": "LAMINA GALV C.18 3' (ROLLO)",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "TJU RELEASED",
+          "BBK RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0032286"
+      },
+      {
+        "uid": "64IAAAGxoeVOgD",
+        "depth": 2,
+        "item_id": "0962053",
+        "item_revision_id": "A",
+        "object_name": ".035 GALV TEXTD 49.375\" ROLL",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "HAB RELEASED",
+          "TJU RELEASED",
+          "CNO RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-COD-0022737"
+      },
+      {
+        "uid": "QMDAkyWKoeVOgD",
+        "depth": 2,
+        "item_id": "0548767",
+        "item_revision_id": "E",
+        "object_name": "TAPE-ADHESIVE TRANSFER 1 IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": ""
+      },
+      {
+        "uid": "Q_FAUPMfoeVOgD",
+        "depth": 2,
+        "item_id": "3232986",
+        "item_revision_id": "B",
+        "object_name": "TRIM-CASE JOINING RLNMA-RLNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "wICAUTHroeVOgD",
+        "depth": 2,
+        "item_id": "3242444",
+        "item_revision_id": "A",
+        "object_name": "LABEL-B JOIN TRIM",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "QPIAUPMfoeVOgD",
+        "depth": 2,
+        "item_id": "3234754",
+        "item_revision_id": "B",
+        "object_name": "TRIM-CASE JOINING RLNMA-RMNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "wYLAUTHroeVOgD",
+        "depth": 2,
+        "item_id": "3242445",
+        "item_revision_id": "A",
+        "object_name": "LABEL-C JOIN TRIM",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "gDJAUPMfoeVOgD",
+        "depth": 2,
+        "item_id": "3234755",
+        "item_revision_id": "B",
+        "object_name": "TRIM-CASE JOINING RMNMA-RMNMA TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "wsAAUTHroeVOgD",
+        "depth": 2,
+        "item_id": "3242446",
+        "item_revision_id": "A",
+        "object_name": "LABEL-D JOIN TRIM",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "wrKAUPMfoeVOgD",
+        "depth": 2,
+        "item_id": "3238597",
+        "item_revision_id": "B",
+        "object_name": "TRIM-FACADE JOINT RNMA SM OC TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "BcKAUPMfoeVOgD",
+        "depth": 2,
+        "item_id": "3238665",
+        "item_revision_id": "B",
+        "object_name": "SPLASHGUARD-JOINING TRIM TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "t3JAAAm7oeVOgD",
+        "depth": 3,
+        "item_id": "0962094",
+        "item_revision_id": "A",
+        "object_name": "LAM CRS C22 TEXTD 48.5\" COIL",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "38523"
+      }
+    ],
+    "edges": [
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "dKOAAA1roeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "RQHAhGuJoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "gnFAkaMhoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "wmGAUPMfoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "gkDAUfjQoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "g8LAUb7ToeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "wwEAUb7ToeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "AhAAUb7ToeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "QAAAUfjQoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "wYPAUPdDoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "AJLAUPdDoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "guHAUTHroeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "RtEAk6MIoeVOgD",
+        "child_uid": "AXGAUTHroeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "gnFAkaMhoeVOgD",
+        "child_uid": "r2IAAAGuoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wmGAUPMfoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g8LAUb7ToeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g8LAUb7ToeVOgD",
+        "child_uid": "Q_FAUPMfoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g8LAUb7ToeVOgD",
+        "child_uid": "wICAUTHroeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wwEAUb7ToeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wwEAUb7ToeVOgD",
+        "child_uid": "QPIAUPMfoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wwEAUb7ToeVOgD",
+        "child_uid": "wYLAUTHroeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "AhAAUb7ToeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "AhAAUb7ToeVOgD",
+        "child_uid": "gDJAUPMfoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "AhAAUb7ToeVOgD",
+        "child_uid": "wsAAUTHroeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wYPAUPdDoeVOgD",
+        "child_uid": "wrKAUPMfoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wYPAUPdDoeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "AJLAUPdDoeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "AJLAUPdDoeVOgD",
+        "child_uid": "BcKAUPMfoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "Q_FAUPMfoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "QPIAUPMfoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "gDJAUPMfoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "wrKAUPMfoeVOgD",
+        "child_uid": "t3JAAAm7oeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "BcKAUPMfoeVOgD",
+        "child_uid": "t3JAAAm7oeVOgD",
+        "depth": 3
+      }
+    ],
+    "visited_count": 26,
+    "truncated": false,
+    "truncate_reason": "",
+    "queue_remaining": 0,
+    "elapsed_seconds": 168.148
+  }
+}

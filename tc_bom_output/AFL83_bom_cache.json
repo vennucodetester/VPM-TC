@@ -1,0 +1,224 @@
+{
+  "nomenclature": "AFL83",
+  "candidates": [
+    {
+      "uid": "ADDAErY8oeVOgD",
+      "item_id": "AFL83",
+      "item_revision_id": "A",
+      "object_name": "TRIM-END RLN-RMN-MA TO RFLN",
+      "object_desc": "TRIM-END RLN-RMN-MA TO RFLN",
+      "h4_Nomenclature": "",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED",
+        "HAB RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "selected_revisions": [
+    {
+      "uid": "ADDAErY8oeVOgD",
+      "item_id": "AFL83",
+      "item_revision_id": "A",
+      "object_name": "TRIM-END RLN-RMN-MA TO RFLN",
+      "object_desc": "TRIM-END RLN-RMN-MA TO RFLN",
+      "h4_Nomenclature": "",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED",
+        "HAB RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "bom": {
+    "nodes": [
+      {
+        "uid": "ADDAErY8oeVOgD",
+        "depth": 0,
+        "item_id": "AFL83",
+        "item_revision_id": "A",
+        "object_name": "TRIM-END RLN-RMN-MA TO RFLN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0038145"
+      },
+      {
+        "uid": "QMDAkyWKoeVOgD",
+        "depth": 1,
+        "item_id": "0548767",
+        "item_revision_id": "E",
+        "object_name": "TAPE-ADHESIVE TRANSFER 1 IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": ""
+      },
+      {
+        "uid": "SxFAEn8AoeVOgD",
+        "depth": 1,
+        "item_id": "3239249",
+        "item_revision_id": "A",
+        "object_name": "TRIM-END RMN-MA TO RFLN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0038145"
+      },
+      {
+        "uid": "AnDAErY8oeVOgD",
+        "depth": 1,
+        "item_id": "3239509",
+        "item_revision_id": "A",
+        "object_name": "INSTRUCTION-END TRIM RLN-RMN-MA TO RFLN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "QIHAknv_oeVOgD",
+        "depth": 1,
+        "item_id": "3247554",
+        "item_revision_id": "A",
+        "object_name": "TRIM-FACADE RLN-RMN-MA TO RFLN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0038145"
+      },
+      {
+        "uid": "QkIAknv_oeVOgD",
+        "depth": 1,
+        "item_id": "3247555",
+        "item_revision_id": "A",
+        "object_name": "TRIM-END RLN-MA TO RFLN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0038145"
+      },
+      {
+        "uid": "64IAAAGxoeVOgD",
+        "depth": 2,
+        "item_id": "0962053",
+        "item_revision_id": "A",
+        "object_name": ".035 GALV TEXTD 49.375\" ROLL",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "HAB RELEASED",
+          "TJU RELEASED",
+          "CNO RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-COD-0022737"
+      }
+    ],
+    "edges": [
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "SxFAEn8AoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "AnDAErY8oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "QIHAknv_oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "QkIAknv_oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "QMDAkyWKoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "SxFAEn8AoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "QIHAknv_oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ADDAErY8oeVOgD",
+        "child_uid": "QkIAknv_oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "SxFAEn8AoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "QIHAknv_oeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "QkIAknv_oeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      }
+    ],
+    "visited_count": 7,
+    "truncated": false,
+    "truncate_reason": "",
+    "queue_remaining": 0,
+    "elapsed_seconds": 42.05
+  }
+}
