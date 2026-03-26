@@ -4851,7 +4851,7 @@ class BomExplorerView(QWidget):
         return item_to_nom
 
     def _on_find_missing_boms(self):
-        """Show dialog listing ECN items not in any loaded BOM, grouped by case."""
+        """Show dialog listing ECN items not in any loaded BOM, auto-detect top-level assembly via TC where-used."""
         ecn_lookup = self._get_ecn_item_lookup()
         if not ecn_lookup:
             QMessageBox.information(self, "Find Missing BOMs",
@@ -4874,63 +4874,160 @@ class BomExplorerView(QWidget):
                                     f"All {len(found)} ECN items are covered by loaded BOMs. No missing items.")
             return
 
-        # Group missing items by ECN number for display
-        by_ecn = {}
-        for item_id, item in missing.items():
-            ecn_num = getattr(item, 'ecn_number', 'Unknown')
-            by_ecn.setdefault(ecn_num, []).append((item_id, item))
+        # Check if TC is connected — needed for where-used queries
+        client = getattr(self._main_window, '_tc_client', None)
+        tc_connected = client and getattr(client, 'is_connected', False)
 
-        # Build dialog
+        if not tc_connected:
+            # Prompt login first
+            from tc_connector import TcLoginDialog
+            tc_config = self._main_window.ecn_config.get("teamcenter", {})
+            login_dialog = TcLoginDialog(tc_config, self._main_window)
+            if login_dialog.exec() != QDialog.DialogCode.Accepted:
+                QMessageBox.information(self, "Find Missing BOMs",
+                                        "TC login required to resolve parent assemblies.")
+                return
+            client = login_dialog.client
+            self._main_window._tc_client = client
+            tc_connected = True
+
+        # Resolve top-level assembly for each missing item via where-used
+        # Use progress dialog since this involves TC queries
+        progress = QProgressDialog(
+            "Resolving parent assemblies via Teamcenter...", "Cancel", 0, len(missing), self
+        )
+        progress.setWindowTitle("Finding Top-Level BOMs")
+        progress.setWindowModality(Qt.WindowModality.WindowModal)
+        progress.setMinimumDuration(0)
+
+        # Cache: item_id → {root_item_id, chain, found}
+        if not hasattr(self, '_where_used_cache'):
+            self._where_used_cache = {}
+
+        item_to_root = {}  # {item_id: root_item_id or None}
+        item_to_chain = {}  # {item_id: [chain]}
+
+        for i, (item_id, item) in enumerate(missing.items()):
+            if progress.wasCanceled():
+                break
+            progress.setValue(i)
+            progress.setLabelText(f"Resolving {item_id}... ({i+1}/{len(missing)})")
+            QApplication.processEvents()
+
+            # Check cache first
+            if item_id in self._where_used_cache:
+                result = self._where_used_cache[item_id]
+            else:
+                # Parse revision from item name if available (e.g. "3233143/C")
+                rev_id = None
+                item_name = getattr(item, 'name', '')
+                if '/' in str(item_name):
+                    parts = str(item_name).split('/')
+                    rev_id = parts[-1].strip() if len(parts) > 1 else None
+
+                try:
+                    result = client.find_top_level_assembly(item_id, revision_id=rev_id)
+                except Exception as e:
+                    result = {"found": False, "chain": [item_id], "error": str(e)}
+
+                self._where_used_cache[item_id] = result
+
+            if result.get("found"):
+                root_id = result["root_item_id"]
+                item_to_root[item_id] = root_id
+                item_to_chain[item_id] = result.get("chain", [item_id])
+            else:
+                item_to_root[item_id] = None
+                item_to_chain[item_id] = [item_id]
+
+        progress.setValue(len(missing))
+
+        # Group missing items by their top-level assembly
+        by_root = {}  # {root_item_id: [(item_id, item, chain), ...]}
+        unknown_items = []  # items where where-used found no parent
+        for item_id, item in missing.items():
+            root = item_to_root.get(item_id)
+            chain = item_to_chain.get(item_id, [item_id])
+            if root and root != item_id:
+                by_root.setdefault(root, []).append((item_id, item, chain))
+            else:
+                unknown_items.append((item_id, item, chain))
+
+        # Build dialog — grouped by top-level assembly
         dialog = QDialog(self)
-        dialog.setWindowTitle(f"Missing BOMs — {len(missing)} items not in any loaded BOM")
-        dialog.setMinimumSize(700, 500)
+        dialog.setWindowTitle(f"Missing BOMs — {len(missing)} items need BOM pull")
+        dialog.setMinimumSize(800, 550)
         dlayout = QVBoxLayout(dialog)
 
-        info_label = QLabel(f"<b>{len(found)}</b> ECN items found in loaded BOMs. "
-                            f"<b>{len(missing)}</b> items missing (grouped by ECN).<br>"
-                            f"Check items to fetch, enter nomenclature if needed, then click Fetch.")
+        resolved_count = sum(len(v) for v in by_root.values())
+        info_label = QLabel(
+            f"<b>{len(found)}</b> ECN items already in loaded BOMs. "
+            f"<b>{len(missing)}</b> missing.<br>"
+            f"<b>{resolved_count}</b> resolved to top-level assemblies via where-used. "
+            f"<b>{len(unknown_items)}</b> could not be resolved."
+        )
         info_label.setWordWrap(True)
         dlayout.addWidget(info_label)
 
-        # Table: checkbox | item_id | name | ECN | nomenclature input
+        # Table: checkbox | Top-Level Assembly | # Items | Item List | Chain
         table = QTableWidget()
         table.setColumnCount(5)
-        table.setHorizontalHeaderLabels(["Fetch", "Item ID", "Name", "ECN", "Nomenclature (enter case)"])
+        table.setHorizontalHeaderLabels([
+            "Fetch", "Top-Level Assembly", "# Missing Items", "Items", "Hierarchy Chain"
+        ])
         table.horizontalHeader().setStretchLastSection(True)
         table.setColumnWidth(0, 50)
-        table.setColumnWidth(1, 120)
-        table.setColumnWidth(2, 200)
-        table.setColumnWidth(3, 160)
+        table.setColumnWidth(1, 160)
+        table.setColumnWidth(2, 100)
+        table.setColumnWidth(3, 250)
 
-        rows = []
-        for ecn_num in sorted(by_ecn.keys()):
-            for item_id, item in sorted(by_ecn[ecn_num], key=lambda x: x[0]):
-                rows.append((item_id, item, ecn_num))
+        # Rows: one per top-level assembly + one per unknown item
+        table_rows = []  # (nom_to_fetch, display_items, sample_chain)
+        for root_id in sorted(by_root.keys()):
+            items_list = by_root[root_id]
+            item_ids_str = ", ".join(iid for iid, _, _ in items_list[:5])
+            if len(items_list) > 5:
+                item_ids_str += f"... +{len(items_list) - 5} more"
+            sample_chain = " → ".join(items_list[0][2]) if items_list else ""
+            table_rows.append((root_id, items_list, item_ids_str, sample_chain))
 
-        table.setRowCount(len(rows))
+        # Unknown items get individual rows with editable nomenclature
+        for item_id, item, chain in unknown_items:
+            table_rows.append((None, [(item_id, item, chain)], item_id, "No parent found"))
+
+        table.setRowCount(len(table_rows))
         check_boxes = []
-        nom_edits = []
-        for i, (item_id, item, ecn_num) in enumerate(rows):
+        nom_edits = []  # Only for unknown items (editable)
+
+        for i, (root_id, items_list, items_str, chain_str) in enumerate(table_rows):
             cb = QTableWidgetItem()
             cb.setFlags(cb.flags() | Qt.ItemFlag.ItemIsUserCheckable)
-            cb.setCheckState(Qt.CheckState.Checked)
+            cb.setCheckState(Qt.CheckState.Checked if root_id else Qt.CheckState.Unchecked)
             table.setItem(i, 0, cb)
             check_boxes.append(cb)
 
-            table.setItem(i, 1, QTableWidgetItem(str(getattr(item, 'name', item_id))))
-            table.setItem(i, 2, QTableWidgetItem(str(getattr(item, 'id', ''))))
-            table.setItem(i, 3, QTableWidgetItem(ecn_num))
+            if root_id:
+                # Resolved — show root assembly name (not editable)
+                nom_item = QTableWidgetItem(root_id)
+                nom_item.setBackground(QColor("#E8F5E9"))  # Light green
+                table.setItem(i, 1, nom_item)
+                nom_edits.append(None)
+            else:
+                # Unknown — editable text field
+                nom_edit = QLineEdit()
+                nom_edit.setPlaceholderText("Enter top-level assembly")
+                table.setCellWidget(i, 1, nom_edit)
+                nom_edits.append(nom_edit)
 
-            nom_edit = QLineEdit()
-            nom_edit.setPlaceholderText("e.g. RLN4MA")
-            table.setCellWidget(i, 4, nom_edit)
-            nom_edits.append(nom_edit)
+            table.setItem(i, 2, QTableWidgetItem(str(len(items_list))))
+            table.setItem(i, 3, QTableWidgetItem(items_str))
+            table.setItem(i, 4, QTableWidgetItem(chain_str))
 
         dlayout.addWidget(table, 1)
 
         # Buttons
         btn_layout = QHBoxLayout()
-        fetch_btn = QPushButton("Fetch Selected")
+        fetch_btn = QPushButton("Fetch Selected BOMs")
         fetch_btn.setStyleSheet("padding: 8px 20px; font-weight: bold; background-color: #7719AA; color: white;")
         cancel_btn = QPushButton("Close")
         cancel_btn.setStyleSheet("padding: 8px 20px;")
@@ -4942,19 +5039,20 @@ class BomExplorerView(QWidget):
         cancel_btn.clicked.connect(dialog.reject)
 
         def _do_fetch():
-            # Collect unique nomenclatures to fetch
             noms_to_fetch = set()
-            for i, (item_id, item, ecn_num) in enumerate(rows):
+            for i, (root_id, items_list, items_str, chain_str) in enumerate(table_rows):
                 if check_boxes[i].checkState() == Qt.CheckState.Checked:
-                    nom_text = nom_edits[i].text().strip()
-                    if nom_text:
-                        noms_to_fetch.add(nom_text.upper())
+                    if root_id:
+                        noms_to_fetch.add(root_id.upper())
+                    elif nom_edits[i]:
+                        manual_nom = nom_edits[i].text().strip()
+                        if manual_nom:
+                            noms_to_fetch.add(manual_nom.upper())
             if not noms_to_fetch:
-                QMessageBox.warning(dialog, "No Nomenclatures",
-                                    "Enter nomenclature for at least one checked item.")
+                QMessageBox.warning(dialog, "Nothing to Fetch",
+                                    "No assemblies selected or entered.")
                 return
             dialog.accept()
-            # Fetch using existing mechanism
             self._fetch_cases_by_name(list(noms_to_fetch))
 
         fetch_btn.clicked.connect(_do_fetch)

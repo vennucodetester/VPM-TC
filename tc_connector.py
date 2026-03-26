@@ -816,6 +816,195 @@ class TcSoaClient:
         return relations_map
 
     # ------------------------------------------------------------------
+    # WHERE-USED — Climb BOM hierarchy to find top-level assembly
+    # ------------------------------------------------------------------
+
+    def where_used(self, item_revision_uid):
+        """
+        Find parent assemblies that contain this item revision as a BOM child.
+        Uses Cad-2007-01-StructureManagement/whereUsed SOA.
+
+        Returns list of dicts: [{"uid": parent_uid, "item_id": ..., "item_revision_id": ...}, ...]
+        """
+        if not item_revision_uid:
+            return []
+
+        _tc_logger.info(f"where_used: uid={item_revision_uid}")
+
+        # Set property policy so we get item_id/revision back
+        self.set_property_policy({
+            "ItemRevision": ["item_id", "item_revision_id", "object_name"],
+            "H4_Hussmann_ItemRevision": ["item_id", "item_revision_id", "object_name"],
+        })
+
+        try:
+            result = self._post(
+                "Cad-2007-01-StructureManagement", "whereUsed",
+                {"inputObjects": [{"uid": item_revision_uid}]}
+            )
+        except TcSoaError as e:
+            _tc_logger.warning(f"  whereUsed SOA failed: {e}")
+            return []
+
+        parents = []
+        # Parse response — structure varies by TC version
+        output = result.get("output", [])
+        if not output:
+            output = result.get("parentComponents", [])
+
+        for entry in output:
+            if isinstance(entry, dict):
+                # Try common response shapes
+                parent_obj = entry.get("parentItemRevision") or entry.get("component") or entry
+                uid = parent_obj.get("uid", "") if isinstance(parent_obj, dict) else ""
+                if uid and uid != item_revision_uid:
+                    parents.append(uid)
+            elif isinstance(entry, str) and entry != item_revision_uid:
+                parents.append(entry)
+
+        # Also check ServiceData for created/updated objects
+        svc_data = result.get("ServiceData", result.get("serviceData", {}))
+        if isinstance(svc_data, dict):
+            model_objs = svc_data.get("modelObjects", {})
+            for uid_key, obj in model_objs.items():
+                if isinstance(obj, dict):
+                    obj_type = obj.get("type", "")
+                    if "Revision" in obj_type and uid_key != item_revision_uid:
+                        props = obj.get("props", {})
+                        item_id_prop = props.get("item_id", {})
+                        item_id_val = ""
+                        if isinstance(item_id_prop, dict):
+                            db_vals = item_id_prop.get("dbValues", [])
+                            item_id_val = db_vals[0] if db_vals else ""
+                        if item_id_val:
+                            parents.append(uid_key)
+
+        # Deduplicate
+        seen = set()
+        unique_parents = []
+        for uid in parents:
+            if uid not in seen:
+                seen.add(uid)
+                unique_parents.append(uid)
+
+        _tc_logger.info(f"  where_used found {len(unique_parents)} parents")
+        return unique_parents
+
+    def resolve_item_to_revision_uid(self, item_id, revision_id=None):
+        """
+        Resolve an item_id (e.g. '3233143') to its ItemRevision UID.
+        Optionally filter by revision_id (e.g. 'C').
+        Reuses the 'Item Revision...' saved query.
+        """
+        if not item_id:
+            return None
+
+        _tc_logger.info(f"resolve_item_to_revision_uid: {item_id}/{revision_id or '*'}")
+
+        try:
+            uids = self.execute_saved_query(
+                "Item Revision...", ["Item ID"], [str(item_id)]
+            )
+        except TcSoaError as e:
+            _tc_logger.warning(f"  Saved query failed for {item_id}: {e}")
+            return None
+
+        if not uids:
+            _tc_logger.info(f"  No UIDs found for {item_id}")
+            return None
+
+        if not revision_id or len(uids) == 1:
+            _tc_logger.info(f"  Resolved {item_id} → {uids[0]}")
+            return uids[0]
+
+        # Multiple revisions — fetch properties to match revision_id
+        try:
+            props = self.get_properties(uids, ["item_revision_id"])
+            for uid in uids:
+                rev = props.get(uid, {}).get("item_revision_id", "")
+                if rev.upper() == revision_id.upper():
+                    _tc_logger.info(f"  Resolved {item_id}/{revision_id} → {uid}")
+                    return uid
+        except TcSoaError:
+            pass
+
+        # Fallback: return first
+        _tc_logger.info(f"  Could not match revision {revision_id}, returning first UID")
+        return uids[0]
+
+    def find_top_level_assembly(self, item_id, revision_id=None, max_levels=20):
+        """
+        Climb where-used chain from item_id to find the highest-level assembly.
+
+        Returns dict:
+            {
+                "root_item_id": "RLN4MA",
+                "root_revision_id": "D",
+                "root_uid": "BoHAknFJoeVOgD",
+                "chain": ["3233143", "3232926", "RLN4MA"],
+                "found": True
+            }
+        Or {"found": False, "chain": [item_id], "error": "..."} on failure.
+        """
+        _tc_logger.info(f"find_top_level_assembly: {item_id}/{revision_id or '*'}")
+
+        # Step 1: Resolve item_id to UID
+        current_uid = self.resolve_item_to_revision_uid(item_id, revision_id)
+        if not current_uid:
+            return {"found": False, "chain": [item_id], "error": "Could not resolve item to UID"}
+
+        chain = [item_id]
+        visited = {current_uid}
+
+        for level in range(max_levels):
+            parents = self.where_used(current_uid)
+            if not parents:
+                # No more parents — current is the root
+                break
+
+            # Pick first parent (primary assembly path)
+            parent_uid = parents[0]
+            if parent_uid in visited:
+                _tc_logger.warning(f"  Cycle detected at level {level}")
+                break
+            visited.add(parent_uid)
+
+            # Get parent's item_id
+            try:
+                props = self.get_properties([parent_uid], ["item_id", "item_revision_id"])
+                parent_props = props.get(parent_uid, {})
+                parent_item_id = parent_props.get("item_id", "")
+                parent_rev_id = parent_props.get("item_revision_id", "")
+            except TcSoaError:
+                parent_item_id = ""
+                parent_rev_id = ""
+
+            if parent_item_id:
+                chain.append(parent_item_id)
+            current_uid = parent_uid
+
+        # Current_uid is now the root
+        # Get final properties
+        root_item_id = chain[-1] if chain else item_id
+        root_rev_id = ""
+        try:
+            props = self.get_properties([current_uid], ["item_id", "item_revision_id", "object_name"])
+            root_props = props.get(current_uid, {})
+            root_item_id = root_props.get("item_id", root_item_id)
+            root_rev_id = root_props.get("item_revision_id", "")
+        except TcSoaError:
+            pass
+
+        _tc_logger.info(f"  Top-level: {root_item_id}/{root_rev_id} (chain: {' → '.join(chain)})")
+        return {
+            "root_item_id": root_item_id,
+            "root_revision_id": root_rev_id,
+            "root_uid": current_uid,
+            "chain": chain,
+            "found": True,
+        }
+
+    # ------------------------------------------------------------------
     # BOM / STRUCTURE OPERATIONS — Exact EXE flow
     # ------------------------------------------------------------------
 
