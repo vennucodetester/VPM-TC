@@ -4659,13 +4659,15 @@ class BomExplorerView(QWidget):
     COL_RELEASED = 5
     COL_ASSIGNEE = 6
     COL_TASK = 7
+    COL_LINK = 8
 
-    HEADERS = ["Item ID / Rev", "Name", "Qty", "Workflow", "ECN", "Status", "Assignee", "Current Task"]
+    HEADERS = ["Item ID / Rev", "Name", "Qty", "Workflow", "ECN", "Status", "Assignee", "Current Task", "Link Status"]
 
     def __init__(self, main_window, parent=None):
         super().__init__(parent)
         self._main_window = main_window
         self._bom_database = {}  # {nomenclature: bom_result}
+        self._link_check_data = {}  # {item_id: link_info} populated by _on_link_check()
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -4689,6 +4691,18 @@ class BomExplorerView(QWidget):
         export_btn.setStyleSheet("padding: 5px 12px;")
         export_btn.clicked.connect(self._on_export_csv)
         toolbar.addWidget(export_btn)
+
+        toolbar.addSpacing(10)
+
+        missing_btn = QPushButton("🔍 Find Missing BOMs")
+        missing_btn.setStyleSheet("padding: 5px 12px; color: #7719AA; font-weight: bold;")
+        missing_btn.clicked.connect(self._on_find_missing_boms)
+        toolbar.addWidget(missing_btn)
+
+        link_btn = QPushButton("🔗 Link Check")
+        link_btn.setStyleSheet("padding: 5px 12px; color: #0066cc; font-weight: bold;")
+        link_btn.clicked.connect(self._on_link_check)
+        toolbar.addWidget(link_btn)
 
         toolbar.addSpacing(20)
 
@@ -4756,6 +4770,7 @@ class BomExplorerView(QWidget):
         self._tree.setColumnWidth(self.COL_RELEASED, 100)
         self._tree.setColumnWidth(self.COL_ASSIGNEE, 120)
         self._tree.setColumnWidth(self.COL_TASK, 150)
+        self._tree.setColumnWidth(self.COL_LINK, 250)
         layout.addWidget(self._tree, 1)
 
         # --- Status bar ---
@@ -4817,6 +4832,306 @@ class BomExplorerView(QWidget):
                     if name_id and name_id not in lookup:
                         lookup[name_id] = item
         return lookup
+
+    # ------------------------------------------------------------------
+    # LINK CHECK & MISSING BOM DETECTION
+    # ------------------------------------------------------------------
+
+    def _build_item_to_nomenclature_map(self):
+        """Scan all loaded BOMs, map every item_id → top-level nomenclature."""
+        item_to_nom = {}
+        for nom, bom_result in self._bom_database.items():
+            if bom_result is None:
+                continue
+            nodes = (bom_result or {}).get("bom", {}).get("nodes", []) or []
+            for node in nodes:
+                item_id = node.get("item_id", "")
+                if item_id:
+                    item_to_nom[item_id] = nom
+        return item_to_nom
+
+    def _on_find_missing_boms(self):
+        """Show dialog listing ECN items not in any loaded BOM, grouped by case."""
+        ecn_lookup = self._get_ecn_item_lookup()
+        if not ecn_lookup:
+            QMessageBox.information(self, "Find Missing BOMs",
+                                    "No ECN data loaded. Load ECN data first via the ECN Data menu.")
+            return
+
+        item_to_nom = self._build_item_to_nomenclature_map()
+
+        # Categorize: found (in a BOM) vs missing (not in any BOM)
+        found = {}    # {item_id: nomenclature}
+        missing = {}  # {item_id: Item}
+        for item_id, item in ecn_lookup.items():
+            if item_id in item_to_nom:
+                found[item_id] = item_to_nom[item_id]
+            else:
+                missing[item_id] = item
+
+        if not missing:
+            QMessageBox.information(self, "Find Missing BOMs",
+                                    f"All {len(found)} ECN items are covered by loaded BOMs. No missing items.")
+            return
+
+        # Group missing items by ECN number for display
+        by_ecn = {}
+        for item_id, item in missing.items():
+            ecn_num = getattr(item, 'ecn_number', 'Unknown')
+            by_ecn.setdefault(ecn_num, []).append((item_id, item))
+
+        # Build dialog
+        dialog = QDialog(self)
+        dialog.setWindowTitle(f"Missing BOMs — {len(missing)} items not in any loaded BOM")
+        dialog.setMinimumSize(700, 500)
+        dlayout = QVBoxLayout(dialog)
+
+        info_label = QLabel(f"<b>{len(found)}</b> ECN items found in loaded BOMs. "
+                            f"<b>{len(missing)}</b> items missing (grouped by ECN).<br>"
+                            f"Check items to fetch, enter nomenclature if needed, then click Fetch.")
+        info_label.setWordWrap(True)
+        dlayout.addWidget(info_label)
+
+        # Table: checkbox | item_id | name | ECN | nomenclature input
+        table = QTableWidget()
+        table.setColumnCount(5)
+        table.setHorizontalHeaderLabels(["Fetch", "Item ID", "Name", "ECN", "Nomenclature (enter case)"])
+        table.horizontalHeader().setStretchLastSection(True)
+        table.setColumnWidth(0, 50)
+        table.setColumnWidth(1, 120)
+        table.setColumnWidth(2, 200)
+        table.setColumnWidth(3, 160)
+
+        rows = []
+        for ecn_num in sorted(by_ecn.keys()):
+            for item_id, item in sorted(by_ecn[ecn_num], key=lambda x: x[0]):
+                rows.append((item_id, item, ecn_num))
+
+        table.setRowCount(len(rows))
+        check_boxes = []
+        nom_edits = []
+        for i, (item_id, item, ecn_num) in enumerate(rows):
+            cb = QTableWidgetItem()
+            cb.setFlags(cb.flags() | Qt.ItemFlag.ItemIsUserCheckable)
+            cb.setCheckState(Qt.CheckState.Checked)
+            table.setItem(i, 0, cb)
+            check_boxes.append(cb)
+
+            table.setItem(i, 1, QTableWidgetItem(str(getattr(item, 'name', item_id))))
+            table.setItem(i, 2, QTableWidgetItem(str(getattr(item, 'id', ''))))
+            table.setItem(i, 3, QTableWidgetItem(ecn_num))
+
+            nom_edit = QLineEdit()
+            nom_edit.setPlaceholderText("e.g. RLN4MA")
+            table.setCellWidget(i, 4, nom_edit)
+            nom_edits.append(nom_edit)
+
+        dlayout.addWidget(table, 1)
+
+        # Buttons
+        btn_layout = QHBoxLayout()
+        fetch_btn = QPushButton("Fetch Selected")
+        fetch_btn.setStyleSheet("padding: 8px 20px; font-weight: bold; background-color: #7719AA; color: white;")
+        cancel_btn = QPushButton("Close")
+        cancel_btn.setStyleSheet("padding: 8px 20px;")
+        btn_layout.addStretch()
+        btn_layout.addWidget(cancel_btn)
+        btn_layout.addWidget(fetch_btn)
+        dlayout.addLayout(btn_layout)
+
+        cancel_btn.clicked.connect(dialog.reject)
+
+        def _do_fetch():
+            # Collect unique nomenclatures to fetch
+            noms_to_fetch = set()
+            for i, (item_id, item, ecn_num) in enumerate(rows):
+                if check_boxes[i].checkState() == Qt.CheckState.Checked:
+                    nom_text = nom_edits[i].text().strip()
+                    if nom_text:
+                        noms_to_fetch.add(nom_text.upper())
+            if not noms_to_fetch:
+                QMessageBox.warning(dialog, "No Nomenclatures",
+                                    "Enter nomenclature for at least one checked item.")
+                return
+            dialog.accept()
+            # Fetch using existing mechanism
+            self._fetch_cases_by_name(list(noms_to_fetch))
+
+        fetch_btn.clicked.connect(_do_fetch)
+        dialog.exec()
+
+    def _fetch_cases_by_name(self, case_names):
+        """Fetch BOM cases by nomenclature list, reusing existing TC fetch logic."""
+        from tc_connector import TcLoginDialog, TcEcnDataFetcher
+        client = getattr(self._main_window, '_tc_client', None)
+        if not client or not getattr(client, 'is_connected', False):
+            tc_config = self._main_window.ecn_config.get("teamcenter", {})
+            login_dialog = TcLoginDialog(tc_config, self._main_window)
+            if login_dialog.exec() != QDialog.DialogCode.Accepted:
+                return
+            client = login_dialog.get_client()
+            self._main_window._tc_client = client
+        self._fetch_cases(client, case_names)
+
+    def _on_link_check(self):
+        """Run link check: overlay ECN workflow stage + release status on BOM tree."""
+        ecn_lookup = self._get_ecn_item_lookup()
+        if not self._bom_database:
+            QMessageBox.information(self, "Link Check", "No BOM data loaded. Add cases first.")
+            return
+
+        # ECN Completed step position — count steps up to and including "ECN Completed"
+        # From workflow_config, ECN Completed is typically step index ~14-15
+        # We use completed_steps from the Item object: if completed_steps >= ecn_completed_pos, it's done
+        ECN_COMPLETED_STEP_NAME = "ECN Completed"
+
+        link_data = {}  # {item_id: {status, text, color, blocked_children_count}}
+
+        for nom, bom_result in self._bom_database.items():
+            if bom_result is None:
+                continue
+            bom = bom_result.get("bom", {}) or {}
+            nodes = bom.get("nodes", []) or []
+            edges = bom.get("edges", []) or []
+            if not nodes:
+                continue
+
+            node_by_uid = {n["uid"]: n for n in nodes if isinstance(n, dict) and n.get("uid")}
+            children_of = {}
+            for e in edges:
+                if not isinstance(e, dict):
+                    continue
+                p = e.get("parent_uid", "")
+                c = e.get("child_uid", "")
+                if p and c:
+                    children_of.setdefault(p, []).append(c)
+
+            def _get_all_descendants(uid):
+                desc = []
+                for child_uid in children_of.get(uid, []):
+                    desc.append(child_uid)
+                    desc.extend(_get_all_descendants(child_uid))
+                return desc
+
+            def _is_prod_released(node):
+                release_text = self._release_text(node.get("release_status_list", ""))
+                return "PRODUCTION RELEASED" in release_text.upper()
+
+            def _is_ecn_done(item_id):
+                """Check if item's ECN workflow has reached or passed ECN Completed."""
+                ecn_item = ecn_lookup.get(item_id)
+                if not ecn_item:
+                    return False  # No ECN data — cannot confirm done
+                step_name = getattr(ecn_item, 'current_step_name', '') or ''
+                if step_name.upper() in ('COMPLETED',):
+                    return True
+                # Check if completed_steps indicates we're past ECN Completed
+                # The workflow_config has ECN Completed around position 15
+                # If the item has MCN-level steps active, it's definitely past ECN Completed
+                completed = getattr(ecn_item, 'completed_steps', 0)
+                total = getattr(ecn_item, 'total_steps', 0)
+                # Heuristic: if progress > 60% or completed_steps > 10, likely past ECN Completed
+                # More precise: check if current step is in the MCN section
+                mcn_steps = {'MCN Created', 'Supply Chain', 'MFG ENGG', 'Copper Programmer',
+                             'Sheet Metal Programmer', 'Production Control SM', 'First Article (FAI)',
+                             'Costing', 'PPAP Needed', 'Set Effectivity', 'MCN Released',
+                             'Item Production Released', 'MFG Operations', 'Analyst Review',
+                             'Costing Rework', 'PPAP Update', 'PPAP Update MTY', 'Sourceability',
+                             'Plant Coding Sourcing', 'Part Implementation Completed'}
+                if step_name in mcn_steps:
+                    return True
+                # If step is "ECN Completed" itself, it's done
+                if step_name == ECN_COMPLETED_STEP_NAME:
+                    return True
+                return False
+
+            # Analyze each node
+            for node in nodes:
+                uid = node.get("uid", "")
+                item_id = node.get("item_id", "")
+                if not uid or not item_id:
+                    continue
+
+                is_released = _is_prod_released(node)
+                ecn_item = ecn_lookup.get(item_id)
+                ecn_done = is_released or _is_ecn_done(item_id)
+
+                # Count blocked children
+                desc_uids = _get_all_descendants(uid)
+                blocked_children = []
+                for d_uid in desc_uids:
+                    d_node = node_by_uid.get(d_uid, {})
+                    d_item_id = d_node.get("item_id", "")
+                    if not d_item_id:
+                        continue
+                    d_released = _is_prod_released(d_node)
+                    d_ecn_done = d_released or _is_ecn_done(d_item_id)
+                    if not d_released and not d_ecn_done:
+                        d_ecn_item = ecn_lookup.get(d_item_id)
+                        d_step = getattr(d_ecn_item, 'current_step_name', '') if d_ecn_item else ''
+                        d_performer = getattr(d_ecn_item, 'current_step_performer', '') if d_ecn_item else ''
+                        d_progress = getattr(d_ecn_item, 'effective_progress', 0) if d_ecn_item else 0
+                        blocked_children.append({
+                            "item_id": d_item_id,
+                            "rev": d_node.get("item_revision_id", ""),
+                            "step": d_step,
+                            "performer": d_performer,
+                            "progress": d_progress,
+                        })
+
+                # Determine link status text and color
+                if is_released:
+                    status_text = "✓ PROD RELEASED"
+                    status_color = "#D4EDDA"  # green
+                elif ecn_done:
+                    status_text = "✓ ECN Completed"
+                    status_color = "#D4EDDA"
+                elif ecn_item:
+                    step = getattr(ecn_item, 'current_step_name', '') or 'Unknown'
+                    performer = getattr(ecn_item, 'current_step_performer', '') or ''
+                    progress = getattr(ecn_item, 'effective_progress', 0)
+                    if getattr(ecn_item, 'is_rejected', False):
+                        status_text = f"✗ Rejected at {step}"
+                        if performer:
+                            status_text += f" — {performer}"
+                        status_color = "#F8D7DA"  # red
+                    else:
+                        status_text = f"⏳ {step} ({progress:.0f}%)"
+                        if performer:
+                            status_text += f" — {performer}"
+                        status_color = "#FFF3CD"  # yellow
+                else:
+                    status_text = "✗ Not in any ECN"
+                    status_color = "#F8D7DA"  # red
+
+                # Add blocked children info for parent nodes
+                if blocked_children and (is_released or ecn_done):
+                    n = len(blocked_children)
+                    status_text = f"⚠ {n} child{'ren' if n > 1 else ''} blocked"
+                    status_color = "#FFE0B2"  # orange
+                elif blocked_children:
+                    n = len(blocked_children)
+                    status_text += f" | ⚠ {n} blocked"
+
+                link_data[item_id] = {
+                    "text": status_text,
+                    "color": status_color,
+                    "blocked_children": blocked_children,
+                    "is_clear": is_released or (ecn_done and not blocked_children),
+                }
+
+        self._link_check_data = link_data
+        self._rebuild_tree()
+
+        # Summary
+        total = len(link_data)
+        clear = sum(1 for v in link_data.values() if v["is_clear"])
+        blocked = total - clear
+        QMessageBox.information(self, "Link Check Complete",
+                                f"Analyzed {total} parts across {len(self._bom_database)} cases.\n\n"
+                                f"✓ {clear} parts clear\n"
+                                f"✗ {blocked} parts blocked or in progress\n\n"
+                                f"Link Status column has been updated.")
 
     # ------------------------------------------------------------------
     # TOOLBAR ACTIONS
@@ -5183,6 +5498,24 @@ class BomExplorerView(QWidget):
                 tree_item.setText(self.COL_RELEASED, display_status)
                 tree_item.setText(self.COL_ASSIGNEE, ecn_performer)
                 tree_item.setText(self.COL_TASK, ecn_progress)
+
+                # Link status column (populated after link check)
+                link_info = self._link_check_data.get(item_id)
+                if link_info:
+                    tree_item.setText(self.COL_LINK, link_info["text"])
+                    tree_item.setBackground(self.COL_LINK, QColor(link_info["color"]))
+                    if link_info.get("blocked_children"):
+                        bc_lines = [f"Blocked children:"]
+                        for bc in link_info["blocked_children"][:10]:
+                            bc_line = f"  ✗ {bc['item_id']}/{bc['rev']}"
+                            if bc['step']:
+                                bc_line += f" — {bc['step']}"
+                            if bc['performer']:
+                                bc_line += f" ({bc['performer']})"
+                            bc_lines.append(bc_line)
+                        if len(link_info["blocked_children"]) > 10:
+                            bc_lines.append(f"  ... and {len(link_info['blocked_children']) - 10} more")
+                        tree_item.setToolTip(self.COL_LINK, "\n".join(bc_lines))
 
                 # Color coding
                 if getattr(ecn_item, 'is_rejected', False) if ecn_item else False:
