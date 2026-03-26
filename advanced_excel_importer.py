@@ -1,4 +1,4 @@
-_VPM_VERSION = "3.1.7"  # Fix NaN status treated as activity - str(NaN)="nan" was truthy
+_VPM_VERSION = "3.2.1"  # Fix Error status treated as RED - now YELLOW (started, no decision)
 import pandas as pd
 import datetime
 from PyQt6.QtWidgets import QFileDialog, QMessageBox, QDialog, QVBoxLayout, QScrollArea, QWidget, QLabel, QHBoxLayout, QFrame, QGridLayout, QProgressBar
@@ -300,48 +300,61 @@ class WorkflowFlowchartDialog(QDialog):
         return False
 
     def get_task_state(self, task_name):
+        """Get color, performer, and status text for a workflow step.
+        Uses the same get_step_color() logic as the summary engine."""
         row = self.item.raw_data
-        # Get the engine instance to access conditional logic methods
         engine = self.parent().ecn_engine if hasattr(self.parent(), 'ecn_engine') else None
 
         for config in self.workflow_config:
             if config['name'] == task_name:
-                # Check if task applies to this item (conditional logic)
                 if engine and not engine.task_applies_to_item(row, config):
                     return "#ecf0f1", config.get('default_performer', ''), "Not Applicable"
 
-                # Use flexible column matching for all columns
                 start_col = self.find_flexible_column(row.keys(), config['start_date_col']) if config['start_date_col'] else None
                 end_col = self.find_flexible_column(row.keys(), config['end_date_col']) if config['end_date_col'] else None
-                status_col = self.find_flexible_column(row.keys(), config['status_col']) if config['status_col'] else None
-                performer_col = self.find_flexible_column(row.keys(), config['performer_col']) if config['performer_col'] else None
+                status_col = self.find_flexible_column(row.keys(), config.get('status_col')) if config.get('status_col') else None
+                performer_col = self.find_flexible_column(row.keys(), config.get('performer_col')) if config.get('performer_col') else None
 
                 start_date = pd.to_datetime(row.get(start_col), errors='coerce') if start_col else pd.NaT
                 end_date = pd.to_datetime(row.get(end_col), errors='coerce') if end_col else pd.NaT
-                status = str(row.get(status_col, "")).title() if status_col else ""
 
-                # Get performer, use default if not assigned
+                # NaN-safe status extraction with semicolon handling
+                raw_status = row.get(status_col, "") if status_col else ""
+                status_raw = raw_status if pd.notna(raw_status) and raw_status != "" else ""
+                status_display = str(status_raw).split(";")[0].strip().title() if status_raw else ""
+
+                # Performer
                 performer = row.get(performer_col, "") if performer_col else ""
-                if pd.isna(performer) or performer is None or str(performer).strip() == "":
+                if pd.isna(performer) or performer is None or not str(performer).strip():
                     performer = config.get('default_performer', '')
                 else:
                     performer = str(performer)
 
-                if "Reject" in status:
-                    return "#e74c3c", performer, "Rejected"
-                if pd.notna(end_date):
-                    return "#2ecc71", performer, f"Completed: {end_date.strftime('%Y-%m-%d')}"
-                # Fallback: config expects end_date column but not found in report
-                if end_col is None and config['end_date_col'] is not None and status:
-                    if any(kw in status.upper() for kw in ['RELEASED', 'COMPLETED', 'APPROVED']):
-                        return "#2ecc71", performer, status
-                if pd.notna(start_date):
-                    if config['end_date_col'] is None:
-                        # Event step (creation) — start = done
-                        return "#2ecc71", performer, f"Completed: {start_date.strftime('%Y-%m-%d')}"
-                    return "#f1c40f", performer, f"In Progress: {start_date.strftime('%Y-%m-%d')}"
+                is_milestone = config.get('end_date_col') is None
 
-                return "#bdc3c7", performer, "Pending"
+                # Use engine's get_step_color if available, otherwise inline
+                if engine:
+                    color = engine.get_step_color(start_date, end_date, status_raw, is_milestone)
+                else:
+                    color = "GRAY"  # fallback
+
+                # Map color to hex + status text
+                color_map = {"GREEN": "#2ecc71", "YELLOW": "#f1c40f", "RED": "#e74c3c", "GRAY": "#bdc3c7"}
+                hex_color = color_map.get(color, "#bdc3c7")
+
+                if color == "GREEN":
+                    date = end_date if pd.notna(end_date) else start_date
+                    date_str = date.strftime('%Y-%m-%d') if pd.notna(date) else ""
+                    status_text = f"Completed: {date_str}" if date_str else (status_display or "Completed")
+                elif color == "YELLOW":
+                    date_str = start_date.strftime('%Y-%m-%d') if pd.notna(start_date) else ""
+                    status_text = f"In Progress: {date_str}" if date_str else "In Progress"
+                elif color == "RED":
+                    status_text = f"Rejected ({status_display})" if status_display else "Rejected"
+                else:
+                    status_text = "Pending"
+
+                return hex_color, performer, status_text
         return "#bdc3c7", "", "Pending"
 
     def build_workflow_view(self):
@@ -601,6 +614,51 @@ class EcnDashboardEngine:
             or self._row_value_has_non_null(row, 'Costing Rework End Date')
         )
 
+    def get_step_color(self, start_date, end_date, status_raw, is_milestone=False):
+        """
+        Universal color rule for any workflow step.
+        Returns: "GREEN", "YELLOW", "RED", or "GRAY"
+
+        Rules:
+        - No start, no end → GRAY (not triggered)
+        - Milestone (no end_date_col): has start → GREEN
+        - Start + End + Reject → RED
+        - Start + End → GREEN (Completed/Approve/Approved/blank)
+        - Start only + Error → RED (stuck)
+        - Start only → YELLOW (in progress)
+        """
+        # Clean status: guard against NaN
+        status = ""
+        if pd.notna(status_raw) and status_raw != "":
+            # Handle semicolons: "Approve;Approve" → take first
+            s = str(status_raw).strip()
+            if ";" in s:
+                s = s.split(";")[0].strip()
+            status = s.upper()
+
+        has_start = pd.notna(start_date)
+        has_end = pd.notna(end_date)
+
+        # Milestone steps (PR Created, ECN Created, etc.) — start date = done
+        if is_milestone:
+            return "GREEN" if has_start else "GRAY"
+
+        if not has_start and not has_end:
+            return "GRAY"
+
+        if has_start and has_end:
+            if "REJECT" in status or "NO DECISION" in status:
+                return "RED"
+            return "GREEN"
+
+        if has_start and not has_end:
+            # Error = task is stuck/in system error, but no decision made yet.
+            # Treat as YELLOW (started). Only Reject/No Decision with an end date = RED.
+            return "YELLOW"
+
+        # Edge case: end without start (shouldn't happen, but treat as done)
+        return "GREEN" if has_end else "GRAY"
+
     def task_applies_to_item(self, row, task_config):
         """
         Determine if a task applies to a specific item.
@@ -718,30 +776,61 @@ class EcnDashboardEngine:
                 # Break after auto-completing
                 return
 
+    def _resolve_step_data(self, row, config):
+        """
+        Extract start_date, end_date, status for a workflow step from raw_data.
+        Handles NaN safely and splits semicolons.
+        Returns: (start_date, end_date, status_raw, is_milestone)
+        """
+        start_col = self.find_flexible_column(row.keys(), config['start_date_col']) if config.get('start_date_col') else None
+        end_col = self.find_flexible_column(row.keys(), config['end_date_col']) if config.get('end_date_col') else None
+        status_col = self.find_flexible_column(row.keys(), config.get('status_col')) if config.get('status_col') else None
+
+        start_date = pd.to_datetime(row.get(start_col), errors='coerce') if start_col else pd.NaT
+        end_date = pd.to_datetime(row.get(end_col), errors='coerce') if end_col else pd.NaT
+
+        raw_status = row.get(status_col, "") if status_col else ""
+        status_raw = raw_status if pd.notna(raw_status) and raw_status != "" else ""
+
+        # Milestone = step with no end_date_col (PR Created, ECN Created, etc.)
+        # Also: Design Released has end_date_col but no start_date_col — treat normally
+        is_milestone = config.get('end_date_col') is None
+
+        return start_date, end_date, status_raw, is_milestone
+
+    def _get_performer(self, row, config):
+        """Extract performer for a step, falling back to default."""
+        performer_col = self.find_flexible_column(row.keys(), config.get('performer_col')) if config.get('performer_col') else None
+        performer = row.get(performer_col, "") if performer_col else ""
+        if pd.isna(performer) or performer is None or not str(performer).strip():
+            return config.get('default_performer', '')
+        return str(performer)
+
     def _calculate_ecn_statuses(self, prs_dict):
         """
-        Pre-calculates all status fields for ECN items using step-based progress.
-        For each item, counts completed vs total applicable workflow steps to produce
-        a granular progress percentage (0-100%). Called once after all data is loaded.
+        v3.2.0: Simplified color-based workflow engine.
+
+        For each item:
+        1. Determine applicable steps (has data OR condition matches)
+        2. Color each step: GREEN/YELLOW/RED/GRAY using get_step_color()
+        3. Bottleneck = first YELLOW step (or first RED if no YELLOW)
+        4. Progress = GREEN count / applicable count
+        5. Rework = if RED exists, find earlier YELLOW step
         """
+        # Pre-compute position map for workflow_config
+        config_position = {id(cfg): i for i, cfg in enumerate(self.workflow_config)}
+
         for pr in prs_dict.values():
             for ecn in pr.ecns.values():
                 for item in ecn.items:
                     row = item.raw_data
-                    # NOTE: _auto_complete_design_task removed — it mutated
-                    # raw_data (set Design Task end = start) which corrupted
-                    # the summary when rejections caused workflow loops.
-                    # Gap-skipping (highest_activity_pos) now handles Design
-                    # Task completion implicitly without mutation.
 
-                    # Step 1: Determine applicable steps.
-                    # Include a step if it has actual data, OR if it has a
-                    # condition that evaluates to True (the task is expected
-                    # for this part type even though it hasn't started yet).
+                    # ── Step 1: Determine applicable steps ──
                     applicable_steps = []
                     for config in self.workflow_config:
                         if not self.task_applies_to_item(row, config):
                             continue
+                        # Check if step has any real data
                         has_any_data = False
                         for col_key in ['start_date_col', 'end_date_col', 'performer_col', 'status_col']:
                             col_name = config.get(col_key)
@@ -753,256 +842,151 @@ class EcnDashboardEngine:
                         if has_any_data:
                             applicable_steps.append(config)
                         elif config.get('condition') is not None:
-                            # Conditional step whose condition was met but has
-                            # no data yet — include so "not started" tasks are
-                            # counted toward total progress.
                             try:
                                 if config['condition'](row):
                                     applicable_steps.append(config)
                             except Exception:
                                 pass
 
-                    # ── Pass 1: Find the highest-position completed step ──
-                    # If step N is complete, all steps before N are implicitly
-                    # complete even if their data is missing from the report.
-                    config_position = {id(cfg): i for i, cfg in enumerate(self.workflow_config)}
-                    highest_completed_pos = -1
-                    highest_completed_name = ""
-                    highest_activity_pos = -1  # Tracks the furthest step with ANY start date
+                    # ── Step 2: Color each step ──
+                    step_colors = []  # list of (config, color, start_date, end_date, status)
                     for config in applicable_steps:
+                        start_date, end_date, status_raw, is_milestone = self._resolve_step_data(row, config)
+                        color = self.get_step_color(start_date, end_date, status_raw, is_milestone)
+                        step_colors.append((config, color, start_date, end_date, status_raw))
+
+                    # ── Step 3: Gap-skipping ──
+                    # If step N is GREEN/YELLOW/RED (has activity), all earlier
+                    # steps are implicitly complete even if data is missing.
+                    highest_activity_pos = -1
+                    for config, color, *_ in step_colors:
+                        if color != "GRAY":
+                            pos = config_position.get(id(config), 0)
+                            if pos > highest_activity_pos:
+                                highest_activity_pos = pos
+
+                    # Promote earlier GRAY steps to GREEN if a later step has activity
+                    for i, (config, color, sd, ed, st) in enumerate(step_colors):
                         pos = config_position.get(id(config), 0)
-                        _end = self.find_flexible_column(row.keys(), config['end_date_col']) if config.get('end_date_col') else None
-                        _start = self.find_flexible_column(row.keys(), config['start_date_col']) if config.get('start_date_col') else None
-                        if config['end_date_col'] is None:
-                            _done = pd.notna(pd.to_datetime(row.get(_start), errors='coerce')) if _start else False
-                        elif _end:
-                            _done = pd.notna(pd.to_datetime(row.get(_end), errors='coerce'))
-                        else:
-                            _sc = self.find_flexible_column(row.keys(), config.get('status_col')) if config.get('status_col') else None
-                            _raw_sv = row.get(_sc, "") if _sc else ""
-                            _sv = str(_raw_sv).upper() if pd.notna(_raw_sv) and _raw_sv != "" else ""
-                            _done = any(kw in _sv for kw in ['RELEASED', 'COMPLETED', 'APPROVED']) if _sv else (pd.notna(pd.to_datetime(row.get(_start), errors='coerce')) if _start else False)
-                        if _done and pos > highest_completed_pos:
-                            highest_completed_pos = pos
-                            highest_completed_name = config['name']
-                        # Track furthest step with a start date — if step N has
-                        # started, all steps 0..N-1 are implicitly complete
-                        _has_start = pd.notna(pd.to_datetime(row.get(_start), errors='coerce')) if _start else False
-                        if _has_start and pos > highest_activity_pos:
-                            highest_activity_pos = pos
+                        if color == "GRAY" and pos < highest_activity_pos:
+                            step_colors[i] = (config, "GREEN", sd, ed, st)
 
-                    # If a later step has started, all prior steps must be done
-                    if highest_activity_pos > highest_completed_pos:
-                        highest_completed_pos = highest_activity_pos - 1
+                    # ── Step 4: Count and find bottleneck ──
+                    green_count = 0
+                    first_yellow = None  # (index, config, start_date)
+                    first_red = None     # (index, config, start_date)
+                    last_green_name = ""
 
-                    # ── Pass 2: Count completed steps, find bottleneck ──
-                    completed_count = 0
-                    current_step_found = False
-                    is_rejected = False
+                    for i, (config, color, start_date, end_date, status_raw) in enumerate(step_colors):
+                        if color == "GREEN":
+                            green_count += 1
+                            last_green_name = config['name']
+                        elif color == "YELLOW" and first_yellow is None:
+                            first_yellow = (i, config, start_date)
+                        elif color == "RED" and first_red is None:
+                            first_red = (i, config, start_date)
 
-                    for config in applicable_steps:
-                        pos = config_position.get(id(config), 0)
-                        end_col = self.find_flexible_column(row.keys(), config['end_date_col']) if config['end_date_col'] else None
-                        start_col = self.find_flexible_column(row.keys(), config['start_date_col']) if config['start_date_col'] else None
-                        status_col = self.find_flexible_column(row.keys(), config.get('status_col')) if config.get('status_col') else None
-
-                        end_date = pd.to_datetime(row.get(end_col), errors='coerce') if end_col else pd.NaT
-                        start_date = pd.to_datetime(row.get(start_col), errors='coerce') if start_col else pd.NaT
-                        _raw_status = row.get(status_col, "") if status_col else ""
-                        status = str(_raw_status).upper() if pd.notna(_raw_status) and _raw_status != "" else ""
-
-                        # Determine completion — steps at or before the highest
-                        # completed position are implicitly done (gap-skipping).
-                        step_complete = False
-                        if pos <= highest_completed_pos:
-                            step_complete = True
-                        elif config['end_date_col'] is None:
-                            step_complete = pd.notna(start_date)
-                        elif end_col is None:
-                            if status:
-                                step_complete = any(kw in status for kw in ['RELEASED', 'COMPLETED', 'APPROVED'])
-                            else:
-                                step_complete = pd.notna(start_date)
-                        else:
-                            step_complete = pd.notna(end_date)
-
-                        # Check rejection — only flag if the rejected step
-                        # is NOT yet complete (issue was fixed and moved past).
-                        # "No Decision" also counts as rejection (sends work back)
-                        is_rejection_status = (
-                            "REJECT" in status or "NO DECISION" in status
-                        )
-                        if is_rejection_status and not step_complete:
-                            is_rejected = True
-
-                        if step_complete:
-                            completed_count += 1
-                        elif not current_step_found:
-                            # Only mark as bottleneck if the step has actually
-                            # started (has a start date) or is in progress.
-                            # Steps with zero data (no start, no end, no status)
-                            # are future steps that haven't begun — skip them.
-                            has_any_activity = (
-                                pd.notna(start_date) or pd.notna(end_date) or
-                                bool(status.strip())
-                            )
-                            if has_any_activity:
-                                current_step_found = True
-                                item.current_step_name = config['name']
-                                item.current_step_start_date = start_date if pd.notna(start_date) else None
-                                performer_col = self.find_flexible_column(row.keys(), config['performer_col']) if config.get('performer_col') else None
-                                performer = row.get(performer_col, "") if performer_col else ""
-                                if pd.isna(performer) or performer is None or not str(performer).strip():
-                                    performer = config.get('default_performer', '')
-                                item.current_step_performer = str(performer)
-
-                    # ── Rejection rework detection (Option C) ──
-                    # Keep the REJECTED step as the current task (bottleneck),
-                    # but also find where work went back to (rework step).
-                    # Display format: "Sheetmetal Review ↩ Design Task"
-                    item.rework_step_name = ""
-                    if current_step_found and is_rejected:
-                        try:
-                            _match = next(c for c in applicable_steps if c['name'] == item.current_step_name)
-                            rejected_step_pos = config_position.get(id(_match), 999)
-                        except StopIteration:
-                            rejected_step_pos = 999
-                        # Find the earlier step that work went back to:
-                        # must have end_date_col defined (real completable step),
-                        # have a start date, but NO end date (still open/rework).
-                        for earlier_cfg in applicable_steps:
-                            earlier_pos = config_position.get(id(earlier_cfg), 0)
-                            if earlier_pos >= rejected_step_pos:
-                                continue
-                            # Skip steps without end_date_col (milestones like
-                            # PR Created, ECN Created) — they can't be "open"
-                            if earlier_cfg.get('end_date_col') is None:
-                                continue
-                            _e_start_col = self.find_flexible_column(row.keys(), earlier_cfg['start_date_col']) if earlier_cfg.get('start_date_col') else None
-                            _e_end_col = self.find_flexible_column(row.keys(), earlier_cfg['end_date_col']) if earlier_cfg.get('end_date_col') else None
-                            _e_start = pd.to_datetime(row.get(_e_start_col), errors='coerce') if _e_start_col else pd.NaT
-                            _e_end = pd.to_datetime(row.get(_e_end_col), errors='coerce') if _e_end_col else pd.NaT
-                            if pd.notna(_e_start) and pd.isna(_e_end):
-                                item.rework_step_name = earlier_cfg['name']
-                                break
-
-                    # Step 3: Calculate progress
+                    # Bottleneck priority: YELLOW first, then RED
                     total = len(applicable_steps)
-                    item.completed_steps = completed_count
+                    is_rejected = first_red is not None
+
+                    if first_yellow:
+                        _, cfg, sd = first_yellow
+                        item.current_step_name = cfg['name']
+                        item.current_step_start_date = sd if pd.notna(sd) else None
+                        item.current_step_performer = self._get_performer(row, cfg)
+                    elif first_red:
+                        _, cfg, sd = first_red
+                        item.current_step_name = cfg['name']
+                        item.current_step_start_date = sd if pd.notna(sd) else None
+                        item.current_step_performer = self._get_performer(row, cfg)
+                    elif green_count == total and total > 0:
+                        # All done — show last completed step
+                        item.current_step_name = last_green_name or "Completed"
+                        item.current_step_performer = ""
+                        item.current_step_start_date = None
+                    else:
+                        item.current_step_name = last_green_name or "Completed"
+                        item.current_step_performer = ""
+                        item.current_step_start_date = None
+
+                    # ── Step 5: Rework detection ──
+                    # If RED exists, find an earlier YELLOW step (work went back)
+                    item.rework_step_name = ""
+                    if first_red is not None:
+                        red_pos = config_position.get(id(first_red[1]), 999)
+                        for config, color, *_ in step_colors:
+                            if color == "YELLOW":
+                                pos = config_position.get(id(config), 0)
+                                if pos < red_pos:
+                                    item.rework_step_name = config['name']
+                                    break
+
+                    # ── Step 6: Calculate progress ──
+                    item.completed_steps = green_count
                     item.total_steps = total
                     item.is_rejected = is_rejected
+                    item.effective_progress = round((green_count / total) * 100, 1) if total > 0 else 0
 
-                    if total > 0:
-                        item.effective_progress = round((completed_count / total) * 100, 1)
-                    else:
-                        item.effective_progress = 0
-
-                    if not current_step_found:
-                        if completed_count == total and total > 0:
-                            # All applicable steps done — search for next pending
-                            # step AFTER the highest completed position only.
-                            applicable_set = set(id(s) for s in applicable_steps)
-                            next_pending = None
-                            for cfg in self.workflow_config[highest_completed_pos + 1:]:
-                                if not self.task_applies_to_item(row, cfg):
-                                    continue
-                                if id(cfg) in applicable_set:
-                                    continue
-                                next_pending = cfg
-                                break
-                            if next_pending:
-                                p_col = self.find_flexible_column(row.keys(), next_pending['performer_col']) if next_pending.get('performer_col') else None
-                                p_val = row.get(p_col, "") if p_col else ""
-                                if pd.isna(p_val) or not str(p_val).strip():
-                                    p_val = next_pending.get('default_performer', '')
-                                item.current_step_name = next_pending['name']
-                                item.current_step_performer = str(p_val)
-                            else:
-                                # Show last completed step name (e.g., "MCN Released")
-                                item.current_step_name = highest_completed_name or "Completed"
-                                item.current_step_performer = ""
-                        else:
-                            item.current_step_name = highest_completed_name or "Completed"
-                            item.current_step_performer = ""
-
-                    # ECN dependency flag (set in ECN-level pass below)
+                    # Flags
                     item.waiting_on_ecn = False
                     item.ecn_peers_behind = 0
-
-                    # Pending MCN task: item is deep in workflow but not done
-                    item.has_pending_mcn_task = (item.effective_progress >= 80 and item.effective_progress < 100)
+                    item.has_pending_mcn_task = (80 <= item.effective_progress < 100)
                     item.needs_attention = item.is_rejected
 
-                # ECN Level Calculation
+                # ── ECN Level Calculation ──
                 ecn.is_rejected = any(item.is_rejected for item in ecn.items)
                 ecn.has_pending_mcn_task = any(item.has_pending_mcn_task for item in ecn.items)
                 ecn.needs_attention = ecn.is_rejected
-
-                if ecn.items:
-                    ecn.effective_progress = round(
-                        sum(item.effective_progress for item in ecn.items) / len(ecn.items), 1
-                    )
-                else:
-                    ecn.effective_progress = 0
+                ecn.effective_progress = (
+                    round(sum(i.effective_progress for i in ecn.items) / len(ecn.items), 1)
+                    if ecn.items else 0
+                )
 
                 # ── ECN Peer Dependency Check ──
-                # If the ECN is not released, items that are individually
-                # Production Released are "On Hold - ECN Pending".
                 ecn_released = False
                 for item in ecn.items:
                     r = item.raw_data
                     ecn_rel_col = self.find_flexible_column(r.keys(), 'ECN Released Date')
-                    if ecn_rel_col:
-                        ecn_rel_date = pd.to_datetime(r.get(ecn_rel_col), errors='coerce')
-                        if pd.notna(ecn_rel_date):
-                            ecn_released = True
-                            break
+                    if ecn_rel_col and pd.notna(pd.to_datetime(r.get(ecn_rel_col), errors='coerce')):
+                        ecn_released = True
+                        break
 
                 if not ecn_released:
-                    # Find the position of "ECN Completed" in workflow config.
-                    # Any item whose last completed step is at or past ECN Completed
-                    # (or whose current step has no activity) should be on hold.
-                    ecn_completed_pos = -1
-                    for idx, cfg in enumerate(self.workflow_config):
-                        if cfg['name'] == 'ECN Completed':
-                            ecn_completed_pos = idx
-                            break
+                    ecn_completed_pos = next(
+                        (i for i, c in enumerate(self.workflow_config) if c['name'] == 'ECN Completed'), -1
+                    )
+                    if ecn_completed_pos >= 0:
+                        for item in ecn.items:
+                            r = item.raw_data
+                            item_highest_pos = -1
+                            for cfg in self.workflow_config:
+                                _e = self.find_flexible_column(r.keys(), cfg['end_date_col']) if cfg.get('end_date_col') else None
+                                _s = self.find_flexible_column(r.keys(), cfg['start_date_col']) if cfg.get('start_date_col') else None
+                                if cfg['end_date_col'] is None:
+                                    _d = pd.notna(pd.to_datetime(r.get(_s), errors='coerce')) if _s else False
+                                elif _e:
+                                    _d = pd.notna(pd.to_datetime(r.get(_e), errors='coerce'))
+                                else:
+                                    _d = False
+                                if _d:
+                                    pos = config_position.get(id(cfg), -1)
+                                    if pos > item_highest_pos:
+                                        item_highest_pos = pos
 
-                    for item in ecn.items:
-                        # Re-derive highest_completed_pos for this item
-                        r = item.raw_data
-                        item_highest_pos = -1
-                        for cfg in self.workflow_config:
-                            _e = self.find_flexible_column(r.keys(), cfg['end_date_col']) if cfg.get('end_date_col') else None
-                            _s = self.find_flexible_column(r.keys(), cfg['start_date_col']) if cfg.get('start_date_col') else None
-                            if cfg['end_date_col'] is None:
-                                _d = pd.notna(pd.to_datetime(r.get(_s), errors='coerce')) if _s else False
-                            elif _e:
-                                _d = pd.notna(pd.to_datetime(r.get(_e), errors='coerce'))
-                            else:
-                                _d = False
-                            if _d:
-                                pos = next((i for i, c in enumerate(self.workflow_config) if c is cfg), -1)
-                                if pos > item_highest_pos:
-                                    item_highest_pos = pos
+                            if item_highest_pos >= ecn_completed_pos:
+                                item.waiting_on_ecn = True
+                                item.ecn_peers_behind = sum(
+                                    1 for i in ecn.items
+                                    if i.effective_progress < item.effective_progress and i is not item
+                                )
+                                item.current_step_name = "On Hold - ECN Pending"
+                                item.current_step_performer = ""
 
-                        # If item's last completed step is at/past ECN Completed
-                        # position, it's waiting on ECN release before MCN can start
-                        if item_highest_pos >= ecn_completed_pos and ecn_completed_pos >= 0:
-                            peers_behind = sum(
-                                1 for i in ecn.items
-                                if i.effective_progress < item.effective_progress and i is not item
-                            )
-                            item.waiting_on_ecn = True
-                            item.ecn_peers_behind = peers_behind
-                            item.current_step_name = "On Hold - ECN Pending"
-                            item.current_step_performer = ""
-
-            # PR Level Calculation
+            # ── PR Level Calculation ──
             pr.is_rejected = any(ecn.is_rejected for ecn in pr.ecns.values())
             pr.has_pending_mcn_task = any(ecn.has_pending_mcn_task for ecn in pr.ecns.values())
             pr.needs_attention = pr.is_rejected
-
             if pr.ecns:
                 pr.effective_progress = round(
                     sum(ecn.effective_progress for ecn in pr.ecns.values()) / len(pr.ecns), 1
@@ -1182,6 +1166,10 @@ class EcnDashboardEngine:
                             old_val = existing_item.raw_data.get(key)
                             if pd.notna(new_val) and (not pd.notna(old_val) or not str(old_val).strip()):
                                 existing_item.raw_data[key] = new_val
+                        # Clean semicolons in merged data: "Approve;Approve" → "Approve"
+                        for key, val in existing_item.raw_data.items():
+                            if isinstance(val, str) and ";" in val:
+                                existing_item.raw_data[key] = val.split(";")[0].strip()
                         # Recalculate date range on merged data
                         merge_dates = []
                         for task_conf in self.workflow_config:
