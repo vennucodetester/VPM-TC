@@ -1,102 +1,15 @@
-DLLs staged to local path: C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls
-  WARNING: Could not load TcSoaClient: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaClient.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaClient.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
+ DLLs staged to local path: C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls
+Loaded 9/9 TC assemblies from C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls
 
+Pre-check: pinging http://STLV-HSMWEBTCP1:8080/tc ...
+  REACHABLE: http://STLV-HSMWEBTCP1:8080/tc/RestServices/Core-2008-06-Session -> HTTP 400 (server responded)
 
-  WARNING: Could not load TcSoaCommon: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCommon.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCommon.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-  WARNING: Could not load TcSoaCoreStrong: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCoreStrong.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCoreStrong.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-  WARNING: Could not load TcSoaCoreTypes: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCoreTypes.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCoreTypes.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-  WARNING: Could not load TcSoaStrongModel: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaStrongModel.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaStrongModel.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-  WARNING: Could not load TcSoaQueryStrong: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaQueryStrong.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaQueryStrong.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-  WARNING: Could not load TcSoaQueryTypes: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaQueryTypes.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaQueryTypes.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-  WARNING: Could not load TcSoaCadStrong: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCadStrong.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCadStrong.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-  WARNING: Could not load TcSoaCadTypes: Could not load file or assembly 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCadTypes.dll' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)
-File name: 'file:///C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls\TcSoaCadTypes.dll' ---> System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
-   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
-   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
-   at Python.Runtime.AssemblyManager.LoadAssemblyPath(String name)
-   at Python.Runtime.CLRModule.AddReference(String name)
-
-
-Loaded 0/9 TC assemblies from C:\Users\ccbefb\AppData\Local\Temp\tc_soa_dlls
-
-ERROR: No module named 'Teamcenter'
+ERROR: interface takes exactly one argument
 Traceback (most recent call last):
-  File "C:\PYTHON\VPM-TC\2.5\test_siemens_bridge.py", line 538, in main
+  File "C:\PYTHON\VPM-TC\2.5\test_siemens_bridge.py", line 604, in main
     conn = tc_connect(args.url, args.user, args.password, retries=args.retries)
-  File "C:\PYTHON\VPM-TC\2.5\test_siemens_bridge.py", line 163, in tc_connect
-    from Teamcenter.Soa import SoaConstants
-ModuleNotFoundError: No module named 'Teamcenter'
-
-C:\PYTHON\VPM-TC\2.5>
+  File "C:\PYTHON\VPM-TC\2.5\test_siemens_bridge.py", line 241, in tc_connect
+    cred_mgr = create_credential_manager(username, password)
+  File "C:\PYTHON\VPM-TC\2.5\test_siemens_bridge.py", line 183, in create_credential_manager
+    return PyCredentialManager(username, password)
+TypeError: interface takes exactly one argument
