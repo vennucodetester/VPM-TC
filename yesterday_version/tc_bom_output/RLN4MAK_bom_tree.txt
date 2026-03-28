@@ -1,0 +1,159 @@
+BOM Tree: RLN4MAK
+Fetched: 2026-03-24T23:00:11.221482
+View: MTY View
+Total parts: 102
+Max depth: 5
+
+✗ RLN4MAK/A — RLN4MA-KITS
+├── ✗ 3H00010385/A — RLN4MA-MISC OPTIONS
+├── ✓ 3H00010387/B — EXTERIOR-CASE OPTIONS MICROBLOCK LT 4DR
+│   ├── ✓ AFE98/A — COVER-END RLNMA
+│   │   ├── ✓ 3232970/D — COVER ASSY-END RLNMA TXTD
+│   │   │   ├── ✓ 3232995/C — PANEL-COVER RECT END TXTD OPTL COLOR RLNMA
+│   │   │   │   └── ✓ 0960038/B — 035GALVTEX_50.000X101.000
+│   │   │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+│   │   │   └── ✓ 3242471/A — LABEL-BR END COVER
+│   │   └── ✓ 3236082/A — INSTRUCTION-RNMA END CVR INSTL
+│   └── ✓ AFE99/A — JOINING-CASE RNMA
+│       ├── ✓ 0137715000/A — SCREW SM 10-16X3/4 HX WAS
+│       ├── ✓ 0534121/B — SCREW-SM 8-18X5/8 PHIL HX HD
+│       ├── ✓ 3232962/A — SPACER-JOINING RNMA LT-LT
+│       │   └── ✓ 0203080/A — LAMINA GALV C.18 3' (ROLLO)
+│       ├── ✓ 3233370/C — PANEL-END FACADE 15IN SLOTTED TXTD
+│       │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+│       ├── ✓ 3234330/B — INSTRUCTION-RNMA CASE JOINING
+│       ├── ✓ 3234331/C — TRIM ASSY-CASE JOINING RLNMA-RLNMA TXTD
+│       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+│       │   ├── ✓ 3232986/B — TRIM-CASE JOINING RLNMA-RLNMA TXTD
+│       │   │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+│       │   └── ✓ 3242444/A — LABEL-B JOIN TRIM
+│       ├── ✓ 3234756/C — TRIM ASSY-CASE JOINING RLNMA-RMNMA TXTD
+│       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+│       │   ├── ✓ 3234754/B — TRIM-CASE JOINING RLNMA-RMNMA TXTD
+│       │   │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+│       │   └── ✓ 3242445/A — LABEL-C JOIN TRIM
+│       ├── ✓ 3234757/C — TRIM ASSY-CASE JOINING RMNMA-RMNMA TXTD
+│       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+│       │   ├── ✓ 3234755/B — TRIM-CASE JOINING RMNMA-RMNMA TXTD
+│       │   │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+│       │   └── ✓ 3242446/A — LABEL-D JOIN TRIM
+│       ├── ✓ 3236080/B — INSTRUCTION-RNMA CASE JOINING
+│       ├── ✓ 3238598/B — TRIM ASSY-FACADE RNMA TXTD
+│       │   ├── ✓ 3238597/B — TRIM-FACADE JOINT RNMA SM OC TXTD
+│       │   │   └── ✓ 0962094/A — LAM CRS C22 TEXTD 48.5" COIL
+│       │   └── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+│       ├── ✓ 3238666/B — SPLASHGUARD-JOINING TRIM ASSY TXTD
+│       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+│       │   └── ✓ 3238665/B — SPLASHGUARD-JOINING TRIM TXTD
+│       │       └── ✓ 0962094/A — LAM CRS C22 TEXTD 48.5" COIL
+│       ├── ✓ 3242469/A — LABEL-BN FACADE TRIM
+│       └── ✓ 3242475/A — LABEL-CD JOINT TRIM SPLGRD
+├── ✗ 3H00010390/A — INTERIOR-CASE OPTIONS MICROBLOCK 4DR
+├── ✗ 3H00010391/A — SHELVING-OPTIONS MICROBLOCK
+│   └── ✓ VX00/A — SHELF ASSY-24IN NARROW OPT COL
+│       ├── ✓ 0380221000/A — STICKER-LOAD LIMIT
+│       ├── ✓ 0516146/B — CLIP-SHELF RETAINING
+│       └── ✓ 3108928/B — SHELF ASSY-24 IN NARROW
+│           ├── ✓ 3108924/C — BRACKET-SHELF 24 RLN
+│           │   └── ✓ 3148174/A — GALV G60U 14GA .071"M X 36"
+│           └── ✓ 0437346000/C — SHELF ASSY-RL 24 WELD
+├── ✗ 3H00010394/A — DOOR-OPTIONS MICROBLOCK LT 4DR
+│   └── ✓ UG74/A — LED-S 4DR 4000K RL
+│       └── ✓ 3073474/G — LED-SYST 4DR 4000K RL
+│           ├── ✓ 0103607002/B — SEALER-1/2 BEAD
+│           ├── ✓ 0482328000/A — TAPE-VHB 1X72Y .025THK
+│           ├── ✓ 1803338/A — NYLON CAP 16-14 NM22WC02
+│           ├── ✓ 1803509/A — NYLON CAP 12-10 NM22WC05
+│           ├── ✓ 1900288/A — TORNILLO PIJA AUTO C/PH 8 X 1
+│           ├── ✓ 3071859/G — LED-S  CTR 58IN 4000K RI
+│           ├── ✓ 3071880/G — LED-S  LH 58IN 4000K RI
+│           ├── ✓ 3071899/E — LED-S  RH 58IN 4000K RI
+│           ├── ✓ 3074381/D — INSTRUCTION-LED UNIV LTG
+│           ├── ✓ 3074382/B — DIAGRAM-WIRING LED UNIV LTG
+│           ├── ✓ 5500172/M — ILUMINATION T8 SYSTEM 4DR
+│           │   ├── ✓ 0210386/C — REFLECTOR END LH
+│           │   ├── ✓ 0210387/C — REFLECTOR END RH
+│           │   ├── ✓ 0387218000/A — STICKER-LIGHT BAR
+│           │   ├── ✓ 0489702000/B — DIAG WRG 4 DRS JAM BLST
+│           │   ├── ✓ 0511082/A — 1/8 DOMED HEAD ALUMINUM RIVET
+│           │   ├── ✓ 1004374/A — FILLER END LENS LH
+│           │   ├── ✓ 1004375/A — FILLER END LENS RH
+│           │   ├── ✓ 1004376/A — FILLER MULLION LENS
+│           │   ├── ✓ 1004377/A — SHIELD LAMP
+│           │   ├── ✓ 1803084/A — LAMP F58T8 4000 K OR 4100 K 5O
+│           │   ├── ✓ 1803357/B — WIRE ASM JUMPER
+│           │   ├── ✓ 1803983/A — WIRE ASM LAMP-BLST WC 4DR
+│           │   ├── ✓ 1900427/A — SCREW 8X1/2 TR PHL SM
+│           │   ├── ✓ 1900437/B — SCREW-8 X 3/8 SM THREAD BLUND
+│           │   ├── ✓ 7406403/A — LENS ASSEMBLY END LH
+│           │   └── ✓ 7406404/A — LENS ASSEMBLY END RH
+│           ├── ✓ 3117868/D — POWER SUPPLY-4A 24V 96W
+│           ├── ✓ 3016238/A — CONNECTOR-SPLICING 5 COND
+│           ├── ✓ 0456490/A — WIRE -18 GA BLK 35" LED WC67
+│           ├── ✓ 050584100/F — REINFORCEMENT-BRACKET MULLION WC
+│           ├── ✓ 1803437/A — WIRE 18 GA RED 34"
+│           ├── ✓ 3027886/B — BRACKET-END FRAME LED REINF
+│           └── ✓ 0428788001/A — CONNECTOR-4 WIRE
+├── ✗ 3H00010397/A — REFRIGERATION-MICROBLOCK LT CASSETTE
+└── ✗ 3H00010393/A — END-OPTIONS MICROBLOCK LT
+    └── ✗ AFE94KIT/A — END-LH RH RECT RLNMA
+        ├── ✗ 3H00010399/A — AFE94 OPTIONS
+        │   ├── ✓ AFE98/A — COVER-END RLNMA
+        │   │   ├── ✓ 3232970/D — COVER ASSY-END RLNMA TXTD
+        │   │   │   ├── ✓ 3232995/C — PANEL-COVER RECT END TXTD OPTL COLOR RLNMA
+        │   │   │   │   └── ✓ 0960038/B — 035GALVTEX_50.000X101.000
+        │   │   │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+        │   │   │   └── ✓ 3242471/A — LABEL-BR END COVER
+        │   │   └── ✓ 3236082/A — INSTRUCTION-RNMA END CVR INSTL
+        │   └── ✓ AFE99/A — JOINING-CASE RNMA
+        │       ├── ✓ 0137715000/A — SCREW SM 10-16X3/4 HX WAS
+        │       ├── ✓ 0534121/B — SCREW-SM 8-18X5/8 PHIL HX HD
+        │       ├── ✓ 3232962/A — SPACER-JOINING RNMA LT-LT
+        │       │   └── ✓ 0203080/A — LAMINA GALV C.18 3' (ROLLO)
+        │       ├── ✓ 3233370/C — PANEL-END FACADE 15IN SLOTTED TXTD
+        │       │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+        │       ├── ✓ 3234330/B — INSTRUCTION-RNMA CASE JOINING
+        │       ├── ✓ 3234331/C — TRIM ASSY-CASE JOINING RLNMA-RLNMA TXTD
+        │       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+        │       │   ├── ✓ 3232986/B — TRIM-CASE JOINING RLNMA-RLNMA TXTD
+        │       │   │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+        │       │   └── ✓ 3242444/A — LABEL-B JOIN TRIM
+        │       ├── ✓ 3234756/C — TRIM ASSY-CASE JOINING RLNMA-RMNMA TXTD
+        │       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+        │       │   ├── ✓ 3234754/B — TRIM-CASE JOINING RLNMA-RMNMA TXTD
+        │       │   │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+        │       │   └── ✓ 3242445/A — LABEL-C JOIN TRIM
+        │       ├── ✓ 3234757/C — TRIM ASSY-CASE JOINING RMNMA-RMNMA TXTD
+        │       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+        │       │   ├── ✓ 3234755/B — TRIM-CASE JOINING RMNMA-RMNMA TXTD
+        │       │   │   └── ✓ 0962053/A — .035 GALV TEXTD 49.375" ROLL
+        │       │   └── ✓ 3242446/A — LABEL-D JOIN TRIM
+        │       ├── ✓ 3236080/B — INSTRUCTION-RNMA CASE JOINING
+        │       ├── ✓ 3238598/B — TRIM ASSY-FACADE RNMA TXTD
+        │       │   ├── ✓ 3238597/B — TRIM-FACADE JOINT RNMA SM OC TXTD
+        │       │   │   └── ✓ 0962094/A — LAM CRS C22 TEXTD 48.5" COIL
+        │       │   └── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+        │       ├── ✓ 3238666/B — SPLASHGUARD-JOINING TRIM ASSY TXTD
+        │       │   ├── ✓ 0548767/E — TAPE-ADHESIVE TRANSFER 1 IN
+        │       │   └── ✓ 3238665/B — SPLASHGUARD-JOINING TRIM TXTD
+        │       │       └── ✓ 0962094/A — LAM CRS C22 TEXTD 48.5" COIL
+        │       ├── ✓ 3242469/A — LABEL-BN FACADE TRIM
+        │       └── ✓ 3242475/A — LABEL-CD JOINT TRIM SPLGRD
+        └── ✗ AFE94/A — END-LH RH RECT RLNMA
+            ├── ✓ 0000215003/B — WASHER-FLAT 5/16WI ZINC
+            ├── ✓ 0019095001/C — LABEL-PRESSURE SENSITIVE, PRY BAR CAUTION
+            ├── ✓ 0135468000/A — SEALANT-PUMPABLE BUTYLE
+            ├── ✓ 0136172002/A — GASKET 1/2 X 1/4 X 600
+            ├── ✓ 0142511002/B — NUT-RETAINER .313-18 .096-.141 PT
+            ├── ✓ 0142512003/B — SCREW-CAP 5/16 18 X 2 1/2 FULL THD HEX HD ST YZ  GRADE 5
+            ├── ✓ 0376231000/A — PLUG-BOLT SPACER
+            ├── ✓ 0430382000/A — SCREW-8 X .5 TR HD PH BLK
+            ├── ✓ 0479781/E — IMPORTANT FOR INSTALLER
+            ├── ✓ 0511304/A — GASKET DONUT RLN END
+            ├── ✓ 0560316/A — GASKET.906" X 1/2" X 200"
+            ├── ✓ 1006247/B — MOULDING END BLACK NO HOLES
+            ├── ✓ 1900427/A — SCREW 8X1/2 TR PHL SM
+            ├── ✓ 3232947/C — SPLASHGUARD-RNMA RH END TXTD
+            ├── ✓ 3232948/C — SPLASHGUARD-RNMA LH END TXTD
+            ├── ✓ 3233001/C — END ASSY-RH RECT RLNMA BARE - FRP INT
+            └── ✓ 3233002/C — END ASSY-LH RECT RLNMA BARE - FRP INT

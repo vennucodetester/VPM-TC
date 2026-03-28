@@ -1,0 +1,2656 @@
+{
+  "nomenclature": "RLN4MAK",
+  "fetched_at": "2026-03-24T23:00:11.221482",
+  "view_type": "MTY View",
+  "total_parts": 102,
+  "max_depth": 5,
+  "root": {
+    "item_id": "RLN4MAK",
+    "revision": "A",
+    "name": "RLN4MA-KITS",
+    "nomenclature": "",
+    "release_status": "",
+    "process_stage": "",
+    "ecn": "",
+    "uid": "xgFAk6cnoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "3H00010385",
+        "revision": "A",
+        "name": "RLN4MA-MISC OPTIONS",
+        "nomenclature": "",
+        "release_status": "",
+        "process_stage": "",
+        "ecn": "",
+        "uid": "x8CAk6cnoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3H00010387",
+        "revision": "B",
+        "name": "EXTERIOR-CASE OPTIONS MICROBLOCK LT 4DR",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007847",
+        "uid": "QIIAkLDUoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "AFE98",
+            "revision": "A",
+            "name": "COVER-END RLNMA",
+            "nomenclature": "AFE98",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0038145",
+            "uid": "RZPAk6MIoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3232970",
+                "revision": "D",
+                "name": "COVER ASSY-END RLNMA TXTD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0038145",
+                "uid": "gEHAUbrkoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "3232995",
+                    "revision": "C",
+                    "name": "PANEL-COVER RECT END TXTD OPTL COLOR RLNMA",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "HAB RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0038355",
+                    "uid": "gyGAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "0960038",
+                        "revision": "B",
+                        "name": "035GALVTEX_50.000X101.000",
+                        "nomenclature": "",
+                        "release_status": [
+                          "HAB RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "41472",
+                        "uid": "FxPAAAJ9oeVOgD",
+                        "depth": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "0548767",
+                    "revision": "E",
+                    "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "QMDAkyWKoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3242471",
+                    "revision": "A",
+                    "name": "LABEL-BR END COVER",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007707",
+                    "uid": "wSBAUTHroeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3236082",
+                "revision": "A",
+                "name": "INSTRUCTION-RNMA END CVR INSTL",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007426",
+                "uid": "gaHA0KT7oeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "AFE99",
+            "revision": "A",
+            "name": "JOINING-CASE RNMA",
+            "nomenclature": "AFE99",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007707",
+            "uid": "RtEAk6MIoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0137715000",
+                "revision": "A",
+                "name": "SCREW SM 10-16X3/4 HX WAS",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0016141",
+                "uid": "dKOAAA1roeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0534121",
+                "revision": "B",
+                "name": "SCREW-SM 8-18X5/8 PHIL HX HD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "BGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "PPAP COMPLETED",
+                  "TJU RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0030790",
+                "uid": "RQHAhGuJoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "3232962",
+                "revision": "A",
+                "name": "SPACER-JOINING RNMA LT-LT",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007375",
+                "uid": "gnFAkaMhoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0203080",
+                    "revision": "A",
+                    "name": "LAMINA GALV C.18 3' (ROLLO)",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "TJU RELEASED",
+                      "BBK RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0032286",
+                    "uid": "r2IAAAGuoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3233370",
+                "revision": "C",
+                "name": "PANEL-END FACADE 15IN SLOTTED TXTD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007705",
+                "uid": "wmGAUPMfoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0962053",
+                    "revision": "A",
+                    "name": ".035 GALV TEXTD 49.375\" ROLL",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "HAB RELEASED",
+                      "TJU RELEASED",
+                      "CNO RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-COD-0022737",
+                    "uid": "64IAAAGxoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3234330",
+                "revision": "B",
+                "name": "INSTRUCTION-RNMA CASE JOINING",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007707",
+                "uid": "gkDAUfjQoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "3234331",
+                "revision": "C",
+                "name": "TRIM ASSY-CASE JOINING RLNMA-RLNMA TXTD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007707",
+                "uid": "g8LAUb7ToeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0548767",
+                    "revision": "E",
+                    "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "QMDAkyWKoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3232986",
+                    "revision": "B",
+                    "name": "TRIM-CASE JOINING RLNMA-RLNMA TXTD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007705",
+                    "uid": "Q_FAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "0962053",
+                        "revision": "A",
+                        "name": ".035 GALV TEXTD 49.375\" ROLL",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED",
+                          "HAB RELEASED",
+                          "TJU RELEASED",
+                          "CNO RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-COD-0022737",
+                        "uid": "64IAAAGxoeVOgD",
+                        "depth": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "3242444",
+                    "revision": "A",
+                    "name": "LABEL-B JOIN TRIM",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007707",
+                    "uid": "wICAUTHroeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3234756",
+                "revision": "C",
+                "name": "TRIM ASSY-CASE JOINING RLNMA-RMNMA TXTD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007707",
+                "uid": "wwEAUb7ToeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0548767",
+                    "revision": "E",
+                    "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "QMDAkyWKoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3234754",
+                    "revision": "B",
+                    "name": "TRIM-CASE JOINING RLNMA-RMNMA TXTD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007705",
+                    "uid": "QPIAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "0962053",
+                        "revision": "A",
+                        "name": ".035 GALV TEXTD 49.375\" ROLL",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED",
+                          "HAB RELEASED",
+                          "TJU RELEASED",
+                          "CNO RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-COD-0022737",
+                        "uid": "64IAAAGxoeVOgD",
+                        "depth": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "3242445",
+                    "revision": "A",
+                    "name": "LABEL-C JOIN TRIM",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007707",
+                    "uid": "wYLAUTHroeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3234757",
+                "revision": "C",
+                "name": "TRIM ASSY-CASE JOINING RMNMA-RMNMA TXTD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007707",
+                "uid": "AhAAUb7ToeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0548767",
+                    "revision": "E",
+                    "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "QMDAkyWKoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3234755",
+                    "revision": "B",
+                    "name": "TRIM-CASE JOINING RMNMA-RMNMA TXTD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007705",
+                    "uid": "gDJAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "0962053",
+                        "revision": "A",
+                        "name": ".035 GALV TEXTD 49.375\" ROLL",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED",
+                          "HAB RELEASED",
+                          "TJU RELEASED",
+                          "CNO RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-COD-0022737",
+                        "uid": "64IAAAGxoeVOgD",
+                        "depth": 4,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "3242446",
+                    "revision": "A",
+                    "name": "LABEL-D JOIN TRIM",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007707",
+                    "uid": "wsAAUTHroeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3236080",
+                "revision": "B",
+                "name": "INSTRUCTION-RNMA CASE JOINING",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007707",
+                "uid": "QAAAUfjQoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "3238598",
+                "revision": "B",
+                "name": "TRIM ASSY-FACADE RNMA TXTD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007705",
+                "uid": "wYPAUPdDoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "3238597",
+                    "revision": "B",
+                    "name": "TRIM-FACADE JOINT RNMA SM OC TXTD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007705",
+                    "uid": "wrKAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "0962094",
+                        "revision": "A",
+                        "name": "LAM CRS C22 TEXTD 48.5\" COIL",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "38523",
+                        "uid": "t3JAAAm7oeVOgD",
+                        "depth": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "0548767",
+                    "revision": "E",
+                    "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "QMDAkyWKoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "item_id": "3238666",
+                "revision": "B",
+                "name": "SPLASHGUARD-JOINING TRIM ASSY TXTD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007705",
+                "uid": "AJLAUPdDoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0548767",
+                    "revision": "E",
+                    "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "QMDAkyWKoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3238665",
+                    "revision": "B",
+                    "name": "SPLASHGUARD-JOINING TRIM TXTD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007705",
+                    "uid": "BcKAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "0962094",
+                        "revision": "A",
+                        "name": "LAM CRS C22 TEXTD 48.5\" COIL",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "38523",
+                        "uid": "t3JAAAm7oeVOgD",
+                        "depth": 5,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_id": "3242469",
+                "revision": "A",
+                "name": "LABEL-BN FACADE TRIM",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007707",
+                "uid": "guHAUTHroeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "3242475",
+                "revision": "A",
+                "name": "LABEL-CD JOINT TRIM SPLGRD",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0007707",
+                "uid": "AXGAUTHroeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "3H00010390",
+        "revision": "A",
+        "name": "INTERIOR-CASE OPTIONS MICROBLOCK 4DR",
+        "nomenclature": "",
+        "release_status": "",
+        "process_stage": "",
+        "ecn": "",
+        "uid": "RROAk6cnoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3H00010391",
+        "revision": "A",
+        "name": "SHELVING-OPTIONS MICROBLOCK",
+        "nomenclature": "",
+        "release_status": "",
+        "process_stage": "",
+        "ecn": "",
+        "uid": "RhFAk6cnoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "VX00",
+            "revision": "A",
+            "name": "SHELF ASSY-24IN NARROW OPT COL",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0002540",
+            "uid": "wnFARq15oeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0380221000",
+                "revision": "A",
+                "name": "STICKER-LOAD LIMIT",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED",
+                  "BGN RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "",
+                "uid": "24CAAAXloeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "0516146",
+                "revision": "B",
+                "name": "CLIP-SHELF RETAINING",
+                "nomenclature": "",
+                "release_status": [
+                  "PRODUCTION RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "BGN RELEASED",
+                  "CNO RELEASED",
+                  "TJU RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0030790",
+                "uid": "kpOAAAKSoeVOgD",
+                "depth": 3,
+                "children": []
+              },
+              {
+                "item_id": "3108928",
+                "revision": "B",
+                "name": "SHELF ASSY-24 IN NARROW",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-NPD-0003110",
+                "uid": "hgJARTgZoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "3108924",
+                    "revision": "C",
+                    "name": "BRACKET-SHELF 24 RLN",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0030887",
+                    "uid": "wsBAz9KIoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "3148174",
+                        "revision": "A",
+                        "name": "GALV G60U 14GA .071\"M X 36\"",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "PPAP COMPLETED",
+                          "BGN RELEASED",
+                          "TJU RELEASED",
+                          "BBK RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-CAP-0038344",
+                        "uid": "x4OAiJgioeVOgD",
+                        "depth": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "0437346000",
+                    "revision": "C",
+                    "name": "SHELF ASSY-RL 24 WELD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "glEAAAqnoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "3H00010394",
+        "revision": "A",
+        "name": "DOOR-OPTIONS MICROBLOCK LT 4DR",
+        "nomenclature": "",
+        "release_status": "",
+        "process_stage": "",
+        "ecn": "",
+        "uid": "hJHAk6cnoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "UG74",
+            "revision": "A",
+            "name": "LED-S 4DR 4000K RL",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0026656",
+            "uid": "wPKAhQDGoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3073474",
+                "revision": "G",
+                "name": "LED-SYST 4DR 4000K RL",
+                "nomenclature": "",
+                "release_status": [
+                  "DESIGN RELEASED",
+                  "MTY RELEASED",
+                  "HAB RELEASED",
+                  "PRODUCTION RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-VAVE-0000294",
+                "uid": "lXFAjzwuoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0103607002",
+                    "revision": "B",
+                    "name": "SEALER-1/2 BEAD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "TJU RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "HSM Part Implementation Process/0103607002/B;1-SEALER-1/2 BEAD:1,Update PPAP - MTY/0103607002/B;1-SEALER-1/2 BEAD:1",
+                    "ecn": "ECN-CAP-0034672",
+                    "uid": "A8DA0xlhoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0482328000",
+                    "revision": "A",
+                    "name": "TAPE-VHB 1X72Y .025THK",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0029511",
+                    "uid": "ZjJAAAmtoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "1803338",
+                    "revision": "A",
+                    "name": "NYLON CAP 16-14 NM22WC02",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0038168",
+                    "uid": "NXMAAAGuoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "1803509",
+                    "revision": "A",
+                    "name": "NYLON CAP 12-10 NM22WC05",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "B9OAAAGroeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "1900288",
+                    "revision": "A",
+                    "name": "TORNILLO PIJA AUTO C/PH 8 X 1",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "BBK RELEASED",
+                      "PRODUCTION RELEASED",
+                      "HAB RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0027258",
+                    "uid": "RhCAAAWqoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3071859",
+                    "revision": "G",
+                    "name": "LED-S  CTR 58IN 4000K RI",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0034509",
+                    "uid": "zsBAkJtKoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3071880",
+                    "revision": "G",
+                    "name": "LED-S  LH 58IN 4000K RI",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0034509",
+                    "uid": "kbKAkJaooeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3071899",
+                    "revision": "E",
+                    "name": "LED-S  RH 58IN 4000K RI",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0034509",
+                    "uid": "GxEAkJaooeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3074381",
+                    "revision": "D",
+                    "name": "INSTRUCTION-LED UNIV LTG",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0027258",
+                    "uid": "BJLAx1G0oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3074382",
+                    "revision": "B",
+                    "name": "DIAGRAM-WIRING LED UNIV LTG",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0027258",
+                    "uid": "xKDAxniDoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "5500172",
+                    "revision": "M",
+                    "name": "ILUMINATION T8 SYSTEM 4DR",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007835",
+                    "uid": "0LHAkDKHoeVOgD",
+                    "depth": 4,
+                    "children": [
+                      {
+                        "item_id": "0210386",
+                        "revision": "C",
+                        "name": "REFLECTOR END LH",
+                        "nomenclature": "",
+                        "release_status": [
+                          "HAB RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "ECOAAAZroeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "0210387",
+                        "revision": "C",
+                        "name": "REFLECTOR END RH",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "EOCAAAZroeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "0387218000",
+                        "revision": "A",
+                        "name": "STICKER-LIGHT BAR",
+                        "nomenclature": "",
+                        "release_status": [
+                          "HAB RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "_lOAAAGuoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "0489702000",
+                        "revision": "B",
+                        "name": "DIAG WRG 4 DRS JAM BLST",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "HAB RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-CAP-0033245",
+                        "uid": "74BAwFa$oeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "0511082",
+                        "revision": "A",
+                        "name": "1/8 DOMED HEAD ALUMINUM RIVET",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "36100",
+                        "uid": "YJCAAA26oeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1004374",
+                        "revision": "A",
+                        "name": "FILLER END LENS LH",
+                        "nomenclature": "",
+                        "release_status": [
+                          "HAB RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "y7CAAAGuoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1004375",
+                        "revision": "A",
+                        "name": "FILLER END LENS RH",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "DkCAAAGuoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1004376",
+                        "revision": "A",
+                        "name": "FILLER MULLION LENS",
+                        "nomenclature": "",
+                        "release_status": [
+                          "HAB RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "TQCAAAGuoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1004377",
+                        "revision": "A",
+                        "name": "SHIELD LAMP",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "T8CAAAGuoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1803084",
+                        "revision": "A",
+                        "name": "LAMP F58T8 4000 K OR 4100 K 5O",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "6ZOAAA29oeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1803357",
+                        "revision": "B",
+                        "name": "WIRE ASM JUMPER",
+                        "nomenclature": "",
+                        "release_status": [
+                          "PRODUCTION RELEASED",
+                          "HAB RELEASED",
+                          "MTY RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "gxIAA4gboeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1803983",
+                        "revision": "A",
+                        "name": "WIRE ASM LAMP-BLST WC 4DR",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-CAP-0033245",
+                        "uid": "r6NAAAGooeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1900427",
+                        "revision": "A",
+                        "name": "SCREW 8X1/2 TR PHL SM",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "6jCAAA29oeVOgD",
+                        "depth": 4,
+                        "children": []
+                      },
+                      {
+                        "item_id": "1900437",
+                        "revision": "B",
+                        "name": "SCREW-8 X 3/8 SM THREAD BLUND",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "BGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "PPAP COMPLETED",
+                          "BBK RELEASED",
+                          "TJU RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-CAP-0034052",
+                        "uid": "kHNAwFcIoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "7406403",
+                        "revision": "A",
+                        "name": "LENS ASSEMBLY END LH",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "mmEAAAGuoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      },
+                      {
+                        "item_id": "7406404",
+                        "revision": "A",
+                        "name": "LENS ASSEMBLY END RH",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "BGN RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "",
+                        "uid": "2SEAAAGuoeVOgD",
+                        "depth": 5,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "3117868",
+                    "revision": "D",
+                    "name": "POWER SUPPLY-4A 24V 96W",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "CNO RELEASED",
+                      "HAB RELEASED",
+                      "TJU RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0037204",
+                    "uid": "A0OAUDqtoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3016238",
+                    "revision": "A",
+                    "name": "CONNECTOR-SPLICING 5 COND",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED",
+                      "HAB RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0029651",
+                    "uid": "gLFAwdhCoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0456490",
+                    "revision": "A",
+                    "name": "WIRE -18 GA BLK 35\" LED WC67",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "inIAAAGXoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "050584100",
+                    "revision": "F",
+                    "name": "REINFORCEMENT-BRACKET MULLION WC",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "HSM Part Implementation Process/050584100/F;2-REINFORCEMENT-BRACKET MULLION WC:1,perform-signoffs/050584100/F;2-REINFORCEMENT-BRACKET MULLION WC:1,ECN Analyst Review/050584100/F;2-REINFORCEMENT-BRACKET MULLION WC:1",
+                    "ecn": "ECN-CAP-0031100",
+                    "uid": "DYGATus4oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "1803437",
+                    "revision": "A",
+                    "name": "WIRE 18 GA RED 34\"",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "ZQCAAA2KoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3027886",
+                    "revision": "B",
+                    "name": "BRACKET-END FRAME LED REINF",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0027258",
+                    "uid": "isKAR4BdoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0428788001",
+                    "revision": "A",
+                    "name": "CONNECTOR-4 WIRE",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "wbIAAAVvoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "3H00010397",
+        "revision": "A",
+        "name": "REFRIGERATION-MICROBLOCK LT CASSETTE",
+        "nomenclature": "",
+        "release_status": "",
+        "process_stage": "",
+        "ecn": "",
+        "uid": "hxKAk6cnoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3H00010393",
+        "revision": "A",
+        "name": "END-OPTIONS MICROBLOCK LT",
+        "nomenclature": "",
+        "release_status": "",
+        "process_stage": "",
+        "ecn": "",
+        "uid": "R9BAk6cnoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "AFE94KIT",
+            "revision": "A",
+            "name": "END-LH RH RECT RLNMA",
+            "nomenclature": "AFE94KIT",
+            "release_status": "",
+            "process_stage": "",
+            "ecn": "",
+            "uid": "xYIAk6MIoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "3H00010399",
+                "revision": "A",
+                "name": "AFE94 OPTIONS",
+                "nomenclature": "",
+                "release_status": "",
+                "process_stage": "",
+                "ecn": "",
+                "uid": "x8CAk6MIoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "AFE98",
+                    "revision": "A",
+                    "name": "COVER-END RLNMA",
+                    "nomenclature": "AFE98",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "HAB RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0038145",
+                    "uid": "RZPAk6MIoeVOgD",
+                    "depth": 2,
+                    "children": [
+                      {
+                        "item_id": "3232970",
+                        "revision": "D",
+                        "name": "COVER ASSY-END RLNMA TXTD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "HAB RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-CAP-0038145",
+                        "uid": "gEHAUbrkoeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "3232995",
+                            "revision": "C",
+                            "name": "PANEL-COVER RECT END TXTD OPTL COLOR RLNMA",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "PRODUCTION RELEASED",
+                              "HAB RELEASED",
+                              "BGN RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-CAP-0038355",
+                            "uid": "gyGAUPMfoeVOgD",
+                            "depth": 4,
+                            "children": [
+                              {
+                                "item_id": "0960038",
+                                "revision": "B",
+                                "name": "035GALVTEX_50.000X101.000",
+                                "nomenclature": "",
+                                "release_status": [
+                                  "HAB RELEASED",
+                                  "MTY RELEASED",
+                                  "PRODUCTION RELEASED",
+                                  "BGN RELEASED"
+                                ],
+                                "process_stage": "",
+                                "ecn": "41472",
+                                "uid": "FxPAAAJ9oeVOgD",
+                                "depth": 5,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "item_id": "0548767",
+                            "revision": "E",
+                            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "BGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED",
+                              "PPAP COMPLETED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "",
+                            "uid": "QMDAkyWKoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          },
+                          {
+                            "item_id": "3242471",
+                            "revision": "A",
+                            "name": "LABEL-BR END COVER",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007707",
+                            "uid": "wSBAUTHroeVOgD",
+                            "depth": 4,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3236082",
+                        "revision": "A",
+                        "name": "INSTRUCTION-RNMA END CVR INSTL",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007426",
+                        "uid": "gaHA0KT7oeVOgD",
+                        "depth": 3,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "item_id": "AFE99",
+                    "revision": "A",
+                    "name": "JOINING-CASE RNMA",
+                    "nomenclature": "AFE99",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007707",
+                    "uid": "RtEAk6MIoeVOgD",
+                    "depth": 2,
+                    "children": [
+                      {
+                        "item_id": "0137715000",
+                        "revision": "A",
+                        "name": "SCREW SM 10-16X3/4 HX WAS",
+                        "nomenclature": "",
+                        "release_status": [
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED",
+                          "HAB RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-CAP-0016141",
+                        "uid": "dKOAAA1roeVOgD",
+                        "depth": 3,
+                        "children": []
+                      },
+                      {
+                        "item_id": "0534121",
+                        "revision": "B",
+                        "name": "SCREW-SM 8-18X5/8 PHIL HX HD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "BGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED",
+                          "PPAP COMPLETED",
+                          "TJU RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-CAP-0030790",
+                        "uid": "RQHAhGuJoeVOgD",
+                        "depth": 3,
+                        "children": []
+                      },
+                      {
+                        "item_id": "3232962",
+                        "revision": "A",
+                        "name": "SPACER-JOINING RNMA LT-LT",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007375",
+                        "uid": "gnFAkaMhoeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "0203080",
+                            "revision": "A",
+                            "name": "LAMINA GALV C.18 3' (ROLLO)",
+                            "nomenclature": "",
+                            "release_status": [
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED",
+                              "BGN RELEASED",
+                              "TJU RELEASED",
+                              "BBK RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-CAP-0032286",
+                            "uid": "r2IAAAGuoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3233370",
+                        "revision": "C",
+                        "name": "PANEL-END FACADE 15IN SLOTTED TXTD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007705",
+                        "uid": "wmGAUPMfoeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "0962053",
+                            "revision": "A",
+                            "name": ".035 GALV TEXTD 49.375\" ROLL",
+                            "nomenclature": "",
+                            "release_status": [
+                              "MTY RELEASED",
+                              "PRODUCTION RELEASED",
+                              "BGN RELEASED",
+                              "HAB RELEASED",
+                              "TJU RELEASED",
+                              "CNO RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-COD-0022737",
+                            "uid": "64IAAAGxoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3234330",
+                        "revision": "B",
+                        "name": "INSTRUCTION-RNMA CASE JOINING",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007707",
+                        "uid": "gkDAUfjQoeVOgD",
+                        "depth": 3,
+                        "children": []
+                      },
+                      {
+                        "item_id": "3234331",
+                        "revision": "C",
+                        "name": "TRIM ASSY-CASE JOINING RLNMA-RLNMA TXTD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007707",
+                        "uid": "g8LAUb7ToeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "0548767",
+                            "revision": "E",
+                            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "BGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED",
+                              "PPAP COMPLETED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "",
+                            "uid": "QMDAkyWKoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          },
+                          {
+                            "item_id": "3232986",
+                            "revision": "B",
+                            "name": "TRIM-CASE JOINING RLNMA-RLNMA TXTD",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007705",
+                            "uid": "Q_FAUPMfoeVOgD",
+                            "depth": 4,
+                            "children": [
+                              {
+                                "item_id": "0962053",
+                                "revision": "A",
+                                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                                "nomenclature": "",
+                                "release_status": [
+                                  "MTY RELEASED",
+                                  "PRODUCTION RELEASED",
+                                  "BGN RELEASED",
+                                  "HAB RELEASED",
+                                  "TJU RELEASED",
+                                  "CNO RELEASED"
+                                ],
+                                "process_stage": "",
+                                "ecn": "ECN-COD-0022737",
+                                "uid": "64IAAAGxoeVOgD",
+                                "depth": 4,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "item_id": "3242444",
+                            "revision": "A",
+                            "name": "LABEL-B JOIN TRIM",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007707",
+                            "uid": "wICAUTHroeVOgD",
+                            "depth": 4,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3234756",
+                        "revision": "C",
+                        "name": "TRIM ASSY-CASE JOINING RLNMA-RMNMA TXTD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007707",
+                        "uid": "wwEAUb7ToeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "0548767",
+                            "revision": "E",
+                            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "BGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED",
+                              "PPAP COMPLETED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "",
+                            "uid": "QMDAkyWKoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          },
+                          {
+                            "item_id": "3234754",
+                            "revision": "B",
+                            "name": "TRIM-CASE JOINING RLNMA-RMNMA TXTD",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007705",
+                            "uid": "QPIAUPMfoeVOgD",
+                            "depth": 4,
+                            "children": [
+                              {
+                                "item_id": "0962053",
+                                "revision": "A",
+                                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                                "nomenclature": "",
+                                "release_status": [
+                                  "MTY RELEASED",
+                                  "PRODUCTION RELEASED",
+                                  "BGN RELEASED",
+                                  "HAB RELEASED",
+                                  "TJU RELEASED",
+                                  "CNO RELEASED"
+                                ],
+                                "process_stage": "",
+                                "ecn": "ECN-COD-0022737",
+                                "uid": "64IAAAGxoeVOgD",
+                                "depth": 4,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "item_id": "3242445",
+                            "revision": "A",
+                            "name": "LABEL-C JOIN TRIM",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007707",
+                            "uid": "wYLAUTHroeVOgD",
+                            "depth": 4,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3234757",
+                        "revision": "C",
+                        "name": "TRIM ASSY-CASE JOINING RMNMA-RMNMA TXTD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007707",
+                        "uid": "AhAAUb7ToeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "0548767",
+                            "revision": "E",
+                            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "BGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED",
+                              "PPAP COMPLETED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "",
+                            "uid": "QMDAkyWKoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          },
+                          {
+                            "item_id": "3234755",
+                            "revision": "B",
+                            "name": "TRIM-CASE JOINING RMNMA-RMNMA TXTD",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007705",
+                            "uid": "gDJAUPMfoeVOgD",
+                            "depth": 4,
+                            "children": [
+                              {
+                                "item_id": "0962053",
+                                "revision": "A",
+                                "name": ".035 GALV TEXTD 49.375\" ROLL",
+                                "nomenclature": "",
+                                "release_status": [
+                                  "MTY RELEASED",
+                                  "PRODUCTION RELEASED",
+                                  "BGN RELEASED",
+                                  "HAB RELEASED",
+                                  "TJU RELEASED",
+                                  "CNO RELEASED"
+                                ],
+                                "process_stage": "",
+                                "ecn": "ECN-COD-0022737",
+                                "uid": "64IAAAGxoeVOgD",
+                                "depth": 4,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "item_id": "3242446",
+                            "revision": "A",
+                            "name": "LABEL-D JOIN TRIM",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007707",
+                            "uid": "wsAAUTHroeVOgD",
+                            "depth": 4,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3236080",
+                        "revision": "B",
+                        "name": "INSTRUCTION-RNMA CASE JOINING",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007707",
+                        "uid": "QAAAUfjQoeVOgD",
+                        "depth": 3,
+                        "children": []
+                      },
+                      {
+                        "item_id": "3238598",
+                        "revision": "B",
+                        "name": "TRIM ASSY-FACADE RNMA TXTD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007705",
+                        "uid": "wYPAUPdDoeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "3238597",
+                            "revision": "B",
+                            "name": "TRIM-FACADE JOINT RNMA SM OC TXTD",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007705",
+                            "uid": "wrKAUPMfoeVOgD",
+                            "depth": 4,
+                            "children": [
+                              {
+                                "item_id": "0962094",
+                                "revision": "A",
+                                "name": "LAM CRS C22 TEXTD 48.5\" COIL",
+                                "nomenclature": "",
+                                "release_status": [
+                                  "MTY RELEASED",
+                                  "HAB RELEASED",
+                                  "PRODUCTION RELEASED",
+                                  "BGN RELEASED"
+                                ],
+                                "process_stage": "",
+                                "ecn": "38523",
+                                "uid": "t3JAAAm7oeVOgD",
+                                "depth": 5,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "item_id": "0548767",
+                            "revision": "E",
+                            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "BGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED",
+                              "PPAP COMPLETED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "",
+                            "uid": "QMDAkyWKoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3238666",
+                        "revision": "B",
+                        "name": "SPLASHGUARD-JOINING TRIM ASSY TXTD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007705",
+                        "uid": "AJLAUPdDoeVOgD",
+                        "depth": 3,
+                        "children": [
+                          {
+                            "item_id": "0548767",
+                            "revision": "E",
+                            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "BGN RELEASED",
+                              "MTY RELEASED",
+                              "HAB RELEASED",
+                              "PRODUCTION RELEASED",
+                              "PPAP COMPLETED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "",
+                            "uid": "QMDAkyWKoeVOgD",
+                            "depth": 4,
+                            "children": []
+                          },
+                          {
+                            "item_id": "3238665",
+                            "revision": "B",
+                            "name": "SPLASHGUARD-JOINING TRIM TXTD",
+                            "nomenclature": "",
+                            "release_status": [
+                              "DESIGN RELEASED",
+                              "MTY RELEASED",
+                              "PRODUCTION RELEASED"
+                            ],
+                            "process_stage": "",
+                            "ecn": "ECN-NPD-0007705",
+                            "uid": "BcKAUPMfoeVOgD",
+                            "depth": 4,
+                            "children": [
+                              {
+                                "item_id": "0962094",
+                                "revision": "A",
+                                "name": "LAM CRS C22 TEXTD 48.5\" COIL",
+                                "nomenclature": "",
+                                "release_status": [
+                                  "MTY RELEASED",
+                                  "HAB RELEASED",
+                                  "PRODUCTION RELEASED",
+                                  "BGN RELEASED"
+                                ],
+                                "process_stage": "",
+                                "ecn": "38523",
+                                "uid": "t3JAAAm7oeVOgD",
+                                "depth": 5,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "item_id": "3242469",
+                        "revision": "A",
+                        "name": "LABEL-BN FACADE TRIM",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007707",
+                        "uid": "guHAUTHroeVOgD",
+                        "depth": 3,
+                        "children": []
+                      },
+                      {
+                        "item_id": "3242475",
+                        "revision": "A",
+                        "name": "LABEL-CD JOINT TRIM SPLGRD",
+                        "nomenclature": "",
+                        "release_status": [
+                          "DESIGN RELEASED",
+                          "MTY RELEASED",
+                          "HAB RELEASED",
+                          "PRODUCTION RELEASED"
+                        ],
+                        "process_stage": "",
+                        "ecn": "ECN-NPD-0007707",
+                        "uid": "AXGAUTHroeVOgD",
+                        "depth": 3,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_id": "AFE94",
+                "revision": "A",
+                "name": "END-LH RH RECT RLNMA",
+                "nomenclature": "AFE94",
+                "release_status": "",
+                "process_stage": "",
+                "ecn": "",
+                "uid": "hcFAk6MIoeVOgD",
+                "depth": 3,
+                "children": [
+                  {
+                    "item_id": "0000215003",
+                    "revision": "B",
+                    "name": "WASHER-FLAT 5/16WI ZINC",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "TJU RELEASED",
+                      "BBK RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0031189",
+                    "uid": "SPOAAA39oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0019095001",
+                    "revision": "C",
+                    "name": "LABEL-PRESSURE SENSITIVE, PRY BAR CAUTION",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "XwPAAA3_oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0135468000",
+                    "revision": "A",
+                    "name": "SEALANT-PUMPABLE BUTYLE",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "xUMAAA22oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0136172002",
+                    "revision": "A",
+                    "name": "GASKET 1/2 X 1/4 X 600",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0036314",
+                    "uid": "VwAAAAWqoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0142511002",
+                    "revision": "B",
+                    "name": "NUT-RETAINER .313-18 .096-.141 PT",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0031293",
+                    "uid": "R9NAjigOoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0142512003",
+                    "revision": "B",
+                    "name": "SCREW-CAP 5/16 18 X 2 1/2 FULL THD HEX HD ST YZ  GRADE 5",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "BBK RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "A9JAQwrEoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0376231000",
+                    "revision": "A",
+                    "name": "PLUG-BOLT SPACER",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "v8GAAAGuoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0430382000",
+                    "revision": "A",
+                    "name": "SCREW-8 X .5 TR HD PH BLK",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED",
+                      "TJU RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0030790",
+                    "uid": "cPMAAAnBoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0479781",
+                    "revision": "E",
+                    "name": "IMPORTANT FOR INSTALLER",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "PPAP COMPLETED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-VAVE-0000021",
+                    "uid": "hwPAQBRUoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0511304",
+                    "revision": "A",
+                    "name": "GASKET DONUT RLN END",
+                    "nomenclature": "",
+                    "release_status": [
+                      "HAB RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "35720",
+                    "uid": "$qEAAA26oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "0560316",
+                    "revision": "A",
+                    "name": "GASKET.906\" X 1/2\" X 200\"",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-CAP-0002897",
+                    "uid": "gJHAwULAoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "1006247",
+                    "revision": "B",
+                    "name": "MOULDING END BLACK NO HOLES",
+                    "nomenclature": "",
+                    "release_status": [
+                      "BGN RELEASED",
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "iKOAAA5toeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "1900427",
+                    "revision": "A",
+                    "name": "SCREW 8X1/2 TR PHL SM",
+                    "nomenclature": "",
+                    "release_status": [
+                      "MTY RELEASED",
+                      "HAB RELEASED",
+                      "PRODUCTION RELEASED",
+                      "BGN RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "",
+                    "uid": "6jCAAA29oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3232947",
+                    "revision": "C",
+                    "name": "SPLASHGUARD-RNMA RH END TXTD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007801",
+                    "uid": "QVEAUrN7oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3232948",
+                    "revision": "C",
+                    "name": "SPLASHGUARD-RNMA LH END TXTD",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007801",
+                    "uid": "gJFAUrN7oeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3233001",
+                    "revision": "C",
+                    "name": "END ASSY-RH RECT RLNMA BARE - FRP INT",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007706",
+                    "uid": "yYMAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  },
+                  {
+                    "item_id": "3233002",
+                    "revision": "C",
+                    "name": "END ASSY-LH RECT RLNMA BARE - FRP INT",
+                    "nomenclature": "",
+                    "release_status": [
+                      "DESIGN RELEASED",
+                      "MTY RELEASED",
+                      "PRODUCTION RELEASED"
+                    ],
+                    "process_stage": "",
+                    "ecn": "ECN-NPD-0007706",
+                    "uid": "CVIAUPMfoeVOgD",
+                    "depth": 4,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

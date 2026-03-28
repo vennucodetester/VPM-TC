@@ -1,0 +1,142 @@
+{
+  "nomenclature": "AFY10",
+  "fetched_at": "2026-03-26T15:51:10.819537",
+  "view_type": "MTY View",
+  "total_parts": 8,
+  "max_depth": 3,
+  "root": {
+    "item_id": "AFY10",
+    "revision": "A",
+    "name": "BALLOON GUARD MICROBLOCK",
+    "nomenclature": "AFY10",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007813",
+    "uid": "QEEAUvPMoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "3244769",
+        "revision": "A",
+        "name": "BRACKET ASSY-BALLOON GUARD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007813",
+        "uid": "g_BAUvKnoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0534132",
+            "revision": "A",
+            "name": "TIE-6\" NATURAL NYLON CABLE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0009032",
+            "uid": "ZqMAAAGVoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3244758",
+            "revision": "A",
+            "name": "BRACKET-BALLOON GUARD MICROBLOCK",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007813",
+            "uid": "g1NAUvKnoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0200450",
+                "revision": "A",
+                "name": "LAMINA GALV C.20 4' (ROLLO)G60",
+                "nomenclature": "",
+                "release_status": [
+                  "BGN RELEASED",
+                  "HAB RELEASED",
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "CNO RELEASED",
+                  "TJU RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0025918",
+                "uid": "mpCAAAWqoeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          },
+          {
+            "item_id": "3244768",
+            "revision": "B",
+            "name": "MESH-PLASTIC 12.5 X 12.5",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007938",
+            "uid": "gBLAkzqkoeVOgD",
+            "depth": 2,
+            "children": [
+              {
+                "item_id": "0543964",
+                "revision": "A",
+                "name": "MESH-PLASTIC 48\"",
+                "nomenclature": "",
+                "release_status": [
+                  "MTY RELEASED",
+                  "PRODUCTION RELEASED",
+                  "HAB RELEASED"
+                ],
+                "process_stage": "",
+                "ecn": "ECN-CAP-0016173",
+                "uid": "OREAAA2boeVOgD",
+                "depth": 3,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item_id": "3244771",
+        "revision": "A",
+        "name": "INSTRUCTION-BALLOON GUARD",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007813",
+        "uid": "QDOAUvKnoeVOgD",
+        "depth": 1,
+        "children": []
+      }
+    ]
+  }
+}

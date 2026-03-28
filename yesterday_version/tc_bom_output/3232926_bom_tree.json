@@ -1,0 +1,173 @@
+{
+  "nomenclature": "3232926",
+  "fetched_at": "2026-03-22T18:18:09.347884",
+  "view_type": "MTY View",
+  "total_parts": 8,
+  "max_depth": 2,
+  "root": {
+    "item_id": "3232926",
+    "revision": "B",
+    "name": "FOOT-EXT FRAME RNMA",
+    "nomenclature": "",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "uid": "Q_KAU7oXoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "0600508",
+        "revision": "A",
+        "name": "MICRO-WIRE WELDING 0.035",
+        "nomenclature": "",
+        "release_status": [
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "TJU RELEASED",
+          "BBK RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "yzOAAAmJoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3232944",
+        "revision": "A",
+        "name": "BASE-RNMA LWR SUPPORT",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "QyMAkaMhoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0200047",
+            "revision": "A",
+            "name": "LAMINA GALV C.12 3'X10' G60",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "O$CAAAm2oeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3232958",
+        "revision": "A",
+        "name": "UPRIGHT EXT FRAME RNMA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "QjBAkaMhoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0200047",
+            "revision": "A",
+            "name": "LAMINA GALV C.12 3'X10' G60",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "O$CAAAm2oeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3245550",
+        "revision": "A",
+        "name": "GUSSET-EXT FRAME LH",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "AgKAkPZroeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "SG12STK",
+            "revision": "A",
+            "name": "SG90U .085 (13GA .0934) 52X120",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "BBK RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "H2KAAA2joeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3245551",
+        "revision": "A",
+        "name": "GUSSET-EXT FRAME RH",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "uid": "A4AAkPZroeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "SG12STK",
+            "revision": "A",
+            "name": "SG90U .085 (13GA .0934) 52X120",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "BBK RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "uid": "H2KAAA2joeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

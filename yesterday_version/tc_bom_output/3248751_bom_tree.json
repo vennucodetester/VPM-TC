@@ -1,0 +1,39 @@
+{
+  "nomenclature": "3248751",
+  "fetched_at": "2026-03-23T17:18:52.990297",
+  "view_type": "MTY View",
+  "total_parts": 2,
+  "max_depth": 1,
+  "root": {
+    "item_id": "3248751",
+    "revision": "A",
+    "name": "PANEL-COVER RECT END TXTD 701 RLNMA",
+    "nomenclature": "",
+    "release_status": "",
+    "process_stage": "Design Release Process/Design Release Process : 3248751/A;1-PANEL-COVER RECT END TXTD 701 RLNMA,Rework Task/Design Release Process : 3248751/A;1-PANEL-COVER RECT END TXTD 701 RLNMA,perform-signoffs/Design Release Process : 3248751/A;1-PANEL-COVER RECT END TXTD 701 RLNMA",
+    "ecn": "ECN-NPD-0007968",
+    "uid": "QaFAk$CioeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "0962053",
+        "revision": "A",
+        "name": ".035 GALV TEXTD 49.375\" ROLL",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "HAB RELEASED",
+          "TJU RELEASED",
+          "CNO RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-COD-0022737",
+        "uid": "64IAAAGxoeVOgD",
+        "depth": 1,
+        "children": []
+      }
+    ]
+  }
+}

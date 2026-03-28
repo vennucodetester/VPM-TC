@@ -1,0 +1,31 @@
+Dependency Report: RLN4MAK
+Generated: 2026-03-24T23:00:11.221482
+Total parts: 102
+
+SUMMARY
+  Released (PRODUCTION RELEASED): 92 of 102 (90.2%)
+  Unreleased: 10
+  Blocked (On-Hold): 0
+
+UNRELEASED PARTS (10 total)
+------------------------------------------------------------
+  ✗ RLN4MAK/A — RLN4MA-KITS
+      Has: (none)
+  ✗ 3H00010385/A — RLN4MA-MISC OPTIONS
+      Has: (none)
+  ✗ 3H00010390/A — INTERIOR-CASE OPTIONS MICROBLOCK 4DR
+      Has: (none)
+  ✗ 3H00010391/A — SHELVING-OPTIONS MICROBLOCK
+      Has: (none)
+  ✗ 3H00010394/A — DOOR-OPTIONS MICROBLOCK LT 4DR
+      Has: (none)
+  ✗ 3H00010397/A — REFRIGERATION-MICROBLOCK LT CASSETTE
+      Has: (none)
+  ✗ 3H00010393/A — END-OPTIONS MICROBLOCK LT
+      Has: (none)
+  ✗ AFE94KIT/A — END-LH RH RECT RLNMA
+      Has: (none)
+  ✗ 3H00010399/A — AFE94 OPTIONS
+      Has: (none)
+  ✗ AFE94/A — END-LH RH RECT RLNMA
+      Has: (none)

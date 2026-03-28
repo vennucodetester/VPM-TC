@@ -1,0 +1,204 @@
+{
+  "nomenclature": "AFY10",
+  "candidates": [
+    {
+      "uid": "QEEAUvPMoeVOgD",
+      "item_id": "AFY10",
+      "item_revision_id": "A",
+      "object_name": "BALLOON GUARD MICROBLOCK",
+      "object_desc": "BALLOON GUARD MICROBLOCK",
+      "h4_Nomenclature": "AFY10",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "selected_revisions": [
+    {
+      "uid": "QEEAUvPMoeVOgD",
+      "item_id": "AFY10",
+      "item_revision_id": "A",
+      "object_name": "BALLOON GUARD MICROBLOCK",
+      "object_desc": "BALLOON GUARD MICROBLOCK",
+      "h4_Nomenclature": "AFY10",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "bom": {
+    "nodes": [
+      {
+        "uid": "QEEAUvPMoeVOgD",
+        "depth": 0,
+        "item_id": "AFY10",
+        "item_revision_id": "A",
+        "object_name": "BALLOON GUARD MICROBLOCK",
+        "h4_Nomenclature": "AFY10",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007813"
+      },
+      {
+        "uid": "g_BAUvKnoeVOgD",
+        "depth": 1,
+        "item_id": "3244769",
+        "item_revision_id": "A",
+        "object_name": "BRACKET ASSY-BALLOON GUARD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007813"
+      },
+      {
+        "uid": "QDOAUvKnoeVOgD",
+        "depth": 1,
+        "item_id": "3244771",
+        "item_revision_id": "A",
+        "object_name": "INSTRUCTION-BALLOON GUARD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007813"
+      },
+      {
+        "uid": "ZqMAAAGVoeVOgD",
+        "depth": 2,
+        "item_id": "0534132",
+        "item_revision_id": "A",
+        "object_name": "TIE-6\" NATURAL NYLON CABLE",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0009032"
+      },
+      {
+        "uid": "g1NAUvKnoeVOgD",
+        "depth": 2,
+        "item_id": "3244758",
+        "item_revision_id": "A",
+        "object_name": "BRACKET-BALLOON GUARD MICROBLOCK",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007813"
+      },
+      {
+        "uid": "gBLAkzqkoeVOgD",
+        "depth": 2,
+        "item_id": "3244768",
+        "item_revision_id": "B",
+        "object_name": "MESH-PLASTIC 12.5 X 12.5",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007938"
+      },
+      {
+        "uid": "mpCAAAWqoeVOgD",
+        "depth": 3,
+        "item_id": "0200450",
+        "item_revision_id": "A",
+        "object_name": "LAMINA GALV C.20 4' (ROLLO)G60",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "BGN RELEASED",
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "CNO RELEASED",
+          "TJU RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0025918"
+      },
+      {
+        "uid": "OREAAA2boeVOgD",
+        "depth": 3,
+        "item_id": "0543964",
+        "item_revision_id": "A",
+        "object_name": "MESH-PLASTIC 48\"",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0016173"
+      }
+    ],
+    "edges": [
+      {
+        "parent_uid": "QEEAUvPMoeVOgD",
+        "child_uid": "g_BAUvKnoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QEEAUvPMoeVOgD",
+        "child_uid": "QDOAUvKnoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "g_BAUvKnoeVOgD",
+        "child_uid": "ZqMAAAGVoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g_BAUvKnoeVOgD",
+        "child_uid": "g1NAUvKnoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g_BAUvKnoeVOgD",
+        "child_uid": "gBLAkzqkoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "g1NAUvKnoeVOgD",
+        "child_uid": "mpCAAAWqoeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "gBLAkzqkoeVOgD",
+        "child_uid": "OREAAA2boeVOgD",
+        "depth": 3
+      }
+    ],
+    "visited_count": 8,
+    "truncated": false,
+    "truncate_reason": "",
+    "queue_remaining": 0,
+    "elapsed_seconds": 51.518
+  }
+}

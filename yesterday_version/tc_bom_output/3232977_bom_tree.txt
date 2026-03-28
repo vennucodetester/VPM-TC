@@ -1,0 +1,146 @@
+BOM Tree: 3232977
+Fetched: 2026-03-22T19:53:43.774320
+View: MTY View
+Total parts: 101
+Max depth: 4
+
+3232977/C — MODULE-FOAM ASSY 4 DR RNMA
+├── 0135468000/A — SEALANT-PUMPABLE BUTYLE
+├── 0334177002/A — SEALER SILICONE ADHESIVE
+├── 0431934000/A — FOAM-ASM FLAT LWR 4N
+│   ├── 0386582001/A — SPACER-BOLT (3 STUD)
+│   ├── 1501434/A — VENT TAPE 1.88 X 1.88 X 0.188
+│   ├── 0437134000/A — LINER FLAT FOAM TOP/BACK
+│   │   └── 0208949/A — G60U .013"M X36.750"X122.468"
+│   ├── 2700372/A — INSULATION FOAM REACH
+│   │   ├── 2700351/A — POLIOL VORACOR* CR 1058
+│   │   └── 2700352/A — ISOCIANATO VORACOR* CE 153
+│   ├── 0386877001/A — GASKET DONUT  BIG ROLL
+│   ├── 0431931000/A — CAP-END FLAT FOAM RH
+│   ├── 2700037/A — COLD CREAM (CREMA FRIA)
+│   ├── 0386808001/A — SPACER-BOLT
+│   ├── 0431930000/A — CAP-END FLAT FOAM LH
+│   ├── 0103607002/A — SEALER-1/2 BEAD
+│   ├── 0386472001/A — EXTRUSION-OFFSET JOINT 4 DR
+│   ├── 0330999002/A — TAPE-2 WIDE BOX SEALING
+│   └── 0386482001/A — FLAP-FOAM HOLE
+├── 3195637/A — FOAM-ASSY EXTENSION 4DR
+│   ├── 0330999002/A — TAPE-2 WIDE BOX SEALING
+│   ├── 0384132003/A — TAPE-WATERPROOF CLOTH 2"
+│   ├── 0536497/A — EXTRUSION-FRT FOAM TOP 4DR
+│   ├── 0548767/A — TAPE-ADHESIVE TRANSFER 1"
+│   ├── 3187640/A — LINER-FOAM EXTENSION CASS 4DR
+│   │   └── 0200874/A — LAMINA GALV PAS C.24 33"(ROLLO
+│   ├── 3196821/A — INSULATION-FOAM EXTENSION INJ
+│   ├── 3204288/A — INSULATION-FOAM EXTENSION CTR
+│   ├── 2700372/A — INSULATION FOAM REACH
+│   │   ├── 2700351/A — POLIOL VORACOR* CR 1058
+│   │   └── 2700352/A — ISOCIANATO VORACOR* CE 153
+│   └── 3196814/A — INSULATION-FOAM EXTENSION END
+├── 3198561/A — BOTTOM -ASSY 4DR SC
+│   ├── 0311800001/A — ADHESIVE-PVC & ABS PIPE
+│   ├── 0386604000/A — BUSHING-REDUCER 1 1/4 X 1
+│   ├── 0386605000/A — PLUG-1 THREADED
+│   ├── 051443900/A — LOCTITE PLASTIC PIPE SEALANT 80726
+│   ├── 3196808/A — FOAM-ASSY BOTTOM 4DR SC
+│   │   ├── 0136172002/A — GASKET 1/2 X 1/4 X 600
+│   │   ├── 0386547002/A — DRAIN
+│   │   ├── 0386548002/A — GASKET-DRAIN
+│   │   ├── 0386559001/A — LINER-EXT REAR 4 DR
+│   │   │   └── 0208975/A — (OBS) LAM GAL PAS C24 120.093X21.476
+│   │   ├── 0386670001/A — EXTRUSION-BOTTOM 4 DR
+│   │   ├── 0386712001/A — FILLER ENDCAP
+│   │   ├── 0386860001/A — PLUG-ENDCAP ANTI SWEAT 1
+│   │   ├── 0386861000/A — PLUG-ENDCAP ANTI SWEAT 2
+│   │   ├── 0386966000/A — PLUG-BTM RXTRUSION
+│   │   ├── 0418096000/A — EXTRUSION-BTM FOAM 4
+│   │   ├── 0424042001/A — SCREW-PHILLIPS 3/16 X 3/4
+│   │   ├── 0438100000/A — PLUG -ENDCAP ANTI SWEAT 3
+│   │   ├── 0438101000/A — PLUG-ENDCAP ANTI SWEAT 4
+│   │   ├── 0545578/A — ENDCAP ASSY-LH 33"POLYSTYR
+│   │   │   ├── 0414109/A — FLAP-38/50" BOTTOM FOAM
+│   │   │   └── 0545579/A — ENDCAP-LH 33" POLYSTYRENE
+│   │   ├── 0545582/A — ENDCAP-RH 33" POLYSTYRENE
+│   │   │   └── PSH0601/A — HIGH IMPACT-POLYSTYRENE
+│   │   ├── 1006279/A — GASKET-DRAIN
+│   │   ├── 1501434/A — VENT TAPE 1.88 X 1.88 X 0.188
+│   │   ├── 2600083/A — CINTA ADHESIVA TRANSPARENTE 2"
+│   │   ├── 2700037/A — COLD CREAM (CREMA FRIA)
+│   │   ├── 2700372/A — INSULATION FOAM REACH
+│   │   │   ├── 2700351/A — POLIOL VORACOR* CR 1058
+│   │   │   └── 2700352/A — ISOCIANATO VORACOR* CE 153
+│   │   ├── 3178213/A — LINER-INTERIOR 4DR NAR
+│   │   │   └── 3126320/A — GALV G90U 26GA .018"M X 36"
+│   │   ├── 3191770/A — LINER-EXT FRT 4DR NAR CASSETTE
+│   │   │   └── 0208304/A — LAMINA GALV PAS C.24 4' ROLLO
+│   │   └── 0462726000/A — PLATE-FOAM ASM BTM 2X5
+│   │       └── 0208069/A — LAMINA GALV C.22 3  (ROLLO)G60
+│   └── 0556273/A — ELBOW PVC 1.250" SCH #40 SOC X FIPT
+├── 3232960/A — FOAM ASSY-FRONT & SUPPORT 4DR RNMA
+│   ├── 0130711003/A — SCREW SM SLFDRIL 8-18X1/2 HX HD ST ZP W/SERRA
+│   ├── 0430303000/A — SCREW-1/4 X 7/8 PL THD
+│   ├── 3021218/A — SUPPORT-UNDER DOOR RLTM4
+│   │   └── 0207858/A — LAMINA G60 C14 12.005"X152.811
+│   ├── 3021439/A — RIVET-1/8" ALUM WIDE GRIP
+│   ├── 3187649/A — CHANNEL-REINFORCEMENT CASS
+│   │   └── 3148174/A — GALV G60U 14GA .071"M X 36"
+│   ├── 3187891/A — GUSSET-CASSETTE GRILL
+│   │   └── 3148175/A — GALV G60U 14GA .071"M X 48"
+│   ├── 3196827/A — FOAM-ASSY FRONT LWR 4DR SC
+│   │   ├── 0330999002/A — TAPE-2 WIDE BOX SEALING
+│   │   ├── 0533467/A — CAP-FRONT FOAM ASSY RH
+│   │   ├── 0533468/A — CAP-FRONT FOAM ASSY LH
+│   │   ├── 0533469/A — SPACER-FRONT FOAM ASSY
+│   │   ├── 0536493/A — EXTRUSION-FRT FOAM BTM 4DR
+│   │   ├── 0536497/A — EXTRUSION-FRT FOAM TOP 4DR
+│   │   ├── 0536547/A — FLAP-FOAM HOLE
+│   │   ├── 0536838/A — LINER-4DR FRT FOAM ASSY OUTER
+│   │   │   └── 0200450/A — LAMINA GALV C.20 4' (ROLLO)G60
+│   │   ├── 0536841/A — LINER-4DR FRT FOAM ASSY INNER
+│   │   │   └── 0200450/A — LAMINA GALV C.20 4' (ROLLO)G60
+│   │   ├── 1501434/A — VENT TAPE 1.88 X 1.88 X 0.188
+│   │   └── 2700372/A — INSULATION FOAM REACH
+│   │       ├── 2700351/A — POLIOL VORACOR* CR 1058
+│   │       └── 2700352/A — ISOCIANATO VORACOR* CE 153
+│   ├── 3202833/A — CHANNEL-REINFORCEMENT CASS LNG
+│   │   └── 3148174/A — GALV G60U 14GA .071"M X 36"
+│   └── 3232927/A — SUPPORT-FRONT PANEL CASSETTE
+│       └── 0200045/A — LAMINA GALV C.22 4' (ROLLO)G60
+├── 3232965/A — FOAM-ASSEMBLY TOP 4 DR RNMA
+│   ├── 0103607002/A — SEALER-1/2 BEAD
+│   ├── 0330999002/A — TAPE-2 WIDE BOX SEALING
+│   ├── 0386472001/A — EXTRUSION-OFFSET JOINT 4 DR
+│   ├── 0386482001/A — FLAP-FOAM HOLE
+│   ├── 0386808001/A — SPACER-BOLT
+│   ├── 0421034000/A — EXTRUSION-FLT FOAM FRT 4
+│   ├── 0472798/A — TAPE-MASKING 3/4" WIDE       X 50M ROLL
+│   ├── 0509633/A — SPACER - 1 BOLT 3/8
+│   ├── 1501434/A — VENT TAPE 1.88 X 1.88 X 0.188
+│   ├── 2700037/A — COLD CREAM (CREMA FRIA)
+│   ├── 2700372/A — INSULATION FOAM REACH
+│   │   ├── 2700351/A — POLIOL VORACOR* CR 1058
+│   │   └── 2700352/A — ISOCIANATO VORACOR* CE 153
+│   ├── 3159645/A — END-35.50IN FLT FRT RH IRL-N 2.0
+│   ├── 3159646/A — END-35.50IN FLT FRT LH IRL-N 2.0
+│   ├── 3172745/A — BRACKET-IRI TOP FOAM BACKER
+│   │   └── 0200052/A — LAMINA GALV C.20 3' (ROLLO)G60
+│   ├── 3232952/A — LINER-INT TOP 4DR CASSETTE
+│   │   └── 3122120/A — GALV G60U 30GA .013"M X  33.5"
+│   └── 3232953/A — LINER-EXT TOP 4DR CASSETTE
+│       └── 3122121/A — GALV G60U 30GA .013"M X  36.75"
+├── 0430303000/A — SCREW-1/4 X 7/8 PL THD
+└── 3196807/A — FOAM-ASSY FLAT UPR BACK 4DR SC
+    ├── 0103607002/A — SEALER-1/2 BEAD
+    ├── 0330999002/A — TAPE-2 WIDE BOX SEALING
+    ├── 0386468000/A — END-35.750 IN FLAT ASM LEFT
+    ├── 0386469000/A — END-35.750 IN FLAT ASM RIGHT
+    ├── 0386472001/A — EXTRUSION-OFFSET JOINT 4 DR
+    ├── 0386482001/A — FLAP-FOAM HOLE
+    ├── 0386582001/A — SPACER-BOLT (3 STUD)
+    ├── 1501434/A — VENT TAPE 1.88 X 1.88 X 0.188
+    ├── 2700037/A — COLD CREAM (CREMA FRIA)
+    ├── 2700372/A — INSULATION FOAM REACH
+    │   ├── 2700351/A — POLIOL VORACOR* CR 1058
+    │   └── 2700352/A — ISOCIANATO VORACOR* CE 153
+    └── 3191771/A — LINER-FLAT FOAM 4DR CASSETTE
+        └── 3122120/A — GALV G60U 30GA .013"M X  33.5"

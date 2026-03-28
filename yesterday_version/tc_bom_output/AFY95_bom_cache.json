@@ -1,0 +1,83 @@
+{
+  "nomenclature": "AFY95",
+  "candidates": [
+    {
+      "uid": "wrOAkHhtoeVOgD",
+      "item_id": "AFY95",
+      "item_revision_id": "A",
+      "object_name": "CONDENSING UNIT-MICROBLOCK LT ALX440U-DS3B0",
+      "object_desc": "CONDENSING UNIT-MICROBLOCK LT ALX440U-DS3B0",
+      "h4_Nomenclature": "",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "selected_revisions": [
+    {
+      "uid": "wrOAkHhtoeVOgD",
+      "item_id": "AFY95",
+      "item_revision_id": "A",
+      "object_name": "CONDENSING UNIT-MICROBLOCK LT ALX440U-DS3B0",
+      "object_desc": "CONDENSING UNIT-MICROBLOCK LT ALX440U-DS3B0",
+      "h4_Nomenclature": "",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "bom": {
+    "nodes": [
+      {
+        "uid": "wrOAkHhtoeVOgD",
+        "depth": 0,
+        "item_id": "AFY95",
+        "item_revision_id": "A",
+        "object_name": "CONDENSING UNIT-MICROBLOCK LT ALX440U-DS3B0",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007836"
+      },
+      {
+        "uid": "akLAkvtZoeVOgD",
+        "depth": 1,
+        "item_id": "3242798",
+        "item_revision_id": "C",
+        "object_name": "CONDENSING UNIT-LT MICROBLOCK ALX440U-DS3B0",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007933"
+      }
+    ],
+    "edges": [
+      {
+        "parent_uid": "wrOAkHhtoeVOgD",
+        "child_uid": "akLAkvtZoeVOgD",
+        "depth": 1
+      }
+    ],
+    "visited_count": 2,
+    "truncated": false,
+    "truncate_reason": "",
+    "queue_remaining": 0,
+    "elapsed_seconds": 13.048
+  }
+}

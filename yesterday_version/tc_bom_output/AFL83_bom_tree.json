@@ -1,0 +1,302 @@
+{
+  "nomenclature": "AFL83",
+  "fetched_at": "2026-03-26T15:56:22.039223",
+  "view_type": "MTY View",
+  "total_parts": 7,
+  "max_depth": 2,
+  "root": {
+    "item_id": "AFL83",
+    "revision": "A",
+    "name": "TRIM-END RLN-RMN-MA TO RFLN",
+    "nomenclature": "",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED",
+      "HAB RELEASED"
+    ],
+    "process_stage": "",
+    "ecn": "ECN-CAP-0038145",
+    "uid": "ADDAErY8oeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "0548767",
+        "revision": "E",
+        "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "ecn": "",
+        "uid": "QMDAkyWKoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3239249",
+        "revision": "A",
+        "name": "TRIM-END RMN-MA TO RFLN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0038145",
+        "uid": "SxFAEn8AoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3239509",
+        "revision": "A",
+        "name": "INSTRUCTION-END TRIM RLN-RMN-MA TO RFLN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007623",
+        "uid": "AnDAErY8oeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3247554",
+        "revision": "A",
+        "name": "TRIM-FACADE RLN-RMN-MA TO RFLN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0038145",
+        "uid": "QIHAknv_oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3247555",
+        "revision": "A",
+        "name": "TRIM-END RLN-MA TO RFLN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0038145",
+        "uid": "QkIAknv_oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "0548767",
+        "revision": "E",
+        "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "ecn": "",
+        "uid": "QMDAkyWKoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3239249",
+        "revision": "A",
+        "name": "TRIM-END RMN-MA TO RFLN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0038145",
+        "uid": "SxFAEn8AoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3247554",
+        "revision": "A",
+        "name": "TRIM-FACADE RLN-RMN-MA TO RFLN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0038145",
+        "uid": "QIHAknv_oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3247555",
+        "revision": "A",
+        "name": "TRIM-END RLN-MA TO RFLN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "HAB RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-CAP-0038145",
+        "uid": "QkIAknv_oeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0962053",
+            "revision": "A",
+            "name": ".035 GALV TEXTD 49.375\" ROLL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0022737",
+            "uid": "64IAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

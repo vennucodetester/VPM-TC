@@ -1,0 +1,1954 @@
+{
+  "nomenclature": "RLN4MA",
+  "fetched_at": "2026-03-23T23:36:11.808112",
+  "view_type": "MTY View",
+  "total_parts": 108,
+  "max_depth": 2,
+  "root": {
+    "item_id": "RLN4MA",
+    "revision": "D",
+    "name": "RLN4MA-REACH-IN LT 4DR R290 MICROBLOCK",
+    "nomenclature": "RLN4MA",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007943",
+    "uid": "BoHAknFJoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "3232971",
+        "revision": "B",
+        "name": "MODULE-EXT STRUCTURE 4 DR RNMA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007831",
+        "uid": "gkNAkTauoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0115192003",
+            "revision": "C",
+            "name": "SCREW-.25-20 X .75 HEX THD CUTTING SERRATED-FLG",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED",
+              "TJU RELEASED",
+              "BBK RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0031189",
+            "uid": "ijGASmBQoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0137715002",
+            "revision": "A",
+            "name": "SCREW SM 10-16X3/4 HX WAS",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0030790",
+            "uid": "7QIAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0376397002",
+            "revision": "B",
+            "name": "NUT-HEX W/FLANGE 3/8-24",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "yfHAAAYLoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232926",
+            "revision": "B",
+            "name": "FOOT-EXT FRAME RNMA",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007831",
+            "uid": "Q_KAU7oXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232942",
+            "revision": "C",
+            "name": "RAIL-RNMA 4 DOOR BASE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007959",
+            "uid": "BNPAk75LoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232944",
+            "revision": "B",
+            "name": "BASE-RNMA LWR SUPPORT",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007831",
+            "uid": "gONAkPoToeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232989",
+            "revision": "A",
+            "name": "BASE-RNMA RH END",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007375",
+            "uid": "hRNAkaMhoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232990",
+            "revision": "A",
+            "name": "BASE-RNMA LH END",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007375",
+            "uid": "hlCAkaMhoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3232977",
+        "revision": "C",
+        "name": "MODULE-FOAM ASSY 4 DR RNMA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007866",
+        "uid": "weEAkfqZoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0135468000",
+            "revision": "A",
+            "name": "SEALANT-PUMPABLE BUTYLE",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "xUMAAA22oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0334177002",
+            "revision": "H",
+            "name": "SEALER SILICONE ADHESIVE",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0003215",
+            "uid": "BbLAgJoEoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0431934000",
+            "revision": "H",
+            "name": "FOAM-ASM FLAT LWR 4N",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0021594",
+            "uid": "hqHARH6DoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3195637",
+            "revision": "E",
+            "name": "FOAM-ASSY EXTENSION 4DR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007866",
+            "uid": "A2EAkfqZoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3198561",
+            "revision": "B",
+            "name": "BOTTOM -ASSY 4DR SC",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0006720",
+            "uid": "CQPA04WOoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232960",
+            "revision": "B",
+            "name": "FOAM ASSY-FRONT & SUPPORT 4DR RNMA",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007801",
+            "uid": "RIHAUvaroeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232965",
+            "revision": "D",
+            "name": "FOAM-ASSEMBLY TOP 4 DR RNMA",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "HSM Part Implementation Process/3232965/D;1-FOAM-ASSEMBLY TOP 4 DR RNMA:8,MFG Engineer2/3232965/D;1-FOAM-ASSEMBLY TOP 4 DR RNMA:8",
+            "ecn": "ECN-CAP-0038096",
+            "uid": "BREAkz2noeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0430303000",
+            "revision": "D",
+            "name": "SCREW-1/4 X 7/8 PL THD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0005756",
+            "uid": "yMGAQC6$oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3196807",
+            "revision": "B",
+            "name": "FOAM-ASSY FLAT UPR BACK 4DR SC",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "PRODUCTION RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0006840",
+            "uid": "hQNAUB7WoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3232980",
+        "revision": "E",
+        "name": "MODULE-INTERIOR ASSY 4 DR RNMA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007950",
+        "uid": "QdEAk33NoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "3232931",
+            "revision": "B",
+            "name": "PANEL-RNMA BACK INT",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007706",
+            "uid": "xtJAUPMfoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232936",
+            "revision": "A",
+            "name": "SUPPORT-RNMA LH END FRAME EXT GUSSET",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007375",
+            "uid": "wpDAkaMhoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232937",
+            "revision": "A",
+            "name": "SUPPORT-RNMA RH END FRAME EXT GUSSET",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007375",
+            "uid": "w5IAkaMhoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232939",
+            "revision": "A",
+            "name": "SUPPORT-RNMA DECK PAN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007375",
+            "uid": "AeCAkaMhoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232940",
+            "revision": "B",
+            "name": "GRILLE-RNMA END DISCHARGE AIR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007706",
+            "uid": "h6DAUX1goeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232941",
+            "revision": "B",
+            "name": "GRILLE-RNMA CTR DISCHARGE AIR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007706",
+            "uid": "xuEAUX1goeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3242093",
+            "revision": "A",
+            "name": "FOAM-AIR DIVIDER INSULATION",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007706",
+            "uid": "C2FAUPMfoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0137715002",
+            "revision": "A",
+            "name": "SCREW SM 10-16X3/4 HX WAS",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0030790",
+            "uid": "7QIAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0376397002",
+            "revision": "B",
+            "name": "NUT-HEX W/FLANGE 3/8-24",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "yfHAAAYLoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0482328000",
+            "revision": "A",
+            "name": "TAPE-VHB 1X72Y .025THK",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029511",
+            "uid": "ZjJAAAmtoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3191536",
+            "revision": "C",
+            "name": "BASE-DISPLAY CENTER",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007290",
+            "uid": "gINAkCvQoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3244797",
+            "revision": "A",
+            "name": "FRAME ASSY-RNMA LH END ADD SCR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007831",
+            "uid": "QYLAUv$5oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3244798",
+            "revision": "A",
+            "name": "FRAME ASSY-RNMA RH END ADD SCR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007831",
+            "uid": "QsOAUv$5oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3244799",
+            "revision": "A",
+            "name": "SUPPORT ASSY-RNMA REAR SHELF ADD SCR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007831",
+            "uid": "gADAUv$5oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3245910",
+            "revision": "A",
+            "name": "BRACKET-SUPPORT GRILL LH",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007866",
+            "uid": "AwDAkXpzoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3245911",
+            "revision": "A",
+            "name": "BRACKET-SUPPORT GRILL RH",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007866",
+            "uid": "QALAkXpzoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3246072",
+            "revision": "B",
+            "name": "PANEL-INT TOP LH",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "HSM Part Implementation Process/3246072/B;2-PANEL-INT TOP LH:1,Production Control SM/3246072/B;2-PANEL-INT TOP LH:1",
+            "ecn": "ECN-NPD-0007931",
+            "uid": "QkHAkzuJoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3246073",
+            "revision": "B",
+            "name": "PANEL-INT TOP RH",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "HSM Part Implementation Process/3246073/B;2-PANEL-INT TOP RH:2,Production Control SM/3246073/B;2-PANEL-INT TOP RH:2",
+            "ecn": "ECN-NPD-0007931",
+            "uid": "gcOAkzuJoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3246074",
+            "revision": "B",
+            "name": "PANEL-INT TOP CTR",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "HSM Part Implementation Process/3246074/B;2-PANEL-INT TOP CTR:3,Production Control SM/3246074/B;2-PANEL-INT TOP CTR:3",
+            "ecn": "ECN-NPD-0007931",
+            "uid": "wQPAkzuJoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3248488",
+            "revision": "A",
+            "name": "SUPPORT ASSY-RN4MA CANOPY",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "HSM Part Implementation Process/3248488/A;1-SUPPORT ASSY-RN4MA CANOPY:10,Set Final Costing/3248488/A;1-SUPPORT ASSY-RN4MA CANOPY:10,perform-signoffs/3248488/A;1-SUPPORT ASSY-RN4MA CANOPY:10",
+            "ecn": "ECN-NPD-0007950",
+            "uid": "weEAk33NoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3233417",
+        "revision": "E",
+        "name": "MODULE-FRAME BLK RLN4MA",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007974",
+        "uid": "wuKAk$dqoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0108880001",
+            "revision": "A",
+            "name": "MARKER-WIRE VINYL ORANGE",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "xEKAAA22oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0399798001",
+            "revision": "A",
+            "name": "LABEL-WIRINIG CODES",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0013085",
+            "uid": "uLGAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0399800001",
+            "revision": "A",
+            "name": "LABEL-GROUND LUG",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0032774",
+            "uid": "PYCAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0410640001",
+            "revision": "E",
+            "name": "LABEL-DISCONNET",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "TQCAgTNaoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0418114000",
+            "revision": "A",
+            "name": "SUPPORT-DOOR SHIPPING",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0001594",
+            "uid": "47CAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0425652000",
+            "revision": "A",
+            "name": "SCREW # 6X5/8 OVAL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "B2KAAA2yoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0428616000",
+            "revision": "A",
+            "name": "SCREW-CASE END SHOULDER B",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0036539",
+            "uid": "JzGAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "043051301",
+            "revision": "B",
+            "name": "CONNECTOR-2 WIRE",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0015225",
+            "uid": "x0HAh8XpoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0432616000",
+            "revision": "B",
+            "name": "SCREW-K50 WFR HD PHIL BLK",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0036539",
+            "uid": "gvLAC7AqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "050463100",
+            "revision": "A",
+            "name": "DISCONNECT ASM-BALLAST",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0003890",
+            "uid": "mDGAAAGxoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0521014",
+            "revision": "C",
+            "name": "DOOR LH BLACK LT WC67",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0035301",
+            "uid": "DbJAEezBoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0548767",
+            "revision": "E",
+            "name": "TAPE-ADHESIVE TRANSFER 1 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "QMDAkyWKoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1E34065",
+            "revision": "D",
+            "name": "NAMEPLATE HUSSMANN SERVICE",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0037117",
+            "uid": "g6KAk3XEoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0456356",
+            "revision": "G",
+            "name": "LABEL-DOOR POWER ATTENTION",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0018715",
+            "uid": "l_OAx172oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0550747",
+            "revision": "B",
+            "name": "PATENTS LABEL STD",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "SLPAQ98joeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3005041",
+            "revision": "D",
+            "name": "LABEL-CLOSING TORQUE ATTENTION",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0007343",
+            "uid": "1kAAg_jcoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3233415",
+            "revision": "C",
+            "name": "FRAME-LH BLK RLN4MA",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007866",
+            "uid": "gJEAkbaaoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0137715002",
+            "revision": "A",
+            "name": "SCREW SM 10-16X3/4 HX WAS",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0030790",
+            "uid": "7QIAAAVXoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0138299001",
+            "revision": "A",
+            "name": "SCREW SM TEK SELF DRILL 10-16X1 1/2 W/SERRA",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "C6OAAAGQoeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3234687",
+        "revision": "D",
+        "name": "MODULE-PACKOUT RN4MA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007958",
+        "uid": "ArHAk7UCoeVOgD",
+        "depth": 1,
+        "children": [
+          {
+            "item_id": "0008515001",
+            "revision": "B",
+            "name": "CLIP-SHELF END FRAME",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "wRNABWaWoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0142194000",
+            "revision": "A",
+            "name": "STRAPPING (FLEJE 1/2 PLASTICO)",
+            "nomenclature": "",
+            "release_status": [
+              "SWN RELEASED",
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "BBK RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "BROAAAWqoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0301266002",
+            "revision": "A",
+            "name": "COVER-DRAIN",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "tMIAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0352341002",
+            "revision": "A",
+            "name": "BAG-POLYETHYLENE 18 X 18",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0003080",
+            "uid": "e_AAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0387350000",
+            "revision": "C",
+            "name": "STICKER-FRONT SUPPORT",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0008688",
+            "uid": "4YNAA5UcoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0399091000",
+            "revision": "B",
+            "name": "SPACER-REMOVABLE END",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "37449",
+            "uid": "ACOAAA55oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0399799001",
+            "revision": "B",
+            "name": "LABEL-BRACE WARNING",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "jVCAAA55oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0399805000",
+            "revision": "A",
+            "name": "LABEL-PKG. PRODUCE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0003892",
+            "uid": "5hHAAA3VoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0399810002",
+            "revision": "A",
+            "name": "TAG-DAMAGE/LOSS",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0003893",
+            "uid": "hUEAAA22oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0410640001",
+            "revision": "E",
+            "name": "LABEL-DISCONNET",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029578",
+            "uid": "TQCAgTNaoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0430249000",
+            "revision": "A",
+            "name": "LABEL- ANSI/NSF TYPE II LABEL",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "TgGAAA2KoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0444785000",
+            "revision": "A",
+            "name": "MOA-RL,RM TAPE LOCATION",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "SwJAAA3JoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "051443900",
+            "revision": "B",
+            "name": "SEALANT-480 MULTI PURPOSE WITH PTFE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0012870",
+            "uid": "wfEABkymoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0519328",
+            "revision": "B",
+            "name": "WASHER PIN DOOR LOCK",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0008738",
+            "uid": "RYAAw_jzoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0528454",
+            "revision": "H",
+            "name": "LABEL-RISK OF FIRE PRPN-EL COMPNT",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "CNO RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0031294",
+            "uid": "x0MAjeqxoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0528971",
+            "revision": "G",
+            "name": "LABEL-RISK OF FIRE PRPN-OS CASE",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "CNO RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0006720",
+            "uid": "yvIAERZ$oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0528972",
+            "revision": "G",
+            "name": "LABEL-RISK OF FIRE PRPN-FAN PLENUM",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "CNO RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0031294",
+            "uid": "RhBAjiGwoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0528973",
+            "revision": "H",
+            "name": "LABEL-RISK OF FIRE PRPN-COMPR UNIT",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "CNO RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0031294",
+            "uid": "xCBAjiGwoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0531496",
+            "revision": "B",
+            "name": "STICKER VALANCE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0009210",
+            "uid": "BAEAAALJoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0536734",
+            "revision": "B",
+            "name": "LABEL DRAIN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0022570",
+            "uid": "D4FAxfAioeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0536974",
+            "revision": "A",
+            "name": "BOLT- TAP, 5/16\"-18 x 4.5, STEEL, ZINC FINISH, GR5",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0004247",
+            "uid": "R4EAAAW1oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0541569",
+            "revision": "B",
+            "name": "LABEL-CASE TOP CAUTION",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0009757",
+            "uid": "y5FAgLnNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "0552623",
+            "revision": "C",
+            "name": "SHIPPING BRACE STD RL,RM,RLN,RLT",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007426",
+            "uid": "hJEA0WBaoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1004330",
+            "revision": "A",
+            "name": "BOLSA PLASTICO DE 23X32 C200",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "nFIAAAmSoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1006135",
+            "revision": "A",
+            "name": "BOLSA PLASTICA PARA DOCUMENTOS",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0032774",
+            "uid": "CuPAAAWNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1900154",
+            "revision": "B",
+            "name": "CABLE TIE 6\"",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "BBK RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029651",
+            "uid": "aaBAg8JzoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1900155",
+            "revision": "A",
+            "name": "CINTILLO DE PLAST. 11\" LARGO",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "ajGAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1900356",
+            "revision": "A",
+            "name": "CINTILLO DE PLASTICO 30\"LARGO",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0030790",
+            "uid": "jZKAAAmSoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "1900576",
+            "revision": "B",
+            "name": "STRAP SEAL 0.500 IN",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED",
+              "BBK RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029651",
+            "uid": "SkBAAD$PoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "23S289",
+            "revision": "B",
+            "name": "LABEL- UL EPH SANITATION",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "PPAP COMPLETED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0005390",
+            "uid": "SaLAAiW6oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2400125",
+            "revision": "B",
+            "name": "LABEL-ZEBRA PAPER 3\"\" X 2\"\"",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "xePAAAaNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2400190",
+            "revision": "G",
+            "name": "STICKER UL/CUL LISTED",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "x2HAAAaNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2402199",
+            "revision": "B",
+            "name": "TAPE-RIBBON RESIN 110MM X 450M",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "",
+            "uid": "izPAAAaNoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2402310",
+            "revision": "A",
+            "name": "ETIQUETA DRENAJE",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "HAB RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0003892",
+            "uid": "miAAAA22oeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2600083",
+            "revision": "A",
+            "name": "CINTA ADHESIVA TRANSPARENTE 2\"",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029511",
+            "uid": "aUCAAAGuoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "2602738",
+            "revision": "A",
+            "name": "TAPE-8916V BLUE",
+            "nomenclature": "",
+            "release_status": [
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "MTY RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0029651",
+            "uid": "YtOAAAGloeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3040539",
+            "revision": "F",
+            "name": "LABEL-SERIAL PLATE SCNTN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0033266",
+            "uid": "gXJAUguIoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3043443",
+            "revision": "A",
+            "name": "LABEL-CLIP DOOR",
+            "nomenclature": "",
+            "release_status": [
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0010000",
+            "uid": "RnBAQvbboeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3069575",
+            "revision": "A",
+            "name": "LABEL-WARNING P65 CALIFORNIA",
+            "nomenclature": "",
+            "release_status": [
+              "BGN RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "SWN RELEASED",
+              "CNO RELEASED",
+              "MTY RELEASED",
+              "BBK RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0026099",
+            "uid": "kMMARgSPoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3113734",
+            "revision": "B",
+            "name": "LABEL-RISK OF FIRE PRPN-FOL HD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "TJU RELEASED",
+              "PRODUCTION RELEASED",
+              "CNO RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-COD-0019606",
+            "uid": "hhKAjeqxoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3177054",
+            "revision": "A",
+            "name": "LABEL-AHRI CERTIFIED",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED",
+              "BGN RELEASED",
+              "TJU RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-CAP-0031248",
+            "uid": "BdCADZEboeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3199408",
+            "revision": "B",
+            "name": "LABEL-FIRE TRIANGLE 2.25 X 2.25 IN",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "HAB RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007288",
+            "uid": "AkKAE2eEoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232945",
+            "revision": "E",
+            "name": "SPLASHGUARD-RNMA 4 DOOR TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "HSM Part Implementation Process/3232945/E;1-SPLASHGUARD-RNMA 4 DOOR TXTD:14,Production Control SM/3232945/E;1-SPLASHGUARD-RNMA 4 DOOR TXTD:14",
+            "ecn": "ECN-NPD-0007911",
+            "uid": "wINAkvEUoeVOgD",
+            "depth": 2,
+            "children": []
+          },
+          {
+            "item_id": "3232947",
+            "revision": "C",
+            "name": "SPLASHGUARD-RNMA RH END TXTD",
+            "nomenclature": "",
+            "release_status": [
+              "DESIGN RELEASED",
+              "MTY RELEASED",
+              "PRODUCTION RELEASED"
+            ],
+            "process_stage": "",
+            "ecn": "ECN-NPD-0007801",
+            "uid": "QVEAUrN7oeVOgD",
+            "depth": 2,
+            "children": []
+          }
+        ]
+      },
+      {
+        "item_id": "3234816",
+        "revision": "B",
+        "name": "MODULE-SHIPPING RNMA",
+        "nomenclature": "",
+        "release_status": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007974",
+        "uid": "w5OAk$dqoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3245575",
+        "revision": "A",
+        "name": "MODULE-ELECTRICAL LOW 2 OUTLET",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007854",
+        "uid": "gpGAkP5ioeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3246055",
+        "revision": "A",
+        "name": "MANUAL-INSTALL RN-MA EN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007871",
+        "uid": "BKCAkX$voeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3246058",
+        "revision": "A",
+        "name": "DATASHEET-RLN-MA EN",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007871",
+        "uid": "RaMAkX$voeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3247194",
+        "revision": "A",
+        "name": "DRAWING-RLNMA-RMNMA DIMENSIONAL APPL",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007901",
+        "uid": "A8OAknFJoeVOgD",
+        "depth": 1,
+        "children": []
+      },
+      {
+        "item_id": "3247229",
+        "revision": "B",
+        "name": "MODULE-END PANEL RLN-MA",
+        "nomenclature": "",
+        "release_status": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "HSM Part Implementation Process/3247229/B;1-MODULE-END PANEL RLN-MA:5,Set Final Costing/3247229/B;1-MODULE-END PANEL RLN-MA:5,perform-signoffs/3247229/B;1-MODULE-END PANEL RLN-MA:5",
+        "ecn": "ECN-NPD-0007958",
+        "uid": "gfBAk78BoeVOgD",
+        "depth": 1,
+        "children": []
+      }
+    ]
+  }
+}

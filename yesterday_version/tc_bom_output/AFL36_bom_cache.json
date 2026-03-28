@@ -1,0 +1,624 @@
+{
+  "nomenclature": "AFL36",
+  "candidates": [
+    {
+      "uid": "QyOAk75LoeVOgD",
+      "item_id": "AFL36",
+      "item_revision_id": "B",
+      "object_name": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "object_desc": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "h4_Nomenclature": "",
+      "release_status_list": "DESIGN RELEASED",
+      "process_stage": ""
+    },
+    {
+      "uid": "RYHA0PT_oeVOgD",
+      "item_id": "AFL36",
+      "item_revision_id": "C",
+      "object_name": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "object_desc": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "h4_Nomenclature": "AFL36",
+      "release_status_list": "",
+      "process_stage": ""
+    },
+    {
+      "uid": "gWJAEn8AoeVOgD",
+      "item_id": "AFL36",
+      "item_revision_id": "A",
+      "object_name": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "object_desc": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "h4_Nomenclature": "",
+      "release_status_list": [
+        "DESIGN RELEASED",
+        "MTY RELEASED",
+        "PRODUCTION RELEASED"
+      ],
+      "process_stage": ""
+    }
+  ],
+  "selected_revisions": [
+    {
+      "uid": "QyOAk75LoeVOgD",
+      "item_id": "AFL36",
+      "item_revision_id": "B",
+      "object_name": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "object_desc": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+      "h4_Nomenclature": "",
+      "release_status_list": "DESIGN RELEASED",
+      "process_stage": ""
+    }
+  ],
+  "bom": {
+    "nodes": [
+      {
+        "uid": "QyOAk75LoeVOgD",
+        "depth": 0,
+        "item_id": "AFL36",
+        "item_revision_id": "B",
+        "object_name": "BASE-RL,MN-MA ELEV 3.16IN 5DR",
+        "h4_Nomenclature": "",
+        "release_status_list": "DESIGN RELEASED",
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007986"
+      },
+      {
+        "uid": "ABBAkvEUoeVOgD",
+        "depth": 1,
+        "item_id": "3232946",
+        "item_revision_id": "E",
+        "object_name": "SPLASHGUARD-RNMA 5 DOOR TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007911"
+      },
+      {
+        "uid": "QVEAUrN7oeVOgD",
+        "depth": 1,
+        "item_id": "3232947",
+        "item_revision_id": "C",
+        "object_name": "SPLASHGUARD-RNMA RH END TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007801"
+      },
+      {
+        "uid": "gJFAUrN7oeVOgD",
+        "depth": 1,
+        "item_id": "3232948",
+        "item_revision_id": "C",
+        "object_name": "SPLASHGUARD-RNMA LH END TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007801"
+      },
+      {
+        "uid": "REDAEn8AoeVOgD",
+        "depth": 1,
+        "item_id": "3239242",
+        "item_revision_id": "A",
+        "object_name": "BASE ASSY-ELEV RISER 3.16IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "ChKAEn8AoeVOgD",
+        "depth": 1,
+        "item_id": "3239246",
+        "item_revision_id": "A",
+        "object_name": "SPLASHGUARD-5DR FR ELEV BASE 3.16IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "C9DAEn8AoeVOgD",
+        "depth": 1,
+        "item_id": "3239247",
+        "item_revision_id": "A",
+        "object_name": "SPLASHGUARD-END LH-RH ELEV BASE 3.16IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "ATOAErY8oeVOgD",
+        "depth": 1,
+        "item_id": "3239508",
+        "item_revision_id": "A",
+        "object_name": "INSTRUCTION-RNMA RISER AND FACADE",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "EQGA0LVMoeVOgD",
+        "depth": 1,
+        "item_id": "3249762",
+        "item_revision_id": "A",
+        "object_name": "BAG ASSY-W SCREW 5DR",
+        "h4_Nomenclature": "",
+        "release_status_list": "DESIGN RELEASED",
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007986"
+      },
+      {
+        "uid": "RfOAAAmSoeVOgD",
+        "depth": 1,
+        "item_id": "B008394",
+        "item_revision_id": "A",
+        "object_name": "1/2 SEALED AIR NYLON BAR",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "BBK RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "TJU RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0029511"
+      },
+      {
+        "uid": "AaIAUPMfoeVOgD",
+        "depth": 1,
+        "item_id": "3232968",
+        "item_revision_id": "C",
+        "object_name": "PANEL-FACADE 5DR 15IN SC SM DSPL TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "wmGAUPMfoeVOgD",
+        "depth": 1,
+        "item_id": "3233370",
+        "item_revision_id": "C",
+        "object_name": "PANEL-END FACADE 15IN SLOTTED TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007705"
+      },
+      {
+        "uid": "wpCAkThioeVOgD",
+        "depth": 1,
+        "item_id": "3245714",
+        "item_revision_id": "A",
+        "object_name": "PANEL-END FACADE 16.62IN SLOTTED TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "gKPAkfa_oeVOgD",
+        "depth": 1,
+        "item_id": "3246471",
+        "item_revision_id": "A",
+        "object_name": "PANEL ASSY-FACADE ELEV 3.16IN R-5MA",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "64IAAAGxoeVOgD",
+        "depth": 2,
+        "item_id": "0962053",
+        "item_revision_id": "A",
+        "object_name": ".035 GALV TEXTD 49.375\" ROLL",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "HAB RELEASED",
+          "TJU RELEASED",
+          "CNO RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-COD-0022737"
+      },
+      {
+        "uid": "xdNAkfOJoeVOgD",
+        "depth": 2,
+        "item_id": "3239236",
+        "item_revision_id": "B",
+        "object_name": "BASE-ELEV LOWER PANEL RISER 3.16IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "gbFAEn8AoeVOgD",
+        "depth": 2,
+        "item_id": "3239237",
+        "item_revision_id": "A",
+        "object_name": "SUPPORT-ELEV UPPER PANEL RISER 3.16IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "7QIAAAVXoeVOgD",
+        "depth": 2,
+        "item_id": "0137715002",
+        "item_revision_id": "A",
+        "object_name": "SCREW SM 10-16X3/4 HX WAS",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "BBK RELEASED",
+          "PRODUCTION RELEASED",
+          "BGN RELEASED",
+          "TJU RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0030790"
+      },
+      {
+        "uid": "BdOAkfmSoeVOgD",
+        "depth": 2,
+        "item_id": "3246347",
+        "item_revision_id": "A",
+        "object_name": "COVER-TOP RISER 3.16IN",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "mpCAAAWqoeVOgD",
+        "depth": 2,
+        "item_id": "0200450",
+        "item_revision_id": "A",
+        "object_name": "LAMINA GALV C.20 4' (ROLLO)G60",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "BGN RELEASED",
+          "HAB RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED",
+          "CNO RELEASED",
+          "TJU RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0025918"
+      },
+      {
+        "uid": "ijGASmBQoeVOgD",
+        "depth": 2,
+        "item_id": "0115192003",
+        "item_revision_id": "C",
+        "object_name": "SCREW-.25-20 X .75 HEX THD CUTTING SERRATED-FLG",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED",
+          "TJU RELEASED",
+          "BBK RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0031189"
+      },
+      {
+        "uid": "ABMAUXl8oeVOgD",
+        "depth": 2,
+        "item_id": "3242616",
+        "item_revision_id": "A",
+        "object_name": "BAG-PLASTIC 4 IN X 6 IN PRESS TO CLOSE",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007707"
+      },
+      {
+        "uid": "RtPAkfqhoeVOgD",
+        "depth": 2,
+        "item_id": "3245710",
+        "item_revision_id": "B",
+        "object_name": "PANEL-FACADE 5DR 16.62IN DSPL TXTD",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "wUHAkfa_oeVOgD",
+        "depth": 2,
+        "item_id": "3246466",
+        "item_revision_id": "A",
+        "object_name": "CHANNEL-SUPPORT 5DR",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "PRODUCTION RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-NPD-0007623"
+      },
+      {
+        "uid": "BJJAiJgioeVOgD",
+        "depth": 3,
+        "item_id": "3148175",
+        "item_revision_id": "A",
+        "object_name": "GALV G60U 14GA .071\"M X 48\"",
+        "h4_Nomenclature": "",
+        "release_status_list": [
+          "DESIGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED",
+          "BGN RELEASED",
+          "TJU RELEASED",
+          "BBK RELEASED"
+        ],
+        "process_stage": "",
+        "h4_ECN_Number": "ECN-CAP-0038344"
+      }
+    ],
+    "edges": [
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "ABBAkvEUoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "QVEAUrN7oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "gJFAUrN7oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "REDAEn8AoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "ChKAEn8AoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "C9DAEn8AoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "ATOAErY8oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "EQGA0LVMoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "RfOAAAmSoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "AaIAUPMfoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "wmGAUPMfoeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "wpCAkThioeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "QyOAk75LoeVOgD",
+        "child_uid": "gKPAkfa_oeVOgD",
+        "depth": 1
+      },
+      {
+        "parent_uid": "ABBAkvEUoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "QVEAUrN7oeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "gJFAUrN7oeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "REDAEn8AoeVOgD",
+        "child_uid": "xdNAkfOJoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "REDAEn8AoeVOgD",
+        "child_uid": "gbFAEn8AoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "REDAEn8AoeVOgD",
+        "child_uid": "7QIAAAVXoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "REDAEn8AoeVOgD",
+        "child_uid": "BdOAkfmSoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "ChKAEn8AoeVOgD",
+        "child_uid": "mpCAAAWqoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "C9DAEn8AoeVOgD",
+        "child_uid": "mpCAAAWqoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "EQGA0LVMoeVOgD",
+        "child_uid": "ijGASmBQoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "EQGA0LVMoeVOgD",
+        "child_uid": "ABMAUXl8oeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "AaIAUPMfoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wmGAUPMfoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "wpCAkThioeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "gKPAkfa_oeVOgD",
+        "child_uid": "RtPAkfqhoeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "gKPAkfa_oeVOgD",
+        "child_uid": "wUHAkfa_oeVOgD",
+        "depth": 2
+      },
+      {
+        "parent_uid": "xdNAkfOJoeVOgD",
+        "child_uid": "BJJAiJgioeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "gbFAEn8AoeVOgD",
+        "child_uid": "BJJAiJgioeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "BdOAkfmSoeVOgD",
+        "child_uid": "BJJAiJgioeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "RtPAkfqhoeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 3
+      },
+      {
+        "parent_uid": "wUHAkfa_oeVOgD",
+        "child_uid": "64IAAAGxoeVOgD",
+        "depth": 3
+      }
+    ],
+    "visited_count": 25,
+    "truncated": false,
+    "truncate_reason": "",
+    "queue_remaining": 0,
+    "elapsed_seconds": 161.22
+  }
+}

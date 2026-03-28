@@ -1,0 +1,42 @@
+{
+  "nomenclature": "AFY94",
+  "fetched_at": "2026-03-26T15:50:05.284907",
+  "view_type": "MTY View",
+  "total_parts": 2,
+  "max_depth": 1,
+  "root": {
+    "item_id": "AFY94",
+    "revision": "A",
+    "name": "CONDENSING UNIT-MICROBLOCK MT TCX413U-DS1B",
+    "nomenclature": "",
+    "release_status": [
+      "DESIGN RELEASED",
+      "MTY RELEASED",
+      "PRODUCTION RELEASED"
+    ],
+    "process_stage": "",
+    "ecn": "ECN-NPD-0007836",
+    "uid": "wTAAkHhtoeVOgD",
+    "depth": 0,
+    "children": [
+      {
+        "item_id": "3242797",
+        "revision": "C",
+        "name": "CONDENSING UNIT-MT MICROBLOCK TCX413U-DS1B",
+        "nomenclature": "",
+        "release_status": [
+          "BGN RELEASED",
+          "MTY RELEASED",
+          "HAB RELEASED",
+          "PRODUCTION RELEASED",
+          "PPAP COMPLETED"
+        ],
+        "process_stage": "",
+        "ecn": "ECN-NPD-0007933",
+        "uid": "KYGAkvtZoeVOgD",
+        "depth": 1,
+        "children": []
+      }
+    ]
+  }
+}
