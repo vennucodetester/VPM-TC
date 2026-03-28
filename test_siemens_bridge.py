@@ -34,9 +34,20 @@ def _ensure_loadfromremotesources():
     config_xml = """\
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5"/>
+  </startup>
   <runtime>
     <loadFromRemoteSources enabled="true"/>
   </runtime>
+  <system.net>
+    <defaultProxy useDefaultCredentials="true">
+      <proxy usesystemdefault="true"/>
+    </defaultProxy>
+    <connectionManagement>
+      <add address="*" maxconnection="10"/>
+    </connectionManagement>
+  </system.net>
 </configuration>
 """
     needs_write = False
@@ -209,6 +220,24 @@ def tc_connect(url, username, password, retries=3, retry_delay=8):
         print("  Active Workspace uses a different path/port than SOA RestServices.")
         print("  The SOA pool on :8080 may be down. Ask IT to check the web tier.")
         print("  Will still attempt login in case ping was a false negative...\n")
+
+    # Configure .NET networking to match checksheet behavior
+    try:
+        import System
+        from System.Net import ServicePointManager, SecurityProtocolType, WebRequest, CredentialCache
+        ServicePointManager.DefaultConnectionLimit = 10
+        ServicePointManager.Expect100Continue = False
+        ServicePointManager.UseNagleAlgorithm = False
+        # Allow all TLS versions
+        ServicePointManager.SecurityProtocol = (
+            SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12
+        )
+        # Use system default proxy (same as browser/checksheet)
+        WebRequest.DefaultWebProxy = WebRequest.GetSystemWebProxy()
+        WebRequest.DefaultWebProxy.Credentials = CredentialCache.DefaultCredentials
+        print("  .NET ServicePointManager configured")
+    except Exception as e:
+        print(f"  WARNING: Could not configure ServicePointManager: {e}")
 
     cred_mgr = create_credential_manager(username, password)
 
@@ -554,6 +583,8 @@ def main():
                         help="List all available saved queries")
     parser.add_argument("--ping", action="store_true",
                         help="Just check if TC SOA web tier is reachable (no login)")
+    parser.add_argument("--diag", action="store_true",
+                        help="Run .NET HTTP diagnostic (tests if .NET can reach TC)")
     parser.add_argument("--retries", type=int, default=3,
                         help="Login retry attempts (default: 3)")
     args = parser.parse_args()
@@ -563,6 +594,48 @@ def main():
         print(f"Pinging TC SOA web tier at {args.url} ...")
         ok = ping_tc_url(args.url)
         sys.exit(0 if ok else 1)
+
+    # .NET HTTP diagnostic mode
+    if args.diag:
+        print(f"Running .NET HTTP diagnostic to {args.url} ...")
+        load_tc_assemblies()
+        try:
+            import System
+            from System.Net import HttpWebRequest, ServicePointManager, SecurityProtocolType
+            from System import Uri
+            ServicePointManager.SecurityProtocol = (
+                SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12
+            )
+            ServicePointManager.Expect100Continue = False
+            ServicePointManager.DefaultConnectionLimit = 10
+
+            test_url = f"{args.url.rstrip('/')}/RestServices/Core-2008-06-Session/login"
+            print(f"  Testing .NET HttpWebRequest to: {test_url}")
+            req = HttpWebRequest.Create(Uri(test_url))
+            req.Method = "POST"
+            req.ContentType = "application/json"
+            req.Timeout = 30000  # 30 seconds
+            req.Proxy = System.Net.WebRequest.GetSystemWebProxy()
+
+            # Write a minimal JSON body
+            body = b'{"header":{},"body":{}}'
+            stream = req.GetRequestStream()
+            stream.Write(body, 0, len(body))
+            stream.Close()
+
+            print("  Waiting for response (30s timeout)...")
+            resp = req.GetResponse()
+            print(f"  .NET HTTP OK: {resp.StatusCode}")
+            resp.Close()
+        except System.Net.WebException as e:
+            if e.Response:
+                print(f"  .NET HTTP error response: {e.Response.StatusCode} (server responded!)")
+            else:
+                print(f"  .NET HTTP failed: {e.Message}")
+                print(f"  This means .NET's HTTP stack can't reach TC — likely proxy issue")
+        except Exception as e:
+            print(f"  .NET HTTP error: {e}")
+        sys.exit(0)
 
     # Require credentials for non-ping operations
     if args.user == "(user)" or args.password == "(password)":
