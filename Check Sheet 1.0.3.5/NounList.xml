@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<NounList>		
+	<Description>ACCUMULATOR</Description>		
+	</NounList>
+		<NounList>
+		<Description>ACRYLIC</Description>		
+	</NounList>
+		<NounList>
+		<Description>ACTIVATOR</Description>		
+	</NounList>
+		<NounList>
+		<Description>ACTUATOR</Description>		
+	</NounList>
+		<NounList>
+		<Description>ADAPTER</Description>		
+	</NounList>
+		<NounList>
+		<Description>ADAPTER ASSY</Description>		
+	</NounList>
+		<NounList>
+		<Description>ADHESIVE</Description>		
+	</NounList>	
+	<NounList>
+		<Description>ALARM</Description>		
+	</NounList>
+		<NounList>
+		<Description>ALARM ASSY</Description>		
+	</NounList>
+		<NounList>
+		<Description>ANCHOR</Description>		
+	</NounList>
+		<NounList>
+		<Description>ANGLE</Description>		
+	</NounList>
+		<NounList>
+		<Description>ANGLE ASSY</Description>		
+	</NounList>
+		<NounList>
+		<Description>ANNUNCIATOR</Description>		
+	</NounList>
+		<NounList>
+		<Description>ANODE</Description>		
+	</NounList>
+		<NounList>
+		<Description>AQUASTAT</Description>		
+	</NounList>
+		<NounList>
+		<Description>BAFFLE</Description>		
+	</NounList>
+		<NounList>
+		<Description>BAFFLE ASSY</Description>		
+	</NounList>
+		<NounList>
+		<Description>BAG</Description>		
+	</NounList>
+		<NounList>
+		<Description>BALLAST</Description>		
+	</NounList>
+	
+<NounList><Description>BAR</Description></NounList>
+<NounList><Description>BAR ASSY</Description></NounList>
+<NounList><Description>BARRIER</Description></NounList>
+<NounList><Description>BASE</Description></NounList>
+<NounList><Description>BASE ASSY</Description></NounList>
+<NounList><Description>BASKET</Description></NounList>
+<NounList><Description>BASKET ASSY</Description></NounList>
+<NounList><Description>BATTERY</Description></NounList>
+<NounList><Description>BEAM</Description></NounList>
+<NounList><Description>BEARING</Description></NounList>
+<NounList><Description>BELL</Description></NounList>
+<NounList><Description>BELT</Description></NounList>
+<NounList><Description>BEND</Description></NounList>
+<NounList><Description>BEZEL</Description></NounList>
+<NounList><Description>BIN ASSY</Description></NounList>
+<NounList><Description>BINDER</Description></NounList>
+<NounList><Description>BLADE</Description></NounList>
+<NounList><Description>BLOCK</Description></NounList>
+<NounList><Description>BLOCK ASSY</Description></NounList>
+<NounList><Description>BLOWER</Description></NounList>
+<NounList><Description>BLOWER ASSY</Description></NounList>
+<NounList><Description>BOARD</Description></NounList>
+<NounList><Description>BOARD ASSY</Description></NounList>
+<NounList><Description>BODY</Description></NounList>
+<NounList><Description>BOLT</Description></NounList>
+<NounList><Description>BOLT ASSY</Description></NounList>
+<NounList><Description>BONNET</Description></NounList>
+<NounList><Description>BOX</Description></NounList>
+<NounList><Description>BOX ASSY</Description></NounList>
+<NounList><Description>BRACE</Description></NounList>
+<NounList><Description>BRACE ASSY</Description></NounList>
+<NounList><Description>BRACKET</Description></NounList>
+<NounList><Description>BRACKET ASSY</Description></NounList>
+<NounList><Description>BRANCH</Description></NounList>
+<NounList><Description>BREAKER</Description></NounList>
+<NounList><Description>BRUSH</Description></NounList>
+<NounList><Description>BUCKET</Description></NounList>
+<NounList><Description>BULB</Description></NounList>
+<NounList><Description>BUMPER</Description></NounList>
+<NounList><Description>BUMPER ASSY</Description></NounList>
+<NounList><Description>BUSHING</Description></NounList>
+<NounList><Description>BUSHING ASSY</Description></NounList>
+<NounList><Description>BUTTON</Description></NounList>
+<NounList><Description>CABLE</Description></NounList>
+<NounList><Description>CABLE ASSY</Description></NounList>
+<NounList><Description>CANOPY</Description></NounList>
+<NounList><Description>CANOPY ASSY</Description></NounList>
+<NounList><Description>CAP</Description></NounList>
+<NounList><Description>CAP ASSY</Description></NounList>
+<NounList><Description>CAPACITOR</Description></NounList>
+<NounList><Description>CAPACITOR ASSY</Description></NounList>
+<NounList><Description>CAPILLARY ASSY</Description></NounList>
+<NounList><Description>CARD</Description></NounList>
+<NounList><Description>CARDHOLDER</Description></NounList>
+<NounList><Description>CAROUSEL ASSY</Description></NounList>
+<NounList><Description>CART ASSY</Description></NounList>
+<NounList><Description>CARTON</Description></NounList>
+<NounList><Description>CARTRIDGE</Description></NounList>
+<NounList><Description>CASTER</Description></NounList>
+<NounList><Description>CASTING</Description></NounList>
+<NounList><Description>CASTING ASSY</Description></NounList>
+<NounList><Description>CATCH</Description></NounList>
+<NounList><Description>CATCH ASSY</Description></NounList>
+<NounList><Description>CEMENT</Description></NounList>
+<NounList><Description>CHAIN</Description></NounList>
+<NounList><Description>CHAMBER</Description></NounList>
+<NounList><Description>CHAMBER ASSY</Description></NounList>
+<NounList><Description>CHANNEL</Description></NounList>
+<NounList><Description>CHANNEL ASSY</Description></NounList>
+<NounList><Description>CHART</Description></NounList>
+<NounList><Description>CHASSIS</Description></NounList>
+<NounList><Description>CIRCUIT</Description></NounList>
+<NounList><Description>CIRCUIT BOARD</Description></NounList>
+<NounList><Description>CLAMP</Description></NounList>
+<NounList><Description>CLEANER</Description></NounList>
+<NounList><Description>CLIP</Description></NounList>
+<NounList><Description>CLIP ASSY</Description></NounList>
+<NounList><Description>CLOCK</Description></NounList>
+<NounList><Description>CLOCK ASSY</Description></NounList>
+<NounList><Description>CLOSURE ASSY</Description></NounList>
+<NounList><Description>COCK</Description></NounList>
+<NounList><Description>COIL</Description></NounList>
+<NounList><Description>COIL ASSY</Description></NounList>
+<NounList><Description>COLLAR</Description></NounList>
+<NounList><Description>COLLECTOR</Description></NounList>
+<NounList><Description>COLUMN</Description></NounList>
+<NounList><Description>COLUMN ASSY</Description></NounList>
+<NounList><Description>COMPRESSOR</Description></NounList>
+<NounList><Description>COMPRESSOR ASSY</Description></NounList>
+<NounList><Description>CONDENSER</Description></NounList>
+<NounList><Description>CONDENSING UNIT</Description></NounList>
+<NounList><Description>CONDITIONER</Description></NounList>
+<NounList><Description>CONDUCTOR</Description></NounList>
+<NounList><Description>CONDUIT</Description></NounList>
+<NounList><Description>CONNECTOR</Description></NounList>
+<NounList><Description>CONTACTOR</Description></NounList>
+<NounList><Description>CONTAINER</Description></NounList>
+<NounList><Description>CONTOUR</Description></NounList>
+<NounList><Description>CONTROL</Description></NounList>
+<NounList><Description>CONTROL ASSY</Description></NounList>
+<NounList><Description>CONTROLLER</Description></NounList>
+<NounList><Description>CONVEYOR</Description></NounList>
+<NounList><Description>CONVEYOR ASSY</Description></NounList>
+<NounList><Description>COOLER</Description></NounList>
+<NounList><Description>CORD</Description></NounList>
+<NounList><Description>CORE</Description></NounList>
+<NounList><Description>CORK</Description></NounList>
+<NounList><Description>CORNER</Description></NounList>
+<NounList><Description>COUNTER</Description></NounList>
+<NounList><Description>COUPLING</Description></NounList>
+<NounList><Description>COVER</Description></NounList>
+<NounList><Description>COVER ASSY</Description></NounList>
+<NounList><Description>COWL</Description></NounList>
+<NounList><Description>COWL ASSY</Description></NounList>
+<NounList><Description>CRANKCASE</Description></NounList>
+<NounList><Description>CRATE</Description></NounList>
+<NounList><Description>CRATE ASSY</Description></NounList>
+<NounList><Description>CROSS</Description></NounList>
+<NounList><Description>CURTAIN</Description></NounList>
+<NounList><Description>CURTAIN ASSY</Description></NounList>
+<NounList><Description>CYLINDER</Description></NounList>
+<NounList><Description>DAMPER</Description></NounList>
+<NounList><Description>DAMPER ASSY</Description></NounList>
+<NounList><Description>DATASHEET</Description></NounList>
+<NounList><Description>DEADFRONT</Description></NounList>
+<NounList><Description>DECAL</Description></NounList>
+<NounList><Description>DECK</Description></NounList>
+<NounList><Description>DECK ASSY</Description></NounList>
+<NounList><Description>DEFLECTOR</Description></NounList>
+<NounList><Description>DEFLECTOR ASSY</Description></NounList>
+<NounList><Description>DEFROST</Description></NounList>
+<NounList><Description>DEHYDRATOR</Description></NounList>
+<NounList><Description>DETECTOR</Description></NounList>
+<NounList><Description>DEVICE</Description></NounList>
+<NounList><Description>DIAGRAM</Description></NounList>
+<NounList><Description>DIAL</Description></NounList>
+<NounList><Description>DIFFUSER</Description></NounList>
+<NounList><Description>DIFFUSER ASSY</Description></NounList>
+<NounList><Description>DIGITAL DIALER</Description></NounList>
+<NounList><Description>DISC</Description></NounList>
+<NounList><Description>DISC ASSY</Description></NounList>
+<NounList><Description>DISCONNECT</Description></NounList>
+<NounList><Description>DISPENSER</Description></NounList>
+<NounList><Description>DISPLAY ASSY</Description></NounList>
+<NounList><Description>DISTRIBUTOR</Description></NounList>
+<NounList><Description>DISTRIBUTOR ASSY</Description></NounList>
+<NounList><Description>DIVERTER</Description></NounList>
+<NounList><Description>DIVERTER ASSY</Description></NounList>
+<NounList><Description>DIVIDER</Description></NounList>
+<NounList><Description>DIVIDER ASSY</Description></NounList>
+<NounList><Description>DOOR</Description></NounList>
+<NounList><Description>DOOR ASSY</Description></NounList>
+<NounList><Description>DRAIN</Description></NounList>
+<NounList><Description>DRAIN ASSY</Description></NounList>
+<NounList><Description>DRAWER</Description></NounList>
+<NounList><Description>DRAWING</Description></NounList>
+<NounList><Description>DRIER</Description></NounList>
+<NounList><Description>DRIER ASSY</Description></NounList>
+<NounList><Description>DRIVE</Description></NounList>
+<NounList><Description>DUCT</Description></NounList>
+<NounList><Description>DUCT ASSY</Description></NounList>
+<NounList><Description>ECONOMIZER</Description></NounList>
+<NounList><Description>ELBOW</Description></NounList>
+<NounList><Description>ELEMENT</Description></NounList>
+<NounList><Description>ENCLOSURE</Description></NounList>
+<NounList><Description>ENCLOSURE ASSY</Description></NounList>
+<NounList><Description>END</Description></NounList>
+<NounList><Description>END ASSY</Description></NounList>
+<NounList><Description>ENVELOPE</Description></NounList>
+<NounList><Description>EQUALIZER</Description></NounList>
+<NounList><Description>EVAPORATOR</Description></NounList>
+<NounList><Description>EVAPORATOR ASSY</Description></NounList>
+<NounList><Description>EXCHANGER</Description></NounList>
+<NounList><Description>EXCHANGER ASSY</Description></NounList>
+<NounList><Description>EXPANSION VALVE</Description></NounList>
+<NounList><Description>EXTENSION</Description></NounList>
+<NounList><Description>EXTENSION ASSY</Description></NounList>
+<NounList><Description>EXTINGUISHER</Description></NounList>
+<NounList><Description>EYELET</Description></NounList>
+<NounList><Description>FAN</Description></NounList>
+<NounList><Description>FAN ASSY</Description></NounList>
+<NounList><Description>FASCIA</Description></NounList>
+<NounList><Description>FASCIA ASSY</Description></NounList>
+<NounList><Description>FASTENER</Description></NounList>
+<NounList><Description>FAUCET</Description></NounList>
+<NounList><Description>FENCE WIRE</Description></NounList>
+<NounList><Description>FIBERGLASS</Description></NounList>
+<NounList><Description>FILLER</Description></NounList>
+<NounList><Description>FILLER ASSY</Description></NounList>
+<NounList><Description>FILTER</Description></NounList>
+<NounList><Description>FILTER DRIER</Description></NounList>
+<NounList><Description>FIN</Description></NounList>
+<NounList><Description>FITTING</Description></NounList>
+<NounList><Description>FITTING ASSY</Description></NounList>
+<NounList><Description>FIXTURE</Description></NounList>
+<NounList><Description>FIXTURE ASSY</Description></NounList>
+<NounList><Description>FLANGE</Description></NounList>
+<NounList><Description>FLARE</Description></NounList>
+<NounList><Description>FLASHING</Description></NounList>
+<NounList><Description>FLOAT</Description></NounList>
+<NounList><Description>FLUE</Description></NounList>
+<NounList><Description>FLUE ASSY</Description></NounList>
+<NounList><Description>FLUX</Description></NounList>
+<NounList><Description>FLYWHEEL</Description></NounList>
+<NounList><Description>FOAM</Description></NounList>
+<NounList><Description>FRAME</Description></NounList>
+<NounList><Description>FRAME ASSY</Description></NounList>
+<NounList><Description>FRONT</Description></NounList>
+<NounList><Description>FRONT ASSY</Description></NounList>
+<NounList><Description>FURNACE</Description></NounList>
+<NounList><Description>FUSE</Description></NounList>
+<NounList><Description>FUSEHOLDER</Description></NounList>
+<NounList><Description>GAS</Description></NounList>
+<NounList><Description>GASKET</Description></NounList>
+<NounList><Description>GASKET ASSY</Description></NounList>
+<NounList><Description>GAUGE</Description></NounList>
+<NounList><Description>GENERATOR</Description></NounList>
+<NounList><Description>GLASS</Description></NounList>
+<NounList><Description>GLASS ASSY</Description></NounList>
+<NounList><Description>GLOVE</Description></NounList>
+<NounList><Description>GLUE</Description></NounList>
+<NounList><Description>GRATING</Description></NounList>
+<NounList><Description>GRILL</Description></NounList>
+<NounList><Description>GRILL ASSY</Description></NounList>
+<NounList><Description>GROMMET</Description></NounList>
+<NounList><Description>GUAGE</Description></NounList>
+<NounList><Description>GUARD</Description></NounList>
+<NounList><Description>GUARD ASSY</Description></NounList>
+<NounList><Description>GUN</Description></NounList>
+<NounList><Description>GUN ASSY</Description></NounList>
+<NounList><Description>GUSSET</Description></NounList>
+<NounList><Description>GUSSET ASSY</Description></NounList>
+<NounList><Description>HAMMER</Description></NounList>
+<NounList><Description>HANDLE</Description></NounList>
+<NounList><Description>HANGER</Description></NounList>
+<NounList><Description>HANGER ASSY</Description></NounList>
+<NounList><Description>HARDBOARD</Description></NounList>
+<NounList><Description>HARDWARE</Description></NounList>
+<NounList><Description>HARNESS</Description></NounList>
+<NounList><Description>HARNESS ASSY</Description></NounList>
+<NounList><Description>HATCH</Description></NounList>
+<NounList><Description>HEAD</Description></NounList>
+<NounList><Description>HEADER</Description></NounList>
+<NounList><Description>HEAT EXCHANGER</Description></NounList>
+<NounList><Description>HEAT RECLAIM</Description></NounList>
+<NounList><Description>HEAT SHRINK</Description></NounList>
+<NounList><Description>HEATER</Description></NounList>
+<NounList><Description>HEATER ASSY</Description></NounList>
+<NounList><Description>HINGE</Description></NounList>
+<NounList><Description>HOIST</Description></NounList>
+<NounList><Description>HOIST ASSY</Description></NounList>
+<NounList><Description>HOLDER</Description></NounList>
+<NounList><Description>HOLDER ASSY</Description></NounList>
+<NounList><Description>HONEYCOMB</Description></NounList>
+<NounList><Description>HONEYCOMB ASSY</Description></NounList>
+<NounList><Description>HOOD</Description></NounList>
+<NounList><Description>HOOK</Description></NounList>
+<NounList><Description>HOOK ASSY</Description></NounList>
+<NounList><Description>HORN</Description></NounList>
+<NounList><Description>HOSE</Description></NounList>
+<NounList><Description>HOSE ASSY</Description></NounList>
+<NounList><Description>HOUSING</Description></NounList>
+<NounList><Description>HOUSING ASSY</Description></NounList>
+<NounList><Description>INDICATOR</Description></NounList>
+<NounList><Description>INSERT</Description></NounList>
+<NounList><Description>INSTRUCTION</Description></NounList>
+<NounList><Description>INSULATION</Description></NounList>
+<NounList><Description>INSULATOR</Description></NounList>
+<NounList><Description>INTEGRATED CIRCUIT</Description></NounList>
+<NounList><Description>INVERTER</Description></NounList>
+<NounList><Description>JACK</Description></NounList>
+<NounList><Description>JOINT ASSY</Description></NounList>
+<NounList><Description>JOIST</Description></NounList>
+<NounList><Description>JUMPER</Description></NounList>
+<NounList><Description>JUNCTION BOX</Description></NounList>
+<NounList><Description>KEY</Description></NounList>
+<NounList><Description>KIT</Description></NounList>
+<NounList><Description>KNIFE</Description></NounList>
+<NounList><Description>KNOB</Description></NounList>
+<NounList><Description>LABEL</Description></NounList>
+<NounList><Description>LADDER</Description></NounList>
+<NounList><Description>LAMINATE</Description></NounList>
+<NounList><Description>LAMP</Description></NounList>
+<NounList><Description>LAMP ASSY</Description></NounList>
+<NounList><Description>LAMPHOLDER</Description></NounList>
+<NounList><Description>LATCH</Description></NounList>
+<NounList><Description>LEG</Description></NounList>
+<NounList><Description>LEVELER</Description></NounList>
+<NounList><Description>LEVER</Description></NounList>
+<NounList><Description>LID</Description></NounList>
+<NounList><Description>LIGHT</Description></NounList>
+<NounList><Description>LIGHTER</Description></NounList>
+<NounList><Description>LINER</Description></NounList>
+<NounList><Description>LINER ASSY</Description></NounList>
+<NounList><Description>LOCK</Description></NounList>
+<NounList><Description>LOCKNUT</Description></NounList>
+<NounList><Description>LOCKOUT ASSY</Description></NounList>
+<NounList><Description>LOCKWASHER</Description></NounList>
+<NounList><Description>LOUVER</Description></NounList>
+<NounList><Description>LOUVER ASSY</Description></NounList>
+<NounList><Description>LUG</Description></NounList>
+<NounList><Description>MANIFOLD</Description></NounList>
+<NounList><Description>MANIFOLD ASSY</Description></NounList>
+<NounList><Description>MANUAL</Description></NounList>
+<NounList><Description>MARKER</Description></NounList>
+<NounList><Description>MASTER</Description></NounList>
+<NounList><Description>MAT</Description></NounList>
+<NounList><Description>MEMBRANE</Description></NounList>
+<NounList><Description>METAL</Description></NounList>
+<NounList><Description>METER</Description></NounList>
+<NounList><Description>MIRROR</Description></NounList>
+<NounList><Description>MIRROR ASSY</Description></NounList>
+<NounList><Description>MODULE</Description></NounList>
+<NounList><Description>MONITOR</Description></NounList>
+<NounList><Description>MOTOR</Description></NounList>
+<NounList><Description>MOULDING</Description></NounList>
+<NounList><Description>MOULDING ASSY</Description></NounList>
+<NounList><Description>MOUNT ASSY</Description></NounList>
+<NounList><Description>MUFFLER</Description></NounList>
+<NounList><Description>MULLION</Description></NounList>
+<NounList><Description>MULLION ASSY</Description></NounList>
+<NounList><Description>MULTI DECK</Description></NounList>
+<NounList><Description>MULTIGLASS</Description></NounList>
+<NounList><Description>MULTIGLASS ASSY</Description></NounList>
+<NounList><Description>NAIL</Description></NounList>
+<NounList><Description>NIPPLE</Description></NounList>
+<NounList><Description>NOSING</Description></NounList>
+<NounList><Description>NOSING ASSY</Description></NounList>
+<NounList><Description>NOZZLE</Description></NounList>
+<NounList><Description>NOZZLE ASSY</Description></NounList>
+<NounList><Description>NUT</Description></NounList>
+<NounList><Description>OIL</Description></NounList>
+<NounList><Description>ORIFICE</Description></NounList>
+<NounList><Description>O-RING</Description></NounList>
+<NounList><Description>PAD</Description></NounList>
+<NounList><Description>PAINT</Description></NounList>
+<NounList><Description>PALLET</Description></NounList>
+<NounList><Description>PAN</Description></NounList>
+<NounList><Description>PAN ASSY</Description></NounList>
+<NounList><Description>PANEL</Description></NounList>
+<NounList><Description>PANEL ASSY</Description></NounList>
+<NounList><Description>PANICBAR</Description></NounList>
+<NounList><Description>PAPER</Description></NounList>
+<NounList><Description>PARTICLE BOARD</Description></NounList>
+<NounList><Description>PARTITION</Description></NounList>
+<NounList><Description>PARTITION ASSY</Description></NounList>
+<NounList><Description>PASTE</Description></NounList>
+<NounList><Description>PEG BAR</Description></NounList>
+<NounList><Description>PEG BAR ASSY</Description></NounList>
+<NounList><Description>PEGBOARD</Description></NounList>
+<NounList><Description>PEGBOARD ASSY</Description></NounList>
+<NounList><Description>PEN</Description></NounList>
+<NounList><Description>PIN</Description></NounList>
+<NounList><Description>PIN ASSY</Description></NounList>
+<NounList><Description>PIPE</Description></NounList>
+<NounList><Description>PIPING ASSY</Description></NounList>
+<NounList><Description>PLASTIC</Description></NounList>
+<NounList><Description>PLATE</Description></NounList>
+<NounList><Description>PLATE ASSY</Description></NounList>
+<NounList><Description>PLATFORM</Description></NounList>
+<NounList><Description>PLATFORM ASSY</Description></NounList>
+<NounList><Description>PLENUM ASSY</Description></NounList>
+<NounList><Description>PLUG</Description></NounList>
+<NounList><Description>PLUG ASSY</Description></NounList>
+<NounList><Description>PLUNGER</Description></NounList>
+<NounList><Description>PLYWOOD</Description></NounList>
+<NounList><Description>POTENTIOMETER</Description></NounList>
+<NounList><Description>POWER SUPPLY</Description></NounList>
+<NounList><Description>PRICE TAG</Description></NounList>
+<NounList><Description>PRIMER</Description></NounList>
+<NounList><Description>PROBE</Description></NounList>
+<NounList><Description>PROCESSOR</Description></NounList>
+<NounList><Description>PROCESSOR ASSY</Description></NounList>
+<NounList><Description>PROTECTOR</Description></NounList>
+<NounList><Description>PROTECTOR ASSY</Description></NounList>
+<NounList><Description>PULLEY</Description></NounList>
+<NounList><Description>PUMP</Description></NounList>
+<NounList><Description>PUNCH</Description></NounList>
+<NounList><Description>RACEWAY</Description></NounList>
+<NounList><Description>RACEWAY ASSY</Description></NounList>
+<NounList><Description>RACK</Description></NounList>
+<NounList><Description>RACK ASSY</Description></NounList>
+<NounList><Description>RAIL</Description></NounList>
+<NounList><Description>RAIL ASSY</Description></NounList>
+<NounList><Description>RAINGUARD</Description></NounList>
+<NounList><Description>RAINSHIELD</Description></NounList>
+<NounList><Description>RAMP</Description></NounList>
+<NounList><Description>REACTOR</Description></NounList>
+<NounList><Description>RECEIVER</Description></NounList>
+<NounList><Description>RECEIVER ASSY</Description></NounList>
+<NounList><Description>RECEPTACLE</Description></NounList>
+<NounList><Description>RECLAIM</Description></NounList>
+<NounList><Description>RECLAIM ASSY</Description></NounList>
+<NounList><Description>REDUCER</Description></NounList>
+<NounList><Description>REEL</Description></NounList>
+<NounList><Description>REFLECTOR</Description></NounList>
+<NounList><Description>REFLECTOR ASSY</Description></NounList>
+<NounList><Description>REFRIGERANT</Description></NounList>
+<NounList><Description>REFRIGERATOR</Description></NounList>
+<NounList><Description>REGULATOR</Description></NounList>
+<NounList><Description>RELAY</Description></NounList>
+<NounList><Description>RELAY ASSY</Description></NounList>
+<NounList><Description>RELIEF</Description></NounList>
+<NounList><Description>REMOTE</Description></NounList>
+<NounList><Description>RESERVOIR</Description></NounList>
+<NounList><Description>RESISTOR</Description></NounList>
+<NounList><Description>RETAINER</Description></NounList>
+<NounList><Description>RETAINER ASSY</Description></NounList>
+<NounList><Description>RETRACTOR</Description></NounList>
+<NounList><Description>RIBBON</Description></NounList>
+<NounList><Description>RING</Description></NounList>
+<NounList><Description>RIVET</Description></NounList>
+<NounList><Description>ROD</Description></NounList>
+<NounList><Description>ROLLER</Description></NounList>
+<NounList><Description>ROLLPIN</Description></NounList>
+<NounList><Description>ROOFCURB</Description></NounList>
+<NounList><Description>ROPE</Description></NounList>
+<NounList><Description>RUB RAIL</Description></NounList>
+<NounList><Description>RUB RAIL ASSY</Description></NounList>
+<NounList><Description>RUBBER</Description></NounList>
+<NounList><Description>SCREEN</Description></NounList>
+<NounList><Description>SCREEN ASSY</Description></NounList>
+<NounList><Description>SCREW</Description></NounList>
+<NounList><Description>SEAL</Description></NounList>
+<NounList><Description>SEALANT</Description></NounList>
+<NounList><Description>SEALER</Description></NounList>
+<NounList><Description>SENSOR</Description></NounList>
+<NounList><Description>SEPARATOR</Description></NounList>
+<NounList><Description>SEPARATOR ASSY</Description></NounList>
+<NounList><Description>SHADE</Description></NounList>
+<NounList><Description>SHAFT</Description></NounList>
+<NounList><Description>SHEET</Description></NounList>
+<NounList><Description>SHEET METAL</Description></NounList>
+<NounList><Description>SHELF</Description></NounList>
+<NounList><Description>SHELF ASSY</Description></NounList>
+<NounList><Description>SHELL</Description></NounList>
+<NounList><Description>SHELL ASSY</Description></NounList>
+<NounList><Description>SHIELD</Description></NounList>
+<NounList><Description>SHIELD ASSY</Description></NounList>
+<NounList><Description>SHIM</Description></NounList>
+<NounList><Description>SHIM ASSY</Description></NounList>
+<NounList><Description>SHROUD</Description></NounList>
+<NounList><Description>SHROUD ASSY</Description></NounList>
+<NounList><Description>SHUTTER</Description></NounList>
+<NounList><Description>SIGHTGLASS</Description></NounList>
+<NounList><Description>SILL</Description></NounList>
+<NounList><Description>SKID</Description></NounList>
+<NounList><Description>SKID ASSY</Description></NounList>
+<NounList><Description>SLAT</Description></NounList>
+<NounList><Description>SLEEVE</Description></NounList>
+<NounList><Description>SLIDE</Description></NounList>
+<NounList><Description>SLINGER</Description></NounList>
+<NounList><Description>SNEEZEGUARD</Description></NounList>
+<NounList><Description>SOCKET</Description></NounList>
+<NounList><Description>SOFTWARE</Description></NounList>
+<NounList><Description>SOLDER</Description></NounList>
+<NounList><Description>SOLENOID</Description></NounList>
+<NounList><Description>SOLVENT</Description></NounList>
+<NounList><Description>SPACER</Description></NounList>
+<NounList><Description>SPACER ASSY</Description></NounList>
+<NounList><Description>SPLASHGUARD</Description></NounList>
+<NounList><Description>SPLASHGUARD ASSY</Description></NounList>
+<NounList><Description>SPRAYBAR</Description></NounList>
+<NounList><Description>SPRING</Description></NounList>
+<NounList><Description>STABILIZER</Description></NounList>
+<NounList><Description>STAND</Description></NounList>
+<NounList><Description>STAPLE</Description></NounList>
+<NounList><Description>STARTER</Description></NounList>
+<NounList><Description>STENCIL</Description></NounList>
+<NounList><Description>STICK</Description></NounList>
+<NounList><Description>STICKER</Description></NounList>
+<NounList><Description>STICKER ASSY</Description></NounList>
+<NounList><Description>STIFFENER</Description></NounList>
+<NounList><Description>STIFFENER ASSY</Description></NounList>
+<NounList><Description>STILE</Description></NounList>
+<NounList><Description>STILE ASSY</Description></NounList>
+<NounList><Description>STRAIGHTENER</Description></NounList>
+<NounList><Description>STRAIGHTENER ASSY</Description></NounList>
+<NounList><Description>STRAINER</Description></NounList>
+<NounList><Description>STRAP</Description></NounList>
+<NounList><Description>STRAP ASSY</Description></NounList>
+<NounList><Description>STRIP</Description></NounList>
+<NounList><Description>STROBE</Description></NounList>
+<NounList><Description>STRUT</Description></NounList>
+<NounList><Description>STRUT ASSY</Description></NounList>
+<NounList><Description>STUD</Description></NounList>
+<NounList><Description>STUD ASSY</Description></NounList>
+<NounList><Description>SUBCOOLER</Description></NounList>
+<NounList><Description>SUPERSTRUCTURE</Description></NounList>
+<NounList><Description>SUPERSTRUCTURE ASSY</Description></NounList>
+<NounList><Description>SUPPORT</Description></NounList>
+<NounList><Description>SUPPORT ASSY</Description></NounList>
+<NounList><Description>SWITCH</Description></NounList>
+<NounList><Description>SWITCH ASSY</Description></NounList>
+<NounList><Description>SWIVEL</Description></NounList>
+<NounList><Description>TAB</Description></NounList>
+<NounList><Description>TABLE</Description></NounList>
+<NounList><Description>TABLE ASSY</Description></NounList>
+<NounList><Description>TACK</Description></NounList>
+<NounList><Description>TAG</Description></NounList>
+<NounList><Description>TANK</Description></NounList>
+<NounList><Description>TAPE</Description></NounList>
+<NounList><Description>TEE</Description></NounList>
+<NounList><Description>TERMINAL</Description></NounList>
+<NounList><Description>THERMOCOUPLE</Description></NounList>
+<NounList><Description>THERMOCOUPLE ASSY</Description></NounList>
+<NounList><Description>THERMOMETER</Description></NounList>
+<NounList><Description>THERMOMETER ASSY</Description></NounList>
+<NounList><Description>THERMOSTAT</Description></NounList>
+<NounList><Description>THERMOSTAT ASSY</Description></NounList>
+<NounList><Description>TIME DELAY</Description></NounList>
+<NounList><Description>TIME DELAY ASSY</Description></NounList>
+<NounList><Description>TIMER</Description></NounList>
+<NounList><Description>TOP ASSY</Description></NounList>
+<NounList><Description>TORCH</Description></NounList>
+<NounList><Description>TRACK</Description></NounList>
+<NounList><Description>TRACK ASSY</Description></NounList>
+<NounList><Description>TRANSDUCER</Description></NounList>
+<NounList><Description>TRANSFORMER</Description></NounList>
+<NounList><Description>TRANSISTOR</Description></NounList>
+<NounList><Description>TRANSITION ASSY</Description></NounList>
+<NounList><Description>TRANSMITTER</Description></NounList>
+<NounList><Description>TRAP</Description></NounList>
+<NounList><Description>TRAP ASSY</Description></NounList>
+<NounList><Description>TRAY</Description></NounList>
+<NounList><Description>TRAY ASSY</Description></NounList>
+<NounList><Description>TRIM</Description></NounList>
+<NounList><Description>TRIM ASSY</Description></NounList>
+<NounList><Description>TROLLEY</Description></NounList>
+<NounList><Description>TROLLEY ASSY</Description></NounList>
+<NounList><Description>TROUGH</Description></NounList>
+<NounList><Description>TROUGH ASSY</Description></NounList>
+<NounList><Description>TRUSS</Description></NounList>
+<NounList><Description>TUBE</Description></NounList>
+<NounList><Description>TUBE ASSY</Description></NounList>
+<NounList><Description>TURBASHED</Description></NounList>
+<NounList><Description>TURNBUCKLE</Description></NounList>
+<NounList><Description>UNION</Description></NounList>
+<NounList><Description>UNIT</Description></NounList>
+<NounList><Description>UNIT ASSY</Description></NounList>
+<NounList><Description>UNLOADER</Description></NounList>
+<NounList><Description>UPRIGHT</Description></NounList>
+<NounList><Description>VALVE</Description></NounList>
+<NounList><Description>VALVE ASSY</Description></NounList>
+<NounList><Description>VANE</Description></NounList>
+<NounList><Description>VASE</Description></NounList>
+<NounList><Description>VENT</Description></NounList>
+<NounList><Description>VIBRATION ELIMINATOR</Description></NounList>
+<NounList><Description>WALL</Description></NounList>
+<NounList><Description>WASHER</Description></NounList>
+<NounList><Description>WEDGE</Description></NounList>
+<NounList><Description>WEDGE ASSY</Description></NounList>
+<NounList><Description>WELL</Description></NounList>
+<NounList><Description>WELL ASSY</Description></NounList>
+<NounList><Description>WHEEL</Description></NounList>
+<NounList><Description>WHEEL ASSY</Description></NounList>
+<NounList><Description>WINDOW</Description></NounList>
+<NounList><Description>WING GLASS</Description></NounList>
+<NounList><Description>WIPER</Description></NounList>
+<NounList><Description>WIRE</Description></NounList>
+<NounList><Description>WIRE ASSY</Description></NounList>
+<NounList><Description>WIREWAY</Description></NounList>
+<NounList><Description>WOOD</Description></NounList>
+<NounList><Description>WRAPPER</Description></NounList>
+<NounList><Description>WRAPPING BOARD</Description></NounList>
+<NounList><Description>WRENCH</Description></NounList>
+
+	
+	
+		
+</data-set>
+
+

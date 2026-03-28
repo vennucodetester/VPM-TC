@@ -1,0 +1,3423 @@
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Case>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family>Bakery</Product_Family>
+<Product_Line>COMBO</Product_Line>
+<Model_Group>AB</Model_Group>
+<High_Level_Category>Finished Goods</High_Level_Category>
+<Subcategory>Bakery Cases</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>ATO Model</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>0</Mapics_Item_Type>
+</Case>
+<Case>
+<Plant>BBK</Plant>
+<Product_Family>Combination</Product_Family>
+<Product_Line>Commercial</Product_Line>
+<Model_Group>ASC</Model_Group>
+<Subcategory>Buy</Subcategory>
+</Case>
+<Case>
+<Product_Family>Condensing</Product_Family>
+<Product_Line>Commercial Coils</Product_Line>
+<Model_Group>ASCM</Model_Group>
+<Subcategory>Buy or Sell</Subcategory>
+</Case>
+<Case>
+<Product_Family>Conventional</Product_Family>
+<Product_Line>Compressor Unit</Product_Line>
+<Model_Group>ascombo</Model_Group>
+<Subcategory>Combination Houses</Subcategory>
+</Case>
+<Case>
+<Product_Family>Convertible</Product_Family>
+<Product_Line>Elite</Product_Line>
+<Model_Group>ASCSM</Model_Group>
+<Subcategory>CondensingUnits-Comm</Subcategory>
+</Case>
+<Case>
+<Product_Family>Custom wood</Product_Family>
+<Product_Line>Entyce</Product_Line>
+<Model_Group>ASEDC</Model_Group>
+<Subcategory>Conventional Systems</Subcategory>
+</Case>
+<Case>
+<Product_Family>Dairy/deli</Product_Family>
+<Product_Line>Excel</Product_Line>
+<Model_Group>ASP</Model_Group>
+<Subcategory>Convertible</Subcategory>
+</Case>
+<Case>
+<Product_Family>Dairy</Product_Family>
+<Product_Line>Impact</Product_Line>
+<Model_Group>ASPML</Model_Group>
+<Subcategory>Custom Wood</Subcategory>
+</Case>
+<Case>
+<Product_Family>Deli-Service</Product_Family>
+<Product_Line>Industrial Coils</Product_Line>
+<Model_Group>ASPWALL</Model_Group>
+<Subcategory>Dairy Cases</Subcategory>
+</Case>
+<Case>
+<Product_Family>Deli</Product_Family>
+<Product_Line>Insight</Product_Line>
+<Model_Group>ASRACK</Model_Group>
+<Subcategory>Deli-Service</Subcategory>
+</Case>
+<Case>
+<Product_Family>Elect'l</Product_Family>
+<Product_Line>Isla</Product_Line>
+<Model_Group>ASRDC</Model_Group>
+<Subcategory>Deli Cases</Subcategory>
+</Case>
+<Case>
+<Product_Family>Floral</Product_Family>
+<Product_Line>miscellaneous</Product_Line>
+<Model_Group>ASXOMBO</Model_Group>
+<Subcategory>Electtrical Distribution Ctr</Subcategory>
+</Case>
+<Case>
+<Product_Family>Food Service</Product_Family>
+<Product_Line>PROTOCOL</Product_Line>
+<Model_Group>C1CWC</Model_Group>
+<Subcategory>Floral Cases</Subcategory>
+</Case>
+<Case>
+<Product_Family>Freight</Product_Family>
+<Product_Line>PUMP SYSTEM</Product_Line>
+<Model_Group>C2</Model_Group>
+<Subcategory>Food Service Cases</Subcategory>
+</Case>
+<Case>
+<Product_Family>Frozen</Product_Family>
+<Product_Line>Q Series</Product_Line>
+<Model_Group>C2EC</Model_Group>
+<Subcategory>Freight</Subcategory>
+</Case>
+<Case>
+<Product_Family>Hot Food</Product_Family>
+<Product_Line>Rack System</Product_Line>
+<Model_Group>C2N</Model_Group>
+<Subcategory>Frozen Food Cases</Subcategory>
+</Case>
+<Case>
+<Product_Family>Island</Product_Family>
+<Product_Line>Self Contained</Product_Line>
+<Model_Group>C2NX</Model_Group>
+<Subcategory>F/G CO2 PROTOCOL</Subcategory>
+</Case>
+<Case>
+<Product_Family>LPP</Product_Family>
+<Product_Line>Specialty</Product_Line>
+<Model_Group>C2X</Model_Group>
+<Subcategory>F/G CO2 RACK</Subcategory>
+</Case>
+<Case>
+<Product_Family>Meat</Product_Family>
+<Product_Line>Walk-In</Product_Line>
+<Model_Group>C2XEC</Model_Group>
+<Subcategory>Hot Food Cases</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Mechanical</Product_Family>
+<Model_Group>C3X</Model_Group>
+<Subcategory>Ice Cream Cases</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Pizza</Product_Family>
+<Model_Group>C4X</Model_Group>
+<Subcategory>Island Cases</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Plus/Rack</Product_Family>
+<Model_Group>C4XRO</Model_Group>
+<Subcategory>LPP Low Profile Protocol</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Produce</Product_Family>
+<Model_Group>C5</Model_Group>
+<Subcategory>Meat Cases</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Protocol</Product_Family>
+<Model_Group>C5NX</Model_Group>
+<Subcategory>Mechanical Houses</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Pump</Product_Family>
+<Model_Group>C5X</Model_Group>
+<Subcategory>Pizza Cases</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Reachin</Product_Family>
+<Model_Group>C6</Model_Group>
+<Subcategory>Plus of Rack Systems</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Seafood</Product_Family>
+<Model_Group>C6X</Model_Group>
+<Subcategory>Port A Paks</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Shelving</Product_Family>
+<Model_Group>CID</Model_Group>
+<Subcategory>Produce Cases</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Single Comp</Product_Family>
+<Model_Group>COND</Model_Group>
+<Subcategory>Produce Cases-Impact</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Specialty</Product_Family>
+<Model_Group>CR3</Model_Group>
+<Subcategory>Protoaire Systems</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Spot Merchandisers</Product_Family>
+<Model_Group>CR3H</Model_Group>
+<Subcategory>Protocol Systems</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Spot Displays</Product_Family>
+<Model_Group>CR3HTO</Model_Group>
+<Subcategory>Pump Station</Subcategory>
+</Case>
+ <Case>
+<Product_Family>Walk-In</Product_Family>
+<Model_Group>CR3P</Model_Group>
+<Subcategory>Reach-In Cases</Subcategory>
+</Case>
+ <Case>
+<Product_Family>wedge</Product_Family>
+<Model_Group>CR3TO</Model_Group>
+<Subcategory>Seafood Cases</Subcategory>
+</Case>
+ <Case>
+<Model_Group>CRFD</Model_Group>
+<Subcategory>Shelving</Subcategory>
+</Case>
+<Case>
+<Model_Group>CW2</Model_Group>
+<Subcategory>Single Compressor Protocol</Subcategory>
+</Case>
+<Case>
+<Model_Group>CW2U</Model_Group>
+<Subcategory>Speciality Cases</Subcategory>
+</Case>
+<Case>
+<Model_Group>D5</Model_Group>
+<Subcategory>Spot displays-Impact</Subcategory>
+</Case>
+<Case>
+<Model_Group>D5N</Model_Group>
+<Subcategory>Spot Merchandisers</Subcategory>
+</Case>
+<Case>
+<Model_Group>D5NX</Model_Group>
+<Subcategory>Walk-In Coolers</Subcategory>
+</Case>
+<Case>
+<Model_Group>D5RRI</Model_Group>
+<Subcategory>Wedge Cases</Subcategory>
+</Case>
+<Case>
+<Model_Group>D5RRIS</Model_Group>
+</Case>
+<Case>
+<Model_Group>D5X</Model_Group>
+</Case>
+<Case>
+<Model_Group>D5XRRI</Model_Group>
+</Case>
+<Case>
+<Model_Group>D5XRRIS</Model_Group>
+</Case>
+<Case>
+<Model_Group>D6</Model_Group>
+</Case>
+<Case>
+<Model_Group>D6NX</Model_Group>
+</Case>
+<Case>
+<Model_Group>D6X</Model_Group>
+</Case>
+<Case>
+  <Model_Group>DBP</Model_Group>
+</Case>
+<Case>
+  <Model_Group>DBRP</Model_Group>
+</Case>
+<Case>
+  <Model_Group>DS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>DSF</Model_Group>
+</Case>
+<Case>
+  <Model_Group>DSI</Model_Group>
+</Case>
+<Case>
+  <Model_Group>DSRP</Model_Group>
+</Case>
+<Case>
+  <Model_Group>DSRPI</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E1S</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E2</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E2S</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E2SB</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E2SP</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E2V</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E3</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E4</Model_Group>
+</Case>
+<Case>
+  <Model_Group>E5</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ED1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>EDS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ES1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ES1S</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESBD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESBDHV</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESBDS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESBDVS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESGM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESGNSESGNVS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESGS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ESGSS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>F</Model_Group>
+</Case>
+<Case>
+  <Model_Group>F1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>F2</Model_Group>
+</Case>
+<Case>
+  <Model_Group>F6</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FC</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FC-4-R</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FI</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FL3X</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FL4NX</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FL5NX</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FMSS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FN</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FW</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FWG</Model_Group>
+</Case>
+<Case>
+  <Model_Group>FWGH</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HED</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HEDN</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HEDW</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HRHD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HTHD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HTHS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HTHZ</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HTSD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>HTSH</Model_Group>
+</Case>         
+<Case>
+  <Model_Group>HTSS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC1BL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC2SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC2SM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC2XNL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC2XSL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC2XSM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC3BL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC3SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC4SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC5BL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC6SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IC6SM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID5NL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID5NM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID5SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID5SLR</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID5SM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID5SU</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID6NL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID6SU</Model_Group>
+</Case>
+<Case>
+  <Model_Group>ID6SV</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IDD5NL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IDD5SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IDD5SLR</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IDD5SU</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IDD6NL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IDD6SU</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IDDF5NL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IM1SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IM1SM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IM3SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IM4SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IM5NL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>IM5SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>L</Model_Group>
+</Case>
+<Case>
+  <Model_Group>LI</Model_Group>
+</Case>
+<Case>
+  <Model_Group>LN</Model_Group>
+</Case>
+<Case>
+  <Model_Group>LPH</Model_Group>
+</Case>
+<Case>
+  <Model_Group>LW</Model_Group>
+</Case>
+<Case>
+  <Model_Group>LWE</Model_Group>
+</Case>
+<Case>
+  <Model_Group>LWEGH</Model_Group>
+</Case>
+<Case>
+  <Model_Group>LWU</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1C</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1CIMP</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1CWC</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1D</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1DCO</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1GE</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1GLE</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1L</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1N</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1SG</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1X</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1XD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M1XLD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M3</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M3X</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M4NX</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M4X</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M5</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M5N</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M5NX</Model_Group>
+</Case>
+<Case>
+  <Model_Group>M5X</Model_Group>
+</Case>
+<Case>
+  <Model_Group>MW</Model_Group>
+</Case>
+<Case>
+  <Model_Group>MWGE</Model_Group>
+</Case>
+<Case>
+  <Model_Group>OL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>OR</Model_Group>
+</Case>
+<Case>
+  <Model_Group>PROD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>Q1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>Q3</Model_Group>
+</Case>
+<Case>
+  <Model_Group>R3</Model_Group>
+</Case>
+<Case>
+  <Model_Group>R3D</Model_Group>
+</Case>
+<Case>
+  <Model_Group>R3H</Model_Group>
+</Case>
+<Case>
+  <Model_Group>R3P</Model_Group>
+</Case>
+<Case>
+  <Model_Group>R3TO</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RBB</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RCD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RDC</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RDI</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RED</Model_Group>
+</Case>
+<Case>
+  <Model_Group>REMOTE</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RGD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RGDC</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RGP</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RGSSFP</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RGSSM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RHR</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI1BK</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI1N</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI1NBK</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI2</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI2C</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI2E</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI2N</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI3</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI3E</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI3N</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI4</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI4C</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RI4E</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RIC</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RIM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RLN</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RLNI</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RLTM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RMD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RMID</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RMN</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RMTM</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RPG</Model_Group>
+</Case>
+<Case>
+  <Model_Group>RS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SC2</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SCSS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SHVS</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SI</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SI1</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SI2</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SI2N</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SI3</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SI3E</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SL</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SMB</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SMBT</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SMBV</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SMG</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SMGT</Model_Group>
+</Case>
+<Case>
+  <Model_Group>SMGV</Model_Group>
+</Case>
+<Case>
+  <Model_Group>VGD</Model_Group>
+</Case>
+<Case>
+  <Model_Group>S-SERIES</Model_Group>
+</Case>
+
+<Kit-1>
+  <Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family>Acc</Product_Family>
+<Product_Line>Kits</Product_Line>
+<Model_Group>FIELD/FACTORY</Model_Group>
+<High_Level_Category>Options</High_Level_Category>
+<Subcategory>Option Kit</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>0</Mapics_Item_Type>
+</Kit-1>
+  <Kit-1>
+	<Plant>BBK</Plant>
+    <Product_Family>B</Product_Family>
+	<Subcategory>Option Kit RI/FW/Insight</Subcategory>
+	<Model_Group>FIELD</Model_Group>
+	<Mapics_Item_Type>1</Mapics_Item_Type>
+  </Kit-1>
+	<Kit-1>
+		<Product_Family>BCD</Product_Family>
+		<Subcategory>Option Class</Subcategory>
+		<Model_Group>FACTORY</Model_Group>		
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BCD</Product_Family>		
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BEI</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BF</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BL</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BR</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BRC</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BS</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BSL</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>BU</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>CA</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>CN</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>CO</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>CO2</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>D</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>DF</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>DFH</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>DH</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>DRH</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>E</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>EEFM</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>ELE</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>F</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>GR</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>GRS</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>H</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>INT</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>L</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LABL</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LB</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LEDCANOPY</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LEDITEM</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LEDMULLION</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LEDRAIL</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LEDSHELF</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LO</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>LPP</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>M</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>NC</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>NRP</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>O</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>OEM</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>P</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>PANS</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>PG</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>PTM</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>R</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>RA</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>RK</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>RS</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SA</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SC</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SEN</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SGL</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SL</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SO</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SP</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>STOR</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SUP</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>SW</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>T</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>THE</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>THT</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>TXV</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>VLL</Product_Family>
+	</Kit-1>
+	<Kit-1>
+		<Product_Family>WRAP</Product_Family>
+	</Kit-1>
+<Kit-1>
+		<Product_Family>SU</Product_Family>
+	</Kit-1>	
+<Kit-1>
+		<Product_Family>STO</Product_Family>
+	</Kit-1>		
+<Kit-2>
+  <Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family>Acc</Product_Family>
+<Product_Line>Kits</Product_Line>
+<Model_Group>FIELD/FACTORY</Model_Group>
+<High_Level_Category>Options</High_Level_Category>
+<Subcategory>Option Kit RI/FW/Insight</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>1</Mapics_Item_Type>
+</Kit-2>
+  <Kit-2>  
+	<Plant>BBK</Plant>
+    <Product_Family>B</Product_Family>
+	<Subcategory>Option Kit</Subcategory>
+<Model_Group>FIELD</Model_Group>	
+  </Kit-2>
+	<Kit-2>
+		<Product_Family>BCD</Product_Family>
+<Model_Group>FACTORY</Model_Group>
+	<Subcategory>Option Class</Subcategory>	
+		 </Kit-2>
+	<Kit-2>
+		<Product_Family>BCD</Product_Family>		
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BEI</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BF</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BL</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BR</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BRC</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BS</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BSL</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>BU</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>CA</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>CN</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>CO</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>CO2</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>D</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>DF</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>DFH</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>DH</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>DRH</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>E</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>EEFM</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>ELE</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>F</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>GR</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>GRS</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>H</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>INT</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>L</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LABL</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LB</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LEDCANOPY</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LEDITEM</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LEDMULLION</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LEDRAIL</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LEDSHELF</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LO</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>LPP</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>M</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>NC</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>NRP</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>O</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>OEM</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>P</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>PANS</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>PG</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>PTM</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>R</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>RA</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>RK</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>RS</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SA</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SC</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SEN</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SGL</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SL</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SO</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SP</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>STOR</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SUP</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>SW</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>T</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>THE</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>THT</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>TXV</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>VLL</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>WRAP</Product_Family>
+	</Kit-2>
+		<Kit-2>
+		<Product_Family>SU</Product_Family>
+	</Kit-2>
+	<Kit-2>
+		<Product_Family>STO</Product_Family>
+	</Kit-2>
+	
+	<Kit-3>
+  <Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family>O</Product_Family>
+<Product_Line>Kits</Product_Line>
+<Model_Group>FACTORY</Model_Group>
+<High_Level_Category>Options</High_Level_Category>
+<Subcategory>Option Kit</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>1</Mapics_Item_Type>
+</Kit-3>	
+
+
+	
+  <S-Kit>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Options</High_Level_Category>
+    <Subcategory>Option Kit RI/FW/Insight</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Make</Source>
+    <Mapics_Item_Type>0</Mapics_Item_Type>
+  </S-Kit>
+   	
+	
+	 <S-Kit1>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Options</High_Level_Category>
+    <Subcategory>Option Kit RI/FW/Insight</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Make</Source>
+    <Mapics_Item_Type>0</Mapics_Item_Type>
+  </S-Kit1>
+    <S-Kit1>
+	<Plant>BBK</Plant>
+	<High_Level_Category>Option Class</High_Level_Category>
+	<Subcategory>Option Kit</Subcategory>
+	</S-Kit1>
+	<S-Kit1>
+	<Subcategory>Option Class</Subcategory>
+	</S-Kit1>
+	
+	
+<Option-Class>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Option Class</High_Level_Category>
+    <Subcategory>Option Class</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>ATO Option Class</Master_Template>
+    <Source>Make</Source>
+    <Mapics_Item_Type>0</Mapics_Item_Type>
+  </Option-Class>  	
+	
+	
+  <Assy-Module>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Phantom and Module</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>0</Mapics_Item_Type>
+</Assy-Module>
+  
+<Assembly>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Assembly</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code>03</Finish_Code>
+<Finish_Color>000</Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>0</Mapics_Item_Type>
+ </Assembly> 
+  <Assembly>  
+    <Subcategory>Coil</Subcategory>
+	<Finish_Code>04</Finish_Code>
+	<Finish_Color>144</Finish_Color>
+  </Assembly>
+  <Assembly>  
+    <Subcategory>Doors RI</Subcategory>
+<Finish_Code>99</Finish_Code>	
+<Finish_Color>187</Finish_Color>
+  </Assembly>
+  <Assembly>
+    <Subcategory>Foam</Subcategory>
+<Finish_Color>700</Finish_Color>	
+  </Assembly>
+  <Assembly>
+    <Subcategory>Foam RI</Subcategory>	
+	<Finish_Color>701</Finish_Color>
+  </Assembly>
+  <Assembly>
+    <Subcategory>Frames RI</Subcategory>
+<Finish_Color>702</Finish_Color>	
+  </Assembly>
+  <Assembly>
+    <Subcategory>Krack/Insight</Subcategory>
+<Finish_Color>715</Finish_Color>	
+  </Assembly>
+  <Assembly>
+    <Subcategory>Phantom and Module</Subcategory>
+	<Finish_Color>920</Finish_Color>
+  </Assembly>
+  <Assembly>
+    <Subcategory>Tubing</Subcategory>
+	<Finish_Color>930</Finish_Color>
+  </Assembly> 
+  <Assembly>   
+	<Finish_Color>950</Finish_Color>
+  </Assembly>
+  <Assembly>    
+	<Finish_Color>991</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>992</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>993</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>994</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>995</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>996</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>997</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>998</Finish_Color>
+  </Assembly>
+   <Assembly>    
+	<Finish_Color>999</Finish_Color>
+  </Assembly>  
+     <Assembly>
+  <Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+    </Assembly>  
+  <Assy-Tube>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Assembly</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>0</Mapics_Item_Type>
+ </Assy-Tube> 
+ 
+ <Assy-Weld>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Welded</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code>03</Finish_Code>
+<Finish_Color>000</Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>2</Mapics_Item_Type>
+ </Assy-Weld> 
+  <Assy-Weld>
+	<Finish_Code>04</Finish_Code>
+	<Finish_Color>144</Finish_Color>	
+	<Plant>BBK</Plant>
+  </Assy-Weld>
+  <Assy-Weld>	
+	<Finish_Code>99</Finish_Code>	
+	<Finish_Color>187</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld>   
+	<Finish_Color>700</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld>   
+	<Finish_Color>701</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld>  
+	<Finish_Color>702</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld>  
+	<Finish_Color>715</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld> 
+	<Finish_Color>920</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld> 
+	<Finish_Color>930</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld>   
+	<Finish_Color>950</Finish_Color>
+  </Assy-Weld>
+  <Assy-Weld>    
+	<Finish_Color>991</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>992</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>993</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>994</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>995</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>996</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>997</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>998</Finish_Color>
+  </Assy-Weld>
+   <Assy-Weld>    
+	<Finish_Color>999</Finish_Color>
+  </Assy-Weld>  
+       
+  
+<Assy-Frame>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Assy-Frame</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code>03</Finish_Code>
+<Finish_Color>000</Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>1</Mapics_Item_Type>
+ </Assy-Frame> 
+  <Assy-Frame>  
+    <Subcategory>Coil</Subcategory>
+	<Finish_Code>04</Finish_Code>
+	<Finish_Color>144</Finish_Color>
+  </Assy-Frame>
+  <Assy-Frame>  
+    <Subcategory>Doors RI</Subcategory>
+<Finish_Code>99</Finish_Code>	
+<Finish_Color>187</Finish_Color>
+  </Assy-Frame>
+  <Assy-Frame>
+    <Subcategory>Foam</Subcategory>
+<Finish_Color>700</Finish_Color>	
+  </Assy-Frame>
+  <Assy-Frame>
+    <Subcategory>Foam RI</Subcategory>	
+	<Finish_Color>701</Finish_Color>
+  </Assy-Frame>
+  <Assy-Frame>
+    <Subcategory>Frames RI</Subcategory>
+<Finish_Color>702</Finish_Color>	
+  </Assy-Frame>
+  <Assy-Frame>
+    <Subcategory>Krack/Insight</Subcategory>
+<Finish_Color>715</Finish_Color>	
+  </Assy-Frame>
+  <Assy-Frame>
+    <Subcategory>Phantom and Module</Subcategory>
+	<Finish_Color>920</Finish_Color>
+  </Assy-Frame>
+  <Assy-Frame>
+    <Subcategory>Tubing</Subcategory>
+	<Finish_Color>930</Finish_Color>
+  </Assy-Frame> 
+  <Assy-Frame> 
+<Subcategory>Assembly</Subcategory>  
+	<Finish_Color>950</Finish_Color>
+  </Assy-Frame>
+  <Assy-Frame>    
+	<Finish_Color>991</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>992</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>993</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>994</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>995</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>996</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>997</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>998</Finish_Color>
+  </Assy-Frame>
+   <Assy-Frame>    
+	<Finish_Color>999</Finish_Color>
+  </Assy-Frame>  
+        <Assy-Frame>
+  <Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+    </Assy-Frame>
+  
+  
+  <Assy-Foam>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Assy-Frame</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>2</Mapics_Item_Type>
+ </Assy-Foam> 
+  <Assy-Foam>  
+    <Subcategory>Coil</Subcategory>	
+  </Assy-Foam>
+  <Assy-Foam>  
+    <Subcategory>Doors RI</Subcategory>
+  </Assy-Foam>
+  <Assy-Foam>
+    <Subcategory>Foam</Subcategory>
+  </Assy-Foam>
+  <Assy-Foam>
+    <Subcategory>Foam RI</Subcategory>		
+  </Assy-Foam>
+  <Assy-Foam>
+    <Subcategory>Frames RI</Subcategory>	
+  </Assy-Foam>
+  <Assy-Foam>
+    <Subcategory>Krack/Insight</Subcategory>
+  </Assy-Foam>
+  <Assy-Foam>
+    <Subcategory>Phantom and Module</Subcategory>
+  </Assy-Foam>
+  <Assy-Foam>
+    <Subcategory>Tubing</Subcategory>	
+  </Assy-Foam> 
+  
+  <Assy-Door>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Assy-Door</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code>03</Finish_Code>
+<Finish_Color>000</Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>1</Mapics_Item_Type>
+ </Assy-Door> 
+  <Assy-Door>  
+    <Subcategory>Coil</Subcategory>
+	<Finish_Code>04</Finish_Code>
+	<Finish_Color>144</Finish_Color>
+  </Assy-Door>
+  <Assy-Door>  
+    <Subcategory>Doors RI</Subcategory>
+<Finish_Code>99</Finish_Code>	
+<Finish_Color>187</Finish_Color>
+  </Assy-Door>
+  <Assy-Door>
+    <Subcategory>Foam</Subcategory>
+<Finish_Color>700</Finish_Color>	
+  </Assy-Door>
+  <Assy-Door>
+    <Subcategory>Foam RI</Subcategory>	
+	<Finish_Color>701</Finish_Color>
+  </Assy-Door>
+  <Assy-Door>
+    <Subcategory>Doors RI</Subcategory>
+<Finish_Color>702</Finish_Color>	
+  </Assy-Door>
+  <Assy-Door>
+    <Subcategory>Krack/Insight</Subcategory>
+<Finish_Color>715</Finish_Color>	
+  </Assy-Door>
+  <Assy-Door>
+    <Subcategory>Phantom and Module</Subcategory>
+	<Finish_Color>920</Finish_Color>
+  </Assy-Door>
+  <Assy-Door>
+    <Subcategory>Tubing</Subcategory>
+	<Finish_Color>930</Finish_Color>
+  </Assy-Door> 
+  <Assy-Door>   
+	<Finish_Color>950</Finish_Color>
+	<Subcategory>Assembly</Subcategory>
+  </Assy-Door>
+  <Assy-Door>    
+	<Finish_Color>991</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>992</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>993</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>994</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>995</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>996</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>997</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>998</Finish_Color>
+  </Assy-Door>
+   <Assy-Door>    
+	<Finish_Color>999</Finish_Color>
+  </Assy-Door>  
+          <Assy-Door>
+  <Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+    </Assy-Door>
+  
+  <Assy-Coil>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Assemblies</High_Level_Category>
+<Subcategory>Assy-Frame</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Make</Source>
+<Mapics_Item_Type>2</Mapics_Item_Type>
+ </Assy-Coil> 
+  <Assy-Coil>  
+    <Subcategory>Doors RI</Subcategory>
+  </Assy-Coil>
+  <Assy-Coil>
+    <Subcategory>Coil</Subcategory>
+  </Assy-Coil>
+  <Assy-Coil>
+    <Subcategory>Coil RI</Subcategory>		
+  </Assy-Coil>
+  <Assy-Coil>
+    <Subcategory>Frames RI</Subcategory>	
+  </Assy-Coil>
+  <Assy-Coil>
+    <Subcategory>Krack/Insight</Subcategory>
+  </Assy-Coil>
+  <Assy-Coil>
+    <Subcategory>Phantom and Module</Subcategory>
+  </Assy-Coil>
+  <Assy-Coil>
+    <Subcategory>Tubing</Subcategory>	
+  </Assy-Coil> 
+    <Assy-Coil>
+    <Subcategory>Assembly</Subcategory>	
+  </Assy-Coil> 
+    
+<Assembly-Buy>
+<Unit_of_Measure>ea</Unit_of_Measure>
+<Product_Family><Null/></Product_Family>
+<Product_Line><Null/></Product_Line>
+<Model_Group><Null/></Model_Group>
+<High_Level_Category>Aluminum</High_Level_Category>
+<Subcategory>Aluminum Extrusions</Subcategory>
+<Plant>Monterrey</Plant>
+<Finish_Code><Null/></Finish_Code>
+<Finish_Color><Null/></Finish_Color>
+<Master_Template>CC WC STANDARD</Master_Template>
+<Source>Buy</Source>
+<Mapics_Item_Type>4</Mapics_Item_Type>
+ </Assembly-Buy>
+  <Assembly-Buy>  
+  <High_Level_Category>Brass</High_Level_Category>
+    <Subcategory>Aluminum Tubing</Subcategory>
+	<Plant>BBK</Plant>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Compressor</High_Level_Category>	
+  <Subcategory>Aluminum</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Copper</High_Level_Category>	
+  <Subcategory>Brass</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Countertops</High_Level_Category>	
+  <Subcategory>Compressor Parts</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Doors/Frames</High_Level_Category>	
+  <Subcategory>Condensing Units</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Electronic Components</High_Level_Category>	
+  <Subcategory>Hermetic Recip &lt; 1 hp</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Formed Metal - Outsourced</High_Level_Category>	
+  <Subcategory>Hermetic Recip &gt;= 1 hp</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Glass</High_Level_Category>	
+  <Subcategory>Other Compressors</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Heat Exchangers</High_Level_Category>	
+  <Subcategory>Scrolls</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Motors</High_Level_Category>	
+  <Subcategory>Semi-Hermetic Recip</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Packaging</High_Level_Category>	
+  <Subcategory>Copper Sheet</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Plastic</High_Level_Category>	
+  <Subcategory>Copper Tubing</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Refrigeration Components</High_Level_Category>	
+  <Subcategory>Avonite</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Steel</High_Level_Category>	
+  <Subcategory>Corian</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+  <High_Level_Category>Valves</High_Level_Category>	
+  <Subcategory>Granite</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>
+<High_Level_Category>Wood</High_Level_Category>	
+  <Subcategory>Marble</Subcategory>
+  </Assembly-Buy>  
+  <Assembly-Buy>	
+  <Subcategory>Other Countertops</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Doors</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Frames</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Circuit Breakers</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Connectors</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Contactors</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Controllers</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Enclosures</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Fuses</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Harnesses</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Heaters</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Lightings</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Other Electronic Components</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Sensors</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Solenoid Coil</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Switches or Relays</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Transformers</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Tubing</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Components</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Make to Buy Components</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Shelves</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Wire Racks</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Wireforms</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Bent Glass</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Flat Glass</Subcategory>
+  </Assembly-Buy>
+  <Assembly-Buy>	
+  <Subcategory>Glass Assemblies</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Coils</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Distributors</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Flat Plate</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Shell and Tube</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Basket</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Blades</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Fan Motor Assemblies</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Motors</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Corregated</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Other Packaging</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Plastic</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Belts</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Blow Molding</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Expanded Polystyrene EPS</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Extrusion</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Fabrication</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Injection Molding</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>InsulationTubing</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Insulation</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Polyurethene Foam</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Pultrusion</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Roto Molding</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Rubber</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Seals</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Thermoforming</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Tubing</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Air Separator</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Filter Drier Cores</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Hermetic Filter Driers</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Lvl Indicator</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Oil Separators</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Other Vessels or Tanks</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Pumps</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Receivers</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Sightglass</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Suction Accumulators</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Suction Filters</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Vibrasorbers</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Coil Cold Rolled</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Coil Galvanized</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Coil Hot Rolled</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Coil Laminated</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Coil Painted</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Coil Stainless</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Sheet Cold Rolled</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Sheet Galvanized</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Sheet Hot Rolled</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Sheet Painted</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Sheet Stainless</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Sheet laminated</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Tube Cold Rolled</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Tube Galvanized</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Tube Hot Rolled</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Steel Tube Stainless</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>3 Way</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Access</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Actuator</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Angle</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Balancing</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Ball</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Butterfly</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Check</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Compressor Valve</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>EEPR</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>EEV</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>EPR</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Gate</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Miscellaneous</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Oil Regulator</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Reclaim</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Regulator</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Relief</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Rotolock</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Shutoff</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Solenoid</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>TXV</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Vlv Parts</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Composite Wood</Subcategory>
+  </Assembly-Buy>
+<Assembly-Buy>	
+  <Subcategory>Solid Wood</Subcategory>
+  </Assembly-Buy> 
+  
+<Part-MOA>
+  <Unit_of_Measure>ea</Unit_of_Measure>
+  <Product_Family><Null/></Product_Family>
+  <Product_Line><Null/></Product_Line>
+  <Model_Group><Null/></Model_Group>
+  <High_Level_Category>Reference MOA &amp; Diagram</High_Level_Category>
+  <Subcategory>Drawings MOA</Subcategory>
+  <Plant>Monterrey</Plant>
+  <Finish_Code><Null/></Finish_Code>
+  <Finish_Color><Null/></Finish_Color>
+  <Master_Template>CC WC STANDARD</Master_Template>
+  <Source>Make</Source>
+  <Mapics_Item_Type>9</Mapics_Item_Type>
+  </Part-MOA>
+  <Part-MOA><Plant>BBK</Plant></Part-MOA>
+  
+	<Purchased-Part>
+		<Unit_of_Measure>ea</Unit_of_Measure>
+		<Product_Family><Null/></Product_Family>
+		<Product_Line><Null/></Product_Line>
+		<Model_Group><Null/></Model_Group>
+		<High_Level_Category>Adhesives &amp; Sealants</High_Level_Category>
+		<Subcategory>3 Way</Subcategory>
+		<Plant>Monterrey</Plant>
+		<Finish_Code>03</Finish_Code>
+		<Finish_Color>000</Finish_Color>
+		<Master_Template>CC WC STANDARD</Master_Template>
+		<Source>Buy</Source>
+		<Mapics_Item_Type>4</Mapics_Item_Type>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Plant>BBK</Plant>
+	<Finish_Code>04</Finish_Code>
+	<Finish_Color>144</Finish_Color>
+		<High_Level_Category>Aluminum</High_Level_Category>
+		<Subcategory>Access</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Code>99</Finish_Code>
+	<Finish_Color>187</Finish_Color>
+		<High_Level_Category>Brass</High_Level_Category>
+		<Subcategory>Actuator</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>700</Finish_Color>
+		<High_Level_Category>Compressor</High_Level_Category>
+		<Subcategory>Adhesives and Sealants</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>701</Finish_Color>
+		<High_Level_Category>Copper</High_Level_Category>
+		<Subcategory>Adhesives and Tapes</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>702</Finish_Color>
+		<High_Level_Category>Countertops</High_Level_Category>
+		<Subcategory>Air Separator</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>715</Finish_Color>
+		<High_Level_Category>Doors/Frames</High_Level_Category>
+		<Subcategory>Angle</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>920</Finish_Color>
+		<High_Level_Category>Electronic Components</High_Level_Category>
+		<Subcategory>Avonite</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>930</Finish_Color>
+		<High_Level_Category>Fasteners &amp; Hardware</High_Level_Category>
+		<Subcategory>Balancing</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>950</Finish_Color>
+		<High_Level_Category>Fittings</High_Level_Category>
+		<Subcategory>Ball</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>991</Finish_Color>
+		<High_Level_Category>Glass</High_Level_Category>
+		<Subcategory>Basket</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>992</Finish_Color>
+		<High_Level_Category>Heat Exchangers</High_Level_Category>
+		<Subcategory>Belts</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>993</Finish_Color>
+		<High_Level_Category>Indirect Material</High_Level_Category>
+		<Subcategory>Bent Glass</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>994</Finish_Color>
+	<High_Level_Category>Motors</High_Level_Category>
+		<Subcategory>Blades</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>995</Finish_Color>
+	<High_Level_Category>Other</High_Level_Category>
+		<Subcategory>Blow Molding</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>996</Finish_Color>
+	<High_Level_Category>Packaging</High_Level_Category>
+		<Subcategory>Brass</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>997</Finish_Color>
+	<High_Level_Category>Paint</High_Level_Category>
+		<Subcategory>Brass Fittings</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>998</Finish_Color>
+	<High_Level_Category>Plastic</High_Level_Category>
+		<Subcategory>Butterfly</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<Finish_Color>999</Finish_Color>
+	<High_Level_Category>Refrigeration Components</High_Level_Category>
+		<Subcategory>Check</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<High_Level_Category>Steel</High_Level_Category>
+		<Subcategory>Circuit Breakers</Subcategory>
+		<Finish_Code><Null/></Finish_Code>
+		<Finish_Color><Null/></Finish_Color>
+	</Purchased-Part>
+	<Purchased-Part>
+	<High_Level_Category>Technical Publications</High_Level_Category>
+		<Subcategory>Coil Cold Rolled</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<High_Level_Category>Valves</High_Level_Category>
+		<Subcategory>Coil Galvanized</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<High_Level_Category>Wood</High_Level_Category>
+		<Subcategory>Coil Hot Rolled</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+	<High_Level_Category>Fasteners &amp; Hardware</High_Level_Category>
+		<Subcategory>Coil Laminated</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+		<Subcategory>Coil Painted</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Coil Stainless</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Coils</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Components not on BOMs COS</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Composite Wood</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Compressor Parts</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Compressor Valve</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Condensing Units</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Connectors</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Contactors</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Controllers</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Copper Fittings</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Copper Sheet</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Copper Tubing</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Corian</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Corregated</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Decal</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Distributors</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Doors</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>EEPR</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>EEV</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Electrical Fittings</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Enclosures</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>EPR</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Expanded Polystyrene EPS</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Extrusion</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Fabrication</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Fan Motor Assemblies</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Filter Drier Cores</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Flat Glass</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Flat Plate</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Frames</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Fuses</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Gate</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Glass Assemblies</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Granite</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Harnesses</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Heaters</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Hermetic Filter Driers</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Hermetic Recip &lt;1 hp</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Hermetic Recip >= 1 hp</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Hoses or Hose Fittings</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Injection Molding</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Insulation</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>InsulationTubing</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Lightings</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Lvl Indicator</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Maintenance Items</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Manuals literature etc</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Marble</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Miscellaneous</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Motors</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Oil and Grease</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Oil Regulator</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Oil Separators</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Other Compressors</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Other Countertops</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Other Electronic Components</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Other Fittings</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Other Packaging</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Other Vessels or Tanks</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Paint</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Plastic</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Plastic Fittings</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Polyurethene Foam</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Pultrusion</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Pumps</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Receivers</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Reclaim</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Refrigerants</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Regulator</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Relief</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Roto Molding</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Rotolock</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Rubber</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Scrolls</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Seals</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Semi-Hermetic Recip</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Sensors</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Shell and Tube</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Shutoff</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Sightglass</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Small Tools</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Solenoid</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Solenoid Coil</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Solid Wood</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Fittings</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Sheet Cold Rolled</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Sheet Galvanized</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Sheet Hot Rolled</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Sheet laminated</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Sheet Painted</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Sheet Stainless</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Tube Cold Rolled</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Tube Galvanized</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Tube Hot Rolled</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Steel Tube Stainless</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Sticker Tags Etc</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Suction Accumulators</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Suction Filters</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Supplies</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Switches or Relays</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Thermoforming</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Transformers</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Tubing</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>TXV</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Vibrasorbers</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Vlv Parts</Subcategory>
+	</Purchased-Part>
+<Purchased-Part>
+		<Subcategory>Welding and Brazing</Subcategory>
+	</Purchased-Part>	
+	<Purchased-Part>
+		<Subcategory>Aluminum</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+		<Subcategory>Aluminum Extrusions</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+		<Subcategory>Aluminum Tubing</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+		<Subcategory>Fasteners</Subcategory>
+	</Purchased-Part>
+	<Purchased-Part>
+		<Subcategory>Hardware</Subcategory>
+	</Purchased-Part>
+	
+	
+	<Purchased-PartFM>
+		<Unit_of_Measure>ea</Unit_of_Measure>
+		<Product_Family><Null/></Product_Family>
+		<Product_Line><Null/></Product_Line>
+		<Model_Group><Null/></Model_Group>
+		<High_Level_Category>Formed Metal - Outsourced</High_Level_Category>
+		<Subcategory>Components</Subcategory>
+		<Plant>Monterrey</Plant>
+		<Finish_Code><Null/></Finish_Code>
+		<Finish_Color><Null/></Finish_Color>
+		<Master_Template>CC WC STANDARD</Master_Template>
+		<Source>Buy</Source>
+		<Mapics_Item_Type>9</Mapics_Item_Type>
+	</Purchased-PartFM>
+	<Purchased-PartFM>
+		<Subcategory>Make to Buy Components</Subcategory>
+	</Purchased-PartFM>
+	<Purchased-PartFM>
+		<Subcategory>Shelves</Subcategory>
+	</Purchased-PartFM>
+	<Purchased-PartFM>
+		<Subcategory>Wire Racks</Subcategory>
+	</Purchased-PartFM>
+	<Purchased-PartFM>
+		<Subcategory>Wireforms</Subcategory>
+	</Purchased-PartFM>
+	<Purchased-PartFM> 
+<Finish_Code>03</Finish_Code>
+<Finish_Color>000</Finish_Color>
+ </Purchased-PartFM> 
+  <Purchased-PartFM>  
+    <Subcategory>Coil</Subcategory>
+	<Finish_Code>04</Finish_Code>
+	<Finish_Color>144</Finish_Color>
+  </Purchased-PartFM>
+  <Purchased-PartFM>     
+<Finish_Code>99</Finish_Code>	
+<Finish_Color>187</Finish_Color>
+  </Purchased-PartFM>
+  <Purchased-PartFM>   
+<Finish_Color>700</Finish_Color>	
+  </Purchased-PartFM>
+  <Purchased-PartFM>  
+	<Finish_Color>701</Finish_Color>
+  </Purchased-PartFM>
+  <Purchased-PartFM>   
+<Finish_Color>702</Finish_Color>	
+  </Purchased-PartFM>
+  <Purchased-PartFM>   
+<Finish_Color>715</Finish_Color>	
+  </Purchased-PartFM>
+  <Purchased-PartFM>    
+	<Finish_Color>920</Finish_Color>
+  </Purchased-PartFM>
+  <Purchased-PartFM>   
+	<Finish_Color>930</Finish_Color>
+  </Purchased-PartFM> 
+  <Purchased-PartFM>   
+	<Finish_Color>950</Finish_Color>	
+  </Purchased-PartFM>
+  <Purchased-PartFM>    
+	<Finish_Color>991</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>992</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>993</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>994</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>995</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>996</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>997</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>998</Finish_Color>
+  </Purchased-PartFM>
+   <Purchased-PartFM>    
+	<Finish_Color>999</Finish_Color>
+  </Purchased-PartFM>
+	
+	
+	
+ <SheetMetal-NonPaint>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Fabricated Parts</High_Level_Category>
+    <Subcategory>Sheetmetal</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code>99</Finish_Code>
+    <Finish_Color>000</Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Make</Source>
+    <Mapics_Item_Type>2</Mapics_Item_Type>
+  </SheetMetal-NonPaint>
+
+	
+<SheetMetal-Paint>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Fabricated Parts</High_Level_Category>
+    <Subcategory>Sheetmetal</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Make</Source>
+    <Mapics_Item_Type>2</Mapics_Item_Type>
+  </SheetMetal-Paint>  
+  <SheetMetal-Paint> 
+<Finish_Code>03</Finish_Code>
+<Finish_Color>000</Finish_Color>
+ </SheetMetal-Paint> 
+  <SheetMetal-Paint> 
+	<Finish_Code>04</Finish_Code>
+	<Finish_Color>144</Finish_Color>
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>     
+<Finish_Code>99</Finish_Code>	
+<Finish_Color>187</Finish_Color>
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>   
+<Finish_Color>700</Finish_Color>	
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>  
+	<Finish_Color>701</Finish_Color>
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>   
+<Finish_Color>702</Finish_Color>	
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>   
+<Finish_Color>715</Finish_Color>	
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>    
+	<Finish_Color>920</Finish_Color>
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>   
+	<Finish_Color>930</Finish_Color>
+  </SheetMetal-Paint> 
+  <SheetMetal-Paint>   
+	<Finish_Color>950</Finish_Color>	
+  </SheetMetal-Paint>
+  <SheetMetal-Paint>    
+	<Finish_Color>991</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>992</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>993</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>994</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>995</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>996</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>997</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>998</Finish_Color>
+  </SheetMetal-Paint>
+   <SheetMetal-Paint>    
+	<Finish_Color>999</Finish_Color>
+  </SheetMetal-Paint>
+   
+     
+	<MP-CopperTube>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Fabricated Parts</High_Level_Category>
+    <Subcategory>Copper Tubing RI/FW/Insight</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Make</Source>
+    <Mapics_Item_Type>0</Mapics_Item_Type>
+  </MP-CopperTube> 
+  
+    
+
+<COP>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Adhesives and Sealants</High_Level_Category>
+    <Subcategory>3 Way</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>COP</Source>
+    <Mapics_Item_Type>4</Mapics_Item_Type>
+  </COP>
+  <COP>  
+   <High_Level_Category>Aluminum</High_Level_Category>
+   <Subcategory>Access</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Brass</High_Level_Category>
+   <Subcategory>Actuator</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Compressor</High_Level_Category>
+   <Subcategory>Adhesives and Sealants</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Copper</High_Level_Category>
+   <Subcategory>Adhesives and Tapes</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Countertops</High_Level_Category>
+   <Subcategory>Air Separator</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Doors/Frames</High_Level_Category>
+   <Subcategory>Aluminum</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Electronic Components</High_Level_Category>
+   <Subcategory>Aluminum Extrusions</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Fasteners &amp; Hardware</High_Level_Category>
+   <Subcategory>Aluminum Tubing</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Fittings</High_Level_Category>
+   <Subcategory>Angle</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Formed Metal - Outsourced</High_Level_Category>
+   <Subcategory>Avonite</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Glass</High_Level_Category>
+   <Subcategory>Balancing</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Heat Exchangers</High_Level_Category>
+   <Subcategory>Ball</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Indirect Material</High_Level_Category>
+   <Subcategory>Basket</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Motors</High_Level_Category>
+   <Subcategory>Belts</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Other</High_Level_Category>
+   <Subcategory>Bent Glass</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Packaging</High_Level_Category>
+   <Subcategory>Blades</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Paint</High_Level_Category>
+   <Subcategory>Blow Molding</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Plastic</High_Level_Category>
+   <Subcategory>Brass</Subcategory>
+    </COP>
+	 <COP>  
+   <High_Level_Category>Refrigeration Components</High_Level_Category>
+   <Subcategory>Brass Fittings</Subcategory>
+    </COP>
+	<COP>  
+   <High_Level_Category>Steel</High_Level_Category>
+   <Subcategory>Butterfly</Subcategory>
+    </COP>
+	<COP>  
+   <High_Level_Category>Technical Publications</High_Level_Category>
+   <Subcategory>Check</Subcategory>
+    </COP>
+	<COP>  
+   <High_Level_Category>Valves</High_Level_Category>
+   <Subcategory>Circuit Breakers</Subcategory>
+    </COP>
+	<COP>  
+   <High_Level_Category>Wood</High_Level_Category>
+   <Subcategory>Coil Cold Rolled</Subcategory>
+    </COP>
+	<COP>  
+      <Subcategory>Coil Galvanized</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Coil Hot Rolled</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Coil Laminated</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Coil Painted</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Coil Stainless</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Coils</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Components</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Components not on BOMs COS</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Composite Wood</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Compressor Parts</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Compressor Valve</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Condensing Units</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Connectors</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Contactors</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Controllers</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Copper Fittings</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Copper Sheet</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Copper Tubing</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Corian</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Corregated</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Decal</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Distributors</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Doors</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>EEPR</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>EEV</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Electrical Fittings</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Enclosures</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>EPR</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Expanded Polystyrene EPS</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Extrusion</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Fabrication</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Fan Motor Assemblies</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Filter Drier Cores</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Flat Glass</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Flat Plate</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Frames</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Fuses</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Gate</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Glass Assemblies</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Granite</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Harnesses</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Heaters</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Hermetic Filter Driers</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Hermetic Recip &lt; 1 hp</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Hermetic Recip >= 1 hp</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Hoses or Hose Fittings</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Injection Molding</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Insulation</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>InsulationTubing</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Lightings</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Lvl Indicator</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Maintenance Items</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Make to Buy Components</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Manuals literature etc</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Marble</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Miscellaneous</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Motors</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Oil and Grease</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Oil Regulator</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Oil Separators</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Other Compressors</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Other Countertops</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Other Electronic Components</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Other Fittings</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Other Packaging</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Other Vessels or Tanks</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Paint</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Plastic</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Plastic Fittings</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Polyurethene Foam</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Pultrusion</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Pumps</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Receivers</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Reclaim</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Refrigerants</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Regulator</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Relief</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Roto Molding</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Rotolock</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Rubber</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Scrolls</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Seals</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Semi-Hermetic Recip</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Sensors</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Shell and Tube</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Shelves</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Shutoff</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Sightglass</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Small Tools</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Solenoid</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Solenoid Coil</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Solid Wood</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Fittings</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Sheet Cold Rolled</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Sheet Galvanized</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Sheet Hot Rolled</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Sheet laminated</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Sheet Painted</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Sheet Stainless</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Tube Cold Rolled</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Tube Galvanized</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Tube Hot Rolled</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Steel Tube Stainless</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Sticker Tags Etc</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Suction Accumulators</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Suction Filters</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Supplies</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Switches or Relays</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Thermoforming</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Transformers</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Tubing</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>TXV</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Vibrasorbers</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Vlv Parts</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Welding and Brazing</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Wire Racks</Subcategory>
+    </COP>
+<COP>  
+      <Subcategory>Wireforms</Subcategory>
+    </COP>
+	
+	
+  
+	<MF-Parts>
+    <Unit_of_Measure>ea</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Fabricated Parts</High_Level_Category>
+    <Subcategory>Acrylic</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Make</Source>
+    <Mapics_Item_Type>0</Mapics_Item_Type>
+  </MF-Parts>
+	<MF-Parts>
+	<Plant>BBK</Plant>
+  <Subcategory>Plastic</Subcategory>
+  </MF-Parts>
+	<MF-Parts>
+    <Subcategory>Steel Tubing</Subcategory>
+  </MF-Parts>
+  <MF-Parts>
+    <Subcategory>Wire Goods</Subcategory>
+  </MF-Parts>
+  <MF-Parts>
+    <Subcategory>Wood</Subcategory>
+  </MF-Parts>
+  <MF-Parts>
+    <Subcategory>Metal Cut Down</Subcategory>
+  </MF-Parts>
+  <MF-Parts>
+    <Subcategory>Plastic RI/FW/Insight</Subcategory>
+  </MF-Parts>
+    
+	<RM-Copper>
+    <Unit_of_Measure>m</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>Copper</High_Level_Category>
+    <Subcategory>Copper Tubing </Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Buy</Source>
+    <Mapics_Item_Type>3</Mapics_Item_Type>
+  </RM-Copper>
+  
+	<RM-SheetMetalt>
+    <Unit_of_Measure>kg</Unit_of_Measure>
+    <Product_Family><Null/></Product_Family>
+    <Product_Line><Null/></Product_Line>
+    <Model_Group><Null/></Model_Group>
+    <High_Level_Category>steel</High_Level_Category>
+    <Subcategory>Coil Stainless</Subcategory>
+    <Plant>Monterrey</Plant>
+    <Finish_Code><Null/></Finish_Code>
+    <Finish_Color><Null/></Finish_Color>
+    <Master_Template>CC WC STANDARD</Master_Template>
+    <Source>Buy</Source>
+    <Mapics_Item_Type>4</Mapics_Item_Type>
+  </RM-SheetMetalt>
+  <RM-SheetMetalt>
+  <Subcategory>Coil Laminated</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Coil Painted</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Coil Galvanized</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Sheet Stainless</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Sheet laminated</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Sheet Painted</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Sheet Galvanized</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Coil Cold Rolled</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Coil Hot Rolled</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Sheet Cold Rolled</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Sheet Hot Rolled</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Tube Stainless</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Tube Galvanized</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Tube Cold Rolled</Subcategory>
+   </RM-SheetMetalt>
+   <RM-SheetMetalt>
+  <Subcategory>Steel Tube Hot Rolled</Subcategory>
+   </RM-SheetMetalt> 
+  
+</data-set>
