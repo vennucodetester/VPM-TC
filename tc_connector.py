@@ -55,7 +55,7 @@ class TcConnectionError(TcSoaError):
 
 
 def _is_transient_tc_web_tier_error(exc):
-    """HTTP 500 from TC when Web Tier / Server Manager cannot assign a SOA server (often transient)."""
+    """HTTP 500 from TC when Web Tier / pool is overloaded (often transient; retry)."""
     text = str(exc).lower()
     return (
         "assign a server" in text
@@ -63,6 +63,9 @@ def _is_transient_tc_web_tier_error(exc):
         or "web tier" in text
         or "unexpected error on the web tier" in text
         or ("1003" in text and "assign" in text)
+        or "tcserver is busy" in text
+        or "server is busy" in text
+        or "cannot authenticate the user" in text
     )
 
 
@@ -348,7 +351,7 @@ class TcSoaClient:
         """
         Login to Teamcenter.
         Uses Core-2008-06-Session/login with exact parameters from CHECKSHEET.exe.
-        Read timeout is at least 120s (SSO/TcSS often exceeds a plain 60s client limit).
+        Read timeout is at least 180s (SSO / JsonRest on Web Tier; Rich Client uses a different path).
         Retries up to 3 times on transient Web Tier / “assign a server” errors (code 1003 class).
         If JsonRestServices still fails, tries RestServices once (alternate routing on some sites).
         """
@@ -363,7 +366,8 @@ class TcSoaClient:
         }
 
         _tc_logger.info(f"Login attempt: Core-2008-06-Session/login, user={username}")
-        login_read = max(120, int(self.post_timeout))
+        # Floor 180s: SSO / JsonRest login often exceeds 120s on loaded sites; Rich Client uses a different path.
+        login_read = max(180, int(self.post_timeout))
         login_timeout = (15, login_read)
         max_attempts = 3
         retry_delay_s = 8
@@ -441,7 +445,7 @@ class TcSoaClient:
     def test_connection(self):
         """Test if the server URL is reachable."""
         try:
-            resp = self.session.get(self.base_url, timeout=10)
+            resp = self.session.get(self.base_url, timeout=30)
             return True, "TC server is reachable"
         except requests.exceptions.ConnectionError as e:
             return False, f"Cannot connect: {e}"
@@ -1708,7 +1712,8 @@ class TcLoginDialog(QDialog):
         QApplication.processEvents()
 
         try:
-            client = TcSoaClient(url)
+            # Longer than default 60s: GUI login hits JsonRestServices; Rich Client/AW use other routes and can work when HTTP is slow.
+            client = TcSoaClient(url, post_timeout=180)
 
             reachable, msg = client.test_connection()
             if not reachable:
@@ -1733,7 +1738,11 @@ class TcLoginDialog(QDialog):
             self.status_label.setStyleSheet("color: #dc3545; font-size: 11px;")
             self.connect_btn.setEnabled(True)
         except TcConnectionError as e:
-            self.status_label.setText(str(e))
+            self.status_label.setText(
+                f"{e}\n\n"
+                "Tip: Thick Client / Active Workspace can work while this dialog fails — they do not use "
+                "the same HTTP SOA path as port 8080 JsonRestServices. Retry, or ask IT to check the Web Tier."
+            )
             self.status_label.setStyleSheet("color: #dc3545; font-size: 11px;")
             self.connect_btn.setEnabled(True)
         except Exception as e:
