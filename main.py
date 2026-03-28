@@ -13,7 +13,7 @@ import pandas as pd
 
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
-    QToolBar, QLabel, QFrame, QPushButton, QProgressBar, QMessageBox,
+    QToolBar, QLabel, QFrame, QPushButton, QProgressBar, QProgressDialog, QMessageBox,
     QFileDialog, QDialog, QFormLayout, QLineEdit, QDateEdit, QDialogButtonBox, QSizePolicy,
     QMenu, QTextEdit, QCheckBox, QComboBox, QTabWidget, QTreeWidget, QTreeWidgetItem, QListWidget, QListWidgetItem, QScrollArea,
     QTableWidget, QTableWidgetItem, QHeaderView, QRadioButton, QButtonGroup, QGroupBox,
@@ -4833,27 +4833,101 @@ class BomExplorerView(QWidget):
                         lookup[name_id] = item
         return lookup
 
+    @staticmethod
+    def _ecn_item_base_key(item):
+        """Bare Teamcenter Item ID for BOM matching (e.g. 3233143 from id or name 3233143/C)."""
+        iid = str(getattr(item, "id", "")).strip()
+        if iid:
+            return iid.split("/")[0].strip()
+        name = str(getattr(item, "name", "")).strip()
+        if name:
+            return name.split("/")[0].strip()
+        return ""
+
+    def _ecn_item_id_variants(self, item):
+        """All keys that might appear in BOM nodes for this ECN row."""
+        keys = set()
+        for src in (getattr(item, "id", ""), getattr(item, "name", "")):
+            s = str(src).strip()
+            if not s:
+                continue
+            keys.add(s)
+            if "/" in s:
+                keys.add(s.split("/")[0].strip())
+        return keys
+
+    def _ecn_item_in_bom(self, item, item_to_nom):
+        """Return nomenclature if any variant of this ECN item appears in loaded BOMs."""
+        for key in self._ecn_item_id_variants(item):
+            nom = item_to_nom.get(key)
+            if nom:
+                return nom
+        return None
+
     # ------------------------------------------------------------------
     # LINK CHECK & MISSING BOM DETECTION
     # ------------------------------------------------------------------
 
     def _build_item_to_nomenclature_map(self):
-        """Scan all loaded BOMs, map every item_id → top-level nomenclature."""
+        """
+        Scan all loaded (in-memory) BOMs AND every *_bom_cache.json on disk,
+        returning {item_id: case_nomenclature}.
+        Disk caches let us resolve parts for cases that were fetched in a
+        previous session but are not currently loaded in BOM Explorer.
+        """
         item_to_nom = {}
-        for nom, bom_result in self._bom_database.items():
-            if bom_result is None:
-                continue
+
+        def _ingest(nom, bom_result):
+            if not bom_result:
+                return
             nodes = (bom_result or {}).get("bom", {}).get("nodes", []) or []
             for node in nodes:
-                item_id = node.get("item_id", "")
-                if item_id:
-                    item_to_nom[item_id] = nom
+                raw = node.get("item_id", "")
+                if not raw:
+                    continue
+                s = str(raw).strip()
+                if s:
+                    item_to_nom[s] = nom
+                    if "/" in s:
+                        item_to_nom[s.split("/")[0].strip()] = nom
+
+        # 1. In-memory loaded BOMs (highest priority)
+        for nom, bom_result in self._bom_database.items():
+            _ingest(nom, bom_result)
+
+        # 2. Disk cache files for cases not currently in memory
+        cache_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tc_bom_output")
+        if os.path.isdir(cache_dir):
+            for fname in os.listdir(cache_dir):
+                if not fname.endswith("_bom_cache.json"):
+                    continue
+                # Derive nomenclature from filename: "RLN4MA_bom_cache.json" → "RLN4MA"
+                nom_token = fname[: -len("_bom_cache.json")].upper()
+                if not nom_token or nom_token in self._bom_database:
+                    continue  # already covered by in-memory
+                try:
+                    with open(os.path.join(cache_dir, fname), "r", encoding="utf-8") as fh:
+                        data = json.load(fh)
+                    # Cache file stores the bom_result directly
+                    _ingest(nom_token, data)
+                except Exception:
+                    pass
+
         return item_to_nom
 
     def _on_find_missing_boms(self):
         """Show dialog listing ECN items not in any loaded BOM, auto-detect top-level assembly via TC where-used."""
-        ecn_lookup = self._get_ecn_item_lookup()
-        if not ecn_lookup:
+        ecn_projects = getattr(self._main_window, "ecn_projects", []) or []
+        items_by_base = {}
+        for pr in ecn_projects:
+            ecns = getattr(pr, "ecns", {}) or {}
+            for ecn in ecns.values():
+                for item in getattr(ecn, "items", []) or []:
+                    base = self._ecn_item_base_key(item)
+                    if base:
+                        items_by_base[base] = item
+
+        if not items_by_base:
             QMessageBox.information(self, "Find Missing BOMs",
                                     "No ECN data loaded. Load ECN data first via the ECN Data menu.")
             return
@@ -4861,38 +4935,60 @@ class BomExplorerView(QWidget):
         item_to_nom = self._build_item_to_nomenclature_map()
 
         # Categorize: found (in a BOM) vs missing (not in any BOM)
-        found = {}    # {item_id: nomenclature}
-        missing = {}  # {item_id: Item}
-        for item_id, item in ecn_lookup.items():
-            if item_id in item_to_nom:
-                found[item_id] = item_to_nom[item_id]
+        found = {}    # {base_item_id: nomenclature}
+        missing = {}  # {base_item_id: Item}
+        for base, item in items_by_base.items():
+            nom = self._ecn_item_in_bom(item, item_to_nom)
+            if nom:
+                found[base] = nom
             else:
-                missing[item_id] = item
+                missing[base] = item
 
         if not missing:
             QMessageBox.information(self, "Find Missing BOMs",
                                     f"All {len(found)} ECN items are covered by loaded BOMs. No missing items.")
             return
 
-        # Check if TC is connected — needed for where-used queries
+        # ------------------------------------------------------------------
+        # Try to resolve remaining missing items from the disk BOM cache
+        # index (already included in item_to_nom via _build_item_to_nomenclature_map).
+        # Anything still absent needs a live TC where-used query.
+        # ------------------------------------------------------------------
+        still_missing = {}
+        for base, item in missing.items():
+            nom = self._ecn_item_in_bom(item, item_to_nom)
+            if nom:
+                found[base] = nom
+            else:
+                still_missing[base] = item
+        missing = still_missing
+
+        if not missing:
+            # Everything resolved from disk cache — no TC needed
+            QMessageBox.information(
+                self, "Find Missing BOMs",
+                f"All ECN items resolved from BOM cache.\n"
+                f"{len(found)} items found across loaded/cached cases. No missing items.",
+            )
+            return
+
+        # Still-missing items: try TC where-used as a last resort.
+        # The TC login is optional — user can skip and still see partial results.
         client = getattr(self._main_window, '_tc_client', None)
         tc_connected = client and getattr(client, 'is_connected', False)
 
         if not tc_connected:
-            # Prompt login first
             from tc_connector import TcLoginDialog
             tc_config = self._main_window.ecn_config.get("teamcenter", {})
             login_dialog = TcLoginDialog(tc_config, self._main_window)
-            if login_dialog.exec() != QDialog.DialogCode.Accepted:
-                QMessageBox.information(self, "Find Missing BOMs",
-                                        "TC login required to resolve parent assemblies.")
-                return
-            client = login_dialog.client
-            self._main_window._tc_client = client
-            tc_connected = True
+            if login_dialog.exec() == QDialog.DialogCode.Accepted:
+                client = login_dialog.get_client()
+                self._main_window._tc_client = client
+                self._main_window.ecn_config["teamcenter"] = login_dialog.get_config()
+                self._main_window.save_ecn_config()
+                tc_connected = True
+            # If user cancels login, continue without TC — show partial results
 
-        # Resolve top-level assembly for each missing item via where-used
-        # Use progress dialog since this involves TC queries
         progress = QProgressDialog(
             "Resolving parent assemblies via Teamcenter...", "Cancel", 0, len(missing), self
         )
@@ -4900,12 +4996,11 @@ class BomExplorerView(QWidget):
         progress.setWindowModality(Qt.WindowModality.WindowModal)
         progress.setMinimumDuration(0)
 
-        # Cache: item_id → {root_item_id, chain, found}
         if not hasattr(self, '_where_used_cache'):
             self._where_used_cache = {}
 
-        item_to_root = {}  # {item_id: root_item_id or None}
-        item_to_chain = {}  # {item_id: [chain]}
+        item_to_root = {}
+        item_to_chain = {}
 
         for i, (item_id, item) in enumerate(missing.items()):
             if progress.wasCanceled():
@@ -4914,11 +5009,9 @@ class BomExplorerView(QWidget):
             progress.setLabelText(f"Resolving {item_id}... ({i+1}/{len(missing)})")
             QApplication.processEvents()
 
-            # Check cache first
             if item_id in self._where_used_cache:
                 result = self._where_used_cache[item_id]
-            else:
-                # Parse revision from item name if available (e.g. "3233143/C")
+            elif tc_connected:
                 rev_id = None
                 item_name = getattr(item, 'name', '')
                 if '/' in str(item_name):
@@ -4931,6 +5024,8 @@ class BomExplorerView(QWidget):
                     result = {"found": False, "chain": [item_id], "error": str(e)}
 
                 self._where_used_cache[item_id] = result
+            else:
+                result = {"found": False, "chain": [item_id], "error": "TC not connected"}
 
             if result.get("found"):
                 root_id = result["root_item_id"]
@@ -4961,10 +5056,10 @@ class BomExplorerView(QWidget):
 
         resolved_count = sum(len(v) for v in by_root.values())
         info_label = QLabel(
-            f"<b>{len(found)}</b> ECN items already in loaded BOMs. "
-            f"<b>{len(missing)}</b> missing.<br>"
-            f"<b>{resolved_count}</b> resolved to top-level assemblies via where-used. "
-            f"<b>{len(unknown_items)}</b> could not be resolved."
+            f"<b>{len(found)}</b> ECN items covered by loaded/cached BOMs. "
+            f"<b>{len(missing)}</b> still need a BOM pull.<br>"
+            f"<b>{resolved_count}</b> resolved to top-level assemblies via TC where-used. "
+            f"<b>{len(unknown_items)}</b> could not be resolved — enter assembly manually."
         )
         info_label.setWordWrap(True)
         dlayout.addWidget(info_label)

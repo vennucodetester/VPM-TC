@@ -54,6 +54,18 @@ class TcConnectionError(TcSoaError):
     pass
 
 
+def _is_transient_tc_web_tier_error(exc):
+    """HTTP 500 from TC when Web Tier / Server Manager cannot assign a SOA server (often transient)."""
+    text = str(exc).lower()
+    return (
+        "assign a server" in text
+        or "server manager" in text
+        or "web tier" in text
+        or "unexpected error on the web tier" in text
+        or ("1003" in text and "assign" in text)
+    )
+
+
 # ============================================================================
 # CONSTANTS — Exact values from decompiled CHECKSHEET.exe
 # ============================================================================
@@ -136,8 +148,9 @@ class TcSoaClient:
     All endpoints and body formats match the decompiled CHECKSHEET.exe exactly.
     """
 
-    def __init__(self, base_url):
+    def __init__(self, base_url, post_timeout=60):
         self.base_url = base_url.rstrip('/')
+        self.post_timeout = post_timeout
         self.session = requests.Session()
         self.session.headers.update({
             'Content-Type': 'application/json',
@@ -223,11 +236,22 @@ class TcSoaClient:
                 unique_messages.append(message)
         return unique_messages
 
-    def _post(self, namespace, operation, body, endpoint_family="JsonRestServices", use_session_envelope=True):
+    def _post(
+        self,
+        namespace,
+        operation,
+        body,
+        endpoint_family="JsonRestServices",
+        use_session_envelope=True,
+        timeout=None,
+    ):
         """
         Core HTTP POST to TC SOA endpoint.
         URL pattern: {base_url}/{endpoint_family}/{namespace}/{operation}
+        timeout: seconds for this request (defaults to self.post_timeout).
         """
+        if timeout is None:
+            timeout = self.post_timeout
         url = f"{self.base_url}/{endpoint_family}/{namespace}/{operation}"
 
         if use_session_envelope:
@@ -255,7 +279,8 @@ class TcSoaClient:
         )
 
         try:
-            resp = self.session.post(url, json=payload, timeout=60)
+            # Scalar timeout = same limit for connect+read. Callers may pass (connect_sec, read_sec).
+            resp = self.session.post(url, json=payload, timeout=timeout)
         except requests.exceptions.ConnectionError as e:
             _tc_logger.error(f"  ConnectionError: {e}")
             raise TcConnectionError(
@@ -323,9 +348,11 @@ class TcSoaClient:
         """
         Login to Teamcenter.
         Uses Core-2008-06-Session/login with exact parameters from CHECKSHEET.exe.
+        Read timeout is at least 120s (SSO/TcSS often exceeds a plain 60s client limit).
+        Retries up to 3 times on transient Web Tier / “assign a server” errors (code 1003 class).
+        If JsonRestServices still fails, tries RestServices once (alternate routing on some sites).
         """
         # Single correct format — matches the EXE's SessionService.Login() call
-        # EXE calls: Login(username, password, group="", role="", locale="", discriminator="SoaAppX")
         body = {
             "username": username,
             "password": password,
@@ -336,7 +363,62 @@ class TcSoaClient:
         }
 
         _tc_logger.info(f"Login attempt: Core-2008-06-Session/login, user={username}")
-        result = self._post("Core-2008-06-Session", "login", body)
+        login_read = max(120, int(self.post_timeout))
+        login_timeout = (15, login_read)
+        max_attempts = 3
+        retry_delay_s = 8
+
+        result = None
+        last_err = None
+        for attempt in range(1, max_attempts + 1):
+            try:
+                result = self._post(
+                    "Core-2008-06-Session",
+                    "login",
+                    body,
+                    timeout=login_timeout,
+                    endpoint_family="JsonRestServices",
+                )
+                last_err = None
+                break
+            except TcAuthError:
+                raise
+            except TcSoaError as e:
+                last_err = e
+                if _is_transient_tc_web_tier_error(e) and attempt < max_attempts:
+                    _tc_logger.warning(
+                        "  Login attempt %s/%s: transient Web Tier / pool error — retrying in %ss: %s",
+                        attempt,
+                        max_attempts,
+                        retry_delay_s,
+                        e,
+                    )
+                    time.sleep(retry_delay_s)
+                    continue
+                if not _is_transient_tc_web_tier_error(e):
+                    raise
+                break
+
+        if result is None and last_err is not None:
+            _tc_logger.warning(
+                "  JsonRestServices login failed with Web Tier / pool error; trying RestServices once"
+            )
+            try:
+                result = self._post(
+                    "Core-2008-06-Session",
+                    "login",
+                    body,
+                    timeout=login_timeout,
+                    endpoint_family="RestServices",
+                )
+            except TcSoaError as e2:
+                _tc_logger.warning("  RestServices login failed: %s", e2)
+                raise TcSoaError(
+                    f"{last_err} (RestServices fallback also failed: {e2})"
+                ) from e2
+
+        if result is None:
+            raise last_err if last_err else TcSoaError("Login failed with no response")
 
         _tc_logger.info(f"Login SUCCESS")
         _tc_logger.info(f"  Response keys: {list(result.keys())}")
@@ -349,7 +431,7 @@ class TcSoaClient:
         if not self.is_connected:
             return
         try:
-            self._post("Core-2006-03-Session", "logout", {})
+            self._post("Core-2006-03-Session", "logout", {}, timeout=(10, 60))
         except Exception:
             pass
         finally:
@@ -819,67 +901,172 @@ class TcSoaClient:
     # WHERE-USED — Climb BOM hierarchy to find top-level assembly
     # ------------------------------------------------------------------
 
+    @staticmethod
+    def split_item_id_and_revision(item_id_str):
+        """
+        Saved queries and Item ID fields use the bare id; revision is separate.
+        Accepts '3233143', '3233143/C', 'AFE96/A' → (base_id, rev_or_None).
+        """
+        s = str(item_id_str or "").strip()
+        if not s:
+            return "", None
+        if "/" in s:
+            left, right = s.split("/", 1)
+            rev = right.strip() or None
+            return left.strip(), rev
+        return s, None
+
+    def _extract_where_used_parent_uids(self, entry):
+        """Pull parent ItemRevision UIDs from one whereUsed output element (2012-02: info[].parentObject.uid, etc.)."""
+        uids = []
+
+        def _uid_from_obj(o):
+            if isinstance(o, str) and o:
+                return o
+            if isinstance(o, dict):
+                u = o.get("uid")
+                if u:
+                    return u
+            return None
+
+        if not isinstance(entry, dict):
+            return uids
+
+        for key in ("parentItemRev", "parentItemRevision", "parentObject", "component"):
+            u = _uid_from_obj(entry.get(key))
+            if u:
+                uids.append(u)
+
+        infos = entry.get("info") or entry.get("Info") or []
+        for info in infos:
+            if not isinstance(info, dict):
+                continue
+            for key in ("parentItemRev", "parentItemRevision", "parentObject"):
+                u = _uid_from_obj(info.get(key))
+                if u:
+                    uids.append(u)
+
+        return uids
+
+    # NULL UID constant from decompiled NullModelObject.NULL_ID
+    _TC_NULL_UID = "AAAAAAAAAAAAAA"
+
+    # Read timeout for WhereUsed HTTP layer (connect is short; read holds the BOM work).
+    # Keep moderate to avoid piling sequential multi-minute waits when an endpoint misbehaves.
+    _WHERE_USED_TIMEOUT_S = 120
+    _WHERE_USED_FALLBACK_TIMEOUT_S = 25
+
     def where_used(self, item_revision_uid):
         """
         Find parent assemblies that contain this item revision as a BOM child.
-        Uses Cad-2007-01-StructureManagement/whereUsed SOA.
 
-        Returns list of dicts: [{"uid": parent_uid, "item_id": ..., "item_revision_id": ...}, ...]
+        Primary path uses **lowercase** operation name ``whereUsed`` on Core-2012-02 (JsonRestServices
+        rejects capital ``WhereUsed`` with 214086). Maps use empty arrays per SOA wire format.
+        Falls back to Core-2007-01 ``whereUsed``, RestServices, then capital-W as last resort.
+        Uses an extended HTTP timeout for where-used calls.
+
+        Returns list of parent ItemRevision UIDs (strings).
         """
         if not item_revision_uid:
             return []
 
         _tc_logger.info(f"where_used: uid={item_revision_uid}")
 
-        # Set property policy so we get item_id/revision back
         self.set_property_policy({
             "ItemRevision": ["item_id", "item_revision_id", "object_name"],
             "H4_Hussmann_ItemRevision": ["item_id", "item_revision_id", "object_name"],
         })
 
-        try:
-            result = self._post(
-                "Cad-2007-01-StructureManagement", "whereUsed",
-                {"inputObjects": [{"uid": item_revision_uid}]}
+        # SOA typed maps serialize as arrays of {key,value} entries; empty maps are [].
+        _empty_maps_list = {
+            "stringMap": [], "doubleMap": [], "intMap": [],
+            "boolMap": [], "dateMap": [], "tagMap": [], "floatMap": [],
+        }
+
+        body_2012 = {
+            "input": [{
+                "inputObject": {"uid": item_revision_uid},
+                "useLocalParams": False,
+                "inputParams": dict(_empty_maps_list),
+                "clientId": "",
+            }],
+            "configParams": dict(_empty_maps_list),
+        }
+
+        body_2012_no_input_params = {
+            "input": [{
+                "inputObject": {"uid": item_revision_uid},
+                "useLocalParams": False,
+                "clientId": "",
+            }],
+            "configParams": dict(_empty_maps_list),
+        }
+
+        body_2007 = {
+            "objects": [{"uid": item_revision_uid}],
+            "numLevels": 1,
+            "whereUsedPrecise": False,
+            "rule": {"uid": self._TC_NULL_UID},
+        }
+
+        # (endpoint_family, service, operation, body, envelope, read_timeout_seconds)
+        # JsonRest lowercase first. RestServices last — often slower / duplicate; short fallbacks for capital-W.
+        attempts = [
+            ("JsonRestServices", "Core-2012-02-DataManagement", "whereUsed", body_2012, True, self._WHERE_USED_TIMEOUT_S),
+            ("JsonRestServices", "Core-2012-02-DataManagement", "whereUsed", body_2012_no_input_params, True, self._WHERE_USED_TIMEOUT_S),
+            ("JsonRestServices", "Core-2007-01-DataManagement", "whereUsed", body_2007, True, self._WHERE_USED_TIMEOUT_S),
+            ("RestServices", "Core-2012-02-DataManagement", "whereUsed", body_2012, True, self._WHERE_USED_TIMEOUT_S),
+            # Last resort: capital-W (214086 on JsonRest is instant; RestServices may differ)
+            ("JsonRestServices", "Core-2012-02-DataManagement", "WhereUsed", body_2012, True, self._WHERE_USED_FALLBACK_TIMEOUT_S),
+            ("RestServices", "Core-2012-02-DataManagement", "WhereUsed", body_2012, True, self._WHERE_USED_FALLBACK_TIMEOUT_S),
+            ("JsonRestServices", "Core-2007-01-DataManagement", "WhereUsed", body_2007, True, self._WHERE_USED_FALLBACK_TIMEOUT_S),
+        ]
+
+        result = None
+        for endpoint_family, service, operation, body, envelope, read_sec in attempts:
+            # (connect, read) avoids blaming TC for slow reads when the socket was stuck connecting.
+            http_timeout = (15, int(read_sec))
+            label = (
+                f"{endpoint_family}/{service}/{operation} "
+                f"envelope={envelope} read_timeout={read_sec}s"
             )
-        except TcSoaError as e:
-            _tc_logger.warning(f"  whereUsed SOA failed: {e}")
+            try:
+                result = self._post(
+                    service,
+                    operation,
+                    body,
+                    endpoint_family=endpoint_family,
+                    use_session_envelope=envelope,
+                    timeout=http_timeout,
+                )
+                _tc_logger.info(f"  where_used: {label} succeeded")
+                break
+            except TcSoaError as e:
+                _tc_logger.warning(f"  where_used: {label} failed: {e}")
+
+        if result is None:
+            _tc_logger.warning("  where_used: all endpoints failed, returning empty")
             return []
 
         parents = []
-        # Parse response — structure varies by TC version
+
+        # Parse output[].info[].parentItemRev / parentObject
         output = result.get("output", [])
-        if not output:
-            output = result.get("parentComponents", [])
-
         for entry in output:
-            if isinstance(entry, dict):
-                # Try common response shapes
-                parent_obj = entry.get("parentItemRevision") or entry.get("component") or entry
-                uid = parent_obj.get("uid", "") if isinstance(parent_obj, dict) else ""
-                if uid and uid != item_revision_uid:
+            if not isinstance(entry, dict):
+                continue
+            for uid in self._extract_where_used_parent_uids(entry):
+                if uid and uid != item_revision_uid and uid != self._TC_NULL_UID:
                     parents.append(uid)
-            elif isinstance(entry, str) and entry != item_revision_uid:
-                parents.append(entry)
 
-        # Also check ServiceData for created/updated objects
-        svc_data = result.get("ServiceData", result.get("serviceData", {}))
+        # Fallback: ItemRevision objects in ServiceData.modelObjects
+        svc_data = result.get("ServiceData") or result.get("serviceData") or {}
         if isinstance(svc_data, dict):
-            model_objs = svc_data.get("modelObjects", {})
-            for uid_key, obj in model_objs.items():
-                if isinstance(obj, dict):
-                    obj_type = obj.get("type", "")
-                    if "Revision" in obj_type and uid_key != item_revision_uid:
-                        props = obj.get("props", {})
-                        item_id_prop = props.get("item_id", {})
-                        item_id_val = ""
-                        if isinstance(item_id_prop, dict):
-                            db_vals = item_id_prop.get("dbValues", [])
-                            item_id_val = db_vals[0] if db_vals else ""
-                        if item_id_val:
-                            parents.append(uid_key)
+            for uid_key, obj in svc_data.get("modelObjects", {}).items():
+                if isinstance(obj, dict) and "Revision" in obj.get("type", ""):
+                    if uid_key != item_revision_uid and uid_key != self._TC_NULL_UID:
+                        parents.append(uid_key)
 
-        # Deduplicate
         seen = set()
         unique_parents = []
         for uid in parents:
@@ -899,22 +1086,28 @@ class TcSoaClient:
         if not item_id:
             return None
 
-        _tc_logger.info(f"resolve_item_to_revision_uid: {item_id}/{revision_id or '*'}")
+        base_id, rev_from_id = self.split_item_id_and_revision(item_id)
+        if not base_id:
+            return None
+        if revision_id is None and rev_from_id:
+            revision_id = rev_from_id
+
+        _tc_logger.info(f"resolve_item_to_revision_uid: {base_id}/{revision_id or '*'}")
 
         try:
             uids = self.execute_saved_query(
-                "Item Revision...", ["Item ID"], [str(item_id)]
+                "Item Revision...", ["Item ID"], [str(base_id)]
             )
         except TcSoaError as e:
             _tc_logger.warning(f"  Saved query failed for {item_id}: {e}")
             return None
 
         if not uids:
-            _tc_logger.info(f"  No UIDs found for {item_id}")
+            _tc_logger.info(f"  No UIDs found for {base_id}")
             return None
 
         if not revision_id or len(uids) == 1:
-            _tc_logger.info(f"  Resolved {item_id} → {uids[0]}")
+            _tc_logger.info(f"  Resolved {base_id} → {uids[0]}")
             return uids[0]
 
         # Multiple revisions — fetch properties to match revision_id
@@ -923,7 +1116,7 @@ class TcSoaClient:
             for uid in uids:
                 rev = props.get(uid, {}).get("item_revision_id", "")
                 if rev.upper() == revision_id.upper():
-                    _tc_logger.info(f"  Resolved {item_id}/{revision_id} → {uid}")
+                    _tc_logger.info(f"  Resolved {base_id}/{revision_id} → {uid}")
                     return uid
         except TcSoaError:
             pass
@@ -946,14 +1139,21 @@ class TcSoaClient:
             }
         Or {"found": False, "chain": [item_id], "error": "..."} on failure.
         """
-        _tc_logger.info(f"find_top_level_assembly: {item_id}/{revision_id or '*'}")
+        base_id, rev_from_id = self.split_item_id_and_revision(item_id)
+        if not base_id:
+            return {"found": False, "chain": [item_id], "error": "Empty item id"}
 
-        # Step 1: Resolve item_id to UID
-        current_uid = self.resolve_item_to_revision_uid(item_id, revision_id)
+        if revision_id is None and rev_from_id:
+            revision_id = rev_from_id
+
+        _tc_logger.info(f"find_top_level_assembly: {base_id}/{revision_id or '*'}")
+
+        # Step 1: Resolve item_id to UID (saved query uses bare Item ID only)
+        current_uid = self.resolve_item_to_revision_uid(base_id, revision_id)
         if not current_uid:
-            return {"found": False, "chain": [item_id], "error": "Could not resolve item to UID"}
+            return {"found": False, "chain": [base_id], "error": "Could not resolve item to UID"}
 
-        chain = [item_id]
+        chain = [base_id]
         visited = {current_uid}
 
         for level in range(max_levels):
@@ -985,7 +1185,7 @@ class TcSoaClient:
 
         # Current_uid is now the root
         # Get final properties
-        root_item_id = chain[-1] if chain else item_id
+        root_item_id = chain[-1] if chain else base_id
         root_rev_id = ""
         try:
             props = self.get_properties([current_uid], ["item_id", "item_revision_id", "object_name"])
