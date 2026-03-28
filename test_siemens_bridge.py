@@ -241,8 +241,23 @@ def tc_connect(url, username, password, retries=3, retry_delay=8):
 
     cred_mgr = create_credential_manager(username, password)
 
+    # Enable .NET network tracing to see what the DLL is doing
+    try:
+        import System.Diagnostics
+        ts = System.Diagnostics.TraceSource("System.Net", System.Diagnostics.SourceLevels.All)
+        log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dotnet_trace.log")
+        listener = System.Diagnostics.TextWriterTraceListener(log_path)
+        ts.Listeners.Add(listener)
+        System.Diagnostics.Trace.AutoFlush = True
+        print(f"  .NET trace logging to: {log_path}")
+    except Exception as e:
+        print(f"  Could not enable .NET tracing: {e}")
+
     for attempt in range(1, retries + 1):
         try:
+            # Ensure URL has trailing slash (some TC SOA clients require it)
+            if not url.endswith("/"):
+                url = url + "/"
             print(f"Login attempt {attempt}/{retries} to {url} ...")
             print(f"  Protocol: {SoaConstants.REST} / {SoaConstants.HTTP}")
 
@@ -253,7 +268,32 @@ def tc_connect(url, username, password, retries=3, retry_delay=8):
             session_svc = SessionService.getService(conn)
             args = cred_mgr.GetLoginArgs()
             print(f"  Logging in as {args[0]} ...")
-            response = session_svc.Login(args[0], args[1], args[2], args[3], args[4], args[5])
+            print(f"  (If this hangs, check dotnet_trace.log and kill with Ctrl+C)")
+            # Run login in a thread with timeout so we don't hang forever
+            import threading
+            login_result = [None]
+            login_error = [None]
+
+            def _do_login():
+                try:
+                    login_result[0] = session_svc.Login(
+                        args[0], args[1], args[2], args[3], args[4], args[5]
+                    )
+                except Exception as e:
+                    login_error[0] = e
+
+            t = threading.Thread(target=_do_login, daemon=True)
+            t.start()
+            t.join(timeout=60)  # 60 second timeout
+
+            if t.is_alive():
+                print(f"\n  LOGIN TIMED OUT after 60s!")
+                print(f"  Check dotnet_trace.log for what happened.")
+                print(f"  The Siemens DLL's internal HTTP call is hanging.")
+                raise TimeoutError("Login hung for 60s")
+
+            if login_error[0]:
+                raise login_error[0]
 
             print(f"  Login OK!")
             return conn
