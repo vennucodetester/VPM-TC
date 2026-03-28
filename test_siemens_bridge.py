@@ -23,32 +23,61 @@ import urllib.error
 # 1. Load Siemens TC .NET assemblies via pythonnet
 # ---------------------------------------------------------------------------
 
-DLL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Check Sheet 1.0.3.5")
+DLL_SOURCE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Check Sheet 1.0.3.5")
+
+# .NET blocks loading DLLs from OneDrive/network paths (CAS policy).
+# Copy them to a local temp folder so they load cleanly.
+LOCAL_DLL_DIR = os.path.join(os.environ.get("TEMP", r"C:\Temp"), "tc_soa_dlls")
+
+REQUIRED_DLLS = [
+    "TcSoaClient",
+    "TcSoaCommon",
+    "TcSoaCoreStrong",
+    "TcSoaCoreTypes",
+    "TcSoaStrongModel",
+    "TcSoaQueryStrong",
+    "TcSoaQueryTypes",
+    "TcSoaCadStrong",
+    "TcSoaCadTypes",
+]
+
+
+def _ensure_local_dlls():
+    """Copy DLLs from OneDrive/network source to local temp if needed."""
+    import shutil
+    os.makedirs(LOCAL_DLL_DIR, exist_ok=True)
+    for dll_name in REQUIRED_DLLS:
+        src = os.path.join(DLL_SOURCE_DIR, f"{dll_name}.dll")
+        dst = os.path.join(LOCAL_DLL_DIR, f"{dll_name}.dll")
+        if not os.path.exists(dst) or os.path.getmtime(src) > os.path.getmtime(dst):
+            shutil.copy2(src, dst)
+    # Also copy any other DLLs the TC libs depend on (log4net, binding interfaces, etc.)
+    for f in os.listdir(DLL_SOURCE_DIR):
+        if f.lower().endswith(".dll"):
+            src = os.path.join(DLL_SOURCE_DIR, f)
+            dst = os.path.join(LOCAL_DLL_DIR, f)
+            if not os.path.exists(dst) or os.path.getmtime(src) > os.path.getmtime(dst):
+                shutil.copy2(src, dst)
+    print(f"  DLLs staged to local path: {LOCAL_DLL_DIR}")
+
 
 def load_tc_assemblies():
-    """Load all required Teamcenter SOA .NET DLLs."""
+    """Load all required Teamcenter SOA .NET DLLs from a local (non-network) path."""
     import clr
-    sys.path.insert(0, DLL_DIR)
 
-    required = [
-        "TcSoaClient",
-        "TcSoaCommon",
-        "TcSoaCoreStrong",
-        "TcSoaCoreTypes",
-        "TcSoaStrongModel",
-        "TcSoaQueryStrong",
-        "TcSoaQueryTypes",
-        "TcSoaCadStrong",
-        "TcSoaCadTypes",
-    ]
-    for dll in required:
-        path = os.path.join(DLL_DIR, dll)
+    _ensure_local_dlls()
+    sys.path.insert(0, LOCAL_DLL_DIR)
+
+    loaded = 0
+    for dll in REQUIRED_DLLS:
+        path = os.path.join(LOCAL_DLL_DIR, dll)
         try:
             clr.AddReference(path)
+            loaded += 1
         except Exception as e:
             print(f"  WARNING: Could not load {dll}: {e}")
 
-    print(f"Loaded {len(required)} TC assemblies from {DLL_DIR}")
+    print(f"Loaded {loaded}/{len(REQUIRED_DLLS)} TC assemblies from {LOCAL_DLL_DIR}")
 
 
 # ---------------------------------------------------------------------------
