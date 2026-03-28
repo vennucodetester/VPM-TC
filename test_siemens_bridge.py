@@ -478,8 +478,8 @@ def main():
     parser = argparse.ArgumentParser(description="Siemens TC .NET Bridge POC")
     parser.add_argument("--url", default="http://STLV-HSMWEBTCP1:8080/tc",
                         help="Teamcenter base URL")
-    parser.add_argument("--user", required=True, help="TC username")
-    parser.add_argument("--password", required=True, help="TC password")
+    parser.add_argument("--user", default=None, help="TC username")
+    parser.add_argument("--password", default=None, help="TC password")
     parser.add_argument("--item", help="Item ID to look up (e.g., 0200501)")
     parser.add_argument("--climb", action="store_true",
                         help="Climb full hierarchy to top-level assembly")
@@ -496,6 +496,10 @@ def main():
         print(f"Pinging TC SOA web tier at {args.url} ...")
         ok = ping_tc_url(args.url)
         sys.exit(0 if ok else 1)
+
+    # Require credentials for non-ping operations
+    if not args.user or not args.password:
+        parser.error("--user and --password are required (unless using --ping)")
 
     # Load assemblies
     load_tc_assemblies()
