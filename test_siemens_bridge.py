@@ -478,9 +478,9 @@ def main():
     parser = argparse.ArgumentParser(description="Siemens TC .NET Bridge POC")
     parser.add_argument("--url", default="http://STLV-HSMWEBTCP1:8080/tc",
                         help="Teamcenter base URL")
-    parser.add_argument("--user", default=None, help="TC username")
-    parser.add_argument("--password", default=None, help="TC password")
-    parser.add_argument("--item", help="Item ID to look up (e.g., 0200501)")
+    parser.add_argument("--user", default="(user)", help="TC username")
+    parser.add_argument("--password", default="(password)", help="TC password")
+    parser.add_argument("--item", default="0200501", help="Item ID to look up (e.g., 0200501)")
     parser.add_argument("--climb", action="store_true",
                         help="Climb full hierarchy to top-level assembly")
     parser.add_argument("--list-queries", action="store_true",
@@ -498,8 +498,8 @@ def main():
         sys.exit(0 if ok else 1)
 
     # Require credentials for non-ping operations
-    if not args.user or not args.password:
-        parser.error("--user and --password are required (unless using --ping)")
+    if args.user == "(user)" or args.password == "(password)":
+        parser.error("Replace (user) and (password) with your actual TC credentials in the script, or pass --user X --password Y")
 
     # Load assemblies
     load_tc_assemblies()
