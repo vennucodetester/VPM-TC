@@ -39,6 +39,7 @@ Thumbs.db
 
 # Project specific
 *.log
+!tc_debug.log
 *.vpmw
 ~$*.xlsx
 ~$*.xls

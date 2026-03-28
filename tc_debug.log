@@ -1,0 +1,42 @@
+2026-03-28 01:03:06,249 [INFO] TC Connector module loaded
+2026-03-28 01:04:42,800 [INFO] Login attempt: Core-2008-06-Session/login, user=ccbefb
+2026-03-28 01:04:42,800 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2008-06-Session/login
+2026-03-28 01:04:42,801 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-03-28 01:04:42,801 [DEBUG]   Body: {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}
+2026-03-28 01:04:42,801 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}}
+2026-03-28 01:05:12,923 [DEBUG]   Response HTTP 500
+2026-03-28 01:05:12,923 [DEBUG]   Response body (first 3000 chars): {".QName":"http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException","messages":[{"code":1003,"level":3,"message":"Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator."}]}
+
+2026-03-28 01:05:12,923 [DEBUG]   Response keys: ['.QName', 'messages']
+2026-03-28 01:05:12,924 [WARNING]   TC exception response: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException | Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator.
+2026-03-28 01:05:12,924 [WARNING]   Login attempt 1/3: transient Web Tier / pool error — retrying in 8s: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException: Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator.
+2026-03-28 01:05:20,924 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2008-06-Session/login
+2026-03-28 01:05:20,924 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-03-28 01:05:20,924 [DEBUG]   Body: {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}
+2026-03-28 01:05:20,925 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}}
+2026-03-28 01:05:51,157 [DEBUG]   Response HTTP 500
+2026-03-28 01:05:51,158 [DEBUG]   Response body (first 3000 chars): {".QName":"http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException","messages":[{"code":1003,"level":3,"message":"Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator."}]}
+
+2026-03-28 01:05:51,158 [DEBUG]   Response keys: ['.QName', 'messages']
+2026-03-28 01:05:51,158 [WARNING]   TC exception response: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException | Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator.
+2026-03-28 01:05:51,158 [WARNING]   Login attempt 2/3: transient Web Tier / pool error — retrying in 8s: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException: Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator.
+2026-03-28 01:05:59,158 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2008-06-Session/login
+2026-03-28 01:05:59,158 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-03-28 01:05:59,159 [DEBUG]   Body: {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}
+2026-03-28 01:05:59,159 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}}
+2026-03-28 01:06:29,373 [DEBUG]   Response HTTP 500
+2026-03-28 01:06:29,373 [DEBUG]   Response body (first 3000 chars): {".QName":"http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException","messages":[{"code":1003,"level":3,"message":"Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator."}]}
+
+2026-03-28 01:06:29,373 [DEBUG]   Response keys: ['.QName', 'messages']
+2026-03-28 01:06:29,373 [WARNING]   TC exception response: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException | Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator.
+2026-03-28 01:06:29,373 [WARNING]   JsonRestServices login failed with Web Tier / pool error; trying RestServices once
+2026-03-28 01:06:29,373 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/RestServices/Core-2008-06-Session/login
+2026-03-28 01:06:29,373 [DEBUG]   Request mode: endpoint_family=RestServices, payload_mode=session-envelope
+2026-03-28 01:06:29,373 [DEBUG]   Body: {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}
+2026-03-28 01:06:29,373 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}}
+2026-03-28 01:06:59,611 [DEBUG]   Response HTTP 500
+2026-03-28 01:06:59,611 [DEBUG]   Response body (first 3000 chars): {".QName":"http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException","messages":[{"code":1003,"level":3,"message":"Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator."}]}
+
+2026-03-28 01:06:59,611 [DEBUG]   Response keys: ['.QName', 'messages']
+2026-03-28 01:06:59,611 [WARNING]   TC exception response: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException | Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator.
+2026-03-28 01:06:59,611 [WARNING]   RestServices login failed: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException: Failed to assign a server. There was unexpected error on the Web Tier and/or the Server Manager. Please contact the system administrator.
