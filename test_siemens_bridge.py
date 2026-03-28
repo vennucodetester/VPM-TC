@@ -20,6 +20,47 @@ import urllib.request
 import urllib.error
 
 # ---------------------------------------------------------------------------
+# 0. Fix .NET CAS policy BEFORE importing pythonnet
+# ---------------------------------------------------------------------------
+
+def _ensure_loadfromremotesources():
+    """
+    .NET Framework blocks Assembly.LoadFrom() on 'untrusted' paths unless
+    loadFromRemoteSources is enabled. Create a python.exe.config next to
+    the running Python interpreter to allow it.
+    """
+    python_exe = sys.executable
+    config_path = python_exe + ".config"
+    config_xml = """\
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <runtime>
+    <loadFromRemoteSources enabled="true"/>
+  </runtime>
+</configuration>
+"""
+    needs_write = False
+    if not os.path.exists(config_path):
+        needs_write = True
+    else:
+        with open(config_path, "r") as f:
+            if "loadFromRemoteSources" not in f.read():
+                needs_write = True
+
+    if needs_write:
+        try:
+            with open(config_path, "w") as f:
+                f.write(config_xml)
+            print(f"  Created {config_path} (loadFromRemoteSources=true)")
+            print(f"  NOTE: You may need to re-run the script for this to take effect.")
+        except PermissionError:
+            print(f"  WARNING: Cannot write {config_path} (no permission).")
+            print(f"  Try running as Administrator once, or manually create this file.")
+
+# Run before anything else
+_ensure_loadfromremotesources()
+
+# ---------------------------------------------------------------------------
 # 1. Load Siemens TC .NET assemblies via pythonnet
 # ---------------------------------------------------------------------------
 
@@ -61,8 +102,29 @@ def _ensure_local_dlls():
     print(f"  DLLs staged to local path: {LOCAL_DLL_DIR}")
 
 
-def load_tc_assemblies():
+def _try_set_coreclr_runtime():
+    """
+    If .NET Framework CAS blocks loading, try switching pythonnet to .NET Core
+    which has no CAS restrictions. Must be called BEFORE 'import clr'.
+    """
+    try:
+        from clr_loader import get_coreclr
+        runtime = get_coreclr()
+        # Set the runtime for pythonnet
+        import pythonnet
+        pythonnet.set_runtime(runtime)
+        print("  Using .NET Core (coreclr) runtime — no CAS restrictions")
+        return True
+    except Exception as e:
+        print(f"  coreclr not available ({e}), using .NET Framework")
+        return False
+
+
+def load_tc_assemblies(use_coreclr=False):
     """Load all required Teamcenter SOA .NET DLLs from a local (non-network) path."""
+    if use_coreclr:
+        _try_set_coreclr_runtime()
+
     import clr
 
     _ensure_local_dlls()
@@ -76,6 +138,10 @@ def load_tc_assemblies():
             loaded += 1
         except Exception as e:
             print(f"  WARNING: Could not load {dll}: {e}")
+
+    if loaded == 0 and not use_coreclr:
+        print("\n  All DLLs failed with .NET Framework. Retrying with .NET Core...")
+        return load_tc_assemblies(use_coreclr=True)
 
     print(f"Loaded {loaded}/{len(REQUIRED_DLLS)} TC assemblies from {LOCAL_DLL_DIR}")
 
