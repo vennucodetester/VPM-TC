@@ -14,7 +14,10 @@ Requirements:
 import argparse
 import os
 import sys
+import time
 import traceback
+import urllib.request
+import urllib.error
 
 # ---------------------------------------------------------------------------
 # 1. Load Siemens TC .NET assemblies via pythonnet
@@ -97,31 +100,81 @@ def create_exception_handler():
 
 
 # ---------------------------------------------------------------------------
-# 3. Connect and login
+# 3. Connectivity pre-check and login
 # ---------------------------------------------------------------------------
 
-def tc_connect(url, username, password):
-    """Create Connection and login, mirroring TCFunctions.TC_login exactly."""
+def ping_tc_url(url, timeout=15):
+    """Quick HTTP check to see if the TC SOA web tier is reachable at all."""
+    # Try both RestServices and JsonRestServices endpoints
+    test_urls = [
+        f"{url.rstrip('/')}/RestServices/Core-2008-06-Session",
+        f"{url.rstrip('/')}/JsonRestServices/Core-2008-06-Session",
+        url.rstrip('/'),
+    ]
+    for test_url in test_urls:
+        try:
+            req = urllib.request.Request(test_url, method="GET")
+            resp = urllib.request.urlopen(req, timeout=timeout)
+            print(f"  REACHABLE: {test_url} -> HTTP {resp.status}")
+            return True
+        except urllib.error.HTTPError as e:
+            # HTTP error but server responded — that's fine, SOA tier is alive
+            print(f"  REACHABLE: {test_url} -> HTTP {e.code} (server responded)")
+            return True
+        except urllib.error.URLError as e:
+            print(f"  UNREACHABLE: {test_url} -> {e.reason}")
+        except Exception as e:
+            print(f"  UNREACHABLE: {test_url} -> {e}")
+    return False
+
+
+def tc_connect(url, username, password, retries=3, retry_delay=8):
+    """Create Connection and login with retry logic for flaky SOA web tier."""
     from System.Net import CookieCollection
     from Teamcenter.Soa import SoaConstants
     from Teamcenter.Soa.Client import Connection
     from Teamcenter.Services.Strong.Core import SessionService
 
+    # Pre-check: is the SOA tier even reachable?
+    print(f"\nPre-check: pinging {url} ...")
+    if not ping_tc_url(url):
+        print("\n  WARNING: SOA web tier appears unreachable.")
+        print("  Active Workspace uses a different path/port than SOA RestServices.")
+        print("  The SOA pool on :8080 may be down. Ask IT to check the web tier.")
+        print("  Will still attempt login in case ping was a false negative...\n")
+
     cred_mgr = create_credential_manager(username, password)
 
-    print(f"Connecting to {url} ...")
-    print(f"  Protocol: {SoaConstants.REST} / {SoaConstants.HTTP}")
+    for attempt in range(1, retries + 1):
+        try:
+            print(f"Login attempt {attempt}/{retries} to {url} ...")
+            print(f"  Protocol: {SoaConstants.REST} / {SoaConstants.HTTP}")
 
-    conn = Connection(url, CookieCollection(), cred_mgr, SoaConstants.REST, SoaConstants.HTTP, False)
-    conn.ExceptionHandler = create_exception_handler()
+            conn = Connection(url, CookieCollection(), cred_mgr,
+                              SoaConstants.REST, SoaConstants.HTTP, False)
+            conn.ExceptionHandler = create_exception_handler()
 
-    session_svc = SessionService.getService(conn)
-    args = cred_mgr.get_login_args()
-    print(f"  Logging in as {args[0]} ...")
-    response = session_svc.Login(args[0], args[1], args[2], args[3], args[4], args[5])
+            session_svc = SessionService.getService(conn)
+            args = cred_mgr.get_login_args()
+            print(f"  Logging in as {args[0]} ...")
+            response = session_svc.Login(args[0], args[1], args[2], args[3], args[4], args[5])
 
-    print(f"  Login OK")
-    return conn
+            print(f"  Login OK!")
+            return conn
+
+        except Exception as e:
+            err_str = str(e).lower()
+            is_transient = any(kw in err_str for kw in [
+                "timeout", "timed out", "assign a server", "web tier",
+                "server manager", "1003", "connection", "socket",
+            ])
+
+            if is_transient and attempt < retries:
+                print(f"  Transient error: {e}")
+                print(f"  Retrying in {retry_delay}s ...")
+                time.sleep(retry_delay)
+            else:
+                raise
 
 
 def tc_logout(conn):
@@ -432,14 +485,24 @@ def main():
                         help="Climb full hierarchy to top-level assembly")
     parser.add_argument("--list-queries", action="store_true",
                         help="List all available saved queries")
+    parser.add_argument("--ping", action="store_true",
+                        help="Just check if TC SOA web tier is reachable (no login)")
+    parser.add_argument("--retries", type=int, default=3,
+                        help="Login retry attempts (default: 3)")
     args = parser.parse_args()
+
+    # Ping-only mode (no DLLs needed)
+    if args.ping:
+        print(f"Pinging TC SOA web tier at {args.url} ...")
+        ok = ping_tc_url(args.url)
+        sys.exit(0 if ok else 1)
 
     # Load assemblies
     load_tc_assemblies()
 
     conn = None
     try:
-        conn = tc_connect(args.url, args.user, args.password)
+        conn = tc_connect(args.url, args.user, args.password, retries=args.retries)
 
         if args.list_queries:
             list_queries(conn)
