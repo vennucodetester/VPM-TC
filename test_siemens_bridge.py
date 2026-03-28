@@ -80,6 +80,7 @@ REQUIRED_DLLS = [
     "TcSoaQueryTypes",
     "TcSoaCadStrong",
     "TcSoaCadTypes",
+    "TcPythonHelper",
 ]
 
 
@@ -147,51 +148,22 @@ def load_tc_assemblies(use_coreclr=False):
 
 
 # ---------------------------------------------------------------------------
-# 2. Implement CredentialManager interface (same as checksheet app)
+# 2. Use precompiled C# helper DLL for .NET interface implementations
+#    (pythonnet can't subclass .NET interfaces directly)
 # ---------------------------------------------------------------------------
 
 def create_credential_manager(username, password):
-    """Create a .NET CredentialManager implementation matching the checksheet pattern."""
-    from Teamcenter.Soa.Client import CredentialManager
-
-    class PyCredentialManager(CredentialManager):
-        def __init__(self, user, pwd):
-            self._user = user
-            self._pwd = pwd
-            self._group = ""
-            self._role = ""
-            self._discriminator = "SoaAppX"
-
-        @property
-        def CredentialType(self):
-            return 0
-
-        def GetCredentials(self, exception):
-            # Return empty array on re-auth (same as checksheet)
-            from System import Array, String
-            return Array.CreateInstance(String, 0)
-
-        def SetGroupRole(self, group, role):
-            pass
-
-        def SetUserPassword(self, user, password, discriminator):
-            pass
-
-        def get_login_args(self):
-            return (self._user, self._pwd, self._group, self._role, "", self._discriminator)
-
-    return PyCredentialManager(username, password)
+    """Create a CredentialManager using the precompiled TcPythonHelper.dll."""
+    from TcPythonHelper import SimpleCredentialManager
+    mgr = SimpleCredentialManager()
+    mgr.SetCredentials(username, password)
+    return mgr
 
 
 def create_exception_handler():
-    """Create a .NET ExceptionHandler (no-op, same as checksheet)."""
-    from Teamcenter.Soa.Client import ExceptionHandler
-
-    class PyExceptionHandler(ExceptionHandler):
-        def HandleException(self, exception):
-            print(f"  TC Exception: {exception}")
-
-    return PyExceptionHandler()
+    """Create an ExceptionHandler using the precompiled TcPythonHelper.dll."""
+    from TcPythonHelper import SimpleExceptionHandler
+    return SimpleExceptionHandler()
 
 
 # ---------------------------------------------------------------------------
@@ -250,7 +222,7 @@ def tc_connect(url, username, password, retries=3, retry_delay=8):
             conn.ExceptionHandler = create_exception_handler()
 
             session_svc = SessionService.getService(conn)
-            args = cred_mgr.get_login_args()
+            args = cred_mgr.GetLoginArgs()
             print(f"  Logging in as {args[0]} ...")
             response = session_svc.Login(args[0], args[1], args[2], args[3], args[4], args[5])
 
