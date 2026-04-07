@@ -125,6 +125,18 @@ HSM_REVISION_RULE_FALLBACKS = [HSM_REVISION_RULE, "HSM_Production_DesignReleased
 HSM_BOM_VIEW_TYPE = "MTY View"
 
 
+# Unified property policy: union of every type/property combo VPM uses during a run.
+# Set ONCE at login so subsequent calls (where_used, lookup_*, etc.) don't re-send
+# setObjectPropertyPolicy on every item. See plan: vpm_speed plan, fix #1.
+UNIFIED_POLICY = {
+    "H4_Hussmann_ItemRevision": list(CHECKSHEET_POLICY_PROPS),
+    "ItemRevision": [
+        "item_id", "item_revision_id", "object_name", "object_desc",
+        "release_status_list", "process_stage",
+    ],
+}
+
+
 def get_ecn_type(ecn_id):
     """
     Determine ECN type from the ECN ID string.
@@ -173,6 +185,13 @@ class TcSoaClient:
         self._last_policy_signature = None
         self._bom_create_mode_cache = None
         self._bom_expand_mode_cache = None
+        # Performance caches (cleared on logout). See speedup plan.
+        self._where_used_cache = {}      # uid -> list[parent_uids]
+        self._top_level_cache = {}       # (base_id, rev) -> result dict
+        self._item_props_cache = {}      # uid -> dict of fetched props
+        self._nomenclature_cache = {}    # nom -> list[result dicts]
+        self._where_used_strategy = None  # tuple of attempt that succeeded last
+        self._unified_policy_set = False  # True after one-shot policy set at login
 
     @staticmethod
     def _get_service_data(result):
@@ -429,6 +448,16 @@ class TcSoaClient:
         _tc_logger.info(f"  Response keys: {list(result.keys())}")
         self.is_connected = True
         self.username = username
+
+        # Set the unified property policy ONCE per session so subsequent calls
+        # don't re-send setObjectPropertyPolicy on every item lookup.
+        try:
+            self.set_property_policy(UNIFIED_POLICY)
+            self._unified_policy_set = True
+            _tc_logger.info("  Unified property policy set (one-shot)")
+        except Exception as policy_err:
+            _tc_logger.warning(f"  Unified policy set failed (non-fatal): {policy_err}")
+
         return True
 
     def logout(self):
@@ -442,6 +471,14 @@ class TcSoaClient:
         finally:
             self.is_connected = False
             self.username = None
+            # Clear performance caches so a fresh login starts clean.
+            self._where_used_cache.clear()
+            self._top_level_cache.clear()
+            self._item_props_cache.clear()
+            self._nomenclature_cache.clear()
+            self._where_used_strategy = None
+            self._unified_policy_set = False
+            self._last_policy_signature = None
 
     def test_connection(self):
         """Test if the server URL is reachable."""
@@ -975,12 +1012,18 @@ class TcSoaClient:
         if not item_revision_uid:
             return []
 
+        # Memoization: parents for a given uid don't change during a run.
+        cached = self._where_used_cache.get(item_revision_uid)
+        if cached is not None:
+            _tc_logger.info(f"where_used: uid={item_revision_uid} (cache hit, {len(cached)} parents)")
+            return list(cached)
+
         _tc_logger.info(f"where_used: uid={item_revision_uid}")
 
-        self.set_property_policy({
-            "ItemRevision": ["item_id", "item_revision_id", "object_name"],
-            "H4_Hussmann_ItemRevision": ["item_id", "item_revision_id", "object_name"],
-        })
+        # Property policy is set ONCE at login (UNIFIED_POLICY); no per-call resend.
+        if not self._unified_policy_set:
+            self.set_property_policy(UNIFIED_POLICY)
+            self._unified_policy_set = True
 
         # SOA typed maps serialize as arrays of {key,value} entries; empty maps are [].
         _empty_maps_list = {
@@ -1027,7 +1070,22 @@ class TcSoaClient:
             ("JsonRestServices", "Core-2007-01-DataManagement", "WhereUsed", body_2007, True, self._WHERE_USED_FALLBACK_TIMEOUT_S),
         ]
 
+        # Sticky strategy: once an attempt succeeds for this run, try it FIRST on
+        # subsequent calls. Avoids the 7-fallback storm on every where_used.
+        # Strategy key = (endpoint_family, service, operation, id(body))
+        if self._where_used_strategy is not None:
+            stick_key = self._where_used_strategy
+            reordered = []
+            for a in attempts:
+                key = (a[0], a[1], a[2], id(a[3]))
+                if key == stick_key:
+                    reordered.insert(0, a)
+                else:
+                    reordered.append(a)
+            attempts = reordered
+
         result = None
+        successful_attempt = None
         for endpoint_family, service, operation, body, envelope, read_sec in attempts:
             # (connect, read) avoids blaming TC for slow reads when the socket was stuck connecting.
             http_timeout = (15, int(read_sec))
@@ -1045,6 +1103,7 @@ class TcSoaClient:
                     timeout=http_timeout,
                 )
                 _tc_logger.info(f"  where_used: {label} succeeded")
+                successful_attempt = (endpoint_family, service, operation, id(body))
                 break
             except TcSoaError as e:
                 _tc_logger.warning(f"  where_used: {label} failed: {e}")
@@ -1080,6 +1139,11 @@ class TcSoaClient:
                 unique_parents.append(uid)
 
         _tc_logger.info(f"  where_used found {len(unique_parents)} parents")
+        # Cache result and remember the winning strategy for this run.
+        self._where_used_cache[item_revision_uid] = list(unique_parents)
+        if successful_attempt is not None and self._where_used_strategy is None:
+            self._where_used_strategy = successful_attempt
+            _tc_logger.info(f"  where_used: sticky strategy locked to {successful_attempt[:3]}")
         return unique_parents
 
     def resolve_item_to_revision_uid(self, item_id, revision_id=None):
@@ -1151,6 +1215,15 @@ class TcSoaClient:
         if revision_id is None and rev_from_id:
             revision_id = rev_from_id
 
+        # Memoize: same item asked twice in a run -> instant.
+        cache_key = (base_id, (revision_id or "").upper())
+        cached_top = self._top_level_cache.get(cache_key)
+        if cached_top is not None:
+            _tc_logger.info(
+                f"find_top_level_assembly: {base_id}/{revision_id or '*'} (cache hit)"
+            )
+            return dict(cached_top)
+
         _tc_logger.info(f"find_top_level_assembly: {base_id}/{revision_id or '*'}")
 
         # Step 1: Resolve item_id to UID (saved query uses bare Item ID only)
@@ -1174,40 +1247,60 @@ class TcSoaClient:
                 break
             visited.add(parent_uid)
 
-            # Get parent's item_id
-            try:
-                props = self.get_properties([parent_uid], ["item_id", "item_revision_id"])
-                parent_props = props.get(parent_uid, {})
-                parent_item_id = parent_props.get("item_id", "")
-                parent_rev_id = parent_props.get("item_revision_id", "")
-            except TcSoaError:
-                parent_item_id = ""
-                parent_rev_id = ""
+            # Get parent's item_id (use cache to skip already-known uids).
+            cached_props = self._item_props_cache.get(parent_uid)
+            if cached_props is not None:
+                parent_item_id = cached_props.get("item_id", "")
+                parent_rev_id = cached_props.get("item_revision_id", "")
+            else:
+                try:
+                    props = self.get_properties(
+                        [parent_uid],
+                        ["item_id", "item_revision_id", "object_name"],
+                    )
+                    parent_props = props.get(parent_uid, {})
+                    parent_item_id = parent_props.get("item_id", "")
+                    parent_rev_id = parent_props.get("item_revision_id", "")
+                    if parent_props:
+                        self._item_props_cache[parent_uid] = dict(parent_props)
+                except TcSoaError:
+                    parent_item_id = ""
+                    parent_rev_id = ""
 
             if parent_item_id:
                 chain.append(parent_item_id)
             current_uid = parent_uid
 
         # Current_uid is now the root
-        # Get final properties
+        # Get final properties (cache hit avoids round trip)
         root_item_id = chain[-1] if chain else base_id
         root_rev_id = ""
-        try:
-            props = self.get_properties([current_uid], ["item_id", "item_revision_id", "object_name"])
-            root_props = props.get(current_uid, {})
-            root_item_id = root_props.get("item_id", root_item_id)
-            root_rev_id = root_props.get("item_revision_id", "")
-        except TcSoaError:
-            pass
+        cached_root = self._item_props_cache.get(current_uid)
+        if cached_root is not None:
+            root_item_id = cached_root.get("item_id", root_item_id)
+            root_rev_id = cached_root.get("item_revision_id", "")
+        else:
+            try:
+                props = self.get_properties([current_uid], ["item_id", "item_revision_id", "object_name"])
+                root_props = props.get(current_uid, {})
+                root_item_id = root_props.get("item_id", root_item_id)
+                root_rev_id = root_props.get("item_revision_id", "")
+                if root_props:
+                    self._item_props_cache[current_uid] = dict(root_props)
+            except TcSoaError:
+                pass
 
         _tc_logger.info(f"  Top-level: {root_item_id}/{root_rev_id} (chain: {' → '.join(chain)})")
-        return {
+        result_dict = {
             "root_item_id": root_item_id,
             "root_revision_id": root_rev_id,
             "root_uid": current_uid,
             "chain": chain,
             "found": True,
         }
+        # Cache for the rest of the run.
+        self._top_level_cache[cache_key] = dict(result_dict)
+        return result_dict
 
     # ------------------------------------------------------------------
     # BOM / STRUCTURE OPERATIONS — Exact EXE flow
@@ -2397,10 +2490,19 @@ class TcEcnDataFetcher:
         if not nom:
             return []
 
+        # Memoize: same nomenclature looked up twice in a run -> instant.
+        cached = getattr(self.client, "_nomenclature_cache", {}).get(nom)
+        if cached is not None:
+            _tc_logger.info(
+                f"lookup_item_revisions_by_nomenclature: '{nom}' (cache hit, {len(cached)} revs)"
+            )
+            return [dict(r) for r in cached]
+
         _tc_logger.info(f"lookup_item_revisions_by_nomenclature: '{nom}'")
-        self.client.set_property_policy({
-            "H4_Hussmann_ItemRevision": CHECKSHEET_POLICY_PROPS
-        })
+        # Property policy is set ONCE at login (UNIFIED_POLICY); no per-call resend.
+        if not getattr(self.client, "_unified_policy_set", False):
+            self.client.set_property_policy(UNIFIED_POLICY)
+            self.client._unified_policy_set = True
 
         matched_uids = []
 
@@ -2415,7 +2517,10 @@ class TcEcnDataFetcher:
         except TcSoaError:
             pass
 
-        if not matched_uids:
+        # Slow path is opt-in only — the saved-query catalog scan + describe +
+        # 3-wildcard cross product was producing 30-100+ HTTP round trips per
+        # nomenclature miss. Fast path covers the normal case.
+        if not matched_uids and getattr(self, "_enable_slow_nomenclature_scan", False):
             queries = self.client.get_saved_queries_catalog()
             _tc_logger.info(f"  Saved query catalog size: {len(queries)}")
 
@@ -2490,6 +2595,10 @@ class TcEcnDataFetcher:
         matched_uids = sorted(set(u for u in matched_uids if u))
         if not matched_uids:
             _tc_logger.warning(f"  No item revisions found for nomenclature '{nom}'")
+            try:
+                self.client._nomenclature_cache[nom] = []
+            except Exception:
+                pass
             return []
 
         props = self.client.get_properties(
@@ -2513,6 +2622,11 @@ class TcEcnDataFetcher:
             })
 
         _tc_logger.info(f"  Nomenclature lookup resolved {len(results)} revisions")
+        # Cache for the rest of the run.
+        try:
+            self.client._nomenclature_cache[nom] = [dict(r) for r in results]
+        except Exception:
+            pass
         return results
 
     def select_revisions_for_bom(self, revision_candidates):
