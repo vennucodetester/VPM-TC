@@ -1072,12 +1072,13 @@ class TcSoaClient:
 
         # Sticky strategy: once an attempt succeeds for this run, try it FIRST on
         # subsequent calls. Avoids the 7-fallback storm on every where_used.
-        # Strategy key = (endpoint_family, service, operation, id(body))
+        # Key = (endpoint_family, service, operation) only — body is rebuilt each call
+        # so id(body) always differs, which was breaking the match.
         if self._where_used_strategy is not None:
             stick_key = self._where_used_strategy
             reordered = []
             for a in attempts:
-                key = (a[0], a[1], a[2], id(a[3]))
+                key = (a[0], a[1], a[2])
                 if key == stick_key:
                     reordered.insert(0, a)
                 else:
@@ -1103,7 +1104,7 @@ class TcSoaClient:
                     timeout=http_timeout,
                 )
                 _tc_logger.info(f"  where_used: {label} succeeded")
-                successful_attempt = (endpoint_family, service, operation, id(body))
+                successful_attempt = (endpoint_family, service, operation)
                 break
             except TcSoaError as e:
                 _tc_logger.warning(f"  where_used: {label} failed: {e}")
