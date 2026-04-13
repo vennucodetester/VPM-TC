@@ -1931,3 +1931,1514 @@
 2026-04-13 15:25:01,351 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
 2026-04-13 15:25:01,352 [DEBUG]   Body: {"objects": [{"uid": "gtKAUXl8oeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
 2026-04-13 15:25:01,352 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "gtKAUXl8oeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:36:48,071 [INFO] TC Connector module loaded
+2026-04-13 15:37:43,571 [INFO] Login attempt: Core-2008-06-Session/login, user=ccbefb
+2026-04-13 15:37:43,572 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2008-06-Session/login
+2026-04-13 15:37:43,572 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:43,572 [DEBUG]   Body: {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}
+2026-04-13 15:37:43,572 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"username": "ccbefb", "password": "***REDACTED***", "group": "", "role": "", "locale": "", "sessionDiscriminator": "SoaAppX"}}
+2026-04-13 15:37:44,059 [DEBUG]   Response HTTP 200
+2026-04-13 15:37:44,059 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2006-03\/Session.LoginResponse",
+"user":
+{
+"uid":"wlCAwwAJoeVOgD",
+"className":"User",
+"type":"User"
+},
+"groupMember":
+{
+"uid":"wlOAwwAJoeVOgD",
+"className":"GroupMember",
+"type":"GroupMember"
+},
+"ServiceData":
+{
+"created":["BOM::56128"],
+"plain":["wlCAwwAJoeVOgD","wlOAwwAJoeVOgD"],
+"modelObjects":
+{
+"wlCAwwAJoeVOgD":
+{
+"objectID":"wlCAwwAJoeVOgD",
+"uid":"wlCAwwAJoeVOgD",
+"className":"User",
+"type":"User",
+"props":
+{
+}
+},
+"wlOAwwAJoeVOgD":
+{
+"objectID":"wlOAwwAJoeVOgD",
+"uid":"wlOAwwAJoeVOgD",
+"className":"GroupMember",
+"type":"GroupMember",
+"props":
+{
+}
+},
+"BOM::56128":
+{
+"uid":"BOM::56128",
+"className":"UserSession",
+"type":"UserSession",
+"props":
+{
+"awb0SupportsStructure":
+{
+"dbValues":["0"],
+"uiValues":["False"]
+},
+"awp0CellProperties":
+{
+},
+"awp0RevRule":
+{
+"dbValues":["QEKAAAAwoeVOgD"],
+"uiValues":["Latest Working"]
+},
+"awp0ThumbnailImageTicket":
+{
+"dbValues":[""],
+"uiValues":[""]
+},
+"cm0GlobalChangeContext":
+{
+"dbValues":[""],
+"uiValues":[""],
+"isNulls":[true]
+},
+"fnd0ConditionHelper":
+{
+"dbValues":["BOM::56129"],
+"uiValues":[""]
+},
+"fnd0Geography":
+{
+"dbValues":[""],
+"uiValues":[""]
+},
+"fnd0LocalVolume":
+{
+"dbValues":[""],
+"uiValues":[""]
+},
+"fnd0LocationCode":
+{
+"dbValues":[""],
+"uiValues":[""],
+"isNulls":[true]
+},
+"fnd0ShowGDPR":
+{
+"dbValues":["0"],
+"uiValues":["False"]
+},
+"fnd0UserDeclaredGeography":
+{
+"dbValues":[""],
+"uiValues":[""],
+"isNulls":[true]
+},
+"fnd0bypassflag":
+{
+"dbValues":["0"],
+"uiValues":["False"]
+},
+"fnd0displayrule":
+{
+"dbValues":[""],
+"uiValues":[""],
+"isNulls":[true]
+},
+"fnd0groupmember":
+{
+"dbValues":["wlOAwwAJoeVOgD"],
+"uiValues":["NPD.Engineering.Bridgeton\/Lead Engineer\/Sunil Kumar Vennu (ccbefb)"]
+},
+"fnd0isTrueConditions":
+{
+"dbValues":["Arm0ImportFromOfficeCond","Cm0IsCmDependencyEditableForPrimary","Cm0IsCmDependencyEditableForSecondary","Cm0isCMHasImpactedItemCreatableForSecondary","Cm0isCMHasNonImpactedItemCreatableForSecondary","Cm0isCMHasProblemItemCreatableForSecondary","Cm0isCMHasSolutionItemCreatableForSecondary","Cm0isCMHasWorkBreakdownCreatableForSecondary","Cm0isChangeNoticeCreatable","Cm0isChangeRequestCreatable","Cm0isCm0ActionItemCreatable","Cm0isCm0DevRqstCreatable","Cm0isProblemReportCreatable","Cm0isSimpleChangeCreatable","Fnd0AddReviewerPrivilege","Fnd0EPMTaskModifyPrivilege","Fnd0ManageDueDatePrivilege","Fnd0SMSendAbortNotifications","Fnd0SMUseInitActualLogic","Fnd0SMUsePCStatusLogic","Fnd0SMUseRollupLogic","Fnd0SMUseTaskStartedLogic","H4_Non_Chn_Swn_NR","H4_Non_Tju_Plant","H4isH4_MCNCreatable","H4isH4_PR_CAPCreatable","H4isH4_PR_CODCreatable","H4isH4_PR_NPDCreatable","H4isH4_PR_VAVECreatable","H4isHideUnlessEPECreateable","isAuthor","isCMHasImpactedItemCreatableForSecondary","isCMHasProblemItemCreatableForSecondary","isCMHasSolutionItemCreatableForSecondary","isCMHasWorkBreakdownCreatableForSecondary","isCMReferencesCreatableForSecondary","isChangeNoticeCreatable","isChangeRequestCreatable","isCm0DevRqstCreatable","isProblemReportCreatab
+2026-04-13 15:37:44,060 [DEBUG]   Response keys: ['.QName', 'user', 'groupMember', 'ServiceData']
+2026-04-13 15:37:44,060 [INFO] Login SUCCESS
+2026-04-13 15:37:44,060 [INFO]   Response keys: ['.QName', 'user', 'groupMember', 'ServiceData']
+2026-04-13 15:37:44,060 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2008-06-Session/setObjectPropertyPolicy
+2026-04-13 15:37:44,060 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:44,060 [DEBUG]   Body: {"ObjectPropertyPolicy": {"useRefCount": false, "types": [{"name": "H4_Hussmann_ItemRevision", "properties": [{"name": "item_id"}, {"name": "object_name"}, {"name": "item_revision_id"}, {"name": "items_tag"}, {"name": "object_desc"}, {"name": "h4_Nomenclature"}, {"name": "h4_BGN_Source"}, {"name": "h4_BBK_Source"}, {"name": "h4_CNO_Source"}, {"name": "h4_HAB_Source"}, {"name": "h4_MTY_Source"}, {"name": "h4_SWN_Source"}, {"name": "h4_BOM_Option_Code"}, {"name": "h4_ECN_Number"}, {"name": "h4_Finish_Code"}, {"name": "h4_Finish_Color"}, {"name": "h4_Risk_Level"}, {"name": "h4_High_Level_Category"}, {"name": "h4_Sub_Category"}, {"name": "h4_Hussmann_Item_Type"}, {"name": "h4_Template_Name"}, {"name": "h4_Plant"}, {"name": "object_type"}, {"name": "release_status_list"}, {"name": "effectivity_text"}, {"name": "h4_PLM_Revision"}, {"name": "process_stage"}, {"name": "h4_Plant_Template"}, {"name": "h4_Plant_Coded"}, {"name": "h4_Product_Family"}, {"name": "h4_Model_Group"}, {"name": "h4_Product_Line"}, {"name": "h4_EAU"}]}, {"name": "ItemRevision", "properties": [{"name": "item_id"}, {"name": "item_revision_id"}, {"name": "object_name"}, {"name": "object_desc"}, {"name": "release_status_list"}, {"name": "process_stage"}]}]}}
+2026-04-13 15:37:44,060 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"ObjectPropertyPolicy": {"useRefCount": false, "types": [{"name": "H4_Hussmann_ItemRevision", "properties": [{"name": "item_id"}, {"name": "object_name"}, {"name": "item_revision_id"}, {"name": "items_tag"}, {"name": "object_desc"}, {"name": "h4_Nomenclature"}, {"name": "h4_BGN_Source"}, {"name": "h4_BBK_Source"}, {"name": "h4_CNO_Source"}, {"name": "h4_HAB_Source"}, {"name": "h4_MTY_Source"}, {"name": "h4_SWN_Source"}, {"name": "h4_BOM_Option_Code"}, {"name": "h4_ECN_Number"}, {"name": "h4_Finish_Code"}, {"name": "h4_Finish_Color"}, {"name": "h4_Risk_Level"}, {"name": "h4_High_Level_Category"}, {"name": "h4_Sub_Category"}, {"name": "h4_Hussmann_Item_Type"}, {"name": "h4_Template_Name"}, {"name": "h4_Plant"}, {"name": "object_type"}, {"name": "release_status_list"}, {"name": "effectivity_text"}, {"name": "h4_PLM_Revision"}, {"name": "process_stage"}, {"name": "h4_Plant_Template"}, {"name": "h4_Plant_Coded"}, {"name": "h4_Product_Family"}, {"name": "h4_Model_Group"}, {"name": "h4_Product_Line"}, {"name": "h4_EAU"}]}, {"name": "ItemRevision", "properties": [{"name": "item_id"}, {"name": "item_revision_id"}, {"name": "object_name"}, {"name": "object_desc"}, {"name": "release_status_list"}, {"name": "process_stage"}]}]}}}
+2026-04-13 15:37:44,151 [DEBUG]   Response HTTP 200
+2026-04-13 15:37:44,152 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2008-06\/Session.SetObjectPropertyPolicyOutput",
+"out":"Dynamic:87740-5"
+}
+2026-04-13 15:37:44,152 [DEBUG]   Response keys: ['.QName', 'out']
+2026-04-13 15:37:44,152 [INFO]   Unified property policy set (one-shot)
+2026-04-13 15:37:44,727 [INFO] find_top_level_assembly: 3242658/A
+2026-04-13 15:37:44,727 [INFO] resolve_item_to_revision_uid: 3242658/A
+2026-04-13 15:37:44,727 [INFO] findSavedQueries: looking for 'Item Revision...'
+2026-04-13 15:37:44,727 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Query-2010-04-SavedQuery/findSavedQueries
+2026-04-13 15:37:44,727 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:44,727 [DEBUG]   Body: {"savedQueryCriteriaInputs": [{"queryNames": ["Item Revision..."], "queryType": 0}]}
+2026-04-13 15:37:44,727 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"savedQueryCriteriaInputs": [{"queryNames": ["Item Revision..."], "queryType": 0}]}}
+2026-04-13 15:37:44,816 [DEBUG]   Response HTTP 200
+2026-04-13 15:37:44,816 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Query\/2010-04\/SavedQuery.FindSavedQueriesResponse",
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:37:44,816 [DEBUG]   Response keys: ['.QName', 'ServiceData']
+2026-04-13 15:37:44,816 [INFO]   savedQueries response: []
+2026-04-13 15:37:44,816 [WARNING]   findSavedQueries returned empty for 'Item Revision...', falling back to getSavedQueries catalog lookup.
+2026-04-13 15:37:44,816 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Query-2006-03-SavedQuery/getSavedQueries
+2026-04-13 15:37:44,816 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:44,816 [DEBUG]   Body: {}
+2026-04-13 15:37:44,816 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {}}
+2026-04-13 15:37:44,919 [DEBUG]   Response HTTP 200
+2026-04-13 15:37:44,919 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Query\/2006-03\/SavedQuery.GetSavedQueriesResponse",
+"queries":
+[
+{
+"name":"Z_HR_WIP",
+"description":"Hussmann Item Revision Search...",
+"query":
+{
+"uid":"1iCAgV$IoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"GroupByName",
+"description":"Lookup a Group By Name",
+"query":
+{
+"uid":"A4LAAAAFoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistPoolSchedTasksNS",
+"description":"Find Task Assignments for a Resource Pool",
+"query":
+{
+"uid":"A4LAAAg8oeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistUserSchedTasksNS",
+"description":"Find Schedule Task(s)",
+"query":
+{
+"uid":"A4LAAAw0oeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistRPWFTask",
+"description":"Query to get non WF tasks assigned to RP",
+"query":
+{
+"uid":"A4LAAAw8oeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistPoolSchedTasksNoGroupNS",
+"description":"Find Task Assignments for a Resource Pool",
+"query":
+{
+"uid":"A4LAAAwEoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistPoolSchedTasksNoRoleNS",
+"description":"Find Task Assignments for a Resource Pool",
+"query":
+{
+"uid":"A4LAAAwQoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistUserPoolSchedTasksNS",
+"description":"Find Schedule Task(s)",
+"query":
+{
+"uid":"A4LAAAwYoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistUserPoolSchedTasksNoGroupNS",
+"description":"Find Schedule Task(s)",
+"query":
+{
+"uid":"A4LAAAwgoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistUserPoolSchedTasksNoRoleNS",
+"description":"Find Schedule Task(s)",
+"query":
+{
+"uid":"A4LAAAwooeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"RoleByName",
+"description":"Lookup a Role by name",
+"query":
+{
+"uid":"A4MAAAABoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__Item_Revision_name_or_ID",
+"description":"Find Item Revision(s)with given name or ID.",
+"query":
+{
+"uid":"A4MAAAAJoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistPoolSchedTasksIP",
+"description":"Find Task Assignments for a Resource Pool",
+"query":
+{
+"uid":"A4MAAAg4oeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistSchedTasksWF",
+"description":"Find Schedule Task(s)",
+"query":
+{
+"uid":"A4MAAAw4oeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistPoolSchedTasksNoGroupIP",
+"description":"Find Task Assignments for a Resource Pool",
+"query":
+{
+"uid":"A4MAAAwAoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistPoolSchedTasksNoRoleIP",
+"description":"Find Task Assignments for a Resource Pool",
+"query":
+{
+"uid":"A4MAAAwIoeVOgD",
+"className":"ImanQuery",
+"type":"ImanQuery"
+}
+},
+{
+"name":"__WorklistUserPoolSchedTasksIP",
+"description":"Find Schedule Task(s)",
+"query":
+{
+"uid":"A4MAAAwUoeVOgD",
+"className":"Ima
+2026-04-13 15:37:44,920 [DEBUG]   Response keys: ['.QName', 'queries', 'ServiceData']
+2026-04-13 15:37:44,920 [INFO]   getSavedQueries returned 284 queries
+2026-04-13 15:37:44,920 [INFO]   Catalog exact match UID: QEJAAAgRoeVOgD
+2026-04-13 15:37:44,920 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Query-2008-06-SavedQuery/executeSavedQueries
+2026-04-13 15:37:44,920 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:44,921 [DEBUG]   Body: {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3242658"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}
+2026-04-13 15:37:44,921 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3242658"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}}
+2026-04-13 15:37:45,019 [DEBUG]   Response HTTP 200
+2026-04-13 15:37:45,019 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Query\/2007-09\/SavedQuery.SavedQueriesResponse",
+"arrayOfResults":
+[
+{
+"objectUIDS":["QCGAUXl8oeVOgD"]
+}
+],
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:37:45,019 [DEBUG]   Response keys: ['.QName', 'arrayOfResults', 'ServiceData']
+2026-04-13 15:37:45,019 [INFO]   Query returned 1 UIDs
+2026-04-13 15:37:45,019 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-09-DataManagement/loadObjects
+2026-04-13 15:37:45,019 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:45,019 [DEBUG]   Body: {"uids": ["QCGAUXl8oeVOgD"]}
+2026-04-13 15:37:45,019 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"uids": ["QCGAUXl8oeVOgD"]}}
+2026-04-13 15:37:45,110 [DEBUG]   Response HTTP 200
+2026-04-13 15:37:45,111 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["QCGAUXl8oeVOgD"],
+"modelObjects":
+{
+"QCGAUXl8oeVOgD":
+{
+"objectID":"QCGAUXl8oeVOgD",
+"uid":"QCGAUXl8oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+}
+}
+}
+2026-04-13 15:37:45,111 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:37:45,111 [INFO]   Resolved 3242658 → QCGAUXl8oeVOgD
+2026-04-13 15:37:45,111 [INFO] where_used: uid=QCGAUXl8oeVOgD
+2026-04-13 15:37:45,111 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2012-02-DataManagement/whereUsed
+2026-04-13 15:37:45,111 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:45,111 [DEBUG]   Body: {"input": [{"inputObject": {"uid": "QCGAUXl8oeVOgD"}, "useLocalParams": false, "inputParams": {"stringMap": [], "doubleMap": [], "intMap": [], "boolMap": [], "dateMap": [], "tagMap": [], "floatMap": []}, "clientId": ""}], "configParams": {"stringMap": [], "doubleMap": [], "intMap": [], "boolMap": [], "dateMap": [], "tagMap": [], "floatMap": []}}
+2026-04-13 15:37:45,111 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"input": [{"inputObject": {"uid": "QCGAUXl8oeVOgD"}, "useLocalParams": false, "inputParams": {"stringMap": [], "doubleMap": [], "intMap": [], "boolMap": [], "dateMap": [], "tagMap": [], "floatMap": []}, "clientId": ""}], "configParams": {"stringMap": [], "doubleMap": [], "intMap": [], "boolMap": [], "dateMap": [], "tagMap": [], "floatMap": []}}}
+2026-04-13 15:37:45,198 [DEBUG]   Response HTTP 500
+2026-04-13 15:37:45,198 [DEBUG]   Response body (first 3000 chars): {".QName":"http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException","messages":[{"code":214022,"level":3,"message":"An error has occurred during the JSON parsing."},{"code":214022,"level":3,"message":"An error has occurred during the JSON parsing."},{"code":214004,"level":3,"message":"Please see the log file 'tcserver.exe2968ecb1.syslog' for more information."}]}
+
+2026-04-13 15:37:45,198 [DEBUG]   Response keys: ['.QName', 'messages']
+2026-04-13 15:37:45,198 [WARNING]   TC exception response: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException | An error has occurred during the JSON parsing.; Please see the log file 'tcserver.exe2968ecb1.syslog' for more information.
+2026-04-13 15:37:45,198 [WARNING]   where_used: JsonRestServices/Core-2012-02-DataManagement/whereUsed envelope=True read_timeout=120s failed: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException: An error has occurred during the JSON parsing.; Please see the log file 'tcserver.exe2968ecb1.syslog' for more information.
+2026-04-13 15:37:45,199 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2012-02-DataManagement/whereUsed
+2026-04-13 15:37:45,199 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:45,199 [DEBUG]   Body: {"input": [{"inputObject": {"uid": "QCGAUXl8oeVOgD"}, "useLocalParams": false, "clientId": ""}], "configParams": {"stringMap": [], "doubleMap": [], "intMap": [], "boolMap": [], "dateMap": [], "tagMap": [], "floatMap": []}}
+2026-04-13 15:37:45,199 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"input": [{"inputObject": {"uid": "QCGAUXl8oeVOgD"}, "useLocalParams": false, "clientId": ""}], "configParams": {"stringMap": [], "doubleMap": [], "intMap": [], "boolMap": [], "dateMap": [], "tagMap": [], "floatMap": []}}}
+2026-04-13 15:37:45,369 [DEBUG]   Response HTTP 500
+2026-04-13 15:37:45,369 [DEBUG]   Response body (first 3000 chars): {".QName":"http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException","messages":[{"code":214007,"level":3,"message":" An error occurred in DOM parsing: . "},{"code":214007,"level":3,"message":" An error occurred in DOM parsing: . "},{"code":214004,"level":3,"message":"Please see the log file 'tcserver.exe2968ecb1.syslog' for more information."}]}
+
+2026-04-13 15:37:45,370 [DEBUG]   Response keys: ['.QName', 'messages']
+2026-04-13 15:37:45,370 [WARNING]   TC exception response: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException |  An error occurred in DOM parsing: . ; Please see the log file 'tcserver.exe2968ecb1.syslog' for more information.
+2026-04-13 15:37:45,370 [WARNING]   where_used: JsonRestServices/Core-2012-02-DataManagement/whereUsed envelope=True read_timeout=120s failed: http://teamcenter.com/Schemas/Soa/2006-03/Exceptions.InternalServerException:  An error occurred in DOM parsing: . ; Please see the log file 'tcserver.exe2968ecb1.syslog' for more information.
+2026-04-13 15:37:45,370 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:37:45,370 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:37:45,370 [DEBUG]   Body: {"objects": [{"uid": "QCGAUXl8oeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:37:45,370 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "QCGAUXl8oeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:38:16,984 [DEBUG]   Response HTTP 200
+2026-04-13 15:38:16,984 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2007-01\/DataManagement.WhereUsedResponse",
+"output":
+[
+{
+"inputObject":
+{
+"uid":"QCGAUXl8oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+},
+"info":
+[
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"htNA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"wBAA0PT_oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"AwMA0XPOoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"xCHA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"QNBA0XPOoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"R6CAk3GhoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"A1DA0PT_oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"AmFAUXMToeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"QdJAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"geHAk7UCoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"wVOA0XPOoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"wAIA0XPOoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"ArHAk7UCoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"QKFA0PT_oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"whPAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"QqFAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"R8CAUXMToeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"QzLAUXMToeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"B6CA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"xrBA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"wdPAUnw9oeVOgD",
+"class
+2026-04-13 15:38:16,984 [DEBUG]   Response keys: ['.QName', 'output', 'ServiceData']
+2026-04-13 15:38:16,985 [INFO]   where_used: JsonRestServices/Core-2007-01-DataManagement/whereUsed envelope=True read_timeout=120s succeeded
+2026-04-13 15:38:16,985 [INFO]   where_used found 24 parents
+2026-04-13 15:38:16,985 [INFO]   where_used: sticky strategy locked to ('JsonRestServices', 'Core-2007-01-DataManagement', 'whereUsed')
+2026-04-13 15:38:16,985 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2006-03-DataManagement/getProperties
+2026-04-13 15:38:16,985 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:38:16,985 [DEBUG]   Body: {"objects": [{"uid": "htNA0H7zoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}
+2026-04-13 15:38:16,985 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "htNA0H7zoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}}
+2026-04-13 15:38:17,077 [DEBUG]   Response HTTP 200
+2026-04-13 15:38:17,077 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["htNA0H7zoeVOgD"],
+"modelObjects":
+{
+"htNA0H7zoeVOgD":
+{
+"objectID":"htNA0H7zoeVOgD",
+"uid":"htNA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+"item_id":
+{
+"dbValues":["3234686"],
+"uiValues":["3234686"]
+},
+"item_revision_id":
+{
+"dbValues":["E"],
+"uiValues":["E"]
+},
+"object_name":
+{
+"dbValues":["MODULE-PACKOUT RN5MA"],
+"uiValues":["MODULE-PACKOUT RN5MA"]
+}
+}
+}
+}
+}
+2026-04-13 15:38:17,077 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:38:17,077 [INFO] where_used: uid=htNA0H7zoeVOgD
+2026-04-13 15:38:17,077 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:38:17,077 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:38:17,077 [DEBUG]   Body: {"objects": [{"uid": "htNA0H7zoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:38:17,077 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "htNA0H7zoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:38:50,941 [DEBUG]   Response HTTP 200
+2026-04-13 15:38:50,941 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2007-01\/DataManagement.WhereUsedResponse",
+"output":
+[
+{
+"inputObject":
+{
+"uid":"htNA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+},
+"info":
+[
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"BTGAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"Q_AAkT44oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"gYGAkiqpoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"BNJAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+}
+]
+}
+],
+"ServiceData":
+{
+"plain":["BTGAk6cnoeVOgD","Q_AAkT44oeVOgD","gYGAkiqpoeVOgD","BNJAknFJoeVOgD"],
+"modelObjects":
+{
+"BTGAk6cnoeVOgD":
+{
+"objectID":"BTGAk6cnoeVOgD",
+"uid":"BTGAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"Q_AAkT44oeVOgD":
+{
+"objectID":"Q_AAkT44oeVOgD",
+"uid":"Q_AAkT44oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"gYGAkiqpoeVOgD":
+{
+"objectID":"gYGAkiqpoeVOgD",
+"uid":"gYGAkiqpoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"BNJAknFJoeVOgD":
+{
+"objectID":"BNJAknFJoeVOgD",
+"uid":"BNJAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+}
+}
+}
+}
+2026-04-13 15:38:50,941 [DEBUG]   Response keys: ['.QName', 'output', 'ServiceData']
+2026-04-13 15:38:50,941 [INFO]   where_used: JsonRestServices/Core-2007-01-DataManagement/whereUsed envelope=True read_timeout=120s succeeded
+2026-04-13 15:38:50,941 [INFO]   where_used found 4 parents
+2026-04-13 15:38:50,941 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2006-03-DataManagement/getProperties
+2026-04-13 15:38:50,941 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:38:50,941 [DEBUG]   Body: {"objects": [{"uid": "BTGAk6cnoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}
+2026-04-13 15:38:50,942 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "BTGAk6cnoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}}
+2026-04-13 15:38:51,033 [DEBUG]   Response HTTP 200
+2026-04-13 15:38:51,033 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["BTGAk6cnoeVOgD"],
+"modelObjects":
+{
+"BTGAk6cnoeVOgD":
+{
+"objectID":"BTGAk6cnoeVOgD",
+"uid":"BTGAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+"item_id":
+{
+"dbValues":["RLN5MA"],
+"uiValues":["RLN5MA"]
+},
+"item_revision_id":
+{
+"dbValues":["A"],
+"uiValues":["A"]
+},
+"object_name":
+{
+"dbValues":["RLN5MA-REACH-IN LT 5DR R290 MICROBLOCK"],
+"uiValues":["RLN5MA-REACH-IN LT 5DR R290 MICROBLOCK"]
+}
+}
+}
+}
+}
+2026-04-13 15:38:51,034 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:38:51,034 [INFO] where_used: uid=BTGAk6cnoeVOgD
+2026-04-13 15:38:51,034 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:38:51,034 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:38:51,034 [DEBUG]   Body: {"objects": [{"uid": "BTGAk6cnoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:38:51,034 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "BTGAk6cnoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:39:24,902 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:24,902 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2007-01\/DataManagement.WhereUsedResponse",
+"output":
+[
+{
+"inputObject":
+{
+"uid":"BTGAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+},
+"info":
+[
+]
+}
+],
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:39:24,902 [DEBUG]   Response keys: ['.QName', 'output', 'ServiceData']
+2026-04-13 15:39:24,903 [INFO]   where_used: JsonRestServices/Core-2007-01-DataManagement/whereUsed envelope=True read_timeout=120s succeeded
+2026-04-13 15:39:24,903 [INFO]   where_used found 0 parents
+2026-04-13 15:39:24,904 [INFO]   Top-level: RLN5MA/A (chain: 3242658 → 3234686 → RLN5MA)
+2026-04-13 15:39:24,980 [INFO] find_top_level_assembly: 3H00010401/B
+2026-04-13 15:39:24,981 [INFO] resolve_item_to_revision_uid: 3H00010401/B
+2026-04-13 15:39:24,981 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Query-2008-06-SavedQuery/executeSavedQueries
+2026-04-13 15:39:24,981 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:24,981 [DEBUG]   Body: {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3H00010401"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}
+2026-04-13 15:39:24,981 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3H00010401"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}}
+2026-04-13 15:39:25,080 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:25,080 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Query\/2007-09\/SavedQuery.SavedQueriesResponse",
+"arrayOfResults":
+[
+{
+"objectUIDS":["hnDAk6cnoeVOgD","gsKAkLDUoeVOgD"]
+}
+],
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:39:25,080 [DEBUG]   Response keys: ['.QName', 'arrayOfResults', 'ServiceData']
+2026-04-13 15:39:25,080 [INFO]   Query returned 2 UIDs
+2026-04-13 15:39:25,080 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-09-DataManagement/loadObjects
+2026-04-13 15:39:25,080 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:25,080 [DEBUG]   Body: {"uids": ["hnDAk6cnoeVOgD", "gsKAkLDUoeVOgD"]}
+2026-04-13 15:39:25,080 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"uids": ["hnDAk6cnoeVOgD", "gsKAkLDUoeVOgD"]}}
+2026-04-13 15:39:25,226 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:25,227 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["hnDAk6cnoeVOgD","gsKAkLDUoeVOgD"],
+"modelObjects":
+{
+"hnDAk6cnoeVOgD":
+{
+"objectID":"hnDAk6cnoeVOgD",
+"uid":"hnDAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"gsKAkLDUoeVOgD":
+{
+"objectID":"gsKAkLDUoeVOgD",
+"uid":"gsKAkLDUoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+}
+}
+}
+2026-04-13 15:39:25,227 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:39:25,227 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2006-03-DataManagement/getProperties
+2026-04-13 15:39:25,227 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:25,227 [DEBUG]   Body: {"objects": [{"uid": "hnDAk6cnoeVOgD"}, {"uid": "gsKAkLDUoeVOgD"}], "attributes": ["item_revision_id"]}
+2026-04-13 15:39:25,227 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "hnDAk6cnoeVOgD"}, {"uid": "gsKAkLDUoeVOgD"}], "attributes": ["item_revision_id"]}}
+2026-04-13 15:39:25,318 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:25,318 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["hnDAk6cnoeVOgD","gsKAkLDUoeVOgD"],
+"modelObjects":
+{
+"hnDAk6cnoeVOgD":
+{
+"objectID":"hnDAk6cnoeVOgD",
+"uid":"hnDAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+"item_revision_id":
+{
+"dbValues":["A"],
+"uiValues":["A"]
+}
+}
+},
+"gsKAkLDUoeVOgD":
+{
+"objectID":"gsKAkLDUoeVOgD",
+"uid":"gsKAkLDUoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+"item_revision_id":
+{
+"dbValues":["B"],
+"uiValues":["B"]
+}
+}
+}
+}
+}
+2026-04-13 15:39:25,319 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:39:25,319 [INFO]   Resolved 3H00010401/B → gsKAkLDUoeVOgD
+2026-04-13 15:39:25,319 [INFO] where_used: uid=gsKAkLDUoeVOgD
+2026-04-13 15:39:25,319 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:39:25,319 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:25,319 [DEBUG]   Body: {"objects": [{"uid": "gsKAkLDUoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:39:25,319 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "gsKAkLDUoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:39:58,143 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:58,143 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2007-01\/DataManagement.WhereUsedResponse",
+"output":
+[
+{
+"inputObject":
+{
+"uid":"gsKAkLDUoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+},
+"info":
+[
+]
+}
+],
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:39:58,143 [DEBUG]   Response keys: ['.QName', 'output', 'ServiceData']
+2026-04-13 15:39:58,144 [INFO]   where_used: JsonRestServices/Core-2007-01-DataManagement/whereUsed envelope=True read_timeout=120s succeeded
+2026-04-13 15:39:58,144 [INFO]   where_used found 0 parents
+2026-04-13 15:39:58,144 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2006-03-DataManagement/getProperties
+2026-04-13 15:39:58,144 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:58,144 [DEBUG]   Body: {"objects": [{"uid": "gsKAkLDUoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}
+2026-04-13 15:39:58,144 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "gsKAkLDUoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}}
+2026-04-13 15:39:58,322 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:58,322 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["gsKAkLDUoeVOgD"],
+"modelObjects":
+{
+"gsKAkLDUoeVOgD":
+{
+"objectID":"gsKAkLDUoeVOgD",
+"uid":"gsKAkLDUoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+"item_id":
+{
+"dbValues":["3H00010401"],
+"uiValues":["3H00010401"]
+},
+"item_revision_id":
+{
+"dbValues":["B"],
+"uiValues":["B"]
+},
+"object_name":
+{
+"dbValues":["EXTERIOR-CASE OPTIONS MICROBLOCK LT 3DR"],
+"uiValues":["EXTERIOR-CASE OPTIONS MICROBLOCK LT 3DR"]
+}
+}
+}
+}
+}
+2026-04-13 15:39:58,322 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:39:58,322 [INFO]   Top-level: 3H00010401/B (chain: 3H00010401)
+2026-04-13 15:39:58,349 [INFO] find_top_level_assembly: 3242454/A
+2026-04-13 15:39:58,349 [INFO] resolve_item_to_revision_uid: 3242454/A
+2026-04-13 15:39:58,349 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Query-2008-06-SavedQuery/executeSavedQueries
+2026-04-13 15:39:58,349 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:58,350 [DEBUG]   Body: {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3242454"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}
+2026-04-13 15:39:58,350 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3242454"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}}
+2026-04-13 15:39:58,526 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:58,526 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Query\/2007-09\/SavedQuery.SavedQueriesResponse",
+"arrayOfResults":
+[
+{
+"objectUIDS":["gRBAUTHroeVOgD"]
+}
+],
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:39:58,526 [DEBUG]   Response keys: ['.QName', 'arrayOfResults', 'ServiceData']
+2026-04-13 15:39:58,526 [INFO]   Query returned 1 UIDs
+2026-04-13 15:39:58,526 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-09-DataManagement/loadObjects
+2026-04-13 15:39:58,526 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:58,526 [DEBUG]   Body: {"uids": ["gRBAUTHroeVOgD"]}
+2026-04-13 15:39:58,527 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"uids": ["gRBAUTHroeVOgD"]}}
+2026-04-13 15:39:58,731 [DEBUG]   Response HTTP 200
+2026-04-13 15:39:58,731 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["gRBAUTHroeVOgD"],
+"modelObjects":
+{
+"gRBAUTHroeVOgD":
+{
+"objectID":"gRBAUTHroeVOgD",
+"uid":"gRBAUTHroeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+}
+}
+}
+2026-04-13 15:39:58,731 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:39:58,731 [INFO]   Resolved 3242454 → gRBAUTHroeVOgD
+2026-04-13 15:39:58,731 [INFO] where_used: uid=gRBAUTHroeVOgD
+2026-04-13 15:39:58,731 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:39:58,731 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:39:58,731 [DEBUG]   Body: {"objects": [{"uid": "gRBAUTHroeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:39:58,731 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "gRBAUTHroeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:40:30,797 [DEBUG]   Response HTTP 200
+2026-04-13 15:40:30,797 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2007-01\/DataManagement.WhereUsedResponse",
+"output":
+[
+{
+"inputObject":
+{
+"uid":"gRBAUTHroeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+},
+"info":
+[
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"wBAA0PT_oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"AmFAUXMToeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"whPAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"B6CA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"wAIA0XPOoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"ArHAk7UCoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+}
+]
+}
+],
+"ServiceData":
+{
+"plain":["wBAA0PT_oeVOgD","AmFAUXMToeVOgD","whPAknFJoeVOgD","B6CA0H7zoeVOgD","wAIA0XPOoeVOgD","ArHAk7UCoeVOgD"],
+"modelObjects":
+{
+"wBAA0PT_oeVOgD":
+{
+"objectID":"wBAA0PT_oeVOgD",
+"uid":"wBAA0PT_oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"AmFAUXMToeVOgD":
+{
+"objectID":"AmFAUXMToeVOgD",
+"uid":"AmFAUXMToeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"whPAknFJoeVOgD":
+{
+"objectID":"whPAknFJoeVOgD",
+"uid":"whPAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"B6CA0H7zoeVOgD":
+{
+"objectID":"B6CA0H7zoeVOgD",
+"uid":"B6CA0H7zoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"wAIA0XPOoeVOgD":
+{
+"objectID":"wAIA0XPOoeVOgD",
+"uid":"wAIA0XPOoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"ArHAk7UCoeVOgD":
+{
+"objectID":"ArHAk7UCoeVOgD",
+"uid":"ArHAk7UCoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+}
+}
+}
+}
+2026-04-13 15:40:30,797 [DEBUG]   Response keys: ['.QName', 'output', 'ServiceData']
+2026-04-13 15:40:30,797 [INFO]   where_used: JsonRestServices/Core-2007-01-DataManagement/whereUsed envelope=True read_timeout=120s succeeded
+2026-04-13 15:40:30,798 [INFO]   where_used found 6 parents
+2026-04-13 15:40:30,798 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2006-03-DataManagement/getProperties
+2026-04-13 15:40:30,798 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:40:30,798 [DEBUG]   Body: {"objects": [{"uid": "wBAA0PT_oeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}
+2026-04-13 15:40:30,798 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "wBAA0PT_oeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}}
+2026-04-13 15:40:30,960 [DEBUG]   Response HTTP 200
+2026-04-13 15:40:30,960 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["wBAA0PT_oeVOgD"],
+"modelObjects":
+{
+"wBAA0PT_oeVOgD":
+{
+"objectID":"wBAA0PT_oeVOgD",
+"uid":"wBAA0PT_oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+"item_id":
+{
+"dbValues":["3234687"],
+"uiValues":["3234687"]
+},
+"item_revision_id":
+{
+"dbValues":["F"],
+"uiValues":["F"]
+},
+"object_name":
+{
+"dbValues":["MODULE-PACKOUT RN4MA"],
+"uiValues":["MODULE-PACKOUT RN4MA"]
+}
+}
+}
+}
+}
+2026-04-13 15:40:30,960 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:40:30,960 [INFO] where_used: uid=wBAA0PT_oeVOgD
+2026-04-13 15:40:30,960 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:40:30,960 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:40:30,960 [DEBUG]   Body: {"objects": [{"uid": "wBAA0PT_oeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:40:30,961 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "wBAA0PT_oeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:41:07,277 [DEBUG]   Response HTTP 200
+2026-04-13 15:41:07,279 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2007-01\/DataManagement.WhereUsedResponse",
+"output":
+[
+{
+"inputObject":
+{
+"uid":"wBAA0PT_oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+},
+"info":
+[
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"xUMAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"QGHAkT44oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"A8NAUHj2oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"wVJAkT44oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"BoHAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+},
+{
+"level":1,
+"parentItemRev":
+{
+"uid":"BjLAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+}
+}
+]
+}
+],
+"ServiceData":
+{
+"plain":["xUMAknFJoeVOgD","QGHAkT44oeVOgD","A8NAUHj2oeVOgD","wVJAkT44oeVOgD","BoHAknFJoeVOgD","BjLAk6cnoeVOgD"],
+"modelObjects":
+{
+"xUMAknFJoeVOgD":
+{
+"objectID":"xUMAknFJoeVOgD",
+"uid":"xUMAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"QGHAkT44oeVOgD":
+{
+"objectID":"QGHAkT44oeVOgD",
+"uid":"QGHAkT44oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"A8NAUHj2oeVOgD":
+{
+"objectID":"A8NAUHj2oeVOgD",
+"uid":"A8NAUHj2oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"wVJAkT44oeVOgD":
+{
+"objectID":"wVJAkT44oeVOgD",
+"uid":"wVJAkT44oeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"BoHAknFJoeVOgD":
+{
+"objectID":"BoHAknFJoeVOgD",
+"uid":"BoHAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+},
+"BjLAk6cnoeVOgD":
+{
+"objectID":"BjLAk6cnoeVOgD",
+"uid":"BjLAk6cnoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+}
+}
+}
+}
+2026-04-13 15:41:07,280 [DEBUG]   Response keys: ['.QName', 'output', 'ServiceData']
+2026-04-13 15:41:07,280 [INFO]   where_used: JsonRestServices/Core-2007-01-DataManagement/whereUsed envelope=True read_timeout=120s succeeded
+2026-04-13 15:41:07,281 [INFO]   where_used found 6 parents
+2026-04-13 15:41:07,281 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2006-03-DataManagement/getProperties
+2026-04-13 15:41:07,281 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:41:07,281 [DEBUG]   Body: {"objects": [{"uid": "xUMAknFJoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}
+2026-04-13 15:41:07,282 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "xUMAknFJoeVOgD"}], "attributes": ["item_id", "item_revision_id", "object_name"]}}
+2026-04-13 15:41:07,377 [DEBUG]   Response HTTP 200
+2026-04-13 15:41:07,377 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["xUMAknFJoeVOgD"],
+"modelObjects":
+{
+"xUMAknFJoeVOgD":
+{
+"objectID":"xUMAknFJoeVOgD",
+"uid":"xUMAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+"item_id":
+{
+"dbValues":["RMN4MA"],
+"uiValues":["RMN4MA"]
+},
+"item_revision_id":
+{
+"dbValues":["C"],
+"uiValues":["C"]
+},
+"object_name":
+{
+"dbValues":["RMN4MA-REACH-IN MT 4DR R290 MICROBLOCK"],
+"uiValues":["RMN4MA-REACH-IN MT 4DR R290 MICROBLOCK"]
+}
+}
+}
+}
+}
+2026-04-13 15:41:07,377 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:41:07,377 [INFO] where_used: uid=xUMAknFJoeVOgD
+2026-04-13 15:41:07,377 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:41:07,378 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:41:07,378 [DEBUG]   Body: {"objects": [{"uid": "xUMAknFJoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:41:07,378 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "xUMAknFJoeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
+2026-04-13 15:41:46,394 [DEBUG]   Response HTTP 200
+2026-04-13 15:41:46,394 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Core\/2007-01\/DataManagement.WhereUsedResponse",
+"output":
+[
+{
+"inputObject":
+{
+"uid":"xUMAknFJoeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision"
+},
+"info":
+[
+]
+}
+],
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:41:46,394 [DEBUG]   Response keys: ['.QName', 'output', 'ServiceData']
+2026-04-13 15:41:46,394 [INFO]   where_used: JsonRestServices/Core-2007-01-DataManagement/whereUsed envelope=True read_timeout=120s succeeded
+2026-04-13 15:41:46,394 [INFO]   where_used found 0 parents
+2026-04-13 15:41:46,394 [INFO]   Top-level: RMN4MA/C (chain: 3242454 → 3234687 → RMN4MA)
+2026-04-13 15:41:46,424 [INFO] find_top_level_assembly: 3242472/A
+2026-04-13 15:41:46,424 [INFO] resolve_item_to_revision_uid: 3242472/A
+2026-04-13 15:41:46,424 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Query-2008-06-SavedQuery/executeSavedQueries
+2026-04-13 15:41:46,424 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:41:46,424 [DEBUG]   Body: {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3242472"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}
+2026-04-13 15:41:46,424 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"input": [{"query": {"uid": "QEJAAAgRoeVOgD"}, "entries": ["Item ID"], "values": ["3242472"], "maxNumToReturn": 0, "limitList": [], "resultsType": 0, "requestId": "", "clientId": ""}]}}
+2026-04-13 15:41:46,603 [DEBUG]   Response HTTP 200
+2026-04-13 15:41:46,603 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Query\/2007-09\/SavedQuery.SavedQueriesResponse",
+"arrayOfResults":
+[
+{
+"objectUIDS":["wiGAUTHroeVOgD"]
+}
+],
+"ServiceData":
+{
+"modelObjects":
+{
+}
+}
+}
+2026-04-13 15:41:46,603 [DEBUG]   Response keys: ['.QName', 'arrayOfResults', 'ServiceData']
+2026-04-13 15:41:46,603 [INFO]   Query returned 1 UIDs
+2026-04-13 15:41:46,603 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-09-DataManagement/loadObjects
+2026-04-13 15:41:46,603 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:41:46,603 [DEBUG]   Body: {"uids": ["wiGAUTHroeVOgD"]}
+2026-04-13 15:41:46,603 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"uids": ["wiGAUTHroeVOgD"]}}
+2026-04-13 15:41:46,712 [DEBUG]   Response HTTP 200
+2026-04-13 15:41:46,712 [DEBUG]   Response body (first 3000 chars): {
+".QName":"http:\/\/teamcenter.com\/Schemas\/Soa\/2006-03\/Base.ServiceData",
+"plain":["wiGAUTHroeVOgD"],
+"modelObjects":
+{
+"wiGAUTHroeVOgD":
+{
+"objectID":"wiGAUTHroeVOgD",
+"uid":"wiGAUTHroeVOgD",
+"className":"H4_Hussmann_ItemRevision",
+"type":"H4_Hussmann_ItemRevision",
+"props":
+{
+}
+}
+}
+}
+2026-04-13 15:41:46,712 [DEBUG]   Response keys: ['.QName', 'plain', 'modelObjects']
+2026-04-13 15:41:46,712 [INFO]   Resolved 3242472 → wiGAUTHroeVOgD
+2026-04-13 15:41:46,712 [INFO] where_used: uid=wiGAUTHroeVOgD
+2026-04-13 15:41:46,712 [DEBUG] POST http://STLV-HSMWEBTCP1:8080/tc/JsonRestServices/Core-2007-01-DataManagement/whereUsed
+2026-04-13 15:41:46,712 [DEBUG]   Request mode: endpoint_family=JsonRestServices, payload_mode=session-envelope
+2026-04-13 15:41:46,712 [DEBUG]   Body: {"objects": [{"uid": "wiGAUTHroeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}
+2026-04-13 15:41:46,712 [DEBUG]   Payload: {"header": {"state": {"clientVersion": "14000.1.0", "clientId": "VPM-Python", "logCorrelationId": "", "stateless": false}, "policy": {}}, "body": {"objects": [{"uid": "wiGAUTHroeVOgD"}], "numLevels": 1, "whereUsedPrecise": false, "rule": {"uid": "AAAAAAAAAAAAAA"}}}
