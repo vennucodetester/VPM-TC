@@ -1,0 +1,32 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+# Dependencies and packages
+node_modules/
+vendor/
+packages/
+bower_components/
+
+# Build artifacts and caches
+dist/
+build/
+out/
+bin/
+obj/
+.next/
+.nuxt/
+.cache/
+tmp/
+
+# Logs and system files
+*.log
+.DS_Store
+Thumbs.db
+
+# Data files (huge files that slow down indexing)
+*.csv
+*.json
+*.sql
+*.xml
+*.parquet
+
+# Version control (usually handled, but good to be safe)
+.git/
