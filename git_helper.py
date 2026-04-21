@@ -1,7 +1,7 @@
 """
-Git Helper — Standalone PyQt6 Git Dashboard
-A simple GUI for pull/push/commit/stage/diff/stash/tag operations.
-No LLM or external dependencies beyond PyQt6 and git CLI.
+Git Helper v2 — Simple Git GUI with built-in instructions.
+Pull, Stage All, Commit, Push — that's it for daily use.
+Auto-sets up new repos when you paste a GitHub link.
 """
 import sys
 import os
@@ -12,10 +12,38 @@ from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QSplitter, QGroupBox, QPushButton, QLineEdit, QPlainTextEdit,
     QTreeWidget, QTreeWidgetItem, QLabel, QDialog, QFileDialog,
-    QMessageBox, QInputDialog,
+    QMessageBox, QInputDialog, QTextEdit,
 )
 from PyQt6.QtGui import QFont, QColor, QBrush, QPalette
 from PyQt6.QtCore import Qt
+
+
+# ============================================================================
+# HOW TO USE — always-visible instructions
+# ============================================================================
+
+INSTRUCTIONS = """\
+HOW TO USE THIS APP
+
+DAILY WORKFLOW (do these in order):
+  1. Click [Pull] — gets the latest files from GitHub
+  2. Do your work (edit files, run your app, etc.)
+  3. Click [Stage All] — prepares all your changes
+  4. Type a short note in the commit box
+     (e.g. "updated log file")
+  5. Click [Commit] — saves your changes locally
+  6. Click [Push] — sends everything to GitHub
+
+FIRST TIME SETUP (new project folder):
+  1. Put this app (GitHelper.exe) in your project folder
+  2. Open the app — it will ask for your GitHub link
+  3. Paste the link
+     (e.g. https://github.com/you/project.git)
+  4. Click OK — done. Everything is set up.
+
+THAT'S IT. The buttons below the line are advanced
+and you can ignore them.
+"""
 
 
 # ============================================================================
@@ -51,11 +79,7 @@ class GitRunner:
         ok, _ = self._run(["rev-parse", "--is-inside-work-tree"])
         return ok
 
-    def status(self):
-        return self._run(["status", "--porcelain=v1"])
-
-    def status_long(self):
-        return self._run(["status"])
+    # --- Daily operations ---
 
     def pull(self):
         return self._run(["pull"], timeout=60)
@@ -63,11 +87,11 @@ class GitRunner:
     def push(self):
         return self._run(["push"], timeout=60)
 
-    def stage_files(self, files):
-        return self._run(["add", "--"] + files)
-
     def stage_all(self):
         return self._run(["add", "-A"])
+
+    def stage_files(self, files):
+        return self._run(["add", "--"] + files)
 
     def unstage_files(self, files):
         return self._run(["restore", "--staged", "--"] + files)
@@ -75,20 +99,39 @@ class GitRunner:
     def commit(self, message):
         return self._run(["commit", "-m", message])
 
+    def status(self):
+        return self._run(["status", "--porcelain=v1"])
+
+    def current_branch(self):
+        return self._run(["rev-parse", "--abbrev-ref", "HEAD"])
+
+    def branch_info(self):
+        return self._run(["branch", "-vv"])
+
     def log(self, count=20):
         return self._run(["log", "--oneline", f"-n{count}"])
+
+    # --- First-time setup ---
+
+    def init(self):
+        return self._run(["init"])
+
+    def add_remote(self, url):
+        return self._run(["remote", "add", "origin", url])
+
+    def set_branch_main(self):
+        return self._run(["branch", "-M", "main"])
+
+    def push_first(self):
+        return self._run(["push", "-u", "origin", "main"], timeout=60)
+
+    # --- Advanced (hidden by default) ---
 
     def diff_file(self, filepath):
         return self._run(["diff", "--", filepath])
 
     def diff_staged_file(self, filepath):
         return self._run(["diff", "--cached", "--", filepath])
-
-    def branch_info(self):
-        return self._run(["branch", "-vv"])
-
-    def current_branch(self):
-        return self._run(["rev-parse", "--abbrev-ref", "HEAD"])
 
     def stash_save(self, message=""):
         args = ["stash", "push"]
@@ -110,7 +153,7 @@ class GitRunner:
             args += ["-m", name]
         return self._run(args)
 
-    def list_tags(self, count=10):
+    def list_tags(self):
         return self._run(["tag", "--sort=-creatordate"])
 
     def push_tags(self):
@@ -138,7 +181,7 @@ class DiffDialog(QDialog):
 
 
 # ============================================================================
-# MAIN WINDOW — Git Helper Dashboard
+# MAIN WINDOW — Simplified Git Helper
 # ============================================================================
 
 class GitHelperWindow(QMainWindow):
@@ -147,7 +190,7 @@ class GitHelperWindow(QMainWindow):
         self.repo_path = repo_path
         self.git = GitRunner(repo_path)
         self.setWindowTitle(f"Git Helper — {os.path.basename(repo_path)}")
-        self.resize(950, 650)
+        self.resize(1000, 680)
         self._build_ui()
         self.refresh_status()
 
@@ -168,118 +211,135 @@ class GitHelperWindow(QMainWindow):
         top_bar.addWidget(btn_refresh)
         main_layout.addLayout(top_bar)
 
-        # --- Splitter: left (actions) | right (output) ---
+        # --- Splitter: left (actions) | right (instructions + output) ---
         splitter = QSplitter(Qt.Orientation.Horizontal)
         main_layout.addWidget(splitter, stretch=1)
 
-        # LEFT PANEL
+        # ============ LEFT PANEL ============
         left = QWidget()
         left_layout = QVBoxLayout(left)
         left_layout.setContentsMargins(0, 0, 4, 0)
 
-        # Remote group
-        grp_remote = QGroupBox("Remote")
-        remote_lay = QHBoxLayout(grp_remote)
-        self.btn_pull = QPushButton("Pull")
-        self.btn_push = QPushButton("Push")
+        # --- Main buttons (the daily workflow) ---
+        grp_main = QGroupBox("Daily Workflow")
+        main_btns_lay = QVBoxLayout(grp_main)
+
+        row_remote = QHBoxLayout()
+        self.btn_pull = QPushButton("1. Pull")
+        self.btn_push = QPushButton("6. Push")
         self.btn_pull.clicked.connect(self.do_pull)
         self.btn_push.clicked.connect(self.do_push)
-        remote_lay.addWidget(self.btn_pull)
-        remote_lay.addWidget(self.btn_push)
-        left_layout.addWidget(grp_remote)
+        self.btn_pull.setMinimumHeight(32)
+        self.btn_push.setMinimumHeight(32)
+        row_remote.addWidget(self.btn_pull)
+        row_remote.addWidget(self.btn_push)
+        main_btns_lay.addLayout(row_remote)
 
-        # File status group
-        grp_files = QGroupBox("Working Tree")
-        files_lay = QVBoxLayout(grp_files)
+        # File list
         self.file_list = QTreeWidget()
         self.file_list.setHeaderLabels(["Status", "File"])
-        self.file_list.setColumnWidth(0, 60)
+        self.file_list.setColumnWidth(0, 50)
         self.file_list.setFont(QFont("Consolas", 9))
         self.file_list.setRootIsDecorated(False)
-        files_lay.addWidget(self.file_list)
+        self.file_list.setMaximumHeight(180)
+        main_btns_lay.addWidget(self.file_list)
 
-        file_btn_row = QHBoxLayout()
-        btn_stage_sel = QPushButton("Stage Selected")
-        btn_stage_all = QPushButton("Stage All")
-        btn_unstage = QPushButton("Unstage")
-        btn_stage_sel.clicked.connect(self.do_stage_selected)
-        btn_stage_all.clicked.connect(self.do_stage_all)
-        btn_unstage.clicked.connect(self.do_unstage_selected)
-        file_btn_row.addWidget(btn_stage_sel)
-        file_btn_row.addWidget(btn_stage_all)
-        file_btn_row.addWidget(btn_unstage)
-        files_lay.addLayout(file_btn_row)
-        left_layout.addWidget(grp_files)
+        # Stage All button (the main one)
+        self.btn_stage_all = QPushButton("3. Stage All")
+        self.btn_stage_all.setMinimumHeight(32)
+        self.btn_stage_all.clicked.connect(self.do_stage_all)
+        main_btns_lay.addWidget(self.btn_stage_all)
 
-        # Commit group
-        grp_commit = QGroupBox("Commit")
-        commit_lay = QVBoxLayout(grp_commit)
+        # Commit row
         self.commit_msg = QLineEdit()
-        self.commit_msg.setPlaceholderText("Commit message...")
-        commit_lay.addWidget(self.commit_msg)
-        self.btn_commit = QPushButton("Commit")
+        self.commit_msg.setPlaceholderText("4. Type a short note here...")
+        main_btns_lay.addWidget(self.commit_msg)
+        self.btn_commit = QPushButton("5. Commit")
+        self.btn_commit.setMinimumHeight(32)
         self.btn_commit.clicked.connect(self.do_commit)
         self.commit_msg.textChanged.connect(
             lambda txt: self.btn_commit.setEnabled(bool(txt.strip()))
         )
         self.btn_commit.setEnabled(False)
-        commit_lay.addWidget(self.btn_commit)
-        left_layout.addWidget(grp_commit)
+        main_btns_lay.addWidget(self.btn_commit)
 
-        # Tools group
-        grp_tools = QGroupBox("Tools")
-        tools_lay = QVBoxLayout(grp_tools)
-        row1 = QHBoxLayout()
+        left_layout.addWidget(grp_main)
+
+        # --- Advanced section (collapsed by default) ---
+        self.btn_show_advanced = QPushButton("Show Advanced Options...")
+        self.btn_show_advanced.setStyleSheet("color: #666; font-size: 9pt;")
+        self.btn_show_advanced.clicked.connect(self._toggle_advanced)
+        left_layout.addWidget(self.btn_show_advanced)
+
+        self.grp_advanced = QGroupBox("Advanced")
+        adv_lay = QVBoxLayout(self.grp_advanced)
+
+        row_adv1 = QHBoxLayout()
+        btn_stage_sel = QPushButton("Stage Selected")
+        btn_unstage = QPushButton("Unstage")
         btn_log = QPushButton("View Log")
-        btn_diff = QPushButton("Diff Selected")
+        btn_stage_sel.clicked.connect(self.do_stage_selected)
+        btn_unstage.clicked.connect(self.do_unstage_selected)
         btn_log.clicked.connect(self.do_view_log)
-        btn_diff.clicked.connect(self.do_diff_selected)
-        row1.addWidget(btn_log)
-        row1.addWidget(btn_diff)
-        tools_lay.addLayout(row1)
+        row_adv1.addWidget(btn_stage_sel)
+        row_adv1.addWidget(btn_unstage)
+        row_adv1.addWidget(btn_log)
+        adv_lay.addLayout(row_adv1)
 
-        row2 = QHBoxLayout()
+        row_adv2 = QHBoxLayout()
+        btn_diff = QPushButton("Diff")
         btn_stash = QPushButton("Stash")
         btn_stash_pop = QPushButton("Pop Stash")
-        btn_stash_list = QPushButton("List Stashes")
+        btn_diff.clicked.connect(self.do_diff_selected)
         btn_stash.clicked.connect(self.do_stash_save)
         btn_stash_pop.clicked.connect(self.do_stash_pop)
-        btn_stash_list.clicked.connect(self.do_stash_list)
-        row2.addWidget(btn_stash)
-        row2.addWidget(btn_stash_pop)
-        row2.addWidget(btn_stash_list)
-        tools_lay.addLayout(row2)
+        row_adv2.addWidget(btn_diff)
+        row_adv2.addWidget(btn_stash)
+        row_adv2.addWidget(btn_stash_pop)
+        adv_lay.addLayout(row_adv2)
 
-        row3 = QHBoxLayout()
+        row_adv3 = QHBoxLayout()
         btn_tag = QPushButton("Create Tag")
         btn_push_tags = QPushButton("Push Tags")
-        btn_list_tags = QPushButton("List Tags")
         btn_tag.clicked.connect(self.do_create_tag)
         btn_push_tags.clicked.connect(self.do_push_tags)
-        btn_list_tags.clicked.connect(self.do_list_tags)
-        row3.addWidget(btn_tag)
-        row3.addWidget(btn_push_tags)
-        row3.addWidget(btn_list_tags)
-        tools_lay.addLayout(row3)
+        row_adv3.addWidget(btn_tag)
+        row_adv3.addWidget(btn_push_tags)
+        adv_lay.addLayout(row_adv3)
 
-        left_layout.addWidget(grp_tools)
+        self.grp_advanced.setVisible(False)
+        left_layout.addWidget(self.grp_advanced)
+
         left_layout.addStretch()
 
-        # RIGHT PANEL — output log
+        # ============ RIGHT PANEL — instructions (top) + output (bottom) ============
         right = QWidget()
         right_layout = QVBoxLayout(right)
         right_layout.setContentsMargins(4, 0, 0, 0)
+
+        # Instructions (always visible)
+        instructions_box = QTextEdit()
+        instructions_box.setReadOnly(True)
+        instructions_box.setFont(QFont("Consolas", 9))
+        instructions_box.setPlainText(INSTRUCTIONS)
+        instructions_box.setMaximumHeight(320)
+        instructions_box.setStyleSheet(
+            "background-color: #fffff0; border: 1px solid #ddd; padding: 8px;"
+        )
+        right_layout.addWidget(instructions_box)
+
+        # Output pane (below instructions)
+        out_label = QLabel("Output:")
+        out_label.setFont(QFont("Consolas", 9, weight=QFont.Weight.Bold))
+        right_layout.addWidget(out_label)
         self.output_pane = QPlainTextEdit()
         self.output_pane.setReadOnly(True)
-        self.output_pane.setFont(QFont("Consolas", 10))
+        self.output_pane.setFont(QFont("Consolas", 9))
         right_layout.addWidget(self.output_pane)
-        btn_clear = QPushButton("Clear Output")
-        btn_clear.clicked.connect(self.output_pane.clear)
-        right_layout.addWidget(btn_clear)
 
         splitter.addWidget(left)
         splitter.addWidget(right)
-        splitter.setSizes([360, 560])
+        splitter.setSizes([380, 580])
 
         # Status bar
         self.statusBar().showMessage(f"Repo: {self.repo_path}")
@@ -300,10 +360,18 @@ class GitHelperWindow(QMainWindow):
             QPushButton:hover { background: #e0e0e0; }
             QPushButton:pressed { background: #d0d0d0; }
             QPushButton:disabled { color: #aaa; }
-            QPlainTextEdit {
-                font-family: Consolas, 'Courier New', monospace; font-size: 10pt;
-            }
         """)
+
+    # ------------------------------------------------------------------
+    # Toggle advanced section
+    # ------------------------------------------------------------------
+
+    def _toggle_advanced(self):
+        visible = not self.grp_advanced.isVisible()
+        self.grp_advanced.setVisible(visible)
+        self.btn_show_advanced.setText(
+            "Hide Advanced Options" if visible else "Show Advanced Options..."
+        )
 
     # ------------------------------------------------------------------
     # Helper: run a git op, display output, refresh
@@ -318,7 +386,6 @@ class GitHelperWindow(QMainWindow):
             self.statusBar().showMessage(f"OK: git {cmd_label}", 5000)
         else:
             self.statusBar().showMessage(f"FAILED: git {cmd_label}", 5000)
-            # Warn on merge conflicts
             if "CONFLICT" in output:
                 QMessageBox.warning(
                     self, "Merge Conflict",
@@ -340,7 +407,6 @@ class GitHelperWindow(QMainWindow):
 
     def refresh_status(self):
         self.file_list.clear()
-        # Branch label
         ok, branch = self.git.current_branch()
         if ok:
             ok2, detail = self.git.branch_info()
@@ -352,7 +418,6 @@ class GitHelperWindow(QMainWindow):
                         break
             self.branch_label.setText(f"Branch: {tracking if tracking else branch.strip()}")
 
-        # File list from porcelain status
         ok, raw = self.git.status()
         if not ok:
             return
@@ -366,7 +431,6 @@ class GitHelperWindow(QMainWindow):
             item = QTreeWidgetItem([display, filepath])
             item.setFlags(item.flags() | Qt.ItemFlag.ItemIsUserCheckable)
             item.setCheckState(0, Qt.CheckState.Unchecked)
-            # Color code
             color_map = {
                 "M": QColor(200, 120, 0),
                 "A": QColor(0, 150, 0),
@@ -383,7 +447,7 @@ class GitHelperWindow(QMainWindow):
             self.file_list.addTopLevelItem(item)
 
     # ------------------------------------------------------------------
-    # Slot methods
+    # Slot methods — daily workflow
     # ------------------------------------------------------------------
 
     def do_pull(self):
@@ -391,6 +455,21 @@ class GitHelperWindow(QMainWindow):
 
     def do_push(self):
         self._run_and_display("push", self.git.push)
+
+    def do_stage_all(self):
+        self._run_and_display("add -A", self.git.stage_all)
+
+    def do_commit(self):
+        msg = self.commit_msg.text().strip()
+        if not msg:
+            QMessageBox.warning(self, "Commit", "Please enter a commit message.")
+            return
+        self._run_and_display(f'commit -m "{msg}"', lambda: self.git.commit(msg))
+        self.commit_msg.clear()
+
+    # ------------------------------------------------------------------
+    # Slot methods — advanced
+    # ------------------------------------------------------------------
 
     def do_stage_selected(self):
         files = self._get_checked_files()
@@ -402,9 +481,6 @@ class GitHelperWindow(QMainWindow):
             lambda: self.git.stage_files(files),
         )
 
-    def do_stage_all(self):
-        self._run_and_display("add -A", self.git.stage_all)
-
     def do_unstage_selected(self):
         files = self._get_checked_files()
         if not files:
@@ -414,14 +490,6 @@ class GitHelperWindow(QMainWindow):
             f"restore --staged -- {' '.join(files)}",
             lambda: self.git.unstage_files(files),
         )
-
-    def do_commit(self):
-        msg = self.commit_msg.text().strip()
-        if not msg:
-            QMessageBox.warning(self, "Commit", "Please enter a commit message.")
-            return
-        self._run_and_display(f'commit -m "{msg}"', lambda: self.git.commit(msg))
-        self.commit_msg.clear()
 
     def do_view_log(self):
         self._run_and_display("log --oneline -20", lambda: self.git.log(20))
@@ -451,9 +519,6 @@ class GitHelperWindow(QMainWindow):
     def do_stash_pop(self):
         self._run_and_display("stash pop", self.git.stash_pop)
 
-    def do_stash_list(self):
-        self._run_and_display("stash list", self.git.stash_list)
-
     def do_create_tag(self):
         tag_name, ok = QInputDialog.getText(self, "Create Tag", "Tag name (e.g. v3.2.7):")
         if not ok or not tag_name.strip():
@@ -468,32 +533,82 @@ class GitHelperWindow(QMainWindow):
     def do_push_tags(self):
         self._run_and_display("push --tags", self.git.push_tags)
 
-    def do_list_tags(self):
-        self._run_and_display("tag --sort=-creatordate", self.git.list_tags)
-
 
 # ============================================================================
-# REPO DETECTION
+# REPO DETECTION + AUTO-SETUP
 # ============================================================================
 
-def detect_repo():
-    """Find a git repo: script dir, cwd, or ask the user."""
+def detect_or_setup_repo():
+    """
+    Find a git repo in script dir or cwd.
+    If none found: ask for GitHub URL and set everything up automatically.
+    """
     runner = GitRunner("")
     candidates = [
-        os.path.dirname(os.path.abspath(__file__)),
+        os.path.dirname(os.path.abspath(sys.argv[0] if getattr(sys, 'frozen', False) else __file__)),
         os.getcwd(),
     ]
     for path in candidates:
         runner.repo_path = path
         if runner.is_git_repo():
             return path
-    # Fallback: ask user
-    path = QFileDialog.getExistingDirectory(None, "Select Git Repository")
-    if path:
-        runner.repo_path = path
-        if runner.is_git_repo():
-            return path
-    return ""
+
+    # No git repo found — offer to set one up
+    # Use the first candidate (the folder the exe/script is in)
+    target_folder = candidates[0] if os.path.isdir(candidates[0]) else candidates[1]
+
+    url, ok = QInputDialog.getText(
+        None,
+        "Set Up New Project",
+        f"No git repo found in:\n{target_folder}\n\n"
+        "Paste your GitHub link below to set it up:\n"
+        "(e.g. https://github.com/yourname/project.git)",
+    )
+    if not ok or not url.strip():
+        return ""
+
+    url = url.strip()
+    runner.repo_path = target_folder
+    results = []
+
+    # Step 1: git init
+    ok1, out1 = runner.init()
+    results.append(f"git init: {'OK' if ok1 else 'FAILED'}\n{out1}")
+
+    # Step 2: git remote add origin <url>
+    ok2, out2 = runner.add_remote(url)
+    results.append(f"git remote add origin: {'OK' if ok2 else 'FAILED'}\n{out2}")
+
+    # Step 3: git add -A
+    ok3, out3 = runner.stage_all()
+    results.append(f"git add -A: {'OK' if ok3 else 'FAILED'}\n{out3}")
+
+    # Step 4: git commit -m "Initial commit"
+    ok4, out4 = runner.commit("Initial commit")
+    results.append(f"git commit: {'OK' if ok4 else 'FAILED'}\n{out4}")
+
+    # Step 5: git branch -M main
+    ok5, out5 = runner.set_branch_main()
+    results.append(f"git branch -M main: {'OK' if ok5 else 'FAILED'}\n{out5}")
+
+    # Step 6: git push -u origin main
+    ok6, out6 = runner.push_first()
+    results.append(f"git push: {'OK' if ok6 else 'FAILED'}\n{out6}")
+
+    all_ok = ok1 and ok2 and ok3 and ok4 and ok5 and ok6
+    summary = "\n\n".join(results)
+    if all_ok:
+        QMessageBox.information(
+            None, "Setup Complete",
+            f"Your project is set up and pushed to GitHub!\n\n{summary}"
+        )
+    else:
+        QMessageBox.warning(
+            None, "Setup Partially Complete",
+            f"Some steps had issues. You may need to push manually later.\n\n{summary}"
+        )
+
+    return target_folder
 
 
 # ============================================================================
@@ -504,7 +619,7 @@ def main():
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
 
-    # Light palette (matches VPM app feel)
+    # Light palette
     palette = QPalette()
     palette.setColor(QPalette.ColorRole.Window, QColor(245, 245, 245))
     palette.setColor(QPalette.ColorRole.WindowText, QColor(30, 30, 30))
@@ -517,11 +632,11 @@ def main():
     palette.setColor(QPalette.ColorRole.HighlightedText, QColor(255, 255, 255))
     app.setPalette(palette)
 
-    repo_path = detect_repo()
+    repo_path = detect_or_setup_repo()
     if not repo_path:
         QMessageBox.critical(
             None, "Git Helper",
-            "No git repository found.\n\nPlace this file inside a git repo and run again,\nor select a valid repo directory."
+            "No repository set up. Exiting."
         )
         sys.exit(1)
 
